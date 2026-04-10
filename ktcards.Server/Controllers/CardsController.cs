@@ -73,11 +73,7 @@ namespace ktcards.Server.Controllers
             if (data is null)
                 return BadRequest($"'{team.Name}.bd' is empty or invalid.");
 
-            // Remove existing cards for this team
-            db.OperativeAbilities.RemoveRange(
-                db.OperativeAbilities.Where(a => a.Operative.TeamId == teamId));
-            db.OperativeAttacks.RemoveRange(
-                db.OperativeAttacks.Where(a => a.Operative.TeamId == teamId));
+            // Remove existing cards for this team (cascade delete handles operative children)
             db.Operatives.RemoveRange(db.Operatives.Where(o => o.TeamId == teamId));
             db.FactionRules.RemoveRange(db.FactionRules.Where(r => r.TeamId == teamId));
             db.MarkerTokens.RemoveRange(db.MarkerTokens.Where(m => m.TeamId == teamId));
