@@ -1,1 +1,209 @@
+# KillTeam Cards
 
+Веб-приложение для отображения карточек команд по игре [Kill Team](https://www.warhammer-community.com/en-gb/kill-team/), организованных по сезонам. Включает публичную страницу с карточками команд и панель администратора для управления данными.
+
+## Стек технологий
+
+| Слой | Технология |
+|------|-----------|
+| Фронтенд | React 19 + TypeScript + Vite |
+| Бэкенд | ASP.NET Core 10 (Web API) |
+| База данных | SQLite (через Entity Framework Core 10) |
+| Маршрутизация | React Router v7 |
+
+## Структура проекта
+
+```
+ktcards/
+├── datacards/               # PDF и .bd файлы дата-карт
+├── scripts/                 # Вспомогательные Python-скрипты
+│   ├── parse_pdf_to_bd.py   # Парсинг PDF в формат .bd (OpenAI)
+│   └── import_bd_to_db.py   # Прямой импорт .bd в базу данных MySQL
+├── ktcards.Server/          # ASP.NET Core Web API
+│   ├── Controllers/
+│   │   ├── AuthController.cs          # Аутентификация администратора
+│   │   ├── CardsController.cs         # Получение и импорт дата-карт команды
+│   │   ├── SeasonsController.cs       # CRUD для сезонов
+│   │   └── TeamsController.cs         # CRUD для команд (+ загрузка логотипа)
+│   ├── Data/
+│   │   └── AppDbContext.cs            # EF Core контекст (SQLite)
+│   ├── Filters/
+│   │   └── AdminAuthorizeAttribute.cs # Фильтр авторизации по Bearer-токену
+│   ├── Helpers/
+│   │   ├── AdminTokenService.cs       # Генерация и валидация токенов (24 ч)
+│   │   └── FileHelper.cs             # Удаление файлов логотипов
+│   ├── Models/
+│   │   ├── Season.cs
+│   │   ├── Team.cs
+│   │   ├── Operative.cs
+│   │   ├── OperativeAbility.cs
+│   │   ├── OperativeAttack.cs
+│   │   ├── FactionRule.cs
+│   │   ├── MarkerToken.cs
+│   │   ├── StrategyPloy.cs
+│   │   ├── FirefightPloy.cs
+│   │   └── FactionEquipment.cs
+│   └── Program.cs
+└── ktcards.client/          # React + TypeScript фронтенд
+    └── src/
+        ├── pages/
+        │   ├── HomePage.tsx       # Публичная страница с карточками команд
+        │   ├── AdminPage.tsx      # Панель администратора
+        │   └── TeamCardsPage.tsx  # Страница просмотра дата-карт команды
+        ├── types.ts               # Типы Season, Team и всех карточных сущностей
+        └── App.tsx                # Маршрутизация
+```
+
+## Запуск проекта
+
+### Требования
+
+- [.NET 10 SDK](https://dotnet.microsoft.com/download)
+- [Node.js 20+](https://nodejs.org/) и npm
+
+### Установка зависимостей фронтенда
+
+```bash
+cd ktcards.client
+npm install
+```
+
+### Запуск через Visual Studio
+
+Откройте `ktcards.slnx` в Visual Studio и запустите решение — бэкенд и фронтенд запустятся совместно.
+
+### Запуск вручную
+
+**Бэкенд:**
+```bash
+cd ktcards.Server
+dotnet run
+```
+Сервер запускается на `http://localhost:5069`. База данных (`ktcards.db`) создаётся автоматически при первом запуске.
+
+**Фронтенд (dev-режим):**
+```bash
+cd ktcards.client
+npm run dev
+```
+Vite проксирует запросы `/api/...` на бэкенд.
+
+## Конфигурация
+
+Пароль администратора задаётся в `appsettings.json` (или через переменную окружения):
+
+```json
+{
+  "AdminPassword": "your_secure_password"
+}
+```
+
+## Аутентификация
+
+Все защищённые эндпоинты требуют Bearer-токена в заголовке `Authorization`.
+
+**Получение токена:**
+
+```
+POST /api/auth/login
+Content-Type: application/json
+
+{ "password": "your_admin_password" }
+```
+
+Токен действителен 24 часа. Передавайте его во все защищённые запросы:
+
+```
+Authorization: Bearer <token>
+```
+
+## API
+
+Базовый URL: `http://localhost:5069`
+
+### Аутентификация
+
+| Метод | URL | Описание |
+|-------|-----|----------|
+| `POST` | `/api/auth/login` | Получить токен `{ "password": "..." }` |
+
+### Сезоны
+
+| Метод | URL | Доступ | Описание |
+|-------|-----|--------|----------|
+| `GET` | `/api/seasons` | Публичный | Список всех сезонов с командами |
+| `POST` | `/api/seasons` | 🔒 Админ | Создать сезон `{ "name": "..." }` |
+| `DELETE` | `/api/seasons/{id}` | 🔒 Админ | Удалить сезон и все его команды |
+
+### Команды
+
+| Метод | URL | Доступ | Описание |
+|-------|-----|--------|----------|
+| `GET` | `/api/teams` | Публичный | Список всех команд |
+| `POST` | `/api/teams` | 🔒 Админ | Создать команду (`multipart/form-data`: `name`, `seasonId`, `logo?`) |
+| `DELETE` | `/api/teams/{id}` | 🔒 Админ | Удалить команду |
+
+Загруженные логотипы сохраняются в `wwwroot/uploads/` и доступны по пути `/uploads/<filename>`.
+
+### Дата-карты команды
+
+| Метод | URL | Доступ | Описание |
+|-------|-----|--------|----------|
+| `GET` | `/api/teams/{teamId}/cards` | Публичный | Все карты команды (оперативники, плои и т.д.) |
+| `POST` | `/api/teams/{teamId}/cards/import` | 🔒 Админ | Импортировать карты из файла `<TeamName>.bd` |
+
+## Типы дата-карт команды
+
+Дата-карты команды бывают нескольких типов:
+
+- **Карты оперативников** — статы, способности, атаки каждого бойца
+- **Карта описания состава команды** — общее описание фракции
+- **Faction Rule** — правила команды
+- **Marker/Token Guide** — описание токенов и маркеров команды
+- **Strategy Ploy** — плои стратегии
+- **Firefight Ploy** — плои перестрелки
+- **Faction Equipment** — снаряжение фракции
+
+## Страницы
+
+- **`/`** — публичная страница: отображает карточки команд, сгруппированные по сезонам.
+- **`/teams/:teamId`** — страница команды: все дата-карты (оперативники, faction rules, плои, снаряжение).
+- **`/admin`** — панель администратора: управление сезонами и командами, импорт дата-карт из `.bd` файлов.
+
+## Python-скрипты
+
+### parse_pdf_to_bd.py
+
+Парсит PDF с дата-картами команды в формат `.bd` с помощью `pdfplumber` + OpenAI GPT-4o.
+
+**Требования:** `pip install pdfplumber openai` и переменная окружения `OPENAI_API_KEY`.
+
+```bash
+python scripts/parse_pdf_to_bd.py datacards/TeamName.pdf
+# создаёт datacards/TeamName.bd
+```
+
+### import_bd_to_db.py
+
+Напрямую импортирует `.bd` файлы в базу данных MySQL (обходит веб-API).
+
+**Требования:** `pip install pymysql`
+
+```bash
+# Импорт всех .bd файлов из datacards/
+python scripts/import_bd_to_db.py --host 127.0.0.1 --user root --password secret --database ktcards
+
+# Импорт конкретного файла
+python scripts/import_bd_to_db.py datacards/TeamName.bd --season-id 1
+```
+
+Параметры подключения также принимаются через переменные окружения: `MYSQL_HOST`, `MYSQL_PORT`, `MYSQL_USER`, `MYSQL_PASSWORD`, `MYSQL_DATABASE`.
+
+## Сборка фронтенда для production
+
+```bash
+cd ktcards.client
+npm run build
+```
+
+Собранные файлы помещаются в `wwwroot` бэкенда и раздаются им как статика.
