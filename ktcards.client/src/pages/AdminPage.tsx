@@ -3,7 +3,56 @@ import { Link } from 'react-router-dom';
 import type { Season, Team } from '../types';
 import './AdminPage.css';
 
+const ADMIN_PASSWORD = 'admin';
+const SESSION_KEY = 'admin_auth';
+
 export default function AdminPage() {
+    const [authenticated, setAuthenticated] = useState(
+        () => sessionStorage.getItem(SESSION_KEY) === '1'
+    );
+    const [passwordInput, setPasswordInput] = useState('');
+    const [passwordError, setPasswordError] = useState('');
+
+    function handleLogin(e: React.FormEvent) {
+        e.preventDefault();
+        if (passwordInput === ADMIN_PASSWORD) {
+            sessionStorage.setItem(SESSION_KEY, '1');
+            setAuthenticated(true);
+        } else {
+            setPasswordError('Неверный пароль.');
+        }
+    }
+
+    if (!authenticated) {
+        return (
+            <div className="admin">
+                <header className="admin__header">
+                    <Link to="/" className="admin__back">← Back</Link>
+                    <h1 className="admin__title">Admin Panel</h1>
+                </header>
+                <div className="admin__login">
+                    <form onSubmit={handleLogin} className="admin__form">
+                        <input
+                            className="admin__input"
+                            type="password"
+                            placeholder="Пароль"
+                            value={passwordInput}
+                            onChange={e => setPasswordInput(e.target.value)}
+                            autoFocus
+                            required
+                        />
+                        <button className="admin__btn admin__btn--primary" type="submit">Войти</button>
+                    </form>
+                    {passwordError && <p className="admin__error">{passwordError}</p>}
+                </div>
+            </div>
+        );
+    }
+
+    return <AdminContent />;
+}
+
+function AdminContent() {
     const [seasons, setSeasons] = useState<Season[]>([]);
     const [newSeasonName, setNewSeasonName] = useState('');
     const [seasonError, setSeasonError] = useState('');

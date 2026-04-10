@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import TeamCard from '../components/TeamCard';
 import type { Season } from '../types';
 import './HomePage.css';
@@ -27,14 +26,13 @@ export default function HomePage() {
         <div className="home">
             <header className="home__header">
                 <h1 className="home__title">KillTeam Cards</h1>
-                <Link to="/admin" className="home__admin-link">Admin</Link>
             </header>
 
             {loading && <p className="home__loading">Loading...</p>}
             {error && <p className="home__error">{error}</p>}
 
             {!loading && seasons.length === 0 && (
-                <p className="home__empty">No seasons yet. <Link to="/admin">Add one in Admin.</Link></p>
+                <p className="home__empty">No seasons yet.</p>
             )}
 
             <div className="home__seasons">
