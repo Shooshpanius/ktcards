@@ -1,0 +1,131 @@
+name: Parse datacards (PDF → .bd → DB)
+
+on:
+  workflow_dispatch:
+    inputs:
+      pdf_name:
+        description: >
+          Name of a specific PDF to process (without extension, e.g. "Fellgor Ravagers").
+          Leave blank to process ALL PDFs that have no matching .bd file yet.
+        required: false
+        default: ""
+      force:
+        description: Re-parse even if a .bd file already exists
+        type: boolean
+        required: false
+        default: false
+      season_id:
+        description: Season ID used when auto-creating teams in the DB
+        required: false
+        default: "1"
+  push:
+    branches:
+      - main
+    paths:
+      - "datacards/**.pdf"
+
+jobs:
+  parse-and-import:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python dependencies
+        run: pip install pdfplumber openai
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.x"
+
+      - name: Build server and create/migrate database
+        working-directory: ktcards.Server
+        run: |
+          # Run for 3 s just to trigger auto-migration and create ktcards.db, then kill it
+          dotnet run --no-launch-profile &
+          SERVER_PID=$!
+          sleep 10
+          kill $SERVER_PID 2>/dev/null || true
+          wait $SERVER_PID 2>/dev/null || true
+        env:
+          ConnectionStrings__Default: "Data Source=ktcards.db"
+          ASPNETCORE_ENVIRONMENT: Production
+
+      - name: Determine PDFs to process
+        id: find-pdfs
+        shell: python
+        run: |
+          import os, glob, json
+
+          force = "${{ inputs.force }}" == "true"
+          specific = "${{ inputs.pdf_name }}".strip()
+
+          if specific:
+              pdfs = [f"datacards/{specific}.pdf"]
+          else:
+              pdfs = sorted(glob.glob("datacards/*.pdf"))
+
+          if not force:
+              pdfs = [p for p in pdfs if not os.path.isfile(p.replace(".pdf", ".bd"))]
+
+          print(f"PDFs to process: {pdfs}")
+
+          with open(os.environ["GITHUB_OUTPUT"], "a") as fh:
+              fh.write(f"pdf_list={json.dumps(pdfs)}\n")
+              fh.write(f"has_pdfs={'true' if pdfs else 'false'}\n")
+
+      - name: Parse PDFs → .bd files
+        if: steps.find-pdfs.outputs.has_pdfs == 'true'
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        shell: python
+        run: |
+          import json, subprocess, sys
+
+          pdfs = json.loads('${{ steps.find-pdfs.outputs.pdf_list }}')
+          failed = []
+          for pdf in pdfs:
+              print(f"\n=== Parsing {pdf} ===")
+              result = subprocess.run(
+                  [sys.executable, "scripts/parse_pdf_to_bd.py", pdf],
+                  capture_output=False,
+              )
+              if result.returncode != 0:
+                  failed.append(pdf)
+          if failed:
+              print(f"\nFailed: {failed}", file=sys.stderr)
+              sys.exit(1)
+
+      - name: Import .bd files → database
+        env:
+          SEASON_ID: ${{ inputs.season_id || '1' }}
+        run: |
+          python scripts/import_bd_to_db.py \
+            --db ktcards.Server/ktcards.db \
+            --season-id "$SEASON_ID"
+
+      - name: Commit updated files
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add datacards/*.bd ktcards.Server/ktcards.db \
+                  ktcards.Server/ktcards.db-shm ktcards.Server/ktcards.db-wal 2>/dev/null || true
+
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+          else
+            git commit -m "chore: update datacards and database [skip ci]"
+            git push
+          fi
