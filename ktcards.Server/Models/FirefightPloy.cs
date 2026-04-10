@@ -1,9 +1,12 @@
+using System.Text.Json.Serialization;
+
 namespace ktcards.Server.Models
 {
     public class FirefightPloy
     {
         public int Id { get; set; }
         public int TeamId { get; set; }
+        [JsonIgnore]
         public Team Team { get; set; } = null!;
 
         public string Name { get; set; } = string.Empty;
