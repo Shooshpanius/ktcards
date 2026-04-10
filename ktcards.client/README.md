@@ -15,26 +15,42 @@
 
 ```
 ktcards/
+├── datacards/               # PDF и .bd файлы дата-карт
+├── scripts/                 # Вспомогательные Python-скрипты
+│   ├── parse_pdf_to_bd.py   # Парсинг PDF в формат .bd (OpenAI)
+│   └── import_bd_to_db.py   # Прямой импорт .bd в базу данных MySQL
 ├── ktcards.Server/          # ASP.NET Core Web API
 │   ├── Controllers/
-│   │   ├── SeasonsController.cs   # CRUD для сезонов
-│   │   └── TeamsController.cs     # CRUD для команд (+ загрузка логотипа)
+│   │   ├── AuthController.cs          # Аутентификация администратора
+│   │   ├── CardsController.cs         # Получение и импорт дата-карт команды
+│   │   ├── SeasonsController.cs       # CRUD для сезонов
+│   │   └── TeamsController.cs         # CRUD для команд (+ загрузка логотипа)
 │   ├── Data/
-│   │   └── AppDbContext.cs        # EF Core контекст (SQLite)
+│   │   └── AppDbContext.cs            # EF Core контекст (SQLite)
+│   ├── Filters/
+│   │   └── AdminAuthorizeAttribute.cs # Фильтр авторизации по Bearer-токену
+│   ├── Helpers/
+│   │   ├── AdminTokenService.cs       # Генерация и валидация токенов (24 ч)
+│   │   └── FileHelper.cs             # Удаление файлов логотипов
 │   ├── Models/
 │   │   ├── Season.cs
-│   │   └── Team.cs
-│   ├── Helpers/
-│   │   └── FileHelper.cs          # Удаление файлов логотипов
+│   │   ├── Team.cs
+│   │   ├── Operative.cs
+│   │   ├── OperativeAbility.cs
+│   │   ├── OperativeAttack.cs
+│   │   ├── FactionRule.cs
+│   │   ├── MarkerToken.cs
+│   │   ├── StrategyPloy.cs
+│   │   ├── FirefightPloy.cs
+│   │   └── FactionEquipment.cs
 │   └── Program.cs
 └── ktcards.client/          # React + TypeScript фронтенд
     └── src/
         ├── pages/
-        │   ├── HomePage.tsx       # Публичная страница с карточками
-        │   └── AdminPage.tsx      # Панель администратора
-        ├── components/
-        │   └── TeamCard.tsx       # Компонент карточки команды
-        ├── types.ts               # Типы Season и Team
+        │   ├── HomePage.tsx       # Публичная страница с карточками команд
+        │   ├── AdminPage.tsx      # Панель администратора
+        │   └── TeamCardsPage.tsx  # Страница просмотра дата-карт команды
+        ├── types.ts               # Типы Season, Team и всех карточных сущностей
         └── App.tsx                # Маршрутизация
 ```
 
@@ -72,32 +88,104 @@ npm run dev
 ```
 Vite проксирует запросы `/api/...` на бэкенд.
 
+## Конфигурация
+
+Пароль администратора задаётся в `appsettings.json` (или через переменную окружения):
+
+```json
+{
+  "AdminPassword": "your_secure_password"
+}
+```
+
+## Аутентификация
+
+Все защищённые эндпоинты требуют Bearer-токена в заголовке `Authorization`.
+
+**Получение токена:**
+
+```
+POST /api/auth/login
+Content-Type: application/json
+
+{ "password": "your_admin_password" }
+```
+
+Токен действителен 24 часа. Передавайте его во все защищённые запросы:
+
+```
+Authorization: Bearer <token>
+```
+
 ## API
 
 Базовый URL: `http://localhost:5069`
 
-### Сезоны
+### Аутентификация
 
 | Метод | URL | Описание |
 |-------|-----|----------|
-| `GET` | `/api/seasons` | Список всех сезонов с командами |
-| `POST` | `/api/seasons` | Создать сезон `{ "name": "..." }` |
-| `DELETE` | `/api/seasons/{id}` | Удалить сезон и все его команды |
+| `POST` | `/api/auth/login` | Получить токен `{ "password": "..." }` |
+
+### Сезоны
+
+| Метод | URL | Доступ | Описание |
+|-------|-----|--------|----------|
+| `GET` | `/api/seasons` | Публичный | Список всех сезонов с командами |
+| `POST` | `/api/seasons` | 🔒 Админ | Создать сезон `{ "name": "..." }` |
+| `DELETE` | `/api/seasons/{id}` | 🔒 Админ | Удалить сезон и все его команды |
 
 ### Команды
 
-| Метод | URL | Описание |
-|-------|-----|----------|
-| `GET` | `/api/teams` | Список всех команд |
-| `POST` | `/api/teams` | Создать команду (`multipart/form-data`: `name`, `seasonId`, `logo?`) |
-| `DELETE` | `/api/teams/{id}` | Удалить команду |
+| Метод | URL | Доступ | Описание |
+|-------|-----|--------|----------|
+| `GET` | `/api/teams` | Публичный | Список всех команд |
+| `POST` | `/api/teams` | 🔒 Админ | Создать команду (`multipart/form-data`: `name`, `seasonId`, `logo?`) |
+| `DELETE` | `/api/teams/{id}` | 🔒 Админ | Удалить команду |
 
 Загруженные логотипы сохраняются в `wwwroot/uploads/` и доступны по пути `/uploads/<filename>`.
+
+### Дата-карты команды
+
+| Метод | URL | Доступ | Описание |
+|-------|-----|--------|----------|
+| `GET` | `/api/teams/{teamId}/cards` | Публичный | Все карты команды (оперативники, плои и т.д.) |
+| `POST` | `/api/teams/{teamId}/cards/import` | 🔒 Админ | Импортировать карты из файла `<TeamName>.bd` |
 
 ## Страницы
 
 - **`/`** — публичная страница: отображает карточки команд, сгруппированные по сезонам.
-- **`/admin`** — панель администратора: добавление и удаление сезонов и команд с возможностью загрузки логотипа.
+- **`/teams/:teamId`** — страница команды: все дата-карты (оперативники, faction rules, плои, снаряжение).
+- **`/admin`** — панель администратора: управление сезонами и командами, импорт дата-карт из `.bd` файлов.
+
+## Python-скрипты
+
+### parse_pdf_to_bd.py
+
+Парсит PDF с дата-картами команды в формат `.bd` с помощью `pdfplumber` + OpenAI GPT-4o.
+
+**Требования:** `pip install pdfplumber openai` и переменная окружения `OPENAI_API_KEY`.
+
+```bash
+python scripts/parse_pdf_to_bd.py datacards/TeamName.pdf
+# создаёт datacards/TeamName.bd
+```
+
+### import_bd_to_db.py
+
+Напрямую импортирует `.bd` файлы в базу данных MySQL (обходит веб-API).
+
+**Требования:** `pip install pymysql`
+
+```bash
+# Импорт всех .bd файлов из datacards/
+python scripts/import_bd_to_db.py --host 127.0.0.1 --user root --password secret --database ktcards
+
+# Импорт конкретного файла
+python scripts/import_bd_to_db.py datacards/TeamName.bd --season-id 1
+```
+
+Параметры подключения также принимаются через переменные окружения: `MYSQL_HOST`, `MYSQL_PORT`, `MYSQL_USER`, `MYSQL_PASSWORD`, `MYSQL_DATABASE`.
 
 ## Сборка фронтенда для production
 
