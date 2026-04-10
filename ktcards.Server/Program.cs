@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using ktcards.Server.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Force the server to bind only to HTTP (disable HTTPS endpoints)
@@ -5,6 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.WebHost.UseUrls("http://localhost:5069");
 
 // Add services to the container.
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("Default") ?? "Data Source=ktcards.db"));
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -12,7 +17,15 @@ builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
+// Auto-migrate / create database on startup
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    db.Database.EnsureCreated();
+}
+
 app.UseDefaultFiles();
+app.UseStaticFiles();
 app.MapStaticAssets();
 
 // Configure the HTTP request pipeline.

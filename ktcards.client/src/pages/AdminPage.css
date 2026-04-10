@@ -1,0 +1,163 @@
+.admin {
+    padding: 0 24px 48px;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+}
+
+.admin__header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 24px 0 8px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+}
+
+.admin__back {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.admin__back:hover {
+    opacity: 0.8;
+}
+
+.admin__title {
+    margin: 0;
+    font-size: 28px;
+}
+
+.admin__columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+@media (max-width: 700px) {
+    .admin__columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+.admin__section h2 {
+    margin-bottom: 16px;
+    font-size: 18px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+}
+
+.admin__form {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.admin__form--column {
+    flex-direction: column;
+}
+
+.admin__input {
+    flex: 1;
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--bg);
+    color: var(--text-h);
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.15s;
+}
+
+.admin__input:focus {
+    border-color: var(--accent);
+}
+
+.admin__file-label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 13px;
+    color: var(--text);
+}
+
+.admin__file-label input {
+    font-size: 13px;
+}
+
+.admin__btn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.15s;
+    white-space: nowrap;
+}
+
+.admin__btn:hover {
+    opacity: 0.85;
+}
+
+.admin__btn--primary {
+    background: var(--accent);
+    color: #fff;
+}
+
+.admin__btn--danger {
+    background: transparent;
+    color: #ef4444;
+    border: 1px solid #ef4444;
+}
+
+.admin__error {
+    color: #ef4444;
+    font-size: 13px;
+    margin: 0 0 12px;
+}
+
+.admin__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.admin__list-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.admin__list-item span {
+    flex: 1;
+    color: var(--text-h);
+}
+
+.admin__list-item em {
+    color: var(--text);
+    font-style: normal;
+}
+
+.admin__team-logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+}
+
+.admin__list-empty {
+    color: var(--text);
+    font-size: 14px;
+    padding: 8px 0;
+}

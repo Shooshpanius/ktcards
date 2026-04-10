@@ -1,0 +1,97 @@
+.home {
+    padding: 0 24px 48px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.home__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0 8px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+}
+
+.home__title {
+    margin: 0;
+    font-size: 32px;
+}
+
+.home__admin-link {
+    font-size: 14px;
+    color: var(--accent);
+    text-decoration: none;
+    border: 1px solid var(--accent-border);
+    padding: 6px 14px;
+    border-radius: 6px;
+    background: var(--accent-bg);
+    transition: opacity 0.15s;
+}
+
+.home__admin-link:hover {
+    opacity: 0.8;
+}
+
+.home__loading,
+.home__empty,
+.home__error {
+    text-align: center;
+    font-size: 15px;
+    padding: 24px 0;
+}
+
+.home__loading,
+.home__empty {
+    color: var(--text);
+}
+
+.home__error {
+    color: #ef4444;
+}
+
+.home__empty a {
+    color: var(--accent);
+}
+
+.home__seasons {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.home__season-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.season-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.season-divider__line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+
+.season-divider__label {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text);
+    white-space: nowrap;
+    padding: 4px 10px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+}
+
+.home__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
