@@ -21,7 +21,17 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    db.Database.EnsureCreated();
+    try
+    {
+        db.Database.Migrate();
+    }
+    catch (Microsoft.Data.Sqlite.SqliteException)
+    {
+        // DB file exists but was created without migration history (e.g. via EnsureCreated).
+        // Drop and recreate so migrations can be applied cleanly.
+        db.Database.EnsureDeleted();
+        db.Database.Migrate();
+    }
 }
 
 app.UseDefaultFiles();

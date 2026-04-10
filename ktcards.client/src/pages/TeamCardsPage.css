@@ -1,0 +1,225 @@
+.tcpage {
+    padding: 0 24px 48px;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+}
+
+.tcpage__header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 0 8px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+}
+
+.tcpage__back {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: opacity 0.15s;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.tcpage__back:hover {
+    opacity: 0.7;
+}
+
+.tcpage__title {
+    margin: 0;
+    font-size: 28px;
+}
+
+.tcpage__status {
+    text-align: center;
+    font-size: 15px;
+    padding: 24px 0;
+    color: var(--text);
+}
+
+.tcpage__status--error {
+    color: #ef4444;
+}
+
+.tcpage__sections {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.tcpage__section-title {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+}
+
+.tcpage__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+/* ─── Operative card ─── */
+.op-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px;
+    background: var(--bg);
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+.op-card__header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.op-card__name {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-h);
+}
+
+.op-card__keywords {
+    font-size: 12px;
+    color: var(--text);
+}
+
+.op-card__stats {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 40px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 4px 8px;
+    background: var(--code-bg);
+}
+
+.stat__value {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-h);
+}
+
+.stat__label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text);
+}
+
+.op-card__attacks {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.op-card__attacks th,
+.op-card__attacks td {
+    border: 1px solid var(--border);
+    padding: 4px 8px;
+    text-align: left;
+}
+
+.op-card__attacks th {
+    background: var(--code-bg);
+    font-weight: 600;
+    color: var(--text-h);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.op-card__abilities {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.op-card__ability {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text);
+}
+
+.op-card__ability-name {
+    font-weight: 600;
+    color: var(--text-h);
+}
+
+.op-card__notes {
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--text);
+    font-style: italic;
+}
+
+/* ─── Generic data-card (ploys, rules, equipment, tokens) ─── */
+.dc-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px;
+    background: var(--bg);
+    box-shadow: var(--shadow);
+    width: 280px;
+    box-sizing: border-box;
+}
+
+.dc-card__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.dc-card__name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-h);
+}
+
+.dc-card__cost {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+    white-space: nowrap;
+}
+
+.dc-card__desc {
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--text);
+}
+
+.dc-card__restrictions {
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--text);
+    font-style: italic;
+}

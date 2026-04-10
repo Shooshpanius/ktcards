@@ -136,6 +136,17 @@ function AdminContent() {
         await loadTeams();
     }
 
+    async function importTeamCards(id: number, _name: string) {
+        const r = await fetch(`/api/teams/${id}/cards/import`, { method: 'POST' });
+        if (r.ok) {
+            const data = await r.json();
+            alert(data.message ?? 'Import successful.');
+        } else {
+            const msg = await r.text();
+            alert(`Import failed: ${msg}`);
+        }
+    }
+
     const seasonById = Object.fromEntries(seasons.map(s => [s.id, s.name]));
 
     return (
@@ -222,6 +233,11 @@ function AdminContent() {
                                     <strong>{t.name}</strong>
                                     <em> — {seasonById[t.seasonId] ?? `Season ${t.seasonId}`}</em>
                                 </span>
+                                <button
+                                    className="admin__btn admin__btn--secondary"
+                                    onClick={() => importTeamCards(t.id, t.name)}
+                                    title={`Загрузить данные из файла ${t.name}.bd`}
+                                >Загрузить данные из файла</button>
                                 <button
                                     className="admin__btn admin__btn--danger"
                                     onClick={() => deleteTeam(t.id)}

@@ -1,0 +1,624 @@
+{
+  "teamName": "Fellgor Ravagers",
+  "teamComposition": {
+    "archetypes": ["RECON", "SEEK & DESTROY"],
+    "slots": [
+      {
+        "count": 1,
+        "operative": "FELLGOR RAVAGER IRONHORN",
+        "options": [
+          ["Corrupted pistol", "Corrupted chainsword"],
+          ["Plasma pistol", "Bludgeon"]
+        ]
+      },
+      {
+        "count": 9,
+        "operatives": [
+          "DEATHKNELL",
+          "FLUXBRAY",
+          "GNARLSCAR",
+          "GOREHORN",
+          "HERD-GOAD",
+          "MANGLER",
+          "SHAMAN",
+          "TOXHORN",
+          "VANDAL",
+          {
+            "name": "WARRIOR",
+            "options": [
+              ["Autopistol", "Bludgeon"],
+              ["Autopistol", "Cleaver"]
+            ]
+          }
+        ],
+        "notes": "Other than WARRIOR operatives, your kill team can only include each operative on this list once."
+      }
+    ]
+  },
+  "operatives": [
+    {
+      "name": "Fellgor Ironhorn",
+      "keywords": ["FELLGOR RAVAGER", "CHAOS", "LEADER", "IRONHORN"],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 11,
+      "notes": "Leader operative. Weapon options: (1) Corrupted pistol + Corrupted chainsword, or (2) Plasma pistol + Bludgeon.",
+      "abilities": [
+        {
+          "name": "Call the Attack",
+          "description": "STRATEGIC GAMBIT if this operative doesn't have one of your Frenzy tokens. Select one friendly FELLGOR RAVAGER operative visible to and within 6\" of this operative. That selected operative, and each other friendly FELLGOR RAVAGER operative visible to and within 2\" of it, can immediately perform a free Dash action in an order of your choice."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Corrupted pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\", Rending"
+        },
+        {
+          "name": "Plasma pistol (standard)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\", Piercing 1"
+        },
+        {
+          "name": "Plasma pistol (supercharge)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\", Hot, Lethal 5+, Piercing 1"
+        },
+        {
+          "name": "Bludgeon",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "4",
+          "specialRules": "Brutal"
+        },
+        {
+          "name": "Corrupted chainsword",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Rending"
+        }
+      ]
+    },
+    {
+      "name": "Fellgor Deathknell",
+      "keywords": ["FELLGOR RAVAGER", "CHAOS", "DEATHKNELL"],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Icon Bearer",
+          "description": "This operative isn't affected by the marker control bullet point of the Frenzy faction rule. Whenever determining control of a marker, treat this operative's APL stat as 1 higher. Note this isn't a change to its APL stat, so any changes are cumulative with this."
+        },
+        {
+          "name": "War Gong",
+          "description": "Whenever an attack dice would inflict Critical Dmg on a friendly FELLGOR RAVAGER operative within 3\" of this operative, if this operative doesn't have one of your Frenzy tokens, you can choose for that attack dice to inflict Normal Dmg instead."
+        },
+        {
+          "name": "Gong Knell (1AP)",
+          "description": "Until the start of this operative's next activation or until this operative is incapacitated (whichever comes first), whenever an operative is shooting this operative, improve this operative's Save stat by 1 and ignore the Piercing weapon rule."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Autopistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Bludgeon",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "4",
+          "specialRules": "Brutal"
+        }
+      ]
+    },
+    {
+      "name": "Fellgor Fluxbray",
+      "keywords": ["FELLGOR RAVAGER", "CHAOS", "FLUXBRAY"],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Blade Whirl",
+          "description": "Whenever this operative is fighting or retaliating, if it doesn't have one of your Frenzy tokens, you can resolve one of your successes before the normal order. If you do, that success must be used to block."
+        },
+        {
+          "name": "Cleaver Flurry (2AP)",
+          "description": "Perform a free Reposition action with this operative. During that action, it can move an additional 2\", and can move within control range of enemy operatives (it cannot begin or end the move there). Inflict D3+1 damage on each enemy operative it moved within control range of (roll separately for each after it's moved, in the order it moved within control range of them). This operative cannot perform this action while it has a Conceal order."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Triple cleavers",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Ceaseless"
+        }
+      ]
+    },
+    {
+      "name": "Fellgor Gnarlscar",
+      "keywords": ["FELLGOR RAVAGER", "CHAOS", "GNARLSCAR"],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Sagacious",
+          "description": "At the end of this operative's activation, you can change its order."
+        },
+        {
+          "name": "Uncompromising Attack (1AP)",
+          "description": "Perform a free Fight action with this operative, then perform a free Shoot action with this operative (or vice versa). This operative can perform that Shoot action while within control range of an enemy operative, but if it does, it can and must target an enemy operative within its control range (even if other friendly operatives are within that enemy operative's control range). You can only select an autopistol for that Shoot action."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Autopistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Bionic fist",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Brutal"
+        }
+      ]
+    },
+    {
+      "name": "Fellgor Gorehorn",
+      "keywords": ["FELLGOR RAVAGER", "CHAOS", "GOREHORN"],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Champion",
+          "description": "This operative can perform two Fight actions during its activation."
+        },
+        {
+          "name": "Headtaker (weapon rule)",
+          "description": "Whenever this operative incapacitates an operative with the skullcleaver, roll one D3: this operative regains a number of lost wounds equal to the result (unless it has a Frenzy token); until the end of the battle, add the result to the Critical Dmg stat of this operative's skullcleaver (to a maximum of 8)."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Autopistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Skullcleaver",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Lethal 5+, Headtaker"
+        }
+      ]
+    },
+    {
+      "name": "Fellgor Herd-Goad",
+      "keywords": ["FELLGOR RAVAGER", "CHAOS", "HERD-GOAD"],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Whip Control",
+          "description": "Whenever an enemy operative is visible to and within 3\" of this operative, if this operative isn't within control range of any other enemy operatives: subtract 1 from the Atk stat of that enemy operative's melee weapons (to a minimum of 1); your opponent must spend 1 additional AP for that enemy operative to perform the Fall Back action."
+        },
+        {
+          "name": "Incite Fury (1AP)",
+          "description": "SUPPORT. Select one other friendly FELLGOR RAVAGER operative (excluding SHAMAN or IRONHORN) visible to and within 3\" of this operative. Until the end of that operative's next activation, add 1 to its APL stat. This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Autopistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Crackthorn whip (ranged)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": "Range 3\", Lethal 4+, Stun"
+        },
+        {
+          "name": "Crackthorn whip (melee)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": "Lethal 4+, Shock"
+        }
+      ]
+    },
+    {
+      "name": "Fellgor Mangler",
+      "keywords": ["FELLGOR RAVAGER", "CHAOS", "MANGLER"],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Tactual Hunter (weapon rule)",
+          "description": "Whenever this operative is fighting with vicious claws against an expended operative, the first time you strike with a critical success during that sequence, you can immediately resolve another of your successes as a strike (before your opponent)."
+        },
+        {
+          "name": "Berserker",
+          "description": "This operative cannot perform the Shoot action (other than Guard, but cannot then perform a free Shoot action during the interruption). You must spend 1 additional AP for this operative to perform the Pick Up Marker and mission actions (excluding Operate Hatch)."
+        },
+        {
+          "name": "Savage",
+          "description": "The first time this operative performs the Fight action during each of its activations, if it isn't incapacitated, it can immediately perform a free Fight action afterwards (you don't have to select the same enemy operative to fight against). This takes precedence over action restrictions, and you cannot use the Ruthless Rampage firefight ploy between those two Fight actions."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Vicious claws",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "Ceaseless, Tactual Hunter"
+        }
+      ]
+    },
+    {
+      "name": "Fellgor Shaman",
+      "keywords": ["FELLGOR RAVAGER", "CHAOS", "PSYKER", "SHAMAN"],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Apoplectic Rejuvenation (1AP)",
+          "description": "Select one friendly FELLGOR RAVAGER operative that doesn't have one of your Frenzy tokens and is visible to and within 6\" of this operative. That friendly operative regains up to 2D3 lost wounds; if that operative has incapacitated an enemy operative while fighting or retaliating during the battle, it regains up to 6 lost wounds instead. This operative cannot perform this action while within control range of an enemy operative."
+        },
+        {
+          "name": "Mantle of Darkness (1AP)",
+          "description": "PSYCHIC. Until the start of this operative's next activation or until it's incapacitated (whichever comes first), whenever a friendly FELLGOR RAVAGER operative is visible to and within 3\" of this operative, has a Conceal order and is in cover, that friendly operative cannot be selected as a valid target, taking precedence over all other rules (e.g. Seek, Vantage terrain) except being within 2\". This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Autopistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Tech-curse",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "1",
+          "criticalDamage": "3",
+          "specialRules": "PSYCHIC, Rending, Saturate, Seek Light"
+        },
+        {
+          "name": "Braystave",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "Shock"
+        }
+      ]
+    },
+    {
+      "name": "Fellgor Toxhorn",
+      "keywords": ["FELLGOR RAVAGER", "CHAOS", "TOXHORN"],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Toxic Blessings",
+          "description": "You can ignore any changes to this operative's APL stat and it's not affected by enemy operatives' Shock weapon rule. Whenever an attack dice inflicts Normal Dmg of 3 or more on this operative, roll one D6: on a 5+, subtract 1 from that inflicted damage."
+        },
+        {
+          "name": "Pox Bomb",
+          "description": "This operative can use stun grenades (see universal equipment). Doing so doesn't count towards any limited uses you have (i.e. if you also select that grenade from equipment for other operatives). Whenever an enemy operative takes a stun test as a result of this operative performing the Stun Grenade action, if the result is a 3+, also inflict damage on that enemy operative equal to the dice result halved (rounding up)."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Autopistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Cleaver",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "Fellgor Vandal",
+      "keywords": ["FELLGOR RAVAGER", "CHAOS", "VANDAL"],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Vicious Blows (weapon rule)",
+          "description": "Whenever this operative is fighting, the mancrusher has the Ceaseless weapon rule."
+        },
+        {
+          "name": "Sweeping Blow (1AP)",
+          "description": "Inflict D3+1 damage on each other operative visible to and within 2\" of this operative. This operative cannot perform this action while it has a Conceal order."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Mancrusher",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "5",
+          "criticalDamage": "5",
+          "specialRules": "Brutal, Vicious Blows"
+        }
+      ]
+    },
+    {
+      "name": "Fellgor Warrior",
+      "keywords": ["FELLGOR RAVAGER", "CHAOS", "WARRIOR"],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 10,
+      "notes": "Can be taken multiple times. Weapon options: (1) Autopistol + Bludgeon, or (2) Autopistol + Cleaver.",
+      "abilities": [
+        {
+          "name": "Warrior Frenzy",
+          "description": "Whenever this operative has one of your Frenzy tokens, it cannot be injured. This takes precedence over the normal Frenzy rules."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Autopistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Bludgeon",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "4",
+          "specialRules": "Brutal"
+        },
+        {
+          "name": "Cleaver",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": null
+        }
+      ]
+    }
+  ],
+  "factionRules": [
+    {
+      "name": "Frenzy",
+      "description": "Fellgor Ravagers channel their pain into an animalistic frenzy, dismissing wounds and bursting with aggression.\n\nWhenever a friendly FELLGOR RAVAGER operative that doesn't have one of your Frenzy tokens would be incapacitated during the battle, it's not incapacitated and it gains one of your Frenzy tokens. All remaining attack dice are discarded (including yours if this operative is fighting or retaliating). If it has a Conceal order, change it to Engage.\n\nWhenever a friendly FELLGOR RAVAGER operative has one of your Frenzy tokens:\n• It's only incapacitated as detailed below.\n• It cannot have a Conceal order.\n• It's injured.\n• It cannot perform the Pick Up Marker, unique (excluding Sweeping Blow, see VANDAL) or mission actions (excluding Operate Hatch).\n• For the purpose of determining control of markers and areas of the killzone, treat its APL stat as 1. This takes precedence over any stat changes.\n\nA friendly FELLGOR RAVAGER operative that has one of your Frenzy tokens is incapacitated when one of the following is met:\n• Its activation or counteraction ends.\n• An enemy operative is fighting against or retaliating against it and your opponent strikes with a critical success.\n• An enemy operative is fighting against or retaliating against it and your opponent strikes it for a second time with a normal success.\n• An enemy operative is shooting it and Critical Dmg is inflicted on it.\n• The battle ends (resolve this before any victory conditions that resolve at the end of the battle).\n\nYour opponent treats a FELLGOR RAVAGER operative as being incapacitated (instead of when it would be incapacitated normally) when it gains one of your Frenzy tokens for the purposes of scoring VPs (e.g. kill op) and faction rules that require it to be incapacitated (e.g. HAND OF THE ARCHON Power From Pain, CHAOS CULT Mutation, etc.)."
+    }
+  ],
+  "markersTokens": [
+    {
+      "name": "Frenzy token",
+      "description": "Gained when a friendly FELLGOR RAVAGER operative would be incapacitated. The operative is not incapacitated but is injured, cannot have a Conceal order, and is subject to all Frenzy restrictions. The operative is incapacitated at end of activation, on a critical strike, second normal strike, or inflicted Critical Dmg from shooting."
+    },
+    {
+      "name": "Gong Knell token",
+      "description": "Placed on the Deathknell when it uses its Gong Knell action. Until the start of the Deathknell's next activation or until incapacitated, whenever an operative shoots it, improve its Save stat by 1 and ignore the Piercing weapon rule."
+    },
+    {
+      "name": "Mantle of Darkness token",
+      "description": "Placed on the Shaman when it uses Mantle of Darkness. Until the start of its next activation or incapacitated, friendly FELLGOR RAVAGER operatives within 3\" with a Conceal order in cover cannot be selected as a valid target (except within 2\")."
+    },
+    {
+      "name": "Chaos Sigil token",
+      "description": "Tracks use of the Chaos Sigil faction equipment. Once per turning point, when an operative shoots a friendly FELLGOR RAVAGER operative, you can worsen the Piercing weapon rule by 1 (Piercing 1 is ignored)."
+    },
+    {
+      "name": "Brass Adornments token",
+      "description": "Tracks once-per-battle use of the Brass Adornments equipment. Allows using Animalistic Fury and Wild Rage firefight ploys for 0CP each once per battle."
+    },
+    {
+      "name": "Gore Marks token",
+      "description": "Tracks use of the Gore Marks faction equipment. Once per turning point when fighting or retaliating: inflict 1 damage on that friendly operative and re-roll one attack die. If the result is a fail, inflict 1 additional damage."
+    },
+    {
+      "name": "Pelting Firepower token",
+      "description": "Used to track which friendly FELLGOR RAVAGER operatives have shot an enemy operative during a turning point, for the purposes of the Pelting Firepower strategy ploy."
+    }
+  ],
+  "strategyPloys": [
+    {
+      "name": "Violent Temperament",
+      "cpCost": 1,
+      "description": "Whenever a friendly FELLGOR RAVAGER operative is fighting or retaliating, after rolling your attack dice, you can use this rule. If you do, you must re-roll all of your attack dice (you cannot only re-roll some)."
+    },
+    {
+      "name": "Ambush",
+      "cpCost": 1,
+      "description": "Whenever a friendly FELLGOR RAVAGER operative is activated, if its order is changed from Conceal to Engage, it's ambushing for that activation. Whenever a friendly FELLGOR RAVAGER operative that's ambushing is fighting, you can retain one of your normal successes as a critical success instead. Note that an operative that has one of your Frenzy tokens cannot ambush."
+    },
+    {
+      "name": "Pelting Firepower",
+      "cpCost": 1,
+      "description": "Whenever a friendly FELLGOR RAVAGER operative is shooting an enemy operative that's been shot by another friendly FELLGOR RAVAGER operative during this turning point, that first friendly operative's ranged weapons have the Ceaseless weapon rule; if the enemy operative has been shot by more than one other friendly FELLGOR RAVAGER operative during this turning point, that first friendly operative's ranged weapons have the Relentless weapon rule instead."
+    },
+    {
+      "name": "Reckless Determination",
+      "cpCost": 1,
+      "description": "Whenever an enemy operative is shooting an expended friendly FELLGOR RAVAGER operative, if you cannot retain any cover saves, you can retain one of your defence dice as a normal success without rolling it (in addition to a cover save, if any)."
+    }
+  ],
+  "firefightPloys": [
+    {
+      "name": "Ruthless Rampage",
+      "cpCost": 1,
+      "description": "Use this firefight ploy after a friendly FELLGOR RAVAGER operative performs the Fight action, if it's no longer within control range of enemy operatives. That friendly operative can immediately perform a free Charge action (even if it's already performed the Charge action during that activation), but cannot move more than 3\" during that action."
+    },
+    {
+      "name": "Wild Rage",
+      "cpCost": 1,
+      "description": "Use this firefight ploy when a friendly FELLGOR RAVAGER operative is activated. Until the end of that operative's activation, add 1\" to its Move stat."
+    },
+    {
+      "name": "Animalistic Fury",
+      "cpCost": 1,
+      "description": "Use this firefight ploy when a friendly FELLGOR RAVAGER operative is fighting or retaliating and you strike with a critical success. Inflict 1 additional damage with that strike."
+    },
+    {
+      "name": "Bloodsense",
+      "cpCost": 1,
+      "description": "Use this firefight ploy during a friendly FELLGOR RAVAGER operative's activation, when it incapacitates an enemy operative within its control range. Select one other ready friendly FELLGOR RAVAGER operative that's visible to and within 3\" of the incapacitated enemy operative. When that first friendly operative is expended, you can activate that other friendly operative before your opponent activates. When that other operative is expended, your opponent then activates as normal."
+    }
+  ],
+  "factionEquipment": [
+    {
+      "name": "Brass Adornments",
+      "epCost": 1,
+      "description": "Once per battle, you can use the Animalistic Fury and Wild Rage firefight ploys for 0CP each.",
+      "restrictions": null
+    },
+    {
+      "name": "Gore Marks",
+      "epCost": 1,
+      "description": "Once per turning point, when a friendly FELLGOR RAVAGER operative is fighting or retaliating, you can use this rule. If you do, inflict 1 damage on that friendly operative and re-roll one of your attack dice. If the result is a fail, inflict 1 additional damage on that friendly operative.",
+      "restrictions": null
+    },
+    {
+      "name": "Chaos Sigil",
+      "epCost": 1,
+      "description": "Once per turning point, when an operative is shooting a friendly FELLGOR RAVAGER operative, at the start of the Roll Defence Dice step, you can use this rule. If you do, worsen the x of the Piercing weapon rule by 1 (if any) until the end of that sequence. Note that Piercing 1 would therefore be ignored.",
+      "restrictions": null
+    },
+    {
+      "name": "War Paint",
+      "epCost": 1,
+      "description": "You can ignore any changes to the Move stat of friendly FELLGOR RAVAGER operatives from being injured.",
+      "restrictions": null
+    }
+  ]
+}

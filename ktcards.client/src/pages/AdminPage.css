@@ -113,6 +113,12 @@
     border: 1px solid #ef4444;
 }
 
+.admin__btn--secondary {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
 .admin__error {
     color: #ef4444;
     font-size: 13px;
