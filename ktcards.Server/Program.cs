@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using ktcards.Server.Data;
+using ktcards.Server.Helpers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("Default") ?? "Data Source=ktcards.db"));
 
 builder.Services.AddControllers();
+builder.Services.AddSingleton<AdminTokenService>();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 

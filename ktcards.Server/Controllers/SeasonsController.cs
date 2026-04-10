@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ktcards.Server.Data;
+using ktcards.Server.Filters;
 using ktcards.Server.Helpers;
 using ktcards.Server.Models;
 
@@ -33,6 +34,7 @@ namespace ktcards.Server.Controllers
         }
 
         [HttpPost]
+        [AdminAuthorize]
         public async Task<IActionResult> Create([FromBody] SeasonDto dto)
         {
             if (string.IsNullOrWhiteSpace(dto.Name))
@@ -44,6 +46,7 @@ namespace ktcards.Server.Controllers
         }
 
         [HttpDelete("{id:int}")]
+        [AdminAuthorize]
         public async Task<IActionResult> Delete(int id)
         {
             var season = await db.Seasons.Include(s => s.Teams).FirstOrDefaultAsync(s => s.Id == id);
