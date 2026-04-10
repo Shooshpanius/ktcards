@@ -1,73 +1,109 @@
-# React + TypeScript + Vite
+# KillTeam Cards
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Веб-приложение для отображения карточек команд по игре [Kill Team](https://www.warhammer-community.com/en-gb/kill-team/), организованных по сезонам. Включает публичную страницу с карточками команд и панель администратора для управления данными.
 
-Currently, two official plugins are available:
+## Стек технологий
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+| Слой | Технология |
+|------|-----------|
+| Фронтенд | React 19 + TypeScript + Vite |
+| Бэкенд | ASP.NET Core 10 (Web API) |
+| База данных | SQLite (через Entity Framework Core 10) |
+| Маршрутизация | React Router v7 |
 
-## React Compiler
+## Структура проекта
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+ktcards/
+├── ktcards.Server/          # ASP.NET Core Web API
+│   ├── Controllers/
+│   │   ├── SeasonsController.cs   # CRUD для сезонов
+│   │   └── TeamsController.cs     # CRUD для команд (+ загрузка логотипа)
+│   ├── Data/
+│   │   └── AppDbContext.cs        # EF Core контекст (SQLite)
+│   ├── Models/
+│   │   ├── Season.cs
+│   │   └── Team.cs
+│   ├── Helpers/
+│   │   └── FileHelper.cs          # Удаление файлов логотипов
+│   └── Program.cs
+└── ktcards.client/          # React + TypeScript фронтенд
+    └── src/
+        ├── pages/
+        │   ├── HomePage.tsx       # Публичная страница с карточками
+        │   └── AdminPage.tsx      # Панель администратора
+        ├── components/
+        │   └── TeamCard.tsx       # Компонент карточки команды
+        ├── types.ts               # Типы Season и Team
+        └── App.tsx                # Маршрутизация
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Запуск проекта
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Требования
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- [.NET 10 SDK](https://dotnet.microsoft.com/download)
+- [Node.js 20+](https://nodejs.org/) и npm
+
+### Установка зависимостей фронтенда
+
+```bash
+cd ktcards.client
+npm install
 ```
+
+### Запуск через Visual Studio
+
+Откройте `ktcards.slnx` в Visual Studio и запустите решение — бэкенд и фронтенд запустятся совместно.
+
+### Запуск вручную
+
+**Бэкенд:**
+```bash
+cd ktcards.Server
+dotnet run
+```
+Сервер запускается на `http://localhost:5069`. База данных (`ktcards.db`) создаётся автоматически при первом запуске.
+
+**Фронтенд (dev-режим):**
+```bash
+cd ktcards.client
+npm run dev
+```
+Vite проксирует запросы `/api/...` на бэкенд.
+
+## API
+
+Базовый URL: `http://localhost:5069`
+
+### Сезоны
+
+| Метод | URL | Описание |
+|-------|-----|----------|
+| `GET` | `/api/seasons` | Список всех сезонов с командами |
+| `POST` | `/api/seasons` | Создать сезон `{ "name": "..." }` |
+| `DELETE` | `/api/seasons/{id}` | Удалить сезон и все его команды |
+
+### Команды
+
+| Метод | URL | Описание |
+|-------|-----|----------|
+| `GET` | `/api/teams` | Список всех команд |
+| `POST` | `/api/teams` | Создать команду (`multipart/form-data`: `name`, `seasonId`, `logo?`) |
+| `DELETE` | `/api/teams/{id}` | Удалить команду |
+
+Загруженные логотипы сохраняются в `wwwroot/uploads/` и доступны по пути `/uploads/<filename>`.
+
+## Страницы
+
+- **`/`** — публичная страница: отображает карточки команд, сгруппированные по сезонам.
+- **`/admin`** — панель администратора: добавление и удаление сезонов и команд с возможностью загрузки логотипа.
+
+## Сборка фронтенда для production
+
+```bash
+cd ktcards.client
+npm run build
+```
+
+Собранные файлы помещаются в `wwwroot` бэкенда и раздаются им как статика.
