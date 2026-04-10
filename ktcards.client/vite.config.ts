@@ -19,10 +19,12 @@ export default defineConfig({
         proxy: {
             '^/api': {
                 target,
+                changeOrigin: true,
                 secure: false
             },
             '^/uploads': {
                 target,
+                changeOrigin: true,
                 secure: false
             }
         },
