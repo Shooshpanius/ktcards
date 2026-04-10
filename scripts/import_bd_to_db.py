@@ -1,12 +1,19 @@
 #!/usr/bin/env python3
 """
-Import .bd data-card files into the ktcards SQLite database.
+Import .bd data-card files into the ktcards MySQL database.
 
 Usage:
-    python import_bd_to_db.py [--db <path/to/ktcards.db>] [<TeamName.bd> ...]
+    python import_bd_to_db.py [options] [<TeamName.bd> ...]
 
 If no .bd files are specified, all *.bd files in the datacards/ directory
 (sibling of the scripts/ directory) are processed.
+
+Connection parameters can be supplied via CLI flags or environment variables:
+    MYSQL_HOST      (default: 127.0.0.1)
+    MYSQL_PORT      (default: 3306)
+    MYSQL_USER      (default: root)
+    MYSQL_PASSWORD
+    MYSQL_DATABASE  (default: ktcards)
 
 The team must already exist in the Teams table OR a --season-id can be supplied
 to auto-create missing teams.
@@ -16,17 +23,26 @@ import argparse
 import glob
 import json
 import os
-import sqlite3
 import sys
 
-
-def find_db(default_relative: str) -> str:
-    """Resolve DB path relative to this script's location."""
-    here = os.path.dirname(os.path.abspath(__file__))
-    return os.path.abspath(os.path.join(here, default_relative))
+import pymysql
+import pymysql.cursors
 
 
-def import_bd(conn: sqlite3.Connection, bd_path: str, default_season_id: int) -> None:
+def get_connection(args: argparse.Namespace) -> pymysql.Connection:
+    return pymysql.connect(
+        host=args.host,
+        port=args.port,
+        user=args.user,
+        password=args.password,
+        database=args.database,
+        charset="utf8mb4",
+        cursorclass=pymysql.cursors.Cursor,
+        autocommit=False,
+    )
+
+
+def import_bd(conn: pymysql.Connection, bd_path: str, default_season_id: int) -> None:
     team_name = os.path.splitext(os.path.basename(bd_path))[0]
     print(f"Importing '{team_name}' from {bd_path} …")
 
@@ -36,25 +52,25 @@ def import_bd(conn: sqlite3.Connection, bd_path: str, default_season_id: int) ->
     cur = conn.cursor()
 
     # Find or create team
-    cur.execute("SELECT Id FROM Teams WHERE Name = ?", (team_name,))
+    cur.execute("SELECT Id FROM Teams WHERE Name = %s", (team_name,))
     row = cur.fetchone()
     if row:
         team_id = row[0]
     else:
         cur.execute(
-            "INSERT INTO Teams (Name, SeasonId) VALUES (?, ?)",
+            "INSERT INTO Teams (Name, SeasonId) VALUES (%s, %s)",
             (team_name, default_season_id),
         )
         team_id = cur.lastrowid
         print(f"  Created team '{team_name}' with id={team_id} in season {default_season_id}")
 
     # Delete existing cards (operatives cascade to abilities/attacks via FK)
-    cur.execute("DELETE FROM Operatives WHERE TeamId = ?", (team_id,))
-    cur.execute("DELETE FROM FactionRules WHERE TeamId = ?", (team_id,))
-    cur.execute("DELETE FROM MarkerTokens WHERE TeamId = ?", (team_id,))
-    cur.execute("DELETE FROM StrategyPloys WHERE TeamId = ?", (team_id,))
-    cur.execute("DELETE FROM FirefightPloys WHERE TeamId = ?", (team_id,))
-    cur.execute("DELETE FROM FactionEquipments WHERE TeamId = ?", (team_id,))
+    cur.execute("DELETE FROM Operatives WHERE TeamId = %s", (team_id,))
+    cur.execute("DELETE FROM FactionRules WHERE TeamId = %s", (team_id,))
+    cur.execute("DELETE FROM MarkerTokens WHERE TeamId = %s", (team_id,))
+    cur.execute("DELETE FROM StrategyPloys WHERE TeamId = %s", (team_id,))
+    cur.execute("DELETE FROM FirefightPloys WHERE TeamId = %s", (team_id,))
+    cur.execute("DELETE FROM FactionEquipments WHERE TeamId = %s", (team_id,))
 
     # Insert operatives
     for op in data.get("operatives") or []:
@@ -65,7 +81,7 @@ def import_bd(conn: sqlite3.Connection, bd_path: str, default_season_id: int) ->
             """INSERT INTO Operatives
                (TeamId, Name, Keywords, Movement, ActionPointLimit,
                 GroupActivations, Defence, Save, Wounds, Notes)
-               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+               VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)""",
             (
                 team_id,
                 op.get("name") or "",
@@ -83,7 +99,7 @@ def import_bd(conn: sqlite3.Connection, bd_path: str, default_season_id: int) ->
 
         for ab in op.get("abilities") or []:
             cur.execute(
-                "INSERT INTO OperativeAbilities (OperativeId, Name, Description) VALUES (?, ?, ?)",
+                "INSERT INTO OperativeAbilities (OperativeId, Name, Description) VALUES (%s, %s, %s)",
                 (op_id, ab.get("name") or "", ab.get("description") or ""),
             )
 
@@ -92,7 +108,7 @@ def import_bd(conn: sqlite3.Connection, bd_path: str, default_season_id: int) ->
                 """INSERT INTO OperativeAttacks
                    (OperativeId, Name, AttackType, Attacks, HitSkill,
                     Damage, CriticalDamage, SpecialRules)
-                   VALUES (?, ?, ?, ?, ?, ?, ?, ?)""",
+                   VALUES (%s, %s, %s, %s, %s, %s, %s, %s)""",
                 (
                     op_id,
                     atk.get("name") or "",
@@ -108,28 +124,28 @@ def import_bd(conn: sqlite3.Connection, bd_path: str, default_season_id: int) ->
     # Insert faction rules
     for r in data.get("factionRules") or []:
         cur.execute(
-            "INSERT INTO FactionRules (TeamId, Name, Description) VALUES (?, ?, ?)",
+            "INSERT INTO FactionRules (TeamId, Name, Description) VALUES (%s, %s, %s)",
             (team_id, r.get("name") or "", r.get("description") or ""),
         )
 
     # Insert markers / tokens
     for m in data.get("markersTokens") or []:
         cur.execute(
-            "INSERT INTO MarkerTokens (TeamId, Name, Description) VALUES (?, ?, ?)",
+            "INSERT INTO MarkerTokens (TeamId, Name, Description) VALUES (%s, %s, %s)",
             (team_id, m.get("name") or "", m.get("description") or ""),
         )
 
     # Insert strategy ploys
     for p in data.get("strategyPloys") or []:
         cur.execute(
-            "INSERT INTO StrategyPloys (TeamId, Name, CpCost, Description) VALUES (?, ?, ?, ?)",
+            "INSERT INTO StrategyPloys (TeamId, Name, CpCost, Description) VALUES (%s, %s, %s, %s)",
             (team_id, p.get("name") or "", int(p.get("cpCost") or 0), p.get("description") or ""),
         )
 
     # Insert firefight ploys
     for p in data.get("firefightPloys") or []:
         cur.execute(
-            "INSERT INTO FirefightPloys (TeamId, Name, CpCost, Description) VALUES (?, ?, ?, ?)",
+            "INSERT INTO FirefightPloys (TeamId, Name, CpCost, Description) VALUES (%s, %s, %s, %s)",
             (team_id, p.get("name") or "", int(p.get("cpCost") or 0), p.get("description") or ""),
         )
 
@@ -138,7 +154,7 @@ def import_bd(conn: sqlite3.Connection, bd_path: str, default_season_id: int) ->
         cur.execute(
             """INSERT INTO FactionEquipments
                (TeamId, Name, EpCost, Description, Restrictions)
-               VALUES (?, ?, ?, ?, ?)""",
+               VALUES (%s, %s, %s, %s, %s)""",
             (
                 team_id,
                 e.get("name") or "",
@@ -149,25 +165,27 @@ def import_bd(conn: sqlite3.Connection, bd_path: str, default_season_id: int) ->
         )
 
     conn.commit()
+    cur.close()
     print(f"  Done: '{team_name}'")
 
 
-def ensure_season(conn: sqlite3.Connection, season_id: int) -> None:
+def ensure_season(conn: pymysql.Connection, season_id: int) -> None:
     cur = conn.cursor()
-    cur.execute("SELECT Id FROM Seasons WHERE Id = ?", (season_id,))
+    cur.execute("SELECT Id FROM Seasons WHERE Id = %s", (season_id,))
     if not cur.fetchone():
-        cur.execute("INSERT INTO Seasons (Id, Name) VALUES (?, ?)", (season_id, f"Season {season_id}"))
+        cur.execute("INSERT INTO Seasons (Id, Name) VALUES (%s, %s)", (season_id, f"Season {season_id}"))
         conn.commit()
         print(f"Created Season {season_id}")
+    cur.close()
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Import .bd files into ktcards SQLite DB")
-    parser.add_argument(
-        "--db",
-        default=None,
-        help="Path to ktcards.db (default: ../ktcards.Server/ktcards.db relative to scripts/)",
-    )
+    parser = argparse.ArgumentParser(description="Import .bd files into ktcards MySQL database")
+    parser.add_argument("--host", default=os.environ.get("MYSQL_HOST", "127.0.0.1"), help="MySQL host")
+    parser.add_argument("--port", type=int, default=int(os.environ.get("MYSQL_PORT", "3306")), help="MySQL port")
+    parser.add_argument("--user", default=os.environ.get("MYSQL_USER", "root"), help="MySQL user")
+    parser.add_argument("--password", default=os.environ.get("MYSQL_PASSWORD", ""), help="MySQL password")
+    parser.add_argument("--database", default=os.environ.get("MYSQL_DATABASE", "ktcards"), help="MySQL database name")
     parser.add_argument(
         "--season-id",
         type=int,
@@ -183,16 +201,6 @@ def main():
 
     here = os.path.dirname(os.path.abspath(__file__))
 
-    if args.db:
-        db_path = os.path.abspath(args.db)
-    else:
-        db_path = find_db("../ktcards.Server/ktcards.db")
-
-    if not os.path.isfile(db_path):
-        print(f"ERROR: Database not found: {db_path}", file=sys.stderr)
-        print("Tip: run 'dotnet run' in ktcards.Server once to create the DB.", file=sys.stderr)
-        sys.exit(1)
-
     if args.bd_files:
         bd_files = [os.path.abspath(p) for p in args.bd_files]
     else:
@@ -203,8 +211,11 @@ def main():
         print("No .bd files found to import.")
         sys.exit(0)
 
-    conn = sqlite3.connect(db_path)
-    conn.execute("PRAGMA foreign_keys = ON")
+    try:
+        conn = get_connection(args)
+    except pymysql.Error as exc:
+        print(f"ERROR: Could not connect to MySQL: {exc}", file=sys.stderr)
+        sys.exit(1)
 
     ensure_season(conn, args.season_id)
 
@@ -213,6 +224,7 @@ def main():
         try:
             import_bd(conn, bd_path, args.season_id)
         except Exception as exc:
+            conn.rollback()
             print(f"ERROR importing {bd_path}: {exc}", file=sys.stderr)
             errors.append(bd_path)
 

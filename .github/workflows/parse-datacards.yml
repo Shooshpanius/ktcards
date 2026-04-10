@@ -42,25 +42,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install Python dependencies
-        run: pip install pdfplumber openai
-
-      - name: Set up .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: "10.x"
-
-      - name: Build server and create/migrate database
-        working-directory: ktcards.Server
-        run: |
-          # Run for 3 s just to trigger auto-migration and create ktcards.db, then kill it
-          dotnet run --no-launch-profile &
-          SERVER_PID=$!
-          sleep 10
-          kill $SERVER_PID 2>/dev/null || true
-          wait $SERVER_PID 2>/dev/null || true
-        env:
-          ConnectionStrings__Default: "Data Source=ktcards.db"
-          ASPNETCORE_ENVIRONMENT: Production
+        run: pip install pdfplumber openai pymysql
 
       - name: Determine PDFs to process
         id: find-pdfs
@@ -107,25 +89,27 @@ jobs:
               print(f"\nFailed: {failed}", file=sys.stderr)
               sys.exit(1)
 
-      - name: Import .bd files → database
+      - name: Import .bd files → MySQL database
         env:
-          SEASON_ID: ${{ inputs.season_id || '1' }}
+          MYSQL_HOST:     ${{ secrets.MYSQL_HOST }}
+          MYSQL_PORT:     ${{ secrets.MYSQL_PORT }}
+          MYSQL_USER:     ${{ secrets.MYSQL_USER }}
+          MYSQL_PASSWORD: ${{ secrets.MYSQL_PASSWORD }}
+          MYSQL_DATABASE: ${{ secrets.MYSQL_DATABASE }}
+          SEASON_ID:      ${{ inputs.season_id || '1' }}
         run: |
-          python scripts/import_bd_to_db.py \
-            --db ktcards.Server/ktcards.db \
-            --season-id "$SEASON_ID"
+          python scripts/import_bd_to_db.py --season-id "$SEASON_ID"
 
-      - name: Commit updated files
+      - name: Commit updated .bd files
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add datacards/*.bd ktcards.Server/ktcards.db \
-                  ktcards.Server/ktcards.db-shm ktcards.Server/ktcards.db-wal 2>/dev/null || true
+          git add datacards/*.bd 2>/dev/null || true
 
           if git diff --cached --quiet; then
             echo "Nothing to commit."
           else
-            git commit -m "chore: update datacards and database [skip ci]"
+            git commit -m "chore: update .bd datacards [skip ci]"
             git push
           fi
