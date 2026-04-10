@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="ktcards.client/ktcards.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="ktcards.Server/ktcards.Server.csproj" />
+</Solution>
