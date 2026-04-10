@@ -63,7 +63,8 @@ export default function AdminPage() {
 }
 
 function authHeaders(): HeadersInit {
-    const token = sessionStorage.getItem(SESSION_KEY) ?? '';
+    const token = sessionStorage.getItem(SESSION_KEY);
+    if (!token) return {};
     return { Authorization: `Bearer ${token}` };
 }
 

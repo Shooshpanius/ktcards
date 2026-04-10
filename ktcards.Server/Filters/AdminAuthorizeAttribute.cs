@@ -11,8 +11,10 @@ namespace ktcards.Server.Filters
         {
             var tokenService = context.HttpContext.RequestServices.GetRequiredService<AdminTokenService>();
             var authHeader = context.HttpContext.Request.Headers.Authorization.ToString();
-            if (!authHeader.StartsWith("Bearer ", StringComparison.OrdinalIgnoreCase) ||
-                !tokenService.Validate(authHeader[7..]))
+            const string prefix = "Bearer ";
+            if (!authHeader.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) ||
+                authHeader.Length <= prefix.Length ||
+                !tokenService.Validate(authHeader[prefix.Length..]))
             {
                 context.Result = new UnauthorizedResult();
             }
