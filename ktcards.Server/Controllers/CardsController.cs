@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 using ktcards.Server.Data;
+using ktcards.Server.Filters;
 using ktcards.Server.Models;
 
 namespace ktcards.Server.Controllers
@@ -47,6 +48,7 @@ namespace ktcards.Server.Controllers
 
         // POST /api/teams/{teamId}/cards/import — import cards from the .bd file
         [HttpPost("import")]
+        [AdminAuthorize]
         public async Task<IActionResult> ImportCards(int teamId)
         {
             var team = await db.Teams.FindAsync(teamId);

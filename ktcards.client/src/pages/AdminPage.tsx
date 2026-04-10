@@ -3,23 +3,33 @@ import { Link } from 'react-router-dom';
 import type { Season, Team } from '../types';
 import './AdminPage.css';
 
-const ADMIN_PASSWORD = 'admin';
-const SESSION_KEY = 'admin_auth';
+const SESSION_KEY = 'admin_token';
 
 export default function AdminPage() {
     const [authenticated, setAuthenticated] = useState(
-        () => sessionStorage.getItem(SESSION_KEY) === '1'
+        () => !!sessionStorage.getItem(SESSION_KEY)
     );
     const [passwordInput, setPasswordInput] = useState('');
     const [passwordError, setPasswordError] = useState('');
 
-    function handleLogin(e: React.FormEvent) {
+    async function handleLogin(e: React.FormEvent) {
         e.preventDefault();
-        if (passwordInput === ADMIN_PASSWORD) {
-            sessionStorage.setItem(SESSION_KEY, '1');
-            setAuthenticated(true);
-        } else {
-            setPasswordError('Неверный пароль.');
+        setPasswordError('');
+        try {
+            const r = await fetch('/api/auth/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ password: passwordInput }),
+            });
+            if (r.ok) {
+                const data = await r.json();
+                sessionStorage.setItem(SESSION_KEY, data.token);
+                setAuthenticated(true);
+            } else {
+                setPasswordError('Неверный пароль.');
+            }
+        } catch {
+            setPasswordError('Ошибка соединения с сервером.');
         }
     }
 
@@ -50,6 +60,12 @@ export default function AdminPage() {
     }
 
     return <AdminContent />;
+}
+
+function authHeaders(): HeadersInit {
+    const token = sessionStorage.getItem(SESSION_KEY);
+    if (!token) return {};
+    return { Authorization: `Bearer ${token}` };
 }
 
 function AdminContent() {
@@ -85,7 +101,7 @@ function AdminContent() {
         setSeasonError('');
         const r = await fetch('/api/seasons', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 'Content-Type': 'application/json', ...authHeaders() },
             body: JSON.stringify({ name: newSeasonName }),
         });
         if (r.ok) {
@@ -99,7 +115,7 @@ function AdminContent() {
 
     async function deleteSeason(id: number) {
         if (!confirm('Delete this season and all its teams?')) return;
-        await fetch(`/api/seasons/${id}`, { method: 'DELETE' });
+        await fetch(`/api/seasons/${id}`, { method: 'DELETE', headers: authHeaders() });
         await loadSeasons();
         await loadTeams();
     }
@@ -115,7 +131,7 @@ function AdminContent() {
         form.append('name', newTeamName);
         form.append('seasonId', String(newTeamSeasonId));
         if (newTeamLogo) form.append('logo', newTeamLogo);
-        const r = await fetch('/api/teams', { method: 'POST', body: form });
+        const r = await fetch('/api/teams', { method: 'POST', headers: authHeaders(), body: form });
         if (r.ok) {
             setNewTeamName('');
             setNewTeamSeasonId('');
@@ -131,13 +147,13 @@ function AdminContent() {
 
     async function deleteTeam(id: number) {
         if (!confirm('Delete this team?')) return;
-        await fetch(`/api/teams/${id}`, { method: 'DELETE' });
+        await fetch(`/api/teams/${id}`, { method: 'DELETE', headers: authHeaders() });
         await loadSeasons();
         await loadTeams();
     }
 
     async function importTeamCards(id: number, _name: string) {
-        const r = await fetch(`/api/teams/${id}/cards/import`, { method: 'POST' });
+        const r = await fetch(`/api/teams/${id}/cards/import`, { method: 'POST', headers: authHeaders() });
         if (r.ok) {
             const data = await r.json();
             alert(data.message ?? 'Import successful.');

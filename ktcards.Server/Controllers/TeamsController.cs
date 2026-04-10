@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ktcards.Server.Data;
+using ktcards.Server.Filters;
 using ktcards.Server.Helpers;
 using ktcards.Server.Models;
 
@@ -28,6 +29,7 @@ namespace ktcards.Server.Controllers
 
         [HttpPost]
         [Consumes("multipart/form-data")]
+        [AdminAuthorize]
         public async Task<IActionResult> Create([FromForm] TeamFormDto dto)
         {
             if (string.IsNullOrWhiteSpace(dto.Name))
@@ -60,6 +62,7 @@ namespace ktcards.Server.Controllers
         }
 
         [HttpDelete("{id:int}")]
+        [AdminAuthorize]
         public async Task<IActionResult> Delete(int id)
         {
             var team = await db.Teams.FindAsync(id);
