@@ -24,6 +24,6 @@ export default defineConfig({
         },
         port: parseInt(env.DEV_SERVER_PORT || '56485'),
         // HTTPS disabled — serve over HTTP only
-        https: false
+    //    https: false
     }
 })
