@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ktcards.Server.Data;
+using ktcards.Server.Helpers;
 using ktcards.Server.Models;
 
 namespace ktcards.Server.Controllers
@@ -63,18 +64,10 @@ namespace ktcards.Server.Controllers
         {
             var team = await db.Teams.FindAsync(id);
             if (team is null) return NotFound();
-            DeleteLogo(team.LogoPath);
+            FileHelper.DeleteLogo(team.LogoPath);
             db.Teams.Remove(team);
             await db.SaveChangesAsync();
             return NoContent();
-        }
-
-        private static void DeleteLogo(string? logoPath)
-        {
-            if (string.IsNullOrEmpty(logoPath)) return;
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", logoPath.TrimStart('/'));
-            if (System.IO.File.Exists(filePath))
-                System.IO.File.Delete(filePath);
         }
     }
 

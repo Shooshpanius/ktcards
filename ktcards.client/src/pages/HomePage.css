@@ -34,11 +34,20 @@
 }
 
 .home__loading,
-.home__empty {
+.home__empty,
+.home__error {
     text-align: center;
-    color: var(--text);
     font-size: 15px;
     padding: 24px 0;
+}
+
+.home__loading,
+.home__empty {
+    color: var(--text);
+}
+
+.home__error {
+    color: #ef4444;
 }
 
 .home__empty a {

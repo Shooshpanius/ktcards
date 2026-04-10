@@ -7,6 +7,7 @@ import './HomePage.css';
 export default function HomePage() {
     const [seasons, setSeasons] = useState<Season[]>([]);
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState('');
 
     useEffect(() => {
         fetch('/api/seasons')
@@ -15,7 +16,11 @@ export default function HomePage() {
                 setSeasons(data);
                 setLoading(false);
             })
-            .catch(() => setLoading(false));
+            .catch((err: unknown) => {
+                console.error('Failed to load seasons:', err);
+                setError('Failed to load data. Please try again later.');
+                setLoading(false);
+            });
     }, []);
 
     return (
@@ -26,6 +31,7 @@ export default function HomePage() {
             </header>
 
             {loading && <p className="home__loading">Loading...</p>}
+            {error && <p className="home__error">{error}</p>}
 
             {!loading && seasons.length === 0 && (
                 <p className="home__empty">No seasons yet. <Link to="/admin">Add one in Admin.</Link></p>
