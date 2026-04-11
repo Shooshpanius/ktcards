@@ -7,9 +7,6 @@ services:
   back_ktcards:
     container_name: back_ktcards
     image: back_ktcards:local
-    build:
-      context: ./ktcards.Server
-      dockerfile: Dockerfile
     environment:
       ConnectionStrings__Default: "server=mariadb_ktcards;port=3306;database=ktcards;user=${DB_USER};password=${DB_PASSWORD};"
       ASPNETCORE_URLS: "http://+:8080"
@@ -28,9 +25,6 @@ services:
   front_ktcards:
     container_name: front_ktcards
     image: front_ktcards:local
-    build:
-      context: ./ktcards.client
-      dockerfile: Dockerfile
     ports:
       - "84:80"
     restart: always
