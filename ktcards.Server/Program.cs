@@ -9,8 +9,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.WebHost.UseUrls("http://localhost:5069");
 
 // Add services to the container.
+var connectionString = builder.Configuration.GetConnectionString("Default")
+    ?? throw new InvalidOperationException("Connection string 'Default' not found.");
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("Default") ?? "Data Source=ktcards.db"));
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
 builder.Services.AddControllers();
 builder.Services.AddSingleton<AdminTokenService>();
@@ -27,10 +29,9 @@ using (var scope = app.Services.CreateScope())
     {
         db.Database.Migrate();
     }
-    catch (Microsoft.Data.Sqlite.SqliteException)
+    catch (Exception ex) when (ex is not OutOfMemoryException)
     {
-        // DB file exists but was created without migration history (e.g. via EnsureCreated).
-        // Drop and recreate so migrations can be applied cleanly.
+        // DB may exist but without migration history. Drop and recreate so migrations can be applied cleanly.
         db.Database.EnsureDeleted();
         db.Database.Migrate();
     }
