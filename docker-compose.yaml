@@ -38,6 +38,7 @@ services:
       MYSQL_PASSWORD: ${KTCARDS_DB_PASSWORD}
     volumes:
       - /opt/docker/data/_ktcards/mariadb_ktcards:/var/lib/mysql
+      - ./scripts/mariadb_init:/docker-entrypoint-initdb.d:ro
     restart: always
     healthcheck:
       test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]

@@ -20,7 +20,9 @@ ktcards/
 ├── .env.example             # Шаблон переменных окружения для Docker
 ├── datacards/               # PDF и .bd файлы дата-карт
 ├── docker-compose.yaml      # Сборка и запуск всех сервисов
-├── scripts/                 # Вспомогательные Python-скрипты
+├── scripts/                 # Вспомогательные Python-скрипты и SQL-инициализация
+│   ├── mariadb_init/        # SQL-скрипты, выполняемые MariaDB при первом старте
+│   │   └── 01-grant.sql     # Явная выдача привилегий пользователю ktcards
 │   ├── parse_pdf_to_bd.py   # Парсинг PDF в формат .bd (OpenAI)
 │   └── import_bd_to_db.py   # Прямой импорт .bd в базу данных MySQL
 ├── ktcards.Server/          # ASP.NET Core Web API
@@ -257,3 +259,35 @@ npm run build
 ```
 
 Собранные файлы помещаются в `wwwroot` бэкенда и раздаются им как статика.
+
+## Устранение неполадок
+
+### `Access denied for user 'ktcards'@'...'` при старте бэкенда
+
+**Причина.** MariaDB Docker выполняет инициализацию пользователя (`MYSQL_USER` / `MYSQL_PASSWORD`) и выдачу привилегий **только при первом запуске**, когда директория с данными пуста. Если том `/opt/docker/data/_ktcards/mariadb_ktcards` уже содержал данные от предыдущего деплоя, пользователь `ktcards` мог не получить доступ к базе.
+
+**Вариант 1 — ручная выдача привилегий (данные сохраняются):**
+
+```bash
+source .env   # загрузить переменные KTCARDS_DB_ROOT_PASSWORD и KTCARDS_DB_PASSWORD
+docker exec mariadb_ktcards \
+  mysql -uroot -p"${KTCARDS_DB_ROOT_PASSWORD}" -e \
+  "GRANT ALL PRIVILEGES ON \`ktcards\`.* TO 'ktcards'@'%' IDENTIFIED BY '${KTCARDS_DB_PASSWORD}'; FLUSH PRIVILEGES;"
+```
+
+После этого перезапустите бэкенд:
+```bash
+docker compose restart back_ktcards
+```
+
+**Вариант 2 — сброс тома MariaDB (все данные удаляются):**
+
+```bash
+docker compose down
+sudo rm -rf /opt/docker/data/_ktcards/mariadb_ktcards
+docker compose up -d
+```
+
+MariaDB переинициализируется с нуля: база `ktcards`, пользователь и привилегии будут созданы автоматически, а скрипт `scripts/mariadb_init/01-grant.sql` дополнительно подтвердит права.
+
+> **Почему не возникает при свежей установке?** Директория `scripts/mariadb_init/` монтируется в `/docker-entrypoint-initdb.d/` контейнера MariaDB, поэтому скрипт `01-grant.sql` выполняется при каждой **первой** инициализации и явно выдаёт привилегии.

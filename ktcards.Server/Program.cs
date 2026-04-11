@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using MySqlConnector;
 using ktcards.Server.Data;
 using ktcards.Server.Helpers;
 
@@ -22,6 +23,7 @@ builder.Services.AddOpenApi();
 var app = builder.Build();
 
 // Auto-migrate / create database on startup
+const int MySqlErrorTableAlreadyExists = 1050;
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
@@ -29,9 +31,10 @@ using (var scope = app.Services.CreateScope())
     {
         db.Database.Migrate();
     }
-    catch (Exception ex) when (ex is not OutOfMemoryException)
+    catch (MySqlException ex) when (ex.Number == MySqlErrorTableAlreadyExists)
     {
-        // DB may exist but without migration history. Drop and recreate so migrations can be applied cleanly.
+        // Tables already exist but the EF migrations history table is missing
+        // (pre-migration schema). Drop and recreate so migrations apply cleanly.
         db.Database.EnsureDeleted();
         db.Database.Migrate();
     }
