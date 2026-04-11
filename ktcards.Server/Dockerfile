@@ -25,6 +25,6 @@ RUN dotnet publish "./ktcards.Server.csproj" -c $BUILD_CONFIGURATION -o /app/pub
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app/publish .
+COPY --chown=app:app --from=publish /app/publish .
 
 ENTRYPOINT ["dotnet", "ktcards.Server.dll"]

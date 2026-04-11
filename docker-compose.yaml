@@ -11,6 +11,8 @@ services:
     environment:
       ConnectionStrings__Default: server=mariadb_ktcards;port=3306;database=ktcards;user=${KTCARDS_DB_USER};password=${KTCARDS_DB_PASSWORD};
       ASPNETCORE_URLS: "http://+:8080"
+    volumes:
+      - ktcards_uploads:/app/wwwroot/uploads
     restart: always
     depends_on:
       mariadb_ktcards:
@@ -45,3 +47,6 @@ services:
       interval: 10s
       timeout: 5s
       retries: 3
+
+volumes:
+  ktcards_uploads:
