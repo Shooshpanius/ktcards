@@ -2,11 +2,24 @@
 #       Application KTCARDS
 #########################################################################################################################################
 
+services:
 
   back_ktcards:
     container_name: back_ktcards
     image: back_ktcards:local
+    build:
+      context: ./ktcards.Server
+      dockerfile: Dockerfile
+    environment:
+      ConnectionStrings__Default: "server=mariadb_ktcards;port=3306;database=ktcards;user=${DB_USER};password=${DB_PASSWORD};"
+      ASPNETCORE_URLS: "http://+:8080"
+    ports:
+      - "8080:8080"
     restart: always
+    networks:
+      ktcards_net:
+        aliases:
+          - ktcards
     depends_on:
       mariadb_ktcards:
         condition: service_healthy
@@ -15,9 +28,14 @@
   front_ktcards:
     container_name: front_ktcards
     image: front_ktcards:local
+    build:
+      context: ./ktcards.client
+      dockerfile: Dockerfile
     ports:
       - "84:80"
     restart: always
+    networks:
+      - ktcards_net
     depends_on:
       - back_ktcards
 
@@ -33,9 +51,16 @@
     volumes:
       - /opt/docker/data/_ktcards/mariadb_ktcards:/var/lib/mysql
     restart: always
+    networks:
+      - ktcards_net
     healthcheck:
       test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
       start_period: 10s
       interval: 10s
       timeout: 5s
       retries: 3
+
+
+networks:
+  ktcards_net:
+    driver: bridge
