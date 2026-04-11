@@ -4,10 +4,6 @@ using ktcards.Server.Helpers;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Force the server to bind only to HTTP (disable HTTPS endpoints)
-// UseUrls will override the default URLs and prevent HTTPS endpoints from being started.
-builder.WebHost.UseUrls("http://localhost:5069");
-
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("Default")
     ?? throw new InvalidOperationException("Connection string 'Default' not found.");
