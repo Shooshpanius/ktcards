@@ -8,14 +8,18 @@
 |------|-----------|
 | Фронтенд | React 19 + TypeScript + Vite |
 | Бэкенд | ASP.NET Core 10 (Web API) |
-| База данных | SQLite (через Entity Framework Core 10) |
+| База данных (dev) | SQLite (через Entity Framework Core 10) |
+| База данных (production) | MySQL / MariaDB |
 | Маршрутизация | React Router v7 |
+| Контейнеризация | Docker + Docker Compose |
 
 ## Структура проекта
 
 ```
 ktcards/
+├── .env.example             # Шаблон переменных окружения для Docker
 ├── datacards/               # PDF и .bd файлы дата-карт
+├── docker-compose.yaml      # Сборка и запуск всех сервисов
 ├── scripts/                 # Вспомогательные Python-скрипты
 │   ├── parse_pdf_to_bd.py   # Парсинг PDF в формат .bd (OpenAI)
 │   └── import_bd_to_db.py   # Прямой импорт .bd в базу данных MySQL
@@ -26,12 +30,13 @@ ktcards/
 │   │   ├── SeasonsController.cs       # CRUD для сезонов
 │   │   └── TeamsController.cs         # CRUD для команд (+ загрузка логотипа)
 │   ├── Data/
-│   │   └── AppDbContext.cs            # EF Core контекст (SQLite)
+│   │   └── AppDbContext.cs            # EF Core контекст (SQLite / MySQL)
 │   ├── Filters/
 │   │   └── AdminAuthorizeAttribute.cs # Фильтр авторизации по Bearer-токену
 │   ├── Helpers/
 │   │   ├── AdminTokenService.cs       # Генерация и валидация токенов (24 ч)
 │   │   └── FileHelper.cs             # Удаление файлов логотипов
+│   ├── Migrations/                    # EF Core миграции
 │   ├── Models/
 │   │   ├── Season.cs
 │   │   ├── Team.cs
@@ -45,7 +50,11 @@ ktcards/
 │   │   └── FactionEquipment.cs
 │   └── Program.cs
 └── ktcards.client/          # React + TypeScript фронтенд
+    ├── Dockerfile            # Сборка образа фронтенда (nginx)
+    ├── nginx.conf            # Конфиг nginx: статика + прокси /api и /uploads
     └── src/
+        ├── components/
+        │   └── TeamCard.tsx       # Карточка команды
         ├── pages/
         │   ├── HomePage.tsx       # Публичная страница с карточками команд
         │   ├── AdminPage.tsx      # Панель администратора
@@ -56,30 +65,61 @@ ktcards/
 
 ## Запуск проекта
 
-### Требования
+### Вариант 1 — Docker Compose (рекомендуется для production)
+
+1. Скопируйте `.env.example` в `.env` и заполните значения:
+
+```bash
+cp .env.example .env
+```
+
+```dotenv
+KTCARDS_DB_ROOT_PASSWORD=secret_root
+KTCARDS_DB_USER=ktcards
+KTCARDS_DB_PASSWORD=secret
+```
+
+2. Соберите и запустите образы:
+
+```bash
+docker compose build
+docker compose up -d
+```
+
+| Сервис | URL |
+|--------|-----|
+| Фронтенд | `http://localhost:84` |
+| Бэкенд (API) | `http://localhost:8080` |
+| MariaDB | `localhost:3306` (только внутри сети `ktcards_net`) |
+
+Nginx во фронтенд-контейнере проксирует `/api` и `/uploads` на бэкенд автоматически.
+
+### Вариант 2 — локальный запуск (dev)
+
+#### Требования
 
 - [.NET 10 SDK](https://dotnet.microsoft.com/download)
 - [Node.js 20+](https://nodejs.org/) и npm
 
-### Установка зависимостей фронтенда
+#### Установка зависимостей фронтенда
 
 ```bash
 cd ktcards.client
 npm install
 ```
 
-### Запуск через Visual Studio
+#### Запуск через Visual Studio
 
 Откройте `ktcards.slnx` в Visual Studio и запустите решение — бэкенд и фронтенд запустятся совместно.
 
-### Запуск вручную
+#### Запуск вручную
 
 **Бэкенд:**
 ```bash
 cd ktcards.Server
 dotnet run
 ```
-Сервер запускается на `http://localhost:5069`. База данных (`ktcards.db`) создаётся автоматически при первом запуске.
+Сервер запускается на `http://localhost:5069`. SQLite-база (`ktcards.db`) создаётся автоматически при первом запуске.
 
 **Фронтенд (dev-режим):**
 ```bash
@@ -90,12 +130,22 @@ Vite проксирует запросы `/api/...` на бэкенд.
 
 ## Конфигурация
 
-Пароль администратора задаётся в `appsettings.json` (или через переменную окружения):
+### Пароль администратора
+
+Задаётся в `appsettings.json`:
 
 ```json
 {
   "AdminPassword": "your_secure_password"
 }
+```
+
+### Строка подключения к БД
+
+По умолчанию (dev) используется SQLite. Для переключения на MySQL/MariaDB передайте строку подключения через переменную окружения (например, в Docker Compose):
+
+```
+ConnectionStrings__Default=server=<host>;port=3306;database=ktcards;user=<user>;password=<password>;
 ```
 
 ## Аутентификация
