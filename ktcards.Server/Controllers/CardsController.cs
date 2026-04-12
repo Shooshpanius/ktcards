@@ -60,17 +60,28 @@ namespace ktcards.Server.Controllers
             var bdUrl = $"{baseUrl.TrimEnd('/')}/{Uri.EscapeDataString(team.Name)}.bd";
 
             string json;
-            try
+            var localPath = config["DatacardsLocalPath"];
+            if (!string.IsNullOrWhiteSpace(localPath))
             {
-                var httpClient = httpClientFactory.CreateClient();
-                var response = await httpClient.GetAsync(bdUrl);
-                if (!response.IsSuccessStatusCode)
-                    return NotFound($"File '{team.Name}.bd' not found in the datacards repository.");
-                json = await response.Content.ReadAsStringAsync();
+                var filePath = Path.Combine(localPath.TrimEnd('/'), $"{team.Name}.bd");
+                if (!System.IO.File.Exists(filePath))
+                    return NotFound($"File '{team.Name}.bd' not found in the datacards directory.");
+                json = await System.IO.File.ReadAllTextAsync(filePath);
             }
-            catch (HttpRequestException ex)
+            else
             {
-                return StatusCode(502, $"Failed to fetch '{team.Name}.bd' from repository: {ex.Message}");
+                try
+                {
+                    var httpClient = httpClientFactory.CreateClient();
+                    var response = await httpClient.GetAsync(bdUrl);
+                    if (!response.IsSuccessStatusCode)
+                        return NotFound($"File '{team.Name}.bd' not found in the datacards repository.");
+                    json = await response.Content.ReadAsStringAsync();
+                }
+                catch (HttpRequestException ex)
+                {
+                    return StatusCode(502, $"Failed to fetch '{team.Name}.bd' from repository: {ex.Message}");
+                }
             }
 
             TeamDataCard? data;
