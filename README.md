@@ -1,5 +1,21 @@
 # KillTeam Cards
 
+<div align="center">
+
+[![Live](https://img.shields.io/badge/🚀%20Продакшн-ktcards.ru-darkred?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ktcards.ru/)
+
+[![GitHub Stars](https://img.shields.io/github/stars/Shooshpanius/ktcards?style=flat-square&logo=github&label=Stars&cacheSeconds=3600)](https://github.com/Shooshpanius/ktcards/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/Shooshpanius/ktcards?style=flat-square&logo=github&label=Forks&cacheSeconds=3600)](https://github.com/Shooshpanius/ktcards/forks)
+[![GitHub Issues](https://img.shields.io/github/issues/Shooshpanius/ktcards?style=flat-square&logo=github&label=Issues)](https://github.com/Shooshpanius/ktcards/issues)
+
+![.NET](https://img.shields.io/badge/.NET_10-512BD4?style=flat-square&logo=dotnet&logoColor=white)
+![React](https://img.shields.io/badge/React_19-61DAFB?style=flat-square&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+
+</div>
+
 Веб-приложение для отображения карточек команд по игре [Kill Team](https://www.warhammer-community.com/en-gb/kill-team/), организованных по сезонам. Включает публичную страницу с карточками команд и панель администратора для управления данными.
 
 ## Стек технологий
