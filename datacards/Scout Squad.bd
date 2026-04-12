@@ -1,0 +1,447 @@
+{
+  "teamName": "Scout Squad",
+  "operatives": [
+    {
+      "name": "SCOUT SERGEANT",
+      "keywords": [
+        "SCOUT SQUAD",
+        "IMPERIUM",
+        "ADEPTUS ASTARTES",
+        "LEADER",
+        "SERGEANT"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 11,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Guidance and Experience",
+          "description": "Once during each of this operative’s activations, you can select one other friendly SCOUT SQUAD operative visible to it. Until the end of that operative’s next activation, add 1 to its APL stat."
+        },
+        {
+          "name": "Astartes",
+          "description": "During this operative’s activation, it can perform either two Shoot actions or two Fight actions. If it’s two Shoot actions, an Astartes shotgun, bolt pistol or boltgun must be selected for at least one of them. This operative can counteract regardless of its order."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Astartes shotgun",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "4",
+          "criticalDamage": "4",
+          "specialRules": "Range 6\""
+        },
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Boltgun",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        },
+        {
+          "name": "Chainsword",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": null
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "SCOUT HEAVY GUNNER",
+      "keywords": [
+        "SCOUT SQUAD",
+        "IMPERIUM",
+        "ADEPTUS ASTARTES",
+        "HEAVY GUNNER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Heavy bolter (focused)",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Heavy (Dash only), Piercing Crits 1"
+        },
+        {
+          "name": "Heavy bolter (sweeping)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Heavy (Dash only), Piercing Crits 1, Torrent 1\""
+        },
+        {
+          "name": "Missile launcher (frag)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "Blast 2\", Heavy (Dash only)"
+        },
+        {
+          "name": "Missile launcher (krak)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "5",
+          "criticalDamage": "7",
+          "specialRules": "Heavy (Dash only), Piercing 1"
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "SCOUT HUNTER",
+      "keywords": [
+        "SCOUT SQUAD",
+        "IMPERIUM",
+        "ADEPTUS ASTARTES",
+        "HUNTER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Grapnel Launcher",
+          "description": "Whenever this operative is climbing up, you"
+        },
+        {
+          "name": "Grapnel Assault",
+          "description": "Whenever this operative performs the Charge can treat the vertical distance as 2\" (regardless of how far the action during its activation, if it climbs, drops, jumps or its operative actually moves vertically). base moves underneath Vantage terrain during that action, its melee weapons have the Lethal 3+ weapon rule until the end of that activation."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Combat blade",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "SCOUT SNIPER",
+      "keywords": [
+        "SCOUT SQUAD",
+        "IMPERIUM",
+        "ADEPTUS ASTARTES",
+        "SNIPER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Camo Cloak",
+          "description": "Whenever an operative is shooting this operative:"
+        },
+        {
+          "name": "Optics (1AP)",
+          "description": "• Ignore the Saturate weapon rule. Until the start of this operative’s next activation, whenever • If you can retain any cover saves, you can retain one additional it’s shooting, enemy operatives cannot be obscured. cover save, or you can retain one cover save as a critical This operative cannot perform this action while within control success instead. This isn’t cumulative with improved cover range of an enemy operative. saves from Vantage terrain."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Sniper rifle (mobile)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        },
+        {
+          "name": "Sniper rifle (stationary)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "Devastating 3, Heavy (Dash only), Silent"
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "SCOUT TRACKER",
+      "keywords": [
+        "SCOUT SQUAD",
+        "IMPERIUM",
+        "ADEPTUS ASTARTES",
+        "TRACKER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Track Enemy (1AP)",
+          "description": "Select one enemy operative within 8\" of this operative. Until This operative cannot perform this action while within control the end of the turning point, whenever a friendly SCOUT range of an enemy operative. SQUAD operative is shooting that enemy operative, that friendly operative’s ranged weapons have the Seek Light weapon rule."
+        },
+        {
+          "name": "Auspex Scan (1AP)",
+          "description": "Until the start of this operative’s next activation or until it’s incapacitated (whichever comes first), whenever a friendly SCOUT SQUAD operative is shooting an enemy operative within 8\" of this operative, that enemy operative cannot be obscured; if that friendly operative is a SNIPER that’s currently benefitting from the effects of its Optics action, its ranged weapons also have the Seek Light weapon rule. This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Boltgun",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "SCOUT WARRIOR",
+      "keywords": [
+        "SCOUT SQUAD",
+        "IMPERIUM",
+        "ADEPTUS ASTARTES",
+        "WARRIOR"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Adaptive Equipment",
+          "description": "You can do each of the following once per turning point: • One friendly SCOUT SQUAD WARRIOR operative can perform the Smoke Grenade action. • One friendly SCOUT SQUAD WARRIOR operative can perform the Stun Grenade action. The rules for these actions are found in universal equipment. Performing these actions using this rule doesn’t count towards their action limits (i.e. if you also select those grenades from equipment). NOTES:"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Astartes shotgun",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "4",
+          "criticalDamage": "4",
+          "specialRules": "Range 6\""
+        },
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Boltgun",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        },
+        {
+          "name": "Combat blade",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": null
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    }
+  ],
+  "factionRules": [
+    {
+      "name": "Forward Scouting",
+      "description": "Central to the role of Space Marine Scouts is ranging ahead of the strike force they are attached to, spending extensive periods laying traps for the foe, harassing enemy patrols, gathering intelligence and reconnoitring the ground in preparation for the Chapter’s assault force. At the end of the Set Up Operatives step, you can select and resolve up to six Forward Scouting options. Each option has a number in brackets, which is the maximum number of times you can select and resolve it for the battle. For example, your six selections could be Reposition (2), Trip Alarm (1), Booby Trap (1) and Diversion (1). If both players have this rule, alternate resolving selection by selection, starting with the player with initiative."
+    },
+    {
+      "name": "Forward Scouting Options Are Presented",
+      "description": ""
+    },
+    {
+      "name": "On Their Own Cards",
+      "description": ""
+    },
+    {
+      "name": "Forward Scouting",
+      "description": "Booby Trap (1)"
+    }
+  ],
+  "markersTokens": [
+    {
+      "name": "Perform a free Reposition action with one friendly",
+      "description": ""
+    },
+    {
+      "name": "Place one of your Trip Alarm markers more than",
+      "description": ""
+    },
+    {
+      "name": "Designate Auspex Scan Optics token",
+      "description": ""
+    }
+  ],
+  "strategyPloys": [
+    {
+      "name": "Adaptable Training",
+      "cpCost": 1,
+      "description": "Space Marine Neophytes and their experienced Sergeants draw upon a host of versatile tactics embedded through hypno-indoctrination. Coupled with their stealth training, this enables them to outmanoeuvre their foes while remaining out of reach. You can change the order of up to D3 friendly SCOUT SQUAD operatives that are more than 4\" from enemy operatives."
+    },
+    {
+      "name": "Stealth Relocation",
+      "cpCost": 1,
+      "description": "Space Marine Scout Squads are highly mobile units, shifting swiftly from cover to cover in order to outmanoeuvre the foe. Up to D3 friendly SCOUT SQUAD operatives that have a Conceal order and are more than 4\" from enemy operatives can immediately perform a free Dash action. You cannot use this ploy during the first turning point."
+    }
+  ],
+  "firefightPloys": [
+    {
+      "name": "Emboldened Aspirant",
+      "cpCost": 1,
+      "description": "Surgical enhancement, indoctrination and brutal training instil within a Space Marine Neophyte the confidence and determination to battle powerful foes. SQUAD operative performs the Shoot or Fight action, after any re-rolls. If it’s the first friendly operative to perform either of those actions during this turning point, or if the enemy operative in that action (primary target, if relevant) has a higher Wounds stat than that friendly SCOUT SQUAD operative, you can retain one of your normal successes as a critical success instead."
+    },
+    {
+      "name": "Covert Position",
+      "cpCost": 1,
+      "description": "Space Marine Scouts excel at camouflaging themselves, laying in wait for hours or even days at a time until they identify the perfect moment to strike. SQUAD operative’s activation. Until the start of its next activation, while that operative has a Conceal order and is in cover, it cannot be selected as a valid target, taking precedence over all other rules (e.g. Seek, Vantage terrain) except being within 2\"."
+    }
+  ],
+  "factionEquipment": [
+    {
+      "name": "Combat Blades",
+      "epCost": 1,
+      "description": "Space Marine Neophytes wield a variety of short-bladed melee weapons, demonstrating lethal proficiency with them all. Friendly SCOUT SQUAD operatives have the following melee weapon. Note that some operatives already have this weapon but with better stats; in that instance, use the better version. NAME ATK HIT DMG Combat blade 3 3+ 4/5 NOTES:",
+      "restrictions": null
+    },
+    {
+      "name": "Heavy Weapon Bipod",
+      "epCost": 1,
+      "description": "Deploying a heavy weapon bipod allows the bearer to lay down a hail of suppressing fire. Whenever a friendly SCOUT SQUAD HEAVY GUNNER operative is shooting with a heavy bolter or missile launcher, if it hasn’t moved during the activation, or if it’s a counteraction, that weapon has the Ceaseless weapon rule; if the weapon already has that weapon rule, it has the Relentless weapon rule. Note that operative isn’t restricted from moving after shooting. NOTES:",
+      "restrictions": null
+    }
+  ]
+}

@@ -1,0 +1,859 @@
+{
+  "teamName": "Brood Brothers",
+  "operatives": [
+    {
+      "name": "BROOD BROTHER COMMANDER",
+      "keywords": [
+        "BROOD BROTHER",
+        "TYRANID",
+        "GENESTEALER CULT",
+        "BROODGUARD",
+        "LEADER",
+        "COMMANDER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Coordinate",
+          "description": "STRATEGIC GAMBIT if this operative is in the killzone. Select one enemy operative to gain one of your Crossfire tokens."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Drum-fed autogun",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": "Ceaseless"
+        },
+        {
+          "name": "Laspistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Bayonet",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 3,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        },
+        {
+          "name": "Chainsword and claw",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Balanced, Rending"
+        },
+        {
+          "name": "Power weapon and claw",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "Balanced , Lethal 5+"
+        }
+      ]
+    },
+    {
+      "name": "BROOD BROTHER AGITATOR",
+      "keywords": [
+        "BROOD BROTHER",
+        "TYRANID",
+        "GENESTEALER CULT",
+        "BROODGUARD",
+        "AGITATOR"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Devoted",
+          "description": "Once per turning point, when this operative is fighting"
+        },
+        {
+          "name": "Psiren Caster",
+          "description": "Whenever a friendly BROOD BROTHER or retaliating, in the Resolve Attack Dice step, you can ignore the operative is shooting against, fighting against or retaliating damage inflicted on it from one normal success. against an enemy operative within 6\" of this operative, you can re-roll one of your attack dice."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Shock maul",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "4",
+          "specialRules": "Shock"
+        }
+      ]
+    },
+    {
+      "name": "BROOD BROTHER GUNNER",
+      "keywords": [
+        "BROOD BROTHER",
+        "TYRANID",
+        "GENESTEALER CULT",
+        "BROODGUARD",
+        "GUNNER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Flamer",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "Range 8\", Saturate, Torrent 2\""
+        },
+        {
+          "name": "Grenade launcher (frag)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "4",
+          "specialRules": "Blast 2\""
+        },
+        {
+          "name": "Grenade launcher (krak)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Piercing 1"
+        },
+        {
+          "name": "Meltagun",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "6",
+          "criticalDamage": "3",
+          "specialRules": "Range 6\", Devastating 4, Piercing 2"
+        },
+        {
+          "name": "Plasma gun (standard)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "Piercing 1"
+        },
+        {
+          "name": "Plasma gun (supercharge)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "5",
+          "criticalDamage": "6",
+          "specialRules": "Hot, Lethal 5+, Piercing 1"
+        },
+        {
+          "name": "Bayonet",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "BROOD BROTHER ICONWARD",
+      "keywords": [
+        "BROOD BROTHER",
+        "TYRANID",
+        "GENESTEALER CULT",
+        "BROODGUARD",
+        "ICONWARD"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Cult Icon",
+          "description": "Whenever determining control of a marker within 4\""
+        },
+        {
+          "name": "Broodmind Devotion",
+          "description": "Once per turning point, when a ready of this operative, treat the total APL stat of friendly BROOD friendly BROOD BROTHER BROODGUARD operative BROTHER operatives that contest it as 1 higher if at least one is incapacitated while visible to and within 6\" of this operative, friendly BROOD BROTHER operative contests that marker. you can use this rule. If you do, before that operative is removed Note this isn’t a change to the APL stat, so any changes are from the killzone, it can perform a 1AP action for free (excluding cumulative with this. Fight and Explosives), and you can change its order to do so. It’s then removed from the killzone as normal. You cannot use this rule and the Medic! rule (see MEDIC) on the same operative at the same time."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Large knife",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "BROOD BROTHER KNIFE FIGHTER",
+      "keywords": [
+        "BROOD BROTHER",
+        "TYRANID",
+        "GENESTEALER CULT",
+        "BROODGUARD",
+        "KNIFE FIGHTER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Assassin",
+          "description": "This operative can perform the"
+        },
+        {
+          "name": "Charge action while it Counterattack",
+          "description": "Whenever this operative is fighting or retaliating, has a Conceal order. whenever your opponent resolves a normal success, inflict 1 damage on the enemy operative in that sequence."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Poisoned fighting knives",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Ceaseless, Lethal 5+"
+        }
+      ]
+    },
+    {
+      "name": "BROOD BROTHER MEDIC",
+      "keywords": [
+        "BROOD BROTHER",
+        "TYRANID",
+        "GENESTEALER CULT",
+        "BROODGUARD",
+        "MEDIC"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Medikit (1AP)",
+          "description": "Select one friendly BROOD BROTHER operative (excluding PATRIARCH) within this operative’s control range to regain up to 2D3 lost wounds. It cannot be an operative that the Medic! rule was used on during this turning point. This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Lasgun",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        },
+        {
+          "name": "Bayonet",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        },
+        {
+          "name": "Gene-needler",
+          "type": "Melee",
+          "attacks": 1,
+          "hitSkill": 4,
+          "damage": "5",
+          "criticalDamage": "7",
+          "specialRules": "Lethal 5+, Limited 1"
+        }
+      ]
+    },
+    {
+      "name": "BROOD BROTHER SAPPER",
+      "keywords": [
+        "BROOD BROTHER",
+        "TYRANID",
+        "GENESTEALER CULT",
+        "BROODGUARD",
+        "SAPPER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Final Defiance",
+          "description": "If this operative is incapacitated, it can perform"
+        },
+        {
+          "name": "Grenadier",
+          "description": "This operative can use frag and krak grenades (see a free Explosives unique action before it’s removed from universal equipment). Doing so doesn’t count towards any the killzone. limited uses you have (i.e. if you also select those grenades from equipment for other operatives). Whenever it’s doing so, improve the Hit stat of that weapon by 1."
+        },
+        {
+          "name": "Explosives (1AP)",
+          "description": "The first time this operative performs this action during the battle, place your Explosives marker within its control range. The second time this operative performs this action during the battle, inflict 2D6 damage on each operative within 2\" of that marker (roll separately for each) unless Heavy terrain is wholly intervening between that operative and that marker. This operative cannot perform this action more than twice per battle, while within control range of an enemy operative, or during an activation in which it performed the Charge, Dash or Fall Back action (or vice versa)."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Demolition charge",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "Range 3\", Blast 2\", Heavy (Reposition only),"
+        }
+      ]
+    },
+    {
+      "name": "BROOD BROTHER SNIPER",
+      "keywords": [
+        "BROOD BROTHER",
+        "TYRANID",
+        "GENESTEALER CULT",
+        "BROODGUARD",
+        "SNIPER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Concealed Position (weapon rule)",
+          "description": "This operative can only use this weapon the first time it’s performing the Shoot action during the battle."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Sniper rifle (concealed)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "Devastating 3, Heavy, Silent, Concealed Position*"
+        },
+        {
+          "name": "Sniper rifle (mobile)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        },
+        {
+          "name": "Sniper rifle (stationary)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "Devastating 3, Heavy"
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "BROOD BROTHER TROOPER",
+      "keywords": [
+        "BROOD BROTHER",
+        "TYRANID",
+        "GENESTEALER CULT",
+        "BROODGUARD",
+        "TROOPER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Group Activation",
+          "description": "Whenever this operative is expended, you must then activate one other ready friendly BROOD BROTHER TROOPER operative (if able) before your opponent activates. When that other operative is expended, your opponent then activates as normal (in other words, you cannot activate more than two operatives in succession with this rule)."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Lasgun",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        },
+        {
+          "name": "Bayonet",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "BROOD BROTHER VETERAN",
+      "keywords": [
+        "BROOD BROTHER",
+        "TYRANID",
+        "GENESTEALER CULT",
+        "BROODGUARD",
+        "VETERAN"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Resilient",
+          "description": "Normal Dmg of 3 or more inflicts 1 less damage on"
+        },
+        {
+          "name": "Bodyguard",
+          "description": "You can use the Unquestioning Loyalty this operative. firefight ploy for 0CP if this is the specified friendly BROODGUARD operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Combat shotgun (close range)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "4",
+          "specialRules": "Range 6\""
+        },
+        {
+          "name": "Combat shotgun (long range)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 5,
+          "damage": "2",
+          "criticalDamage": "2",
+          "specialRules": null
+        },
+        {
+          "name": "Bayonet & claw",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": "Balanced"
+        }
+      ]
+    },
+    {
+      "name": "BROOD BROTHER VOX-OPERATOR",
+      "keywords": [
+        "BROOD BROTHER",
+        "TYRANID",
+        "GENESTEALER CULT",
+        "BROODGUARD",
+        "VOX-OPERATOR"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Signal (1AP)",
+          "description": "SUPPORT. Select one other friendly BROOD This operative cannot perform this action while within control BROTHER BROODGUARD operative visible to and range of an enemy operative. within 6\" of this operative. Until the end of that operative’s next activation, add 1 to its APL stat."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Lasgun",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        },
+        {
+          "name": "Bayonet",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "MAGUS",
+      "keywords": [
+        "BROOD BROTHER",
+        "TYRANID",
+        "GENESTEALER CULT",
+        "BROODCOVEN",
+        "PSYKER",
+        "LEADER",
+        "MAGUS"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 9,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Spiritual Leader",
+          "description": "STRATEGIC GAMBIT if this operative is in the killzone. Select one of the following for friendly BROOD BROTHER operatives to have until the end of the turning point or until this operative is incapacitated (whichever comes first): • Whenever an operative is shooting a friendly BROOD BROTHER operative, ignore the Piercing weapon rule. • You can ignore any changes to friendly BROOD BROTHER operatives’ stats from being injured (including their weapons’ stats). • You can ignore any changes to the APL stat of friendly BROOD BROTHER operatives."
+        },
+        {
+          "name": "Mental Onslaught (1AP)",
+          "description": "PSYCHIC. Select one enemy operative visible to this PSYCHIC. Select one enemy operative that’s a valid target operative. Until the end of that operative’s next activation, for this operative. Inflict 2 damage on it, or 4 damage instead subtract 1 from its APL stat. if it’s within 6\" of this operative. Then roll one D6: if the result is higher than that enemy operative’s APL stat, inflict This operative cannot perform this action while within control an additional 2 damage on it, or 4 damage instead if it’s range of an enemy operative. within 6\" of this operative. Keep rolling one D6 in this manner until you roll equal to or less than that enemy operative’s APL stat, until it’s incapacitated, or until you inflict 8 damage on it during this action (whichever comes first). This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Autopistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Bio dagger",
+          "type": "Melee",
+          "attacks": 2,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "6",
+          "specialRules": "Lethal 4+"
+        },
+        {
+          "name": "Force stave",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "PSYCHIC, Shock"
+        }
+      ]
+    },
+    {
+      "name": "PATRIARCH",
+      "keywords": [
+        "BROOD BROTHER",
+        "TYRANID",
+        "GENESTEALER CULT",
+        "BROODCOVEN",
+        "PSYKER",
+        "LEADER",
+        "PATRIARCH"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 4,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 21,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Alpha Predator",
+          "description": "Whenever an operative Monster: This operative cannot use any"
+        },
+        {
+          "name": "Into Shadow (1AP)",
+          "description": "is shooting this operative, ignore the weapons that aren’t on its datacard, Change this operative’s order. Piercing weapon rule. You can activate or perform unique actions (excluding this operative twice during the turning Into Shadow and Mind Control). This operative cannot perform this point as long as it has AP to spend (it Whenever your opponent is selecting a action while within control range of an stays ready while it can still be activated a valid target, if this operative has a Conceal enemy operative. second time). Per turning point, it cannot order, it cannot use Light terrain for cover. move more than 9\" and you cannot spend While this can allow this operative to be more than 4AP in total for it. targeted (assuming it’s visible), it doesn’t remove its cover save (if any)."
+        },
+        {
+          "name": "Mind Control (2AP)",
+          "description": "PSYCHIC. Select one enemy Until the end of the activation, This operative cannot perform this operative visible to and within 2\" that enemy operative is a friendly action while within control range of of this operative. Both players roll operative (an enemy operative for an enemy operative, unless the only one D6 and add their respective your opponent), you can change its enemy operative it’s within control operative’s APL stat to their result. order, and it can immediately perform range of is selected for this action. If your total is higher than your one free action. It cannot perform an opponent’s, you can resolve this action in which it moves other than action’s second effect. Dash (in which case specify the location for your opponent to move the operative to). You can only resolve this action’s second effect once per battle."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Claws",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "5",
+          "criticalDamage": "6",
+          "specialRules": "Relentless, Rending"
+        }
+      ]
+    },
+    {
+      "name": "PSYCHIC FAMILIAR",
+      "keywords": [
+        "BROOD BROTHER",
+        "TYRANID",
+        "GENESTEALER CULT",
+        "PSYCHIC FAMILIAR"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 3,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Small",
+          "description": "This operative cannot use any weapons that aren’t on its"
+        },
+        {
+          "name": "Elusive",
+          "description": "This operative can perform mission actions while within datacard, or perform unique actions. Whenever this operative control range of an enemy operative (this takes precedence over has a Conceal order and is in cover, it cannot be selected as a those actions’ normal conditions). It can move through enemy valid target, taking precedence over all other rules (e.g. Seek, operatives, move within control range of them, and during the Vantage terrain) except being within 2\". This operative can Charge action can leave their control range (it must still end the perform the Fall Back action for 1 less AP. move following all requirements for that move)."
+        },
+        {
+          "name": "Group Activation",
+          "description": "Whenever this operative is expended, you must . then activate one other ready friendly BROOD BROTHER PSYCHIC FAMILIAR operative (if able) before your opponent activates. When that other operative is expended, your opponent then activates as normal."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Claws",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": "Rending"
+        }
+      ]
+    },
+    {
+      "name": "PRIMUS",
+      "keywords": [
+        "BROOD BROTHER",
+        "TYRANID",
+        "GENESTEALER CULT",
+        "BROODCOVEN",
+        "LEADER",
+        "PRIMUS"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 9,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Fist of the Patriarch",
+          "description": "This operative can either perform two Shoot or two Fight"
+        },
+        {
+          "name": "Conspire (1AP)",
+          "description": "actions during its activation. You gain 1CP."
+        },
+        {
+          "name": "Mastermind",
+          "description": "Once per turning point, after rolling off to determine initiative, if this This operative cannot perform this operative is in the killzone, you can do one of the following (you cannot select each action while within control range of an option more than once per battle): enemy operative, or more than once • Add 1 to your dice result. per turning point. • If you didn’t have initiative in the previous turning point, re-roll your dice."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Scoped needle pistol (short range)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "2",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\", Lethal 5+, Silent"
+        },
+        {
+          "name": "Scoped needle pistol (long range)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "2",
+          "criticalDamage": "4",
+          "specialRules": "Silent"
+        },
+        {
+          "name": "Bonesword and toxin injector claw",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Lethal 5+, Rending"
+        }
+      ]
+    }
+  ],
+  "factionRules": [],
+  "markersTokens": [
+    {
+      "name": "Crossfire tokens Devoted token Broodmind",
+      "description": ""
+    },
+    {
+      "name": "Whenever a friendly BROOD BROTHER operative",
+      "description": ""
+    },
+    {
+      "name": "Mind Control Medic token Demolition",
+      "description": ""
+    },
+    {
+      "name": "Whenever a friendly BROOD BROTHER operative",
+      "description": ""
+    }
+  ],
+  "strategyPloys": [
+    {
+      "name": "Pervasive",
+      "cpCost": 1,
+      "description": "The Genestealer Cult is omnipresent and all-pervading, infiltrating and attacking from dozens of locations at once. During each friendly BROOD BROTHER operative’s activation, you can ignore the first vertical distance of 2\" they move during one climb up."
+    },
+    {
+      "name": "Embedded",
+      "cpCost": 1,
+      "description": "Brood Brothers are intimately familiar with the battlefields upon which they fight, taking up positions that offer greatest protection from incoming fire. Whenever an enemy operative is shooting a friendly BROOD BROTHER operative, if you can retain any cover saves as a result of Heavy terrain, you can retain one additional cover save."
+    },
+    {
+      "name": "Uprising",
+      "cpCost": 1,
+      "description": "Appearing at first to be allied troops, the Brood Brothers close in on their foes before revealing their treachery. The first time each friendly BROOD BROTHER operative performs either the Shoot or Fight action during each of its activations, if its order was changed from Conceal to Engage at the start of that activation, the enemy operative selected as the valid target or to fight against gains one of your Crossfire tokens as soon as it’s selected (instead of after resolving your attack dice). This ploy has no effect if that friendly operative was activated within control range of an enemy operative. Note this ploy cannot come into effect more than once per activation (you cannot use it during both the Shoot and Fight action in the same activation)."
+    },
+    {
+      "name": "Cult Devotion",
+      "cpCost": 1,
+      "description": "Such is their devotion to the Cult’s cause that Brood Brothers will gladly trade their lives to land a telling blow upon their oppressors. Whenever a friendly BROOD BROTHER operative (excluding PATRIARCH) is incapacitated while fighting or retaliating, if you have any unresolved successes, you can roll one D6: if the result is a success as if it were the Roll Attack Dice step of that sequence (i.e. using the same weapon, but with no re-rolls), you can strike the enemy operative in that sequence with one of your unresolved normal successes, or any of your successes instead if the D6 result is a critical success. In either case, that friendly operative is removed from the killzone afterwards."
+    }
+  ],
+  "firefightPloys": [
+    {
+      "name": "Ruthless Coordination",
+      "cpCost": 1,
+      "description": "The Broodmind allows for incredibly precise communication and coordinated fire between the members of a Brood Brothers kill team. target for a friendly BROOD BROTHER operative. Until the end of the action, determine visibility as normal, but you can instead determine intervening (for cover and obscured) from another friendly BROOD BROTHER operative that both that friendly operative and the potential valid target are visible to, but that isn’t itself within control range of enemy operatives. Note the friendly operative doesn’t gain the additional benefits of Vantage terrain if the other friendly operative is on it (e.g. to target an enemy operative that has a Conceal order that’s in cover provided only by Light terrain)."
+    },
+    {
+      "name": "Continues On Other Side",
+      "cpCost": 1,
+      "description": ""
+    },
+    {
+      "name": "Unquestioning Loyalty",
+      "cpCost": 1,
+      "description": "The Cult’s rigid hierarchy is reinforced by military training. Lower ranking Brood Brothers will stand in the way of bullets or blades to protect their leaders. BROTHER LEADER operative is selected as the valid target of a Shoot action or to fight against during the Fight action. Select one other friendly BROOD BROTHER BROODGUARD operative (excluding LEADER) visible to and within 3\" of that LEADER operative to become the valid target or to be fought against (as appropriate) instead (even if it wouldn’t normally be valid for this). If it’s the Fight action, treat that other operative as being within the fighting operative’s control range for the duration of that action. If it’s the Shoot action, that other operative is only in cover or obscured if the original target was. This ploy has no effect if it’s the Shoot action and the ranged weapon has the Blast or Torrent weapon rule."
+    },
+    {
+      "name": "Idolisation",
+      "cpCost": 1,
+      "description": "The Cult’s leaders use the psionic power of the Broodmind to provide powerful inspiration to their followers. BROTHER operative (excluding LEADER) within 6\" of a friendly BROOD BROTHER LEADER or BROOD BROTHER ICONWARD operative is shooting, fighting or retaliating, in the Roll Attack Dice step. You can retain one of your fails as a normal success instead of discarding it, or retain one of your normal successes as a critical success instead."
+    },
+    {
+      "name": "Insidious",
+      "cpCost": 1,
+      "description": "Brood Brothers rely upon ambush and surprise to defeat their enemies, retreating and repositioning as required. Before the next activation, one friendly BROOD BROTHER operative can perform a free Dash action, as long as it’s not a valid target for enemy operatives when it starts and ends that action. You cannot use this ploy during the first turning point."
+    }
+  ],
+  "factionEquipment": [
+    {
+      "name": "Lookout",
+      "epCost": 1,
+      "description": "The Brood Brothers’ keen eyes pick out encroaching foes and mark them for annihilation. STRATEGIC GAMBIT. Select one enemy operative visible to a friendly BROOD BROTHER operative to gain one of your Crossfire tokens. NOTES:",
+      "restrictions": null
+    }
+  ]
+}

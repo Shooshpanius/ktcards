@@ -1,0 +1,440 @@
+{
+  "teamName": "Elucidian Starstriders",
+  "operatives": [
+    {
+      "name": "ELUCIA VHANE",
+      "keywords": [
+        "ELUCIDIAN STARSTRIDER",
+        "IMPERIUM",
+        "LEADER",
+        "ELUCIA VHANE"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Digital Lasers",
+          "description": "Whenever this operative performs the"
+        },
+        {
+          "name": "Fight Disruption Field",
+          "description": "Whenever an operative is shooting this action, at the start of the Roll Attack Dice step, you can use operative, ignore the Piercing weapon rule. this rule. If you do, inflict 1 damage on the enemy operative in"
+        },
+        {
+          "name": "Reputation to Maintain",
+          "description": "The first time this operative that sequence. incapacitates an enemy operative during the battle, you can"
+        },
+        {
+          "name": "Merciless",
+          "description": "Whenever this operative is shooting against, fighting either gain 1 additional CP or use an additional WARRANT OF against or retaliating against an enemy operative that was TRADE rule (up to five uses per battle, instead of four). Note already wounded when the action started, this operative's that you still cannot use the same WARRANT OF TRADE rule weapons have the Balanced weapon rule; if the weapon already more than once per battle. has that weapon rule, it has the Ceaseless weapon rule instead of Balanced."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Heirloom relic pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\", Piercing Crits 1, Seek Light"
+        },
+        {
+          "name": "Monomolecular cane-rapier",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "6",
+          "specialRules": "L ethal 5+"
+        }
+      ]
+    },
+    {
+      "name": "CANID",
+      "keywords": [
+        "ELUCIDIAN STARSTRIDER",
+        "IMPERIUM",
+        "CANID"
+      ],
+      "movement": "8\"",
+      "actionPointLimit": 2,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 5,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Beast",
+          "description": "This operative cannot perform any actions other than operative can immediately perform a free Charge action (you Charge, Dash, Fall Back, Fight, Gather, Guard, can change its order to Engage to do so), but must end that move Reposition, Pick Up Marker and Place Marker. It within control range of that enemy operative. cannot use any weapons that aren’t on its datacard."
+        },
+        {
+          "name": "Loyal Companion",
+          "description": "Whenever an enemy operative performs the Fight action, if this operative is a valid operative to fight Perform a free Dash or Reposition action with this against, you can force them to select this operative to fight operative. During that move, it can perform a free Pick against instead. Whenever an enemy operative ends the Charge Up Marker or Place Marker action (you can determine action within control range of another friendly ELUCIDIAN control during that action to do so), and any remaining move STARSTRIDER operative within 3\" of this operative, if this distance it had from the Dash or Reposition action can be operative isn’t within control range of enemy operatives, this used after it does so."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Vicious bite",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Rending"
+        }
+      ]
+    },
+    {
+      "name": "DEATH CULT EXECUTIONER",
+      "keywords": [
+        "ELUCIDIAN STARSTRIDER",
+        "IMPERIUM",
+        "DEATH CULT EXECUTIONER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 5,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Rapid Reflexes",
+          "description": "Whenever an operative is shooting this"
+        },
+        {
+          "name": "Trained Assassin (1AP)",
+          "description": "operative, ignore the Piercing weapon rule. Change this operative’s order."
+        },
+        {
+          "name": "Bladed Stance",
+          "description": "Whenever this operative is fighting or retaliating, This operative cannot perform this action while within control you can resolve one of your successes before the normal order. If range of an enemy operative. you do, that success must be used to block."
+        },
+        {
+          "name": "Zealot",
+          "description": "If this operative is incapacitated during the Fight action, you can strike the enemy operative in that sequence with one of your unresolved successes before this operative is removed from the killzone."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Dartmask",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "1",
+          "criticalDamage": "1",
+          "specialRules": "Range 6\", Lethal 5+, Silent, Stun"
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "Lethal 5+"
+        }
+      ]
+    },
+    {
+      "name": "LECTRO-MAESTER",
+      "keywords": [
+        "ELUCIDIAN STARSTRIDER",
+        "IMPERIUM",
+        "LECTRO-MAESTER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Missionary of the Martian Creed",
+          "description": "Once during each of this"
+        },
+        {
+          "name": "Voltaghiest Array",
+          "description": "Whenever an operative is shooting a friendly operative’s activations, it can perform the Pick Up Marker, ELUCIDIAN STARSTRIDER operative that’s within 4\" of Place Marker or a mission action for 1 less AP. this operative, you can re-roll one of your defence dice."
+        },
+        {
+          "name": "Calibrate Voltagheist (0AP)",
+          "description": "Select one of the following effects to last until the start of this operative’s next activation, until it’s incapacitated or until it performs this action again (whichever comes first): • Charge: This operative’s voltaic pistol has the Lethal 4+ weapon rule. • Field: Whenever an enemy operative ends the Charge, Dash, Fall Back or Reposition action visible to and within 4\" of this operative, inflict D6 damage on that enemy operative. This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Voltaic pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\", 1\" Devastating 1, Rending"
+        },
+        {
+          "name": "Gun butt",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "REJUVENAT ADEPT",
+      "keywords": [
+        "ELUCIDIAN STARSTRIDER",
+        "IMPERIUM",
+        "MEDIC",
+        "REJUVENAT ADEPT"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Normaliser Helm",
+          "description": "Whenever a friendly ELUCIDIAN friendly operative isn’t incapacitated, has 3 wounds remaining STARSTRIDER operative is within 6\" of this operative, you and cannot be incapacitated for the remainder of the action. can ignore any changes to that operative’s stats from being After that action, that friendly operative can immediately injured (including its weapons’ stats). perform a free Dash action, but must end that move within"
+        },
+        {
+          "name": "Healing Serum (1AP)",
+          "description": "Select one friendly ELUCIDIAN STARSTRIDER operative within this operative’s control range to regain up to D3+3 lost wounds. It cannot be an operative that the Medic! rule was used on during this turning point. This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Laspistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Scalpel claw",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Rending"
+        }
+      ]
+    },
+    {
+      "name": "VOIDMASTER",
+      "keywords": [
+        "ELUCIDIAN STARSTRIDER",
+        "IMPERIUM",
+        "NAVIS",
+        "VOIDMASTER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 5,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Disciplinarian",
+          "description": "SUPPORT. Whenever another friendly"
+        },
+        {
+          "name": "Hardy",
+          "description": "Once per battle, when an attack dice inflicts Normal Dmg ELUCIDIAN STARSTRIDER NAVIS operative is within on this operative, you can ignore that inflicted damage. 3\" of this operative, that friendly operative’s ranged weapons (excluding PRIVATEER SUPPORT ASSET weapons) have the Balanced weapon rule; if the weapon already has that weapon rule, it has the Ceaseless weapon rule instead of Balanced."
+        },
+        {
+          "name": "Uncompromising Fire (1AP)",
+          "description": "Perform two free Shoot actions with this operative (this takes precedence over action restrictions). You must select its relic laspistol for one action and its artificer shotgun (close range) for the other (in any order). This operative cannot perform this action while it has a Conceal order, or during an activation in which it performed the Shoot action (or vice versa)."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Artificer shotgun (close range)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "4",
+          "specialRules": "Range 6\""
+        },
+        {
+          "name": "Artificer shotgun (long range)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 5,
+          "damage": "2",
+          "criticalDamage": "2",
+          "specialRules": null
+        },
+        {
+          "name": "Relic laspistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "2",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\", Lethal 5+"
+        },
+        {
+          "name": "Gun butt",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "VOIDSMAN",
+      "keywords": [
+        "ELUCIDIAN STARSTRIDER",
+        "IMPERIUM",
+        "NAVIS",
+        "VOIDSMAN"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 5,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Crewmen",
+          "description": "Once per turning point, whenever you would counteract, if you haven't used a PRIVATEER SUPPORT ASSET during this turning point, you can use this rule. If you do, you can counteract with one friendly ELUCIDIAN STARSTRIDER VOIDSMAN operative that has a Conceal order, but during that counteraction you cannot perform any actions other than Shoot, and you must use a PRIVATEER SUPPORT ASSET to do so. NOTES: NOTES:"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Lasgun",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        },
+        {
+          "name": "Rotor cannon (focused)",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Heavy (Dash only), Rending"
+        },
+        {
+          "name": "Rotor cannon (sweeping)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Heavy (Dash only), Rending, Torrent 1\""
+        },
+        {
+          "name": "Gun butt",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    }
+  ],
+  "factionRules": [
+    {
+      "name": "Warrant Of Trade",
+      "description": "The writ of a Rogue Trader allows them incredible access across the Imperium. With more flexibility than almost any other agents of the Imperium, they barter, intimidate and 'borrow' to gain valuable resources that allow them to enter any engagement with the upper hand. Up to four times per battle, you can use a WARRANT OF TRADE rule (below). Each one specifies when it can be used, and you cannot use the same WARRANT OF TRADE rule more than once per battle. Consideration When: In the Select Operatives step, after revealing your equipment options. Effect: Select one additional equipment option. It cannot be an option you have previously selected. Bribe When: It’s your turn to activate an operative. Effect: You can skip that activation. Seize When: In the Strategy phase, after rolling off to decide initiative. Effect: You can re-roll your dice. Adaptable Terms (Approved Ops only) When: At the end of the second turning point. Effect: Select a new tac op or a new primary op. If you select a new tac op, any points scored from the previous tac op are discarded."
+    },
+    {
+      "name": "Name Atk Hit Dmg",
+      "description": "Archeotech beam 4 3+ 6/7"
+    },
+    {
+      "name": "Wr",
+      "description": "Heavy (Reposition only), Piercing 2, Silent"
+    },
+    {
+      "name": "Name Atk Hit Dmg",
+      "description": "Plasma battery 5 4+ 5/6"
+    },
+    {
+      "name": "Wr",
+      "description": "Heavy (Reposition only), Lethal 5+, Piercing 1, Silent"
+    },
+    {
+      "name": "Name Atk Hit Dmg",
+      "description": "Macrocannon 5 4+ 4/5"
+    },
+    {
+      "name": "Wr",
+      "description": "Heavy (Reposition only), Piercing Crits 1, Saturate, Silent, Torrent 2\""
+    }
+  ],
+  "markersTokens": [],
+  "strategyPloys": [
+    {
+      "name": "Undaunted Explorers",
+      "cpCost": 1,
+      "description": "The Starstriders have weathered many terrible storms in their journeys through the void, and are capable of shrugging off wounds that would fell lesser soldiers. The first time an attack dice inflicts damage on each friendly ELUCIDIAN STARSTRIDER operative during the turning point in the Resolve Attack Dice step, you can halve that inflicted damage (rounding up, to a minimum of 2)."
+    },
+    {
+      "name": "Quick March",
+      "cpCost": 1,
+      "description": "As fearless as any elite Astra Militarum regiment, the Elucidian Starstriders advance swiftly to outflank and isolate their enemies. Whenever a friendly ELUCIDIAN STARSTRIDER operative performs the Reposition action during its activation, you can use this rule. If you do, add 1\" to its Move stat until the end of that activation, but it must end that move closer to your opponent’s drop zone and cannot use a PRIVATEER SUPPORT ASSET during that activation."
+    }
+  ],
+  "firefightPloys": [
+    {
+      "name": "Great Endurance",
+      "cpCost": 1,
+      "description": "Each member of the Navis Imperialis assigned to a Rogue Trader is elite and prepared to endure the most testing of circumstances to perform their duties. STARSTRIDER NAVIS operative’s activation. Until the end of the activation, add 1 to its APL stat."
+    },
+    {
+      "name": "Well-drilled",
+      "cpCost": 1,
+      "description": "Trained regularly and vigorously in the art of boarding actions, members of the Navis Imperialis are expected to precisely coordinate their strikes, working in tandem to complete the goals of the mission at hand. STARSTRIDER NAVIS operative is activated. Select one other ready friendly ELUCIDIAN STARSTRIDER NAVIS operative visible to and within 3\" of that operative. When that first friendly operative is expended, you can activate that other friendly operative before your opponent activates. When that other operative is expended, your opponent then activates as normal."
+    }
+  ],
+  "factionEquipment": [
+    {
+      "name": "Improved Coordinates Uplink",
+      "epCost": 1,
+      "description": "Coordinated triangulation undertaken by Navis Imperialis operatives allows the New Dawn’s weapon batteries to more accurately target the foe. Whenever a friendly ELUCIDIAN STARSTRIDER operative is using a PRIVATEER SUPPORT ASSET, if the target is within 6\" of a friendly ELUCIDIAN STARSTRIDER NAVIS operative, the target cannot be obscured and that weapon has the Saturate weapon rule. NOTES:",
+      "restrictions": null
+    },
+    {
+      "name": "Rapid Gunnery",
+      "epCost": 1,
+      "description": "The New Dawn’s colossal batteries are slow to reload and recharge. Only veteran gun crews possess the expertise and coordination to fire a rapid salvo. Once per battle, when selecting a PRIVATEER SUPPORT ASSET, you can select one that's already been used during the battle. This takes precedence over the normal PRIVATEER SUPPORT ASSET rules. NOTES:",
+      "restrictions": null
+    }
+  ]
+}

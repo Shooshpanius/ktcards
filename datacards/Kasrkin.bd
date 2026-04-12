@@ -1,0 +1,514 @@
+{
+  "teamName": "Kasrkin",
+  "operatives": [
+    {
+      "name": "KASRKIN SERGEANT",
+      "keywords": [
+        "KASRKIN",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "LEADER",
+        "SERGEANT"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 9,
+      "notes": null,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Hot-shot lasgun",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        },
+        {
+          "name": "Hot-shot laspistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Plasma pistol (standard)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\", Piercing 1"
+        },
+        {
+          "name": "Plasma pistol (supercharge)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\", Hot, Lethal 5+, Piercing 1"
+        },
+        {
+          "name": "Chainsword",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": null
+        },
+        {
+          "name": "Gun butt",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 3,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "Lethal 5+"
+        }
+      ]
+    },
+    {
+      "name": "KASRKIN COMBAT MEDIC",
+      "keywords": [
+        "KASRKIN",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "MEDIC",
+        "COMBAT MEDIC"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Medikit (0AP)",
+          "description": "Select one friendly KASRKIN operative within this operative’s control range to regain up to 2D3 lost wounds. It cannot be an operative that the Medic! rule was used on during this turning point. This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Hot-shot lasgun",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        },
+        {
+          "name": "Gun butt",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "KASRKIN DEMO-TROOPER",
+      "keywords": [
+        "KASRKIN",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "DEMO-TROOPER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Melta Mine",
+          "description": "This operative is carrying your Melta Mine marker."
+        },
+        {
+          "name": "It Proximity Mine",
+          "description": "The first time your Melta Mine marker is within can perform the Pick Up Marker action on that marker, and another operative’s control range, remove that marker and inflict whenever it performs the Place Marker action on that marker, 2D6+3 damage on that operative; if it isn’t incapacitated, end it can immediately perform a free Dash action. That marker its action (if any), even if that action’s effects aren’t fulfilled. If cannot be placed within an enemy operative’s control range (if it cannot be placed, move it the minimum amount to do so. Note this operative is incapacitated while carrying that marker and that this operative is ignored for these effects (i.e. it cannot set it that marker cannot be placed, it’s removed with this operative). off or take damage from that marker)."
+        },
+        {
+          "name": "Blast Padding",
+          "description": "Whenever an operative is shooting this operative with a weapon that has the Blast or Torrent weapon rule (excluding weapons that have a sweeping profile), you can re-roll one of your defence dice. In addition, this operative isn’t affected by the x\" Devastating x weapon rule (i.e. Devastating with a distance) unless they are the target during that sequence."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Hot-shot laspistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Gun butt",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "KASRKIN GUNNER",
+      "keywords": [
+        "KASRKIN",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "GUNNER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Flamer",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "Range 8\", Saturate, Torrent 2\""
+        },
+        {
+          "name": "Grenade launcher (frag)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "2",
+          "criticalDamage": "4",
+          "specialRules": "Blast 2\""
+        },
+        {
+          "name": "Grenade launcher (krak)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Piercing 1"
+        },
+        {
+          "name": "Hot-shot volley gun (focused)",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Piercing Crits 1"
+        },
+        {
+          "name": "Hot-shot volley gun (sweeping)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Piercing Crits 1, Torrent 1\""
+        },
+        {
+          "name": "Meltagun",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "6",
+          "criticalDamage": "3",
+          "specialRules": "Range 6\", Devastating 4, Piercing 2"
+        },
+        {
+          "name": "Plasma gun (standard)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "Piercing 1"
+        },
+        {
+          "name": "Plasma gun (supercharge)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "5",
+          "criticalDamage": "6",
+          "specialRules": "Hot, Lethal 5+, Piercing 1"
+        },
+        {
+          "name": "Gun butt",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "KASRKIN RECON-TROOPER",
+      "keywords": [
+        "KASRKIN",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "RECON-TROOPER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Reconnoitre Killzone",
+          "description": "The Relocate strategy ploy costs you 0CP if this operative is the selected friendly KASRKIN operative."
+        },
+        {
+          "name": "Auspex Scan (1AP)",
+          "description": "Until the start of this operative’s next activation or until it’s incapacitated (whichever comes first), whenever an enemy operative is within 8\" of this operative, that enemy operative is being scanned. Whenever a friendly KASRKIN operative is shooting an enemy operative that’s being scanned, that enemy operative cannot be obscured This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Hot-shot lasgun",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        },
+        {
+          "name": "Gun butt",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "KASRKIN SHARPSHOOTER",
+      "keywords": [
+        "KASRKIN",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "SHARPSHOOTER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Camo Cloak",
+          "description": "Whenever an operative is shooting this operative: • Ignore the Saturate weapon rule. • If you can retain any cover saves, you can retain one additional cover save, or you can retain one cover save as a critical success instead. This isn’t cumulative with improved cover saves from Vantage terrain."
+        },
+        {
+          "name": "Concealed Position (weapon rule)",
+          "description": "This operative can only use this weapon the first time it’s performing the Shoot action during the battle."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Hot-shot marksman rifle (concealed)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "Devastating 3, Heavy, Silent,"
+        }
+      ]
+    },
+    {
+      "name": "KASRKIN TROOPER",
+      "keywords": [
+        "KASRKIN",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "TROOPER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Adaptive Equipment",
+          "description": "You can do each of the following once per turning point: • One friendly KASRKIN TROOPER operative can perform the Smoke Grenade action. • One friendly KASRKIN TROOPER operative can perform the Stun Grenade action. The rules for these actions are found in universal equipment. Performing these actions using this rule doesn’t count towards their action limits (i.e. if you also select those grenades from equipment)."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Hot-shot lasgun",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        },
+        {
+          "name": "Gun butt",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "KASRKIN VOX-TROOPER",
+      "keywords": [
+        "KASRKIN",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "VOX-TROOPER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Battle Comms (1AP)",
+          "description": "Select one other friendly KASRKIN operative. Until the end of that operative’s next activation, add 1 to its APL stat (to a maximum of 3 after all APL stat changes have been totalled). This operative can perform this action twice during its activation, but cannot perform this action while within control range of an enemy operative. NOTES:"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Hot-shot lasgun",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        },
+        {
+          "name": "Gun butt",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    }
+  ],
+  "factionRules": [
+    {
+      "name": "Skill At Arms",
+      "description": "Light ’Em Up Establishing overlapping fields of fire as they advance, the Kasrkin react to any enemy movement with a lethal volley of fire. Friendly KASRKIN operatives’ ranged weapons have the Severe weapon rule."
+    },
+    {
+      "name": "Skill At Arms",
+      "description": "Ice In Your Veins All Cadians are subjected to a lifetime of war. Those chosen to join the ranks of the elite Kasrkin are amongst the hardiest. Whenever a friendly KASRKIN operative is fighting or retaliating, or an operative is shooting it, the first time an attack dice inflicts Normal Dmg of 3 or more on this operative during that sequence, that dice inflicts 1 less damage on it."
+    },
+    {
+      "name": "Rapid Fire",
+      "description": "Ruthlessly drilled and murderously efficient, Kasrkin lay down hails of high-powered fire against the foe. Each friendly KASRKIN operative that doesn’t perform an action in which it moves during its activation can perform two Shoot actions (excluding Guard) during that activation, but a bolt pistol, hot-shot lasgun or hot-shot laspistol must be selected for both of those actions."
+    }
+  ],
+  "markersTokens": [],
+  "strategyPloys": [
+    {
+      "name": "Kasrkin",
+      "cpCost": 1,
+      "description": "MARKER/TOKEN GUIDE Medic token Auspex Scan Relics of Cadia token token Tactical Clearance Command Sweep marker token Melta Mine marker"
+    },
+    {
+      "name": "Engage From Cover",
+      "cpCost": 1,
+      "description": "Kasrkin are used to being outnumbered and outgunned, using cover to avoid incoming fire as they engage. Whenever an operative is shooting a friendly KASRKIN operative that’s in cover, you can re-roll one of your defence dice."
+    },
+    {
+      "name": "Elimination Pattern",
+      "cpCost": 1,
+      "description": "Having already outmanoeuvred the foe, the Kasrkin attempt to fell their target in a single volley. Whenever a friendly KASRKIN operative is shooting with a hot-shot weapon against an operative that cannot retain any cover saves or is being scanned (see RECON-TROOPER), that weapon has the Piercing Crits 1 weapon rule, or Piercing 1 instead if it’s a hot-shot volley gun."
+    },
+    {
+      "name": "Clearance Sweep",
+      "cpCost": 1,
+      "description": "The Kasrkin advance steadily towards their objectives, clearing the battlefield of enemies quadrant by quadrant. Place your Clearance Sweep marker in the killzone. Whenever a friendly KASRKIN operative within 5\" horizontally of that marker is shooting an operative also within 5\" horizontally of that marker, that friendly operative’s weapons have the Ceaseless weapon rule. In the Ready step of the next Strategy phase, remove that marker."
+    },
+    {
+      "name": "Relocate",
+      "cpCost": 1,
+      "description": "The Kasrkin are always on the move, advancing swiftly across the battlefield to take up new firing positions. Select one friendly KASRKIN operative that’s more than 3\" from enemy operatives. That operative, and each other friendly KASRKIN operative that’s both within 3\" of that operative and more than 3\" from enemy operatives, can immediately perform a free Dash action in an order of your choice. You cannot use this ploy during the first turning point."
+    }
+  ],
+  "firefightPloys": [
+    {
+      "name": "Give No Ground",
+      "cpCost": 1,
+      "description": "Hardened by a lifetime spent defending the Imperium from the horrific denizens of the Eye of Terror, the Kasrkin demonstrate unwavering discipline in the face of the enemy. operative’s activation, or at the end of the Firefight phase. Select one of your mission markers or an objective marker. Until the end of that activation or until the start of the next turning point respectively, if the total APL of friendly KASRKIN operatives that contest that marker is 2, and the total APL of enemy operatives that contest it is the same, friendly KASRKIN operatives control that marker."
+    }
+  ],
+  "factionEquipment": [
+    {
+      "name": "Combat Daggers",
+      "epCost": 1,
+      "description": "When close combat is required, the Kasrkin turn to their combat daggers in order to silence the enemy. Friendly KASRKIN operatives have the following melee weapon: NAME ATK HIT DMG Combat dagger 3 4+ 3/4 NOTES:",
+      "restrictions": null
+    }
+  ]
+}

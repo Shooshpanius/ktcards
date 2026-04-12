@@ -1,0 +1,723 @@
+{
+  "teamName": "Exaction Squad",
+  "operatives": [
+    {
+      "name": "ARBITES PROCTOR-EXACTANT",
+      "keywords": [
+        "EXACTION SQUAD",
+        "IMPERIUM",
+        "ADEPTUS ARBITES",
+        "LEADER",
+        "PROCTOR-EXACTANT"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 9,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Assault Shield",
+          "description": "If this operative has a dominator maul & assault shield, it has a 3+ Save stat."
+        },
+        {
+          "name": "Deploy Nuncio-aquila (0AP)",
+          "description": "• Whenever an enemy operative is within 3\" of your If your Nuncio-aquila marker isn’t in the killzone, place it Nuncio-aquila marker (or this operative if your Nuncio-aquila within 6\" horizontally of this operative; otherwise, move your marker isn’t in the killzone), your opponent must spend 1 Nuncio-aquila marker up to 6\" horizontally. If this operative additional AP for that enemy operative to perform the Pick is removed from the killzone, remove your Nuncio-aquila Up Marker and mission actions. marker from the killzone. • Whenever determining control of a marker, treat the total This operative cannot perform this action while within control APL stat of enemy operatives that contest it as 1 lower if range of an enemy operative. at least one of those enemy operatives is within 3\" of your Nuncio-aquila marker (or this operative if your Nuncio-aquila marker isn’t in the killzone). Note this isn’t a change to the APL stat, so any changes are cumulative with this."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Combat shotgun (close range)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "4",
+          "criticalDamage": "4",
+          "specialRules": "Range 6\""
+        },
+        {
+          "name": "Combat shotgun (long range)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "2",
+          "specialRules": null
+        },
+        {
+          "name": "Shotpistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Dominator maul & assault shield",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "4",
+          "specialRules": "Lethal 5+, Shock, Repress*"
+        },
+        {
+          "name": "Repression baton",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 3,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "ARBITES CHIRURGANT",
+      "keywords": [
+        "EXACTION SQUAD",
+        "IMPERIUM",
+        "ADEPTUS ARBITES",
+        "MEDIC",
+        "CHIRURGANT"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Medikit (1AP)",
+          "description": "Select one friendly EXACTION SQUAD operative within this operative’s control range to regain up to 2D3 lost wounds. It cannot be an operative that the Medic! rule was used on during this turning point. This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Combat shotgun (close range)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "4",
+          "specialRules": "Range 6\""
+        },
+        {
+          "name": "Combat shotgun (long range)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 5,
+          "damage": "2",
+          "criticalDamage": "2",
+          "specialRules": null
+        },
+        {
+          "name": "Repression baton",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "ARBITES LEASHMASTER",
+      "keywords": [
+        "EXACTION SQUAD",
+        "IMPERIUM",
+        "ADEPTUS ARBITES",
+        "LEASHMASTER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Handler",
+          "description": "Whenever this operative is"
+        },
+        {
+          "name": "Attack Pattern",
+          "description": "STRATEGIC GAMBIT in the first turning point. Select two activated, you can activate a ready of the following attack patterns for a friendly EXACTION SQUAD R-VR friendly EXACTION SQUAD R-VR CYBER-MASTIFF operative to have for the battle: CYBER-MASTIFF operative at the • Aggressive: Its melee weapons have the Relentless weapon rule. same time. Complete their activations • Swift: Add 2\" to its Move stat. action by action in any order. • Defensive: Improve its Save stat by 1."
+        },
+        {
+          "name": "R-vr Command (0AP)",
+          "description": "Select one friendly EXACTION SQUAD R-VR CYBER-MASTIFF operative and change one of its attack patterns."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Combat shotgun (close range)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "4",
+          "specialRules": "Range 6\""
+        },
+        {
+          "name": "Combat shotgun (long range)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 5,
+          "damage": "2",
+          "criticalDamage": "2",
+          "specialRules": null
+        },
+        {
+          "name": "Shotpistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "Range 8”"
+        },
+        {
+          "name": "Repression baton",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "R-VR CYBER-MASTIFF",
+      "keywords": [
+        "EXACTION SQUAD",
+        "IMPERIUM",
+        "ADEPTUS ARBITES",
+        "R-VR CYBER-MASTIFF"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Beast",
+          "description": "This operative cannot perform"
+        },
+        {
+          "name": "Apprehend (0AP)",
+          "description": "any actions other than Apprehend, Select one enemy operative within this operative’s control range. Until that enemy Charge, Dash, Fall Back, Fight, operative is no longer within this operative’s control range, or until this operative Guard, Reposition, Pick Up performs this action again (whichever comes first), worsen the Hit stat of that Marker and Place Marker. It enemy operative’s weapons by 1 (this isn’t cumulative with being injured); in cannot use any weapons that aren’t on addition, that enemy operative cannot perform the Fall Back action. its datacard. This operative cannot perform this action unless an enemy operative is within its control range."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Mechanical bite",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "Lethal 5+"
+        }
+      ]
+    },
+    {
+      "name": "ARBITES CASTIGATOR",
+      "keywords": [
+        "EXACTION SQUAD",
+        "IMPERIUM",
+        "ADEPTUS ARBITES",
+        "CASTIGATOR"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Engendered Focus",
+          "description": "You can ignore any changes to this Castigator’s"
+        },
+        {
+          "name": "Arrest",
+          "description": "Whenever an enemy operative is within operative’s stats (including its weapons’ stats, but excluding its control range of this operative, if no other enemy operatives Save stat). are within this operative’s control range, that enemy operative cannot perform the Fall Back action."
+        },
+        {
+          "name": "Zealous Dedication",
+          "description": "Whenever an attack dice inflicts damage of 3 or more on this operative, roll one D6: on a 5+, subtract 1 from that inflicted damage."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Combat shotgun (close range)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "4",
+          "specialRules": "Range 6\""
+        },
+        {
+          "name": "Combat shotgun (long range)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 5,
+          "damage": "2",
+          "criticalDamage": "2",
+          "specialRules": null
+        },
+        {
+          "name": "Excruciator maul",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "5",
+          "criticalDamage": "5",
+          "specialRules": "Rending, Shock"
+        }
+      ]
+    },
+    {
+      "name": "ARBITES GUNNER",
+      "keywords": [
+        "EXACTION SQUAD",
+        "IMPERIUM",
+        "ADEPTUS ARBITES",
+        "GUNNER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Grenade launcher",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Piercing 1"
+        },
+        {
+          "name": "Heavy stubber (focused)",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Heavy (Dash Only)"
+        },
+        {
+          "name": "Heavy stubber (sweeping)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Heavy (Dash Only), T orrent 1\""
+        },
+        {
+          "name": "Webber",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Range 12\", Severe, Stun"
+        },
+        {
+          "name": "Repression baton",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "ARBITES MALOCATOR",
+      "keywords": [
+        "EXACTION SQUAD",
+        "IMPERIUM",
+        "ADEPTUS ARBITES",
+        "MALOCATOR"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Acute Focus",
+          "description": "Once during"
+        },
+        {
+          "name": "Veriscant (1AP)",
+          "description": "each of this operative’s Select one enemy operative visible to this operative. Until the start of this operative’s next activations, it can perform the activation, until it’s incapacitated or until it performs this action again (whichever comes first), Pick Up Marker, Place whenever a friendly EXACTION SQUAD operative is shooting against, fighting against or Marker, Veriscant or a retaliating against that enemy operative, that friendly operative’s weapons have the Lethal 5+ mission action for 1 less AP. and Severe weapon rules. This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Combat shotgun (close range)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "4",
+          "specialRules": "Range 6\""
+        },
+        {
+          "name": "Combat shotgun (long range)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 5,
+          "damage": "2",
+          "criticalDamage": "2",
+          "specialRules": null
+        },
+        {
+          "name": "Repression baton",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "ARBITES MARKSMAN",
+      "keywords": [
+        "EXACTION SQUAD",
+        "IMPERIUM",
+        "ADEPTUS ARBITES",
+        "MARKSMAN"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Concealed Position (weapon rule)",
+          "description": "This operative can only use this weapon the first time it’s performing the Shoot action during the battle."
+        },
+        {
+          "name": "Optics (1AP)",
+          "description": "Until the start of this operative’s next activation: • The concealed and stationary profiles of its executioner shotgun have the Lethal 5+ weapon rule. • Whenever it’s shooting with its executioner shotgun, enemy operatives cannot be obscured. This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Executioner shotgun (concealed)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "4",
+          "criticalDamage": "0",
+          "specialRules": "Devastating 4, Heavy, Silent, Concealed Position*"
+        },
+        {
+          "name": "Executioner shotgun (mobile)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "4",
+          "specialRules": null
+        },
+        {
+          "name": "Executioner shotgun (stationary)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "4",
+          "criticalDamage": "0",
+          "specialRules": "Devastating 4, Heavy"
+        },
+        {
+          "name": "Repression baton",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "ARBITES REVELATUM",
+      "keywords": [
+        "EXACTION SQUAD",
+        "IMPERIUM",
+        "ADEPTUS ARBITES",
+        "REVELATUM"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Spot (1AP)",
+          "description": "STRATEGIC GAMBIT Select one enemy operative visible to and within 8\" of this operative. Until the end of the turning in the first turning point. point, whenever a friendly EXACTION SQUAD operative is shooting that enemy operative, If this operative is wholly you can use this effect. If you do: within your drop zone, it can immediately perform a free • That friendly operative’s ranged weapons have the Seek Light weapon rule. Reposition action. • That enemy operative cannot be obscured. This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Scoped shotpistol (short range)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "Range 8\", Lethal 5+"
+        },
+        {
+          "name": "Scoped shotpistol (long range)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": null
+        },
+        {
+          "name": "Repression baton",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "ARBITES SUBDUCTOR",
+      "keywords": [
+        "EXACTION SQUAD",
+        "IMPERIUM",
+        "ADEPTUS ARBITES",
+        "SUBDUCTOR"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Stubborn Subjugator",
+          "description": "You can ignore any changes to the Hit stat of this operative’s melee weapons."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Shotpistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Shock maul & assault shield",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "4",
+          "specialRules": "Shock, Repress*"
+        }
+      ]
+    },
+    {
+      "name": "ARBITES VIGILANT",
+      "keywords": [
+        "EXACTION SQUAD",
+        "IMPERIUM",
+        "ADEPTUS ARBITES",
+        "VIGILANT"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Close Quarters Vigilance",
+          "description": "This operative can perform the Shoot action (excluding Guard) while within control range of an enemy operative, but only if it hasn’t performed the Charge action during the activation, or if it’s a counteraction. Note this operative isn’t restricted from performing the Charge action after performing the Shoot action."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Combat shotgun (close range)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "4",
+          "specialRules": "Range 6\""
+        },
+        {
+          "name": "Combat shotgun (long range)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 5,
+          "damage": "2",
+          "criticalDamage": "2",
+          "specialRules": null
+        },
+        {
+          "name": "Repression baton",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "ARBITES VOX-SIGNIFIER",
+      "keywords": [
+        "EXACTION SQUAD",
+        "IMPERIUM",
+        "ADEPTUS ARBITES",
+        "VOX-SIGNIFIER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Signal (1AP)",
+          "description": "SUPPORT. Select one other friendly EXACTION SQUAD operative visible to this operative. Until the end of that operative’s next activation, add 1 to its APL stat. This operative cannot perform this action while within control range of an enemy operative. NOTES:"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Combat shotgun (close range)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "4",
+          "specialRules": "Range 6\""
+        },
+        {
+          "name": "Combat shotgun (long range)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 5,
+          "damage": "2",
+          "criticalDamage": "2",
+          "specialRules": null
+        },
+        {
+          "name": "Repression baton",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    }
+  ],
+  "factionRules": [
+    {
+      "name": "Marked For Justice",
+      "description": "Exaction Squads prioritise their targets, focusing their ire on those marked for immediate punishment before moving on to the next transgressor. STRATEGIC GAMBIT. Select one enemy operative to be your mark for the turning point. Whenever a friendly EXACTION SQUAD operative is shooting against, fighting against or retaliating against your mark, that friendly operative's weapons have the Punishing weapon rule. Whenever your mark is incapacitated, you can select a new enemy operative to be your mark for the turning point (and can continue to do so during this turning point)."
+    }
+  ],
+  "markersTokens": [
+    {
+      "name": "Medic token Apprehend Marked for",
+      "description": ""
+    }
+  ],
+  "strategyPloys": [
+    {
+      "name": "Dispense Justice",
+      "cpCost": 1,
+      "description": "In pursuit of the guilty, Arbitrators are focused, disciplined and utterly determined. Whenever a friendly EXACTION SQUAD operative is fighting or retaliating, if it hasn’t moved more than its Move stat during the activation, or if it's a counteraction, its melee weapons have the Ceaseless weapon rule."
+    },
+    {
+      "name": "Terminal Decree",
+      "cpCost": 1,
+      "description": "A dangerous quarry has been judged guilty of heinous crimes against the Imperium and must be terminated with extreme prejudice. Whenever a friendly EXACTION SQUAD operative is shooting an enemy operative within 6\" of it, or whenever a friendly EXACTION SQUAD GUNNER operative is shooting, that friendly operative’s ranged weapons have the Balanced weapon rule."
+    }
+  ],
+  "firefightPloys": [
+    {
+      "name": "Brutal Backup",
+      "cpCost": 1,
+      "description": "When combating the most belligerent of foes, Arbitrators may combine their considerable might to bludgeon the guilty with baton and maul. SQUAD operative’s activation, before or after it performs an action. Select one enemy operative within its control range. One other friendly EXACTION SQUAD operative can immediately perform a free Fight action, but you cannot select any other enemy operative to fight against during that action."
+    },
+    {
+      "name": "Execution Order",
+      "cpCost": 1,
+      "description": "Those who have earned the ire of the Imperium are marked by the Adeptus Arbites for execution, their termination prioritised. performs a mission action (excluding Operate Hatch). Alternatively, use it at the end of the Firefight phase and select one enemy operative that controls an objective marker. In either case, the next time your opponent would activate that enemy operative, you can interrupt that activation and activate a ready friendly EXACTION SQUAD operative. If you do, during that activation, that friendly operative must shoot against or fight against that enemy operative, and cannot do so against any other enemy operatives until it does (if this isn’t possible, that friendly operative’s activation is cancelled). After completing that friendly operative’s activation, continue that enemy operative’s activation (if possible). You cannot use this ploy again until that enemy operative is activated or incapacitated."
+    }
+  ],
+  "factionEquipment": [
+    {
+      "name": "Strobing Phosphor-lumen",
+      "epCost": 1,
+      "description": "The brilliant white, flickering light of this rotating lumen device has the effect of disorientating foes caught in its beam. Whenever an enemy operative is shooting against, fighting against or retaliating against a friendly EXACTION SQUAD operative within 2\" of it, your opponent cannot re-roll their attack dice results of 1. NOTES:",
+      "restrictions": null
+    },
+    {
+      "name": "Special Issue Shells",
+      "epCost": 1,
+      "description": "Arbites shotguns can be loaded with a wide range of specialist ammunition, including but not limited to incendiary rounds and armour-piercing slugs. Up to twice per turning point, when a friendly EXACTION SQUAD operative is performing the Shoot action and you select a combat shotgun, executioner shotgun, scoped shotpistol or shotpistol, you can use this rule. If you do, select one of the following weapon rules for that weapon to have until the end of that action: • Saturate. • Piercing 1, but only if the target has a Save stat of 3+ or better. • Torrent 1\", but you cannot select more than one secondary target. NOTES:",
+      "restrictions": null
+    }
+  ]
+}

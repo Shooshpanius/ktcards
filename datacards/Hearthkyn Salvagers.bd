@@ -1,0 +1,708 @@
+{
+  "teamName": "Hearthkyn Salvagers",
+  "operatives": [
+    {
+      "name": "HEARTHKYN THEYN",
+      "keywords": [
+        "HEARTHKYN SALVAGER",
+        "LEAGUES OF VOTANN",
+        "LEADER",
+        "THEYN"
+      ],
+      "movement": "5\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 9,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Eye of the Ancestors",
+          "description": "STRATEGIC GAMBIT if this operative"
+        },
+        {
+          "name": "Weavefield Crest",
+          "description": "Once per battle, when an attack dice is in the killzone. Select one enemy operative, or up to two inflicts Normal Dmg on this operative, you can ignore that enemy operatives if three or more friendly HEARTHKYN inflicted damage. SALVAGER operatives are incapacitated. Each of those enemy operatives gains one of your Grudge tokens."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Autoch-pattern bolt pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\", Accurate 1"
+        },
+        {
+          "name": "Autoch-pattern bolter",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Accurate 1"
+        },
+        {
+          "name": "Bolt revolver",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "EtaCarn plasma pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\", Piercing 1"
+        },
+        {
+          "name": "Ion blaster",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Piercing Crits 1"
+        },
+        {
+          "name": "Ion pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\", Piercing Crits 1"
+        },
+        {
+          "name": "Concussion gauntlet",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "5",
+          "criticalDamage": "7",
+          "specialRules": "Brutal, Shock"
+        },
+        {
+          "name": "Plasma weapon",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "Lethal 5+"
+        }
+      ]
+    },
+    {
+      "name": "HEARTHKYN DÔZR",
+      "keywords": [],
+      "movement": "5\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Brawler",
+          "description": "Whenever this operative is"
+        },
+        {
+          "name": "Knux Smash (1AP)",
+          "description": "fighting or retaliating: Select one enemy operative within this operative’s control range. You can move that • Enemy operatives cannot assist. enemy operative up to 3\" to a location it can be placed. Then inflict D3+1 damage on • If it's incapacitated, you can strike it (even if you don’t move it); if the D3 result is a 3, also subtract 1 from that enemy the enemy operative in that sequence operative's APL stat until the end of its next activation. This operative can then with one of your unresolved successes immediately perform a free Charge action (even if it’s already performed the Charge before it’s removed from the killzone. action during that activation), but cannot move more than 3\" during that action. This operative cannot perform this action unless an enemy operative is within its control range. HEARTHKYN SALVAGER , LEAGUES OF VOTANN, DÔZR 28"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Autoch-pattern bolt pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\", Accurate 1"
+        },
+        {
+          "name": "Concussion knux",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "4",
+          "specialRules": "Ceaseless, Lethal 5+, Shock"
+        }
+      ]
+    },
+    {
+      "name": "HEARTHKYN FIELD MEDIC",
+      "keywords": [
+        "HEARTHKYN SALVAGER",
+        "LEAGUES OF VOTANN",
+        "MEDIC",
+        "FIELD MEDIC"
+      ],
+      "movement": "5\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Medikit (1AP)",
+          "description": "Select one friendly HEARTHKYN SALVAGER operative within this operative’s control range to regain up to 2D3 lost wounds. It cannot be an operative that the Medic! rule was used on during this turning point. This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bolt revolver",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Plasma knife",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "Lethal 5+"
+        }
+      ]
+    },
+    {
+      "name": "HEARTHKYN GRENADIER",
+      "keywords": [
+        "HEARTHKYN SALVAGER",
+        "LEAGUES OF VOTANN",
+        "GRENADIER"
+      ],
+      "movement": "5\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Grenadier",
+          "description": "This operative can use frag, krak, smoke and stun grenades (see universal equipment). Doing so doesn’t count towards any limited uses you have (i.e. if you also select those grenades from equipment for other operatives). Whenever this operative is using a frag or krak grenade, improve the Hit stat of that weapon by 1."
+        },
+        {
+          "name": "Utility Grenade (1AP)",
+          "description": "Place one of your Utility Grenade markers within 6\" of this operative. It must be visible to this operative, or on Vantage terrain of a terrain feature that’s visible to this operative. Whenever an operative is within 3\" of that Utility Grenade marker, its controlling player must spend 1 additional AP for that operative to perform the Pick Up Marker and mission actions. In the Ready step of the next Strategy phase, roll one D3. Remove that Utility Grenade marker after a number of activations equal to the result have been completed or at the end of the turning point (whichever comes first). This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Autoch-pattern bolt pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\", Accurate 1"
+        },
+        {
+          "name": "C8 HX charge",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "Range 4\", Blast 1\", Heavy (Reposition only),"
+        }
+      ]
+    },
+    {
+      "name": "HEARTHKYN GUNNER",
+      "keywords": [
+        "HEARTHKYN SALVAGER",
+        "LEAGUES OF VOTANN",
+        "GUNNER"
+      ],
+      "movement": "5\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Beam (weapon rule)",
+          "description": "Whenever this operative is shooting with this weapon, each retained critical success immediately inflicts D3 damage Hearthkyn D on each other operative along one (and only one) beam line (roll Gunner C separately for each operative), but the target isn’t affected. An A operative is along a beam line if a targeting line can be drawn Beam line from this operative to its base, and that line crosses the base of B the original target but doesn’t cross Heavy terrain. In this example, Operative A is the target. Operatives B and C are along the beam line, but Operative D isn’t."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "EtaCarn plasma beamer",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "5",
+          "criticalDamage": "6",
+          "specialRules": "Piercing 1, Beam*"
+        },
+        {
+          "name": "HYLas auto rifle",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Ceaseless, Rending"
+        },
+        {
+          "name": "HYLas rotary cannon (focused)",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Ceaseless, Heavy (Reposition only), Saturate"
+        },
+        {
+          "name": "HYLas rotary cannon (sweeping)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Ceaseless, Heavy (Reposition only), Saturate,"
+        }
+      ]
+    },
+    {
+      "name": "HEARTHKYN JUMP PACK WARRIOR",
+      "keywords": [
+        "HEARTHKYN SALVAGER",
+        "LEAGUES OF VOTANN",
+        "JUMP PACK WARRIOR"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Jump Pack",
+          "description": "Whenever this operative performs an action in which it moves, it can FLY. If it does, don’t move it. Instead, remove it from the killzone and set it back up wholly within a distance equal to its Move stat (or 3\" if it was a Dash) horizontally of its original location (in a killzone that uses the close quarters rules, e.g."
+        },
+        {
+          "name": "Killzone",
+          "description": "Gallowdark, this distance cannot be measured over or through Wall terrain, and that operative cannot be set up on the other side of an access point – in other words it cannot FLY through an open hatchway). Note that it gains no additional distance when performing the Charge action. It must be set up in a location it can be placed, and unless it’s the Charge action, it cannot be set up within control range of an enemy operative."
+        },
+        {
+          "name": "Force Impact (weapon rule)",
+          "description": "Whenever this operative is fighting with this weapon, if it’s performed the Charge action during the activation, this weapon has the Brutal weapon rule."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Autoch-pattern bolt pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\", Accurate 1"
+        },
+        {
+          "name": "Plasma weapon",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "Lethal 5+, Force Impact*"
+        }
+      ]
+    },
+    {
+      "name": "HEARTHKYN KINLYNK",
+      "keywords": [
+        "HEARTHKYN SALVAGER",
+        "LEAGUES OF VOTANN",
+        "KINLYNK"
+      ],
+      "movement": "5\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Signal (1AP)",
+          "description": "SUPPORT. Select one other friendly HEARTHKYN This operative cannot perform this action while within control SALVAGER operative in the killzone. Until the end of that range of an enemy operative. operative’s next activation, add 1 to its APL stat."
+        },
+        {
+          "name": "System Jam (1AP)",
+          "description": "Select one enemy operative that's a valid target for this operative and that doesn’t have one of your System Jam tokens; it gains one. Until the end of the battle, whenever an enemy operative has one of your System Jam tokens, it cannot be activated until each enemy operative without one is expended. When an enemy operative that has one of your System Jam tokens is activated, remove that token. This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Autoch-pattern bolter",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Accurate 1"
+        },
+        {
+          "name": "Ion blaster",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Piercing Crits 1"
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "HEARTHKYN KOGNITÂAR",
+      "keywords": [],
+      "movement": "5\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Tactician",
+          "description": "STRATEGIC GAMBIT if this operative is in the killzone. Place either your Attack or Defence marker in the killzone. Whenever a friendly HEARTHKYN SALVAGER operative is shooting against, fighting against or retaliating against an enemy operative that’s within 3\" of your Attack marker, that friendly operative’s weapons have the Balanced weapon rule. Whenever an enemy operative is shooting a friendly HEARTHKYN SALVAGER operative that’s within 3\" of your Defence marker, you can re-roll one of your defence dice. In the Ready step of the next Strategy phase, remove that marker. HEARTHKYN SALVAGER , LEAGUES OF VOTANN, KOGNITÂAR 28"
+        },
+        {
+          "name": "Accelerated Appraisal (1AP)",
+          "description": "If your Attack or Defence marker is in the killzone, remove it. Place your Attack or Defence marker in the killzone. This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Autoch-pattern bolter",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Accurate 1"
+        },
+        {
+          "name": "Ion blaster",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Piercing Crits 1"
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "HEARTHKYN LOKÂTR",
+      "keywords": [],
+      "movement": "5\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Pan Spectral Scan (1AP)",
+          "description": "SUPPORT. Select one enemy operative visible to this Place your Pan Spectral Scan marker in the killzone. operative. Until the end of the turning point, whenever a Whenever a friendly HEARTHKYN SALVAGER friendly HEARTHKYN SALVAGER operative within 3\" operative is shooting an enemy operative that’s within 3\" of this operative is shooting that enemy operative, you can of that marker, that friendly operative’s ranged weapons use this effect. If you do: have the Accurate 1 and Saturate weapon rules. When this operative is next activated, is incapacitated or performs this • That friendly operative’s ranged weapons have the Seek Light action again (whichever comes first), remove that marker. weapon rule. • That enemy operative cannot be obscured. This operative cannot perform this action while within control range of an enemy operative. This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Autoch-pattern bolter",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Accurate 1"
+        },
+        {
+          "name": "Ion blaster",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Piercing Crits 1"
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "HEARTHKYN LUGGER",
+      "keywords": [
+        "HEARTHKYN SALVAGER",
+        "LEAGUES OF VOTANN",
+        "LUGGER"
+      ],
+      "movement": "5\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Well Supplied",
+          "description": "You can select one additional equipment option. I’ve"
+        },
+        {
+          "name": "Got It",
+          "description": "Once during each of this operative’s activations, it can perform a mission action for 1 less AP."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Autoch-pattern bolter",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Accurate 1"
+        },
+        {
+          "name": "Ion blaster",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Piercing Crits 1"
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "HEARTHKYN WARRIOR",
+      "keywords": [
+        "HEARTHKYN SALVAGER",
+        "LEAGUES OF VOTANN",
+        "WARRIOR"
+      ],
+      "movement": "5\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Secure Salvage",
+          "description": "Whenever an enemy operative is shooting against, fighting against or retaliating against this operative, if this operative contests an objective marker or one of your mission markers, in the Resolve Attack Dice step, you can subtract 1 from the damage inflicted on it from one success. NOTES: NOTES:"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Autoch-pattern bolter",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Accurate 1"
+        },
+        {
+          "name": "Ion blaster",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Piercing Crits 1"
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    }
+  ],
+  "factionRules": [],
+  "markersTokens": [
+    {
+      "name": "Utility",
+      "description": ""
+    },
+    {
+      "name": "Grenade",
+      "description": ""
+    },
+    {
+      "name": "If a particular foe shames or insults the Kin gravely",
+      "description": ""
+    },
+    {
+      "name": "Attack",
+      "description": ""
+    },
+    {
+      "name": "Need Keeps",
+      "description": ""
+    },
+    {
+      "name": "Whenever an enemy operative incapacitates a token Defence",
+      "description": ""
+    },
+    {
+      "name": "Toil Earns",
+      "description": ""
+    },
+    {
+      "name": "Whenever a friendly HEARTHKYN SALVAGER token",
+      "description": ""
+    },
+    {
+      "name": "Pan Spectral",
+      "description": ""
+    },
+    {
+      "name": "System Jam",
+      "description": ""
+    }
+  ],
+  "strategyPloys": [
+    {
+      "name": "Need Keeps",
+      "cpCost": 1,
+      "description": "Those whose need is greatest shall fight hardest for their prize. Select one objective marker or one of your mission markers. • Whenever determining control of that marker, treat the total APL stat of friendly HEARTHKYN SALVAGER operatives that contest it as 1 higher if at least one friendly HEARTHKYN SALVAGER operative contests that marker. Note this isn’t a change to the APL stat, so any changes are cumulative with this. • Whenever a friendly HEARTHKYN SALVAGER operative is within 3\" of that marker, add 1 to the Atk stat of its melee weapons (to a maximum of 4); if the weapon already has an Atk stat of 4, it has the Balanced weapon rule."
+    },
+    {
+      "name": "Wrought Defence",
+      "cpCost": 1,
+      "description": "Artificers of consummate skill, the Kin forge armour of great quality and resilience. Whenever an operative is shooting a friendly HEARTHKYN SALVAGER operative, if you rolled one or less successes (including any re-rolls), you can retain one of your fails as a normal success instead of discarding it."
+    },
+    {
+      "name": "Toil Earns",
+      "cpCost": 1,
+      "description": "The harder the prize is won, the greater the reward. Select one objective marker or one of your mission markers. Whenever an enemy operative is within 3\" of that marker, treat it as having one additional Grudge token."
+    },
+    {
+      "name": "Proximate Firepower",
+      "cpCost": 1,
+      "description": "Hearthkyn Salvagers are supremely effective in close-quarters environments. Whenever a friendly HEARTHKYN SALVAGER operative is shooting an enemy operative within 6\" of it, improve the Hit stat of that friendly operative’s ranged weapons by 1 (to a maximum of 3+). This can allow you to apply or remove the Hit stat change during an action (this takes precedence over the core rules)."
+    }
+  ],
+  "firefightPloys": [
+    {
+      "name": "The Ancestors Are Watching",
+      "cpCost": 1,
+      "description": "The Kin revere their Ancestors and are guided by the lessons of their forebears. HEARTHKYN SALVAGER operative’s activation. Until the end of that activation, that operative can perform either a free Shoot or a free Fight action."
+    },
+    {
+      "name": "Sturdy",
+      "cpCost": 1,
+      "description": "Stocky and stalwart, Hearthkyn Salvagers grit their teeth and shrug off wounds that would fell a Human. shooting a friendly HEARTHKYN SALVAGER operative, when you collect your defence dice. Change the attacker’s retained critical successes to normal successes (any weapon rules they’ve already resolved aren’t affected, e.g. Piercing Crits)."
+    },
+    {
+      "name": "Worth It",
+      "cpCost": 1,
+      "description": "Kin will gladly risk death if the rewards to their kindred are justified. HEARTHKYN SALVAGER operative is incapacitated. It can perform a free mission action before it’s removed from the killzone."
+    },
+    {
+      "name": "Engage To Acquire",
+      "cpCost": 1,
+      "description": "Some prizes must be wrested from the foe by force. The necessity of violent acquisition incites within the Kin a ruthless determination. for a friendly HEARTHKYN SALVAGER operative, if it’s shooting against or fighting against an enemy operative that controls an objective marker or one of your mission markers. You can re-roll any of your attack dice."
+    }
+  ],
+  "factionEquipment": [
+    {
+      "name": "Plasma Knives",
+      "epCost": 1,
+      "description": "The superheated edge of a plasma knife can slice through several inches of solid metal. Armour and bone are no match for such a cutting edge. Friendly HEARTHKYN SALVAGER operatives have the following melee weapon. Note that the FIELD MEDIC operative already has this weapon but with better stats; in that instance, use the better version. NAME ATK HIT DMG Plasma knife 3 4+ 3/5 WR Lethal 5+",
+      "restrictions": null
+    },
+    {
+      "name": "Excavation Tools",
+      "epCost": 1,
+      "description": "Powered picks, plasma cutters and pneumatic drills are items of equipment that allow the Hearthkyn Salvagers to extract treasures buried deep. Friendly HEARTHKYN SALVAGER operatives can perform the Pick Up Marker action for 1 less AP, and don’t have to control the marker to do so (this takes precedence over that action’s conditions – they only need to contest the marker).",
+      "restrictions": null
+    },
+    {
+      "name": "Climbing Rigs",
+      "epCost": 1,
+      "description": "This climbing gear allows pioneering Hearthkyn Salvagers to traverse any difficult terrain they may encounter during the course of their duty. During each friendly HEARTHKYN SALVAGER operative’s activation, you can do one of the following: • When that operative is climbing up, you can treat the vertical distance as 2\" (regardless of how far the operative actually moves vertically). • When that operative is dropping, ignore the vertical distance.",
+      "restrictions": null
+    },
+    {
+      "name": "Writ Of Claim",
+      "epCost": 1,
+      "description": "When the Salvagers of a League have staked their claim, they will defend their due with steadfast determination. Once per battle, if friendly HEARTHKYN SALVAGER operatives contest two or more objective markers, after rolling off to decide initiative, you can use this rule. If you do, you can re-roll your dice.",
+      "restrictions": null
+    }
+  ]
+}

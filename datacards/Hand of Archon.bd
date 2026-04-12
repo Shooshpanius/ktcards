@@ -1,0 +1,573 @@
+{
+  "teamName": "Hand of Archon",
+  "operatives": [
+    {
+      "name": "KABALITE ARCHSYBARITE",
+      "keywords": [
+        "HAND OF THE ARCHON",
+        "AELDARI",
+        "DRUKHARI",
+        "LEADER",
+        "ARCHSYBARITE"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 9,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Cunning",
+          "description": "In the Gambit step of each Strategy phase, if this operative is in the killzone and you pass at the first opportunity, you gain 1CP. Ignore each STRATEGIC GAMBIT from the mission pack (if any) when determining this."
+        },
+        {
+          "name": "Torturous Vision",
+          "description": "Once during each of this operative’s activations, if it doesn’t have any of your Pain tokens when it performs either the Fight or Shoot action, it can gain one of your Pain tokens when you select a valid target or an enemy operative to fight against."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Blast pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\", Piercing 2"
+        },
+        {
+          "name": "Splinter pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "2",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\", Lethal 5+"
+        },
+        {
+          "name": "Splinter rifle",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "2",
+          "criticalDamage": "4",
+          "specialRules": "Lethal 5+"
+        },
+        {
+          "name": "Agoniser",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "Brutal, Lethal 5+, Shock"
+        },
+        {
+          "name": "Array of blades",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "Lethal 5+"
+        },
+        {
+          "name": "Venom blade",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Lethal 4+"
+        }
+      ]
+    },
+    {
+      "name": "KABALITE AGENT",
+      "keywords": [
+        "HAND OF THE ARCHON",
+        "AELDARI",
+        "DRUKHARI",
+        "AGENT"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Sadistic Competition",
+          "description": "Once per turning point, when a friendly HAND OF THE ARCHON operative gains one of your Pain tokens, one friendly HAND OF THE ARCHON AGENT operative that doesn’t have one of your Pain tokens can also gain one."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Splinter rifle",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "2",
+          "criticalDamage": "4",
+          "specialRules": "Lethal 5+"
+        },
+        {
+          "name": "Array of blades",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "KABALITE CRIMSON DUELLIST",
+      "keywords": [
+        "HAND OF THE ARCHON",
+        "AELDARI",
+        "DRUKHARI",
+        "CRIMSON DUELLIST"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Brutal Display",
+          "description": "Once per turning point, when this operative incapacitates an enemy operative within its control range, you can select one other enemy operative visible to and within 6\" of either this operative or the incapacitated enemy operative. Until the start of the next turning point, that other enemy operative cannot control markers or perform the Pick Up Marker or mission actions."
+        },
+        {
+          "name": "Crimson Duellist",
+          "description": "This operative can perform two Fight actions during its activation."
+        },
+        {
+          "name": "Tangle (weapon rule)",
+          "description": "Whenever this operative is fighting or retaliating with this weapon, each of your blocks can be allocated to block two unresolved successes (instead of one)."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Splinter pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "2",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\", Lethal 5+"
+        },
+        {
+          "name": "Razorflail",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Brutal, Tangle*"
+        }
+      ]
+    },
+    {
+      "name": "KABALITE DISCIPLE OF YAELINDRA",
+      "keywords": [
+        "HAND OF THE ARCHON",
+        "AELDARI",
+        "DRUKHARI",
+        "DISCIPLE OF YAELINDRA"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Stinger (weapon rule)",
+          "description": "Whenever an enemy operative is incapacitated by this weapon, before it’s removed from the killzone, inflict D3 damage on each other operative visible to and within 2\" of it (roll separately for each). Each operative subsequently incapacitated as a result of this weapon rule will cause this to happen again."
+        },
+        {
+          "name": "Torment Grenade (1AP)",
+          "description": "Select one enemy operative visible to and within 6\" of this operative. That operative and each other operative within 1\" of it takes a poison test. For an operative to take a poison test, roll one D6, adding 1 to the result if that operative has a Save stat of 4+ or worse: on a 3+, inflict D3 damage on that operative and it gains one of your Poison tokens (if it doesn’t already have one). Whenever an operative that has one of your Poison tokens is activated, inflict D3 damage on it. This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Stinger pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\", Lethal 5+, Stinger*"
+        },
+        {
+          "name": "Array of blades",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "KABALITE ELIXICANT",
+      "keywords": [
+        "HAND OF THE ARCHON",
+        "AELDARI",
+        "DRUKHARI",
+        "ELIXICANT"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Combat Drugs",
+          "description": "At the end of the Select Operatives step, if this operative is selected for deployment, select one of the following COMBAT DRUG rules for friendly HAND OF THE ARCHON operatives to have for the battle: • Painbringer: Whenever an attack dice inflicts damage of 3 or more on this operative, roll one D6: on a 6, subtract 1 from that inflicted damage. • Adrenalight: In the Ready step of each Strategy phase, you can select one friendly operative that has this COMBAT DRUG to gain one of your Pain tokens. • Hypex: You can ignore any changes to this operative’s Move stat from being injured."
+        },
+        {
+          "name": "Administer Drug (1AP)",
+          "description": "Select one friendly HAND OF THE ARCHON operative visible to and within 3\" of this operative, then select one of the following for that friendly operative: • It regains up to 2D3 lost wounds. • Select a different COMBAT DRUG rule for it to have for the battle (this replaces its previous one). This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Splinter rifle",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "2",
+          "criticalDamage": "4",
+          "specialRules": "Lethal 5+"
+        },
+        {
+          "name": "Stim-needler",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "0",
+          "criticalDamage": "0",
+          "specialRules": "Range 3\", Lethal 3+, Stun"
+        },
+        {
+          "name": "Array of blades",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "KABALITE FLAYER",
+      "keywords": [
+        "HAND OF THE ARCHON",
+        "AELDARI",
+        "DRUKHARI",
+        "FLAYER"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Insensible to Pain",
+          "description": "Normal and Critical Dmg of 3 or more inflicts"
+        },
+        {
+          "name": "Flay",
+          "description": "Whenever this operative is using this weapon, the first 1 less damage on this operative. time you strike with a critical success during that sequence, you can select one friendly HAND OF THE ARCHON operative within 6\" of it to gain one of your Pain tokens."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Pain sculptors",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Ceaseless, Flay*"
+        }
+      ]
+    },
+    {
+      "name": "KABALITE GUNNER",
+      "keywords": [
+        "HAND OF THE ARCHON",
+        "AELDARI",
+        "DRUKHARI",
+        "GUNNER"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Blaster",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Piercing 2"
+        },
+        {
+          "name": "Shredder",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Rending, Torrent 2\""
+        },
+        {
+          "name": "Array of blades",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "KABALITE HEAVY GUNNER",
+      "keywords": [
+        "HAND OF THE ARCHON",
+        "AELDARI",
+        "DRUKHARI",
+        "HEAVY GUNNER"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Dark lance",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "6",
+          "criticalDamage": "7",
+          "specialRules": "Heavy (Dash only), Piercing 2"
+        },
+        {
+          "name": "Splinter cannon (focused)",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "Heavy (Dash only), Lethal 5+"
+        },
+        {
+          "name": "Splinter cannon (sweeping)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "H eavy (Dash only), Lethal 5+, Torrent 1\""
+        },
+        {
+          "name": "Array of blades",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "KABALITE SKYSPLINTER ASSASSIN",
+      "keywords": [
+        "HAND OF THE ARCHON",
+        "AELDARI",
+        "DRUKHARI",
+        "SKYSPLINTER ASSASSIN"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Merciless Hunter",
+          "description": "If this operative doesn’t perform the Mark unique action (see other side of card) during its activation, it can perform two Shoot actions during its activation, but a razorwing must be selected for one (and only one) of those actions."
+        },
+        {
+          "name": "Omen",
+          "description": "In the Select Operatives step, when you’re selecting"
+        },
+        {
+          "name": "Mark (1AP)",
+          "description": "equipment, you can select one enemy operative or one other Select one enemy operative visible to this operative. Until the friendly HAND OF THE ARCHON operative (reveal your end of the turning point, whenever this operative is shooting selection when you reveal equipment). Whenever attack or that enemy operative you can use this effect. If you do: defence dice are rolled for that operative: • This operative’s ranged weapons have the Seek Light • If it’s an enemy operative, your opponent must re-roll their weapon rule. dice results of 6. • That enemy operative cannot be obscured. • If it’s a friendly operative, you can re-roll any of your dice results of 1. This operative cannot perform this action while within control range of an enemy operative. NOTES: NOTES: NOTES:"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Razorwing",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "1",
+          "criticalDamage": "2",
+          "specialRules": "Saturate, Seek, Silent"
+        },
+        {
+          "name": "Shardcarbine",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "2",
+          "criticalDamage": "2",
+          "specialRules": "Devastating 2, Lethal 5+"
+        },
+        {
+          "name": "Array of blades",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    }
+  ],
+  "factionRules": [
+    {
+      "name": "Invigorations",
+      "description": "Dark Animus When: During the operative’s activation, before or after it performs an action. Effect: Until the start of the operative’s next activation, add 1 to its APL stat. Accelerated Rejuvenation When: During the operative’s activation or"
+    }
+  ],
+  "markersTokens": [
+    {
+      "name": "Effect",
+      "description": "The operative regains up to D3+1"
+    },
+    {
+      "name": "Stimulated Senses",
+      "description": ""
+    },
+    {
+      "name": "When",
+      "description": "After rolling your attack or defence dice for"
+    },
+    {
+      "name": "Effect",
+      "description": "You can re-roll any of your dice results of"
+    },
+    {
+      "name": "The long-barrelled splinter rifles carried by Kabalite",
+      "description": ""
+    },
+    {
+      "name": "Warriors are incredibly accurate in the hands of a",
+      "description": ""
+    },
+    {
+      "name": "Pain tokens Brutal Display Poison token",
+      "description": ""
+    },
+    {
+      "name": "Whenever a friendly HAND OF THE ARCHON",
+      "description": ""
+    },
+    {
+      "name": "Omen token Hypex token Painbringer",
+      "description": ""
+    },
+    {
+      "name": "Toxin Coating Refined Poison Sadistic",
+      "description": ""
+    }
+  ],
+  "strategyPloys": [
+    {
+      "name": "From Darkness, Death",
+      "cpCost": 1,
+      "description": "Honour is an alien concept to the Drukhari. They make use of distraction and misdirection to butcher unsuspecting foes from the shadows. Whenever a friendly HAND OF THE ARCHON operative is activated, before you determine its order, you can select one enemy operative that friendly operative isn’t a valid target for. Until the end of that activation, the first time that friendly operative is shooting against or fighting against that enemy operative, you can retain one of your normal successes as a critical success instead."
+    },
+    {
+      "name": "Denizens Of Night",
+      "cpCost": 1,
+      "description": "Hailing from Commorragh – the Dark City – the Drukhari are born and raised in shadow, and use it to conceal their movements. Whenever an enemy operative is shooting a friendly HAND OF THE ARCHON operative that’s more than 2\" from enemy operatives, if Heavy or Light terrain is intervening, or any part of that friendly operative’s base is underneath Vantage terrain, you can re-roll one of your defence dice."
+    }
+  ],
+  "firefightPloys": [
+    {
+      "name": "Heinous Arrogance",
+      "cpCost": 1,
+      "description": "To the conceited Drukhari, all opponents are little more than vermin – to be ignored or exterminated. activate a friendly operative. You can skip that activation."
+    },
+    {
+      "name": "Prey On The Wounded",
+      "cpCost": 1,
+      "description": "Drukhari are drawn to agony, seeking out the injured to land a killing blow. for a friendly HAND OF THE ARCHON operative, if it’s shooting against or fighting against a wounded enemy operative. You can re-roll any of your attack dice."
+    }
+  ],
+  "factionEquipment": [
+    {
+      "name": "Toxin Coating",
+      "epCost": 1,
+      "description": "Drukhari raiders are known to coat their blades in venom, ensuring that even the slightest nick of blade against flesh is fatal. Up to twice per turning point, whenever a friendly HAND OF THE ARCHON operative is fighting or retaliating and you’re selecting a melee weapon, you can use this rule. If you do, until the end of that sequence, that operative’s melee weapon has the Lethal 5+ weapon rule. NOTES:",
+      "restrictions": null
+    },
+    {
+      "name": "Refined Poison",
+      "epCost": 1,
+      "description": "Splinter rounds are infused with exquisitely lethal concoctions distilled from the potent venoms and toxins of deadly flora and fauna. Up to twice per turning point, whenever a friendly HAND OF THE ARCHON operative is performing the Shoot action and you select a shardcarbine, splinter cannon, splinter pistol, splinter rifle or stinger pistol, you can use this rule. If you do, until the end of that action, add 1 to the Normal Dmg stat of that weapon. NOTES:",
+      "restrictions": null
+    }
+  ]
+}

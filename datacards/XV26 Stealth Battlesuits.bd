@@ -1,0 +1,561 @@
+{
+  "teamName": "XV26 Stealth Battlesuits",
+  "operatives": [
+    {
+      "name": "XV26 SHAS’VRE",
+      "keywords": [],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 3,
+      "wounds": 13,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "For the Greater Good",
+          "description": "Whenever determining the value of Accurate X for the Kauyon faction rule, if this operative is in the killzone, add 1 to the result if 2 or more friendly XV26 STEALTH BATTLESUIT operatives (excluding DRONE) are incapacitated (to a maximum of Accurate 3). Note that you must have a minimum of Accurate 1 to use this rule."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Burst cannon (focused)",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Ceaseless"
+        },
+        {
+          "name": "Burst cannon (sweeping)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Ceaseless, Torrent 1\""
+        },
+        {
+          "name": "Fusion blaster (short range)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "6",
+          "criticalDamage": "3",
+          "specialRules": "Range 6\", Devastating 4, Piercing 2"
+        },
+        {
+          "name": "Fusion blaster (long range)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Range 12\", Piercing 1"
+        },
+        {
+          "name": "Pulse pistol (ranged)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Pulse pistol (point-blank)",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Accurate 1"
+        }
+      ]
+    },
+    {
+      "name": "XV26 DESIGNATOR",
+      "keywords": [],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 3,
+      "wounds": 12,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Markerlight",
+          "description": "Whenever an enemy operative is a valid target for this operative, or is visible to this operative and within 2\" of your Ambush marker (see Prepare Ambush strategy ploy), it's marked. Whenever a friendly XV26 STEALTH BATTLESUIT operative is shooting an operative that's marked, that friendly operative’s ranged weapons have the Severe weapon rule. Note that an operative can be a valid target for this operative even if this operative isn't the active operative. XV26 STEALTH BATTLESUIT , T'AU EMPIRE, DESIGNATOR 32"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Burst cannon (focused)",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Ceaseless"
+        },
+        {
+          "name": "Burst cannon (sweeping)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Ceaseless, Torrent 1\""
+        },
+        {
+          "name": "Fusion blaster (short range)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "6",
+          "criticalDamage": "3",
+          "specialRules": "Range 6\", Devastating 4, Piercing 2"
+        },
+        {
+          "name": "Fusion blaster (long range)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Range 12\", Piercing 1"
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "XV26 INFILTRATOR",
+      "keywords": [],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 3,
+      "wounds": 12,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Covert Protocols",
+          "description": "This operative can counteract regardless of its order, but if it has a Conceal order during that counteraction, it cannot perform any actions other than Pick Up Marker, Place Marker or mission actions. XV26 STEALTH BATTLESUIT , T'AU EMPIRE, INFILTRATOR 32"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Burst cannon (focused)",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Ceaseless"
+        },
+        {
+          "name": "Burst cannon (sweeping)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Ceaseless, Torrent 1\""
+        },
+        {
+          "name": "Fusion blaster (short range)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "6",
+          "criticalDamage": "3",
+          "specialRules": "Range 6\", Devastating 4, Piercing 2"
+        },
+        {
+          "name": "Fusion blaster (long range)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Range 12\", Piercing 1"
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "XV26 LIBERATOR",
+      "keywords": [],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 3,
+      "wounds": 12,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Grenadier",
+          "description": "This operative can use frag, krak, smoke and stun grenades (see universal equipment). Doing so doesn’t count towards any limited uses you have (i.e. if you also select those grenades from equipment for other operatives). Whenever this operative is using a frag or krak grenade, improve the Hit stat of that weapon by 1. XV26 STEALTH BATTLESUIT , T'AU EMPIRE, LIBERATOR 32"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Burst cannon (focused)",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Ceaseless"
+        },
+        {
+          "name": "Burst cannon (sweeping)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Ceaseless, Torrent 1\""
+        },
+        {
+          "name": "EMP bomb",
+          "type": "Ranged",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "2",
+          "criticalDamage": "2",
+          "specialRules": "Range 4\", Blast 2\", Devastating 1, Heavy"
+        }
+      ]
+    },
+    {
+      "name": "XV26 LODESTAR",
+      "keywords": [],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 3,
+      "wounds": 12,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Electrochaff Launcher",
+          "description": "Once per turning point, when an enemy"
+        },
+        {
+          "name": "Homing Beacon",
+          "description": "This operative is carrying your Homing Beacon operative is performing the Shoot action and your opponent marker. Operatives (excluding DRONE) can perform the Pick selects a valid target (excluding DRONE), you can use this Up Marker action on that marker. The first time an enemy rule, providing this operative isn’t within control range of enemy operative performs the Pick Up Marker action on your operatives. If you do, until the end of that action, whenever Homing Beacon marker, discard that marker (remove it from an enemy operative is shooting a friendly XV26 STEALTH the battle). BATTLESUIT operative that’s both visible to and within 3\" of In the Ready step of each Strategy phase, when you gain CP, this operative and more than 2\" from that enemy operative: if your Homing Beacon marker is in the killzone, roll one D6 if • Ignore the Piercing weapon rule. it's more than 6\" from your drop zone; roll two D6 instead if • That friendly operative is obscured. it's within your opponent’s territory; roll three D6 instead if it's within 6\" of your opponent’s drop zone. If any result is a 4+, you gain one additional CP."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Burst cannon (focused)",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Ceaseless"
+        },
+        {
+          "name": "Burst cannon (sweeping)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Ceaseless, Torrent 1\""
+        },
+        {
+          "name": "Fusion blaster (short range)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "6",
+          "criticalDamage": "3",
+          "specialRules": "Range 6\", Devastating 4, Piercing 2"
+        },
+        {
+          "name": "Fusion blaster (long range)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Range 12\", Piercing 1"
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "XV26 NEUTRALISER",
+      "keywords": [],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 3,
+      "wounds": 12,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Multispectrum Sensor Package",
+          "description": "SUPPORT. Once per turning SYSTEM JAM 1/2AP point, when an enemy operative visible to and within 8\" of this Select one enemy operative visible to this operative. Until the operative is activated, you can use this rule. If you do, each end of that operative’s next activation, subtract 1 from its friendly XV26 STEALTH BATTLESUIT operative within 3\" APL stat. Whenever this operative has a Conceal order, you of this operative can immediately do one of the following: must spend 1 additional AP to perform this action. • Perform a free Dash action (in an order of your choice). This operative cannot perform this action while within control • Change its order. range of an enemy operative. Each friendly operative that performs the Dash action cannot end that move within 3\" of an enemy operative. Note that a Comms Device from universal equipment only affects the second distance of this rule."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Burst cannon (focused)",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Ceaseless"
+        },
+        {
+          "name": "Burst cannon (sweeping)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Ceaseless, Torrent 1\""
+        },
+        {
+          "name": "Fusion blaster (short range)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "6",
+          "criticalDamage": "3",
+          "specialRules": "Range 6\", Devastating 4, Piercing 2"
+        },
+        {
+          "name": "Fusion blaster (long range)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Range 12\", Piercing 1"
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "MV15 GUN DRONE",
+      "keywords": [],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 4,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Drone",
+          "description": "• Whenever determining what’s visible to this operative, the round disc at the top of the miniature is its head. • This operative cannot perform any actions other than • This operative is ignored for your opponent’s kill/elimination op Charge, Dash, Fall Back, Fight, Photon Grenade (when it’s incapacitated, and when determining your starting Launcher, Reposition and Shoot. number of operatives). • Whenever determining control of an objective marker, treat this operative’s APL stat as 1 lower. Note this isn’t a change to its APL stat, so any changes are cumulative with this. • This operative cannot use any weapons that aren’t on its datacard. XV26 STEALTH BATTLESUIT , T'AU EMPIRE, MV15 GUN, DRONE 28"
+        },
+        {
+          "name": "Photon Grenade Launcher (1AP)",
+          "description": "Select one enemy operative visible to this operative and roll one D6: on a 3+, until the end of that operative’s next activation, subtract 2\" from its Move stat. This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Twin pulse carbine",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Ceaseless"
+        },
+        {
+          "name": "Ram",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 5,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "MV75 MARKER DRONE",
+      "keywords": [],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 4,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Drone",
+          "description": "• This operative is ignored for your opponent’s kill/elimination op (when it’s incapacitated, and when determining your starting • This operative cannot perform any actions other than number of operatives). Charge, Dash, Fall Back, Fight, Reposition and Shoot. Markerlight: Whenever an enemy operative is a valid target for • Whenever determining control of an objective marker, treat this operative, or is visible to this operative and within 2\" of your this operative’s APL stat as 1 lower. Note this isn’t a change to Ambush marker (see Prepare Ambush strategy ploy), it's marked. its APL stat, so any changes are cumulative with this. Whenever a friendly XV26 STEALTH BATTLESUIT • This operative cannot use any weapons that aren’t on operative is shooting an operative that's marked, that friendly its datacard. operative’s ranged weapons have the Severe weapon rule. Note • Whenever determining what’s visible to this operative, the that an operative can be a valid target for this operative even if round disc at the top of the miniature is its head. this operative isn't the active operative. XV26 STEALTH BATTLESUIT , T'AU EMPIRE, MV75 MARKER, DRONE 28"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Ram",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 5,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    }
+  ],
+  "factionRules": [
+    {
+      "name": "Kauyon",
+      "description": "Of all the principal martial philosophies revered by the Fire caste, Kauyon is the oldest, and is greatly favoured by kill teams of XV26 Stealth Battlesuits. Roughly translated as the patient hunter, Kauyon's tenets emphasise luring the enemy into overreaching before striking at them with coordinated fury. Shas'vres who are expert in this strategy employ multiple mobile assets, layers of contingencies and delaying tactics to draw foes into ambushes or corral them into pre- prepared fire boxes. Whenever a friendly XV26 STEALTH BATTLESUIT operative is shooting an enemy operative, its ranged weapons have the Accurate X weapon rule. X is determined by that enemy operative’s location."
+    },
+    {
+      "name": "Enemy Operative Location Accurate X",
+      "description": "Within 3\" of your territory Accurate 1 Within your territory Accurate 2 Within 3\" of your drop zone Accurate 3 XV26 STEALTH BATTLESUIT"
+    },
+    {
+      "name": "Tary",
+      "description": "team to date. They combine nd – of course – near invisibility. ace, the XV26 Stealth Battlesuits ently, outmanoeuvre their nterplay capabilities, monitoring mmunications to help the entire team when threatened, or striking with d System Jam to shut down plays threaten the mission. The Lodestar sitions for the team: it transports g Beacon to afford you additional points to spend on critical ploys, and Electrochaff Launcher to deter enemy eats as you push up the killzone. am – while elite in their operative es not play like any of the Space l teams, who typically spread out on and can operate fully independently. ul utility pieces the XV26 Stealth deploy to each killzone work best ion; moving your operatives in a oordinated and compact fashion s like Electrochaff Launcher and rum Sensor Package to cover and most operatives. his defensive play necessary, since m's impact comes from deliberately nd non-reciprocal attacks, not going nsively with double-action headlong hile each operative’s ranged weapons edible damage to a single target, g them at the wrong moment will ndle your limited operative count. play with the XV26 Stealth Battlesuits, st to keep your cool. With such eaponry and mobility, it could be o push forward and strike first, but kly find yourself overwhelmed by most owever, if you wait patiently and antageous engagements, you’ll be uch greater success in your hunts. e wide array of defensive tools at your foil your opponent and draw them g the game on your terms to secure XV26"
+    },
+    {
+      "name": "Stealth",
+      "description": ""
+    },
+    {
+      "name": "Battlesuits",
+      "description": "»"
+    },
+    {
+      "name": "Designer’s",
+      "description": ""
+    },
+    {
+      "name": "Commentary",
+      "description": ""
+    }
+  ],
+  "markersTokens": [
+    {
+      "name": "Integral stealth field generators are built into each",
+      "description": ""
+    },
+    {
+      "name": "Photon Grenade Electrochaff",
+      "description": ""
+    },
+    {
+      "name": "Multispectrum Homing Beacon",
+      "description": ""
+    }
+  ],
+  "strategyPloys": [
+    {
+      "name": "Patient Hunters",
+      "cpCost": 1,
+      "description": "By allowing the enemy to recklessly show their hand or exhaust themselves, the wise can exploit the foolhardy aggression of the foe. Whenever a friendly XV26 STEALTH BATTLESUIT operative is shooting against or fighting against an expended enemy operative, that friendly operative’s weapons have the Balanced weapon rule and its ranged weapons have the Saturate weapon rule. XV26 STEALTH BATTLESUIT"
+    },
+    {
+      "name": "Prepare Ambush",
+      "cpCost": 1,
+      "description": "The T'au precalculate firing solutions and establish kill field parameters, awaiting their unknowing opponents to enter perfect strike range. Place one of your Ambush markers wholly within your territory and more than 2\" from enemy operatives. Whenever a friendly XV26 STEALTH BATTLESUIT operative is shooting an enemy operative that’s within 2\" of that marker, you can use this rule. If you do, that friendly operative's ranged weapons have the Seek weapon rule until the end of the action. Remove that Ambush marker at the end of that action or in the Ready step of the next turning point (whichever comes first)."
+    },
+    {
+      "name": "Bonds Of Unity",
+      "cpCost": 1,
+      "description": "Stealth battlesuit pilots can draw strength and resolve from comrades. Whenever a friendly XV26 STEALTH BATTLESUIT operative is activated (excluding DRONE), if it's visible to and within 6\" of another friendly XV26 STEALTH BATTLESUIT operative (excluding DRONE), you can ignore any changes to that first friendly operative's APL stat and select one of the following: • Ignore any changes to that first friendly operative’s Move stat from being injured until the end of that activation. • Ignore any changes to the Hit stat of that first friendly operative’s weapons from being injured until the end of that activation. XV26 STEALTH BATTLESUIT"
+    },
+    {
+      "name": "Holowave Countermeasures",
+      "cpCost": 1,
+      "description": "Temporary bursts of experimental image-projection technology can throw off advanced targeters and even the aim of experienced snipers. Whenever an operative is shooting a friendly XV26 STEALTH BATTLESUIT operative more than 6\" from it, in the Roll Attack Dice step, the attacker must discard one of their unresolved normal successes (or one of their critical successes if there are none). This isn’t cumulative with being obscured."
+    }
+  ],
+  "firefightPloys": [
+    {
+      "name": "Vectored Retro-thrusters",
+      "cpCost": 1,
+      "description": "XV26 battlesuit pilots are expert at firing unconventional bursts from their multidirectional thrusters to rapidly disengage from aggressive enemies, leaving their foe vulnerable to the rest of the team. ends the Charge action within control range of a friendly XV26 STEALTH BATTLESUIT operative (excluding DRONE). Interrupt that action to use this rule. If you do, that friendly operative can immediately perform a free Fall Back action, but it cannot move more than 3\" during that action. Then, that enemy operative can immediately perform a free Reposition action using any remaining move distance it had from that first Charge action, and can do so even if it’s performed an action that prevents it from performing the Reposition action. XV26 STEALTH BATTLESUIT"
+    },
+    {
+      "name": "Engage Jet Pack",
+      "cpCost": 1,
+      "description": "The potent jet packs built into each XV26 battlesuit provide exceptional mobility, allowing their veteran pilots to secure advantageous positions. STEALTH BATTLESUIT operative (excluding DRONE) is activated or counteracts. Until the end of that activation/counteraction, you can ignore the vertical distance they move during one climb and one drop."
+    },
+    {
+      "name": "Ghostshroud",
+      "cpCost": 1,
+      "description": "Readily rerouting power from their weapons to their stealth fields, these operatives appear to vanish after sowing sudden death. XV26 STEALTH BATTLESUIT operative’s activation. If that operative has an Engage order, change it to Conceal. You cannot use this ploy for each friendly operative more than once per battle. XV26 STEALTH BATTLESUIT"
+    },
+    {
+      "name": "Saviour Protocols",
+      "cpCost": 1,
+      "description": "The drones of this kill team are hard-coded to prioritise the safety of their comrades, even at the cost of their own existence. STEALTH BATTLESUIT operative (excluding DRONE) is selected as the valid target of a Shoot action. Select one friendly XV26 STEALTH BATTLESUIT DRONE operative visible to and within 3\" of that first friendly operative to become the valid target instead (even if it wouldn’t normally be valid for this). That friendly DRONE operative is only in cover or obscured if the original target was. This ploy has no effect if the ranged weapon has the Blast or Torrent weapon rule."
+    }
+  ],
+  "factionEquipment": [
+    {
+      "name": "Advanced Blacksun Filters",
+      "epCost": 1,
+      "description": "Battlesuit and drone bodies augmented with these advanced optical systems are granted incredible target identification clarity, even if confronted by the most unnatural and blinding of conditions. Whenever a friendly XV26 STEALTH BATTLESUIT operative is shooting an operative that's obscured, you don't have to discard one success as a result of that rule. All other effects of obscured apply as normal.",
+      "restrictions": null
+    },
+    {
+      "name": "Counter-network Jammers",
+      "epCost": 1,
+      "description": "Closely packed enemies can be thrown into disarray with a burst of multiwave infrasound from these devices. With the foe's senses and communications equipment disrupted, even outnumbered battlesuit pilots can exploit the resultant confusion to devastating effect. Whenever determining control of a marker, treat the total APL stat of enemy operatives that contest it as 1 lower if only one friendly XV26 STEALTH BATTLESUIT operative and only two enemy operatives contest it. That friendly XV26 STEALTH BATTLESUIT operative cannot be a DRONE operative. Note this isn’t a change to the APL stat, so any changes are cumulative with this. XV26 STEALTH BATTLESUIT",
+      "restrictions": null
+    },
+    {
+      "name": "Hardwired Target Locks",
+      "epCost": 1,
+      "description": "These target-acquisition systems prioritise the parameters of enemy threats and provide their user with automatic locks. They may be embedded into neural interfaces or implanted into pilots' bodies. Whenever you would counteract, you can do so with one friendly XV26 STEALTH BATTLESUIT operative that has a Conceal order and is more than 3\" from enemy operatives, but before it counteracts, you must change its order to Engage and it cannot perform any actions other than Shoot during that counteraction.",
+      "restrictions": null
+    }
+  ]
+}

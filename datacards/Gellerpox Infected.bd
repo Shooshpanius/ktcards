@@ -1,0 +1,582 @@
+{
+  "teamName": "Gellerpox Infected",
+  "operatives": [
+    {
+      "name": "VULGRAR THRICE-CURSED",
+      "keywords": [
+        "GELLERPOX INFECTED",
+        "CHAOS",
+        "NIGHTMARE HULK",
+        "LEADER",
+        "VULGRAR THRICE-CURSED"
+      ],
+      "movement": "5\"",
+      "actionPointLimit": 2,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 5,
+      "wounds": 21,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Spread the Glorious Gifts",
+          "description": "Once per battle STRATEGIC STRATEGIC GAMBIT while this operative is within control GAMBIT. Select one objective marker this operative controls range of an enemy operative. to gain one of your Techno-curse tokens. It cannot be an • Barrelwarp: No additional effect. objective marker within control range of an enemy operative. • Screaming Rustspikes: This TECHNO-CURSE inflicts 2 Whenever that objective marker is within control range of an damage on that enemy operative (instead of 1). enemy operative, that operative is affected by your selected • Viral Vox-static: Whenever that enemy operative is activated, TECHNO-CURSE rule and an additional rule determined by subtract 1 from its APL stat until the end of its activation. your TECHNO-CURSE, as shown opposite. You cannot use this"
+        },
+        {
+          "name": "Engineered (weapon rule)",
+          "description": "At the end of the Select Operatives step, if this operative is selected for deployment, select up to two of the following improvements or weapon rules for this weapon to have for the battle: Add 1 to the Normal Dmg stat, add 1 to the Critical Dmg stat, Balanced, Brutal, Lethal 5+, Rending."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Pyregut (standard)",
+          "type": "Ranged",
+          "attacks": 5,
+          "hitSkill": 2,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "Range 6”, Saturate, Torrent 2”"
+        },
+        {
+          "name": "Pyregut (deluge)",
+          "type": "Ranged",
+          "attacks": 5,
+          "hitSkill": 2,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "Range 4”, Saturate, Seek Light"
+        },
+        {
+          "name": "Fleshmelded weapons",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "E ngineered*"
+        }
+      ]
+    },
+    {
+      "name": "BLOATSPAWN",
+      "keywords": [
+        "GELLERPOX INFECTED",
+        "CHAOS",
+        "NIGHTMARE HULK",
+        "BLOATSPAWN"
+      ],
+      "movement": "5\"",
+      "actionPointLimit": 2,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 5,
+      "wounds": 20,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Swipe (weapon rule)",
+          "description": "Whenever this operative performs the Fight action and you select this weapon profile, if it isn't incapacitated, it can immediately perform a free Fight action afterwards, but you must select this weapon profile and it can only fight against each enemy operative within its control range once per activation or counteraction using this weapon profile. This takes precedence over action restrictions, and you can continue to perform free Fight actions until this operative is incapacitated or has fought against every enemy operative within its control range."
+        },
+        {
+          "name": "Tentacled Grasp",
+          "description": "Whenever an enemy operative would perform the Fall Back action while within control range of this operative, you can use this rule. If you do, roll one D6, adding 1 to the result if that enemy operative has a Wounds stat of 8 or less: on a 4+, that enemy operative cannot perform that action during that activation/counteraction (the AP spent on it isn’t refunded)."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Mutant tentacles",
+          "type": "Ranged",
+          "attacks": 5,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 3\", Torrent 1\""
+        },
+        {
+          "name": "Mutant claw & tentacles",
+          "type": "Melee",
+          "attacks": 6,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "FLESHSCREAMER",
+      "keywords": [
+        "GELLERPOX INFECTED",
+        "CHAOS",
+        "NIGHTMARE HULK",
+        "FLESHSCREAMER"
+      ],
+      "movement": "5\"",
+      "actionPointLimit": 2,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 5,
+      "wounds": 20,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Horrifying Shrieking",
+          "description": "Whenever an enemy operative is within 3\" of this operative, your opponent must spend 1 additional AP for that enemy operative to perform the Pick Up Marker and mission actions. Whenever determining control of a marker, treat the total APL stat of enemy operatives that contest it as 1 lower if at least one of those enemy operatives is within 3\" of this operative. Note this isn’t a change to the APL stat, so any changes are cumulative with this."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Mutant fist and cleaver",
+          "type": "Melee",
+          "attacks": 1,
+          "hitSkill": 3,
+          "damage": "8",
+          "criticalDamage": "9",
+          "specialRules": "Lethal 5+"
+        }
+      ]
+    },
+    {
+      "name": "LUMBERGHAST",
+      "keywords": [
+        "GELLERPOX INFECTED",
+        "CHAOS",
+        "NIGHTMARE HULK",
+        "LUMBERGHAST"
+      ],
+      "movement": "5\"",
+      "actionPointLimit": 2,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 5,
+      "wounds": 20,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Spiked Charger",
+          "description": "Whenever this operative finishes moving during the Charge action, you can inflict D3 damage on each enemy operative within its control range (roll separately for each)."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Mutant claw",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "6",
+          "criticalDamage": "7",
+          "specialRules": "Brutal"
+        }
+      ]
+    },
+    {
+      "name": "MUTANT",
+      "keywords": [
+        "GELLERPOX INFECTED",
+        "CHAOS",
+        "MUTANT"
+      ],
+      "movement": "5\"",
+      "actionPointLimit": 2,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 5,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Group Activation",
+          "description": "Whenever this operative is expended, you"
+        },
+        {
+          "name": "Gellercaust Masks",
+          "description": "Whenever an attack dice would inflict must then activate one other ready friendly GELLERPOX Critical Dmg on this operative, you can choose for that attack INFECTED MUTANT operative (if able) before your dice to inflict Normal Dmg instead. opponent activates. When that other operative is expended, your opponent then activates as normal (in other words, you cannot activate more than two operatives in succession with this rule)."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Frag grenade",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "4",
+          "specialRules": "Range 6\", Blast 2\", Limited 1, Saturate"
+        },
+        {
+          "name": "Heavy axe",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Brutal"
+        },
+        {
+          "name": "Improvised weapon",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Ceaseless"
+        }
+      ]
+    },
+    {
+      "name": "GLITCHLING",
+      "keywords": [
+        "GELLERPOX INFECTED",
+        "CHAOS",
+        "GLITCHLING"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 6,
+      "wounds": 3,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Daemonic",
+          "description": "Whenever an operative is shooting this operative,"
+        },
+        {
+          "name": "Group Activation",
+          "description": "Whenever this operative is expended, you ignore the Piercing weapon rule. must then activate one other ready friendly GELLERPOX INFECTED GLITCHLING operative (if able) before your"
+        },
+        {
+          "name": "Small",
+          "description": "This operative cannot use any weapons that aren’t on its opponent activates. When that other operative is expended, your datacard, or perform unique actions. Whenever this operative opponent then activates as normal (in other words, you cannot has a Conceal order and is in cover, it cannot be selected as a activate more than two operatives in succession with this rule). valid target, taking precedence over all other rules (e.g. Seek, Vantage terrain) except being within 2”."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Diseased effluence",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "2",
+          "specialRules": "Range 6\""
+        },
+        {
+          "name": "Diseased nippers",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "1",
+          "criticalDamage": "2",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "CURSEMITE",
+      "keywords": [
+        "GELLERPOX INFECTED",
+        "CHAOS",
+        "MUTOID VERMIN",
+        "CURSEMITE"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 6,
+      "wounds": 2,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Feast (weapon rule)",
+          "description": "Whenever this operative is using this weapon against a"
+        },
+        {
+          "name": "Group Activation",
+          "description": "Whenever this operative is expended, you wounded operative, add 1 to the Atk stat of this weapon and it must then activate one other ready friendly GELLERPOX has the Lethal 5+ weapon rule. INFECTED MUTOID VERMIN operative (if able) before your opponent activates. When that other operative is expended, your opponent then activates as normal (in other words, you cannot activate more than two operatives in succession with this rule)."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bloodsucking proboscis",
+          "type": "Melee",
+          "attacks": 2,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": "Rending, Feast*"
+        }
+      ]
+    },
+    {
+      "name": "EYESTINGER SWARM",
+      "keywords": [
+        "GELLERPOX INFECTED",
+        "CHAOS",
+        "MUTOID VERMIN",
+        "EYESTINGER SWARM"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 6,
+      "wounds": 2,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Group Activation",
+          "description": "Whenever this operative is expended, you must then activate one other ready friendly GELLERPOX INFECTED MUTOID VERMIN operative (if able) before your opponent activates. When that other operative is expended, your opponent then activates as normal (in other words, you cannot activate more than two operatives in succession with this rule)."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Swarm",
+          "type": "Ranged",
+          "attacks": 5,
+          "hitSkill": 6,
+          "damage": "0",
+          "criticalDamage": "0",
+          "specialRules": "Range 6\", Stun"
+        },
+        {
+          "name": "Sting",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 5,
+          "damage": "1",
+          "criticalDamage": "2",
+          "specialRules": "Shock"
+        }
+      ]
+    },
+    {
+      "name": "SLUDGE-GRUB",
+      "keywords": [
+        "GELLERPOX INFECTED",
+        "CHAOS",
+        "MUTOID VERMIN",
+        "SLUDGE-GRUB"
+      ],
+      "movement": "4\"",
+      "actionPointLimit": 2,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 6,
+      "wounds": 2,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Group Activation",
+          "description": "Whenever this operative is expended, you"
+        },
+        {
+          "name": "Caustic Demise",
+          "description": "When this operative is incapacitated, before it’s must then activate one other ready friendly GELLERPOX removed from the killzone, roll one D6 separately for each enemy INFECTED MUTOID VERMIN operative (if able) before operative visible to and within 2\" of it: on a 4+, inflict 1 damage your opponent activates. When that other operative is expended, on that operative. your opponent then activates as normal (in other words, you cannot activate more than two operatives in succession with this rule). NOTES:"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Acid spit",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "2",
+          "specialRules": "Range 6\", 1\" Devastating 1, Piercing 1"
+        },
+        {
+          "name": "Fanged maw",
+          "type": "Melee",
+          "attacks": 2,
+          "hitSkill": 4,
+          "damage": "1",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    }
+  ],
+  "factionRules": [
+    {
+      "name": "Techno-curse",
+      "description": "The Gellerpox is an insidious techno-curse that wends its way into cogitator systems and mechanical components, spreading its dubious gifts to the unsuspecting. At the end of the Select Operatives step, select one TECHNO-CURSE for friendly GELLERPOX INFECTED operatives to gain for the battle. Whenever an enemy operative is within your selected TECHNO-CURSE’s infection range, that enemy operative is affected by the symptom of the selected TECHNO-CURSE. Each TECHNO-CURSE, its infection range and its symptom is listed below: Viral Vox-static Discordant static noise and ear-piercing screams blare over vox-channels, disrupting the enemy’s communications, breaking their chain of command and sowing fear within their ranks. Infection Range: Within 3\" of a friendly GELLERPOX INFECTED operative (excluding MUTOID VERMIN), or within 4\" of a friendly GELLERPOX INFECTED GLITCHLING operative. Symptom: That enemy operative’s APL stat cannot be added to (remove all positive APL stat changes it has)."
+    },
+    {
+      "name": "Revoltingly Resilient",
+      "description": "The monstrous transformations wrought upon these hulking brutes have rendered their aberrant physiologies incredibly resistant to harm. Whenever an attack dice inflicts damage of 3 or more on a friendly GELLERPOX INFECTED NIGHTMARE HULK or GELLERPOX INFECTED MUTANT operative, roll one D6: on a 4+, subtract 1 from that inflicted damage."
+    }
+  ],
+  "markersTokens": [
+    {
+      "name": "Friendly GELLERPOX INFECTED NIGHTMARE",
+      "description": ""
+    }
+  ],
+  "strategyPloys": [
+    {
+      "name": "Plagueridden Determination",
+      "cpCost": 1,
+      "description": "Nurgle’s blessings cause the body to bloat and fester, bestowing an unnatural resilience upon the recipient. Whenever an operative is shooting a friendly GELLERPOX INFECTED operative (excluding MUTOID VERMIN) that has an Engage order, you can re-roll one of your defence dice."
+    },
+    {
+      "name": "Drawn To The Hum",
+      "cpCost": 1,
+      "description": "The gentle thrum of machinery has an irresistible effect upon the infected, pulling them in like insects drawn to a blazing lumen. Select one objective marker. Whenever a friendly GELLERPOX INFECTED operative performs the Reposition or Charge action during its activation, you can use this rule. If you do, add 1\" to its Move stat until the end of that activation, but it must end that move within 2\" of that objective marker."
+    },
+    {
+      "name": "Blessings Of Infection",
+      "cpCost": 1,
+      "description": "The mutagenic properties and corrupting influence of the Gellerpox lend the infected brutal strength and gleeful determination. Whenever a friendly GELLERPOX INFECTED operative is fighting or retaliating, you can do one of the following: • If you roll three or more fails, you can discard one of them to retain another as a normal success instead. • If you roll three or more successes, you can discard one of your fails to retain one of your normal successes as a critical success instead."
+    },
+    {
+      "name": "Rust Emanations",
+      "cpCost": 1,
+      "description": "Bloated Nightmare Hulks are redolent with infection, surrounded by a halo of foetid energy that corrodes and corrupts the weaponry of nearby assailants. Whenever a friendly GELLERPOX INFECTED NIGHTMARE HULK operative is fighting, your opponent cannot retain results of 3 as successes."
+    }
+  ],
+  "firefightPloys": [
+    {
+      "name": "Revolting Technology",
+      "cpCost": 1,
+      "description": "The Gellerpox’s infectious tendrils reach out to corrupt the mechanical, rendering weapons and machinery dangerous to their operators. is shooting a friendly GELLERPOX INFECTED operative. That operative’s ranged weapons have the Hot weapon rule until the end of that sequence; if the weapon already has that weapon rule, when your opponent rolls one D6 for that weapon rule, you can add or subtract 1 from the result. Note that for the latter you can see the result of your opponent’s roll for the Hot weapon rule before deciding to use this ploy."
+    },
+    {
+      "name": "Putrescent Demise",
+      "cpCost": 1,
+      "description": "As a Gellerpox Infected perishes, their body explodes in a shower of acrid disease and hazardous gore that harms all caught in its blast. INFECTED operative (excluding MUTOID VERMIN) is incapacitated, before it’s removed from the killzone. Inflict 1 damage (or D3 damage instead if that friendly operative is a NIGHTMARE HULK) on each enemy operative visible to and within 2\" of that friendly operative."
+    },
+    {
+      "name": "Barge",
+      "cpCost": 1,
+      "description": "The enormous bodies of the Nightmare Hulks allow them to barge enemies and obstructions aside to achieve their objective."
+    },
+    {
+      "name": "Gellerpox Infected Nightmare Hulk",
+      "cpCost": 1,
+      "description": "operative’s activation or counteraction, before or after it performs an action. During that activation/ counteraction: • It can move through enemy operatives and within control range of them. • It can perform the Charge and Reposition actions while within control range of an enemy operative, and can leave that operative’s control range to do so (but then normal requirements for that move apply)."
+    },
+    {
+      "name": "Frightening Onslaught",
+      "cpCost": 1,
+      "description": "Nightmare Hulks can strike without pause, with terrifying speed. INFECTED NIGHTMARE HULK operative performs the Fight action, if it isn't incapacitated. It can immediately perform a free Fight action (you don't have to select the same enemy operative to fight against). This takes precedence over action restrictions."
+    }
+  ],
+  "factionEquipment": [
+    {
+      "name": "Mutoid Vermin",
+      "epCost": 1,
+      "description": "Rats, worms, insectile vermin and other foul creatures blighted by the Gellerpox swarm to fight at the side of their infected masters. After revealing this equipment option, add four GELLERPOX INFECTED MUTOID VERMIN operatives to your kill team for the battle.",
+      "restrictions": null
+    },
+    {
+      "name": "Mutated Symptoms",
+      "epCost": 1,
+      "description": "The effects of the Gellerpox are many and varied; some infected display multiple mutations, each one more grotesque than the last. Once per battle, when you activate a friendly GELLERPOX INFECTED operative, you can select one additional TECHNO-CURSE for that operative to gain until the end of the turning point (it must be different from your existing TECHNO-CURSE). Note that if a rule refers to an enemy operative being affected by your selected TECHNO-CURSE rule (e.g. VULGRAR THRICE-CURSED operative’s Spread the Glorious Gifts rule), it’s affected by your additional TECHNO-CURSE rule too.",
+      "restrictions": null
+    },
+    {
+      "name": "Polluted Stockpile",
+      "epCost": 1,
+      "description": "As defenders prepare to repel the infected, they find their own weapons and equipment degraded by the Gellerpox’s corroding influence. After revealing this equipment option, roll 2D6: on a 7+, remove one of your opponent’s selected equipment options; otherwise, that player removes one of their own selected equipment options. They cannot select that equipment again during the game sequence (e.g. in the Scouting step of Approved Ops). You cannot select this equipment option after the Select Operatives step.",
+      "restrictions": null
+    },
+    {
+      "name": "Plague Bellows",
+      "epCost": 1,
+      "description": "As fusions of machine and mortal, Nightmare Hulks bristle with rusted flumes, belching exhaust pipes and wheezing bellows, all of which eject clouds of noxious fumes. Whenever an operative is shooting a friendly",
+      "restrictions": null
+    },
+    {
+      "name": "Gellerpox Infected Nightmare Hulk",
+      "epCost": 1,
+      "description": "operative that’s more than 6\" from it, you can retain one of your defence dice results of 3 as a normal success instead of discarding it.",
+      "restrictions": null
+    },
+    {
+      "name": "Gellerpox Infect",
+      "epCost": 1,
+      "description": "Below you will find a list of the operatives that make up a",
+      "restrictions": null
+    },
+    {
+      "name": "Gellerpox Infected",
+      "epCost": 1,
+      "description": "kill team, including, where relevant, any weapons specified for that operative. Note that other than MUTOID VERMIN, you don't select your operatives from a list. This kill team’s operatives are specified.",
+      "restrictions": null
+    },
+    {
+      "name": "Operatives",
+      "epCost": 1,
+      "description": "↘ Every GELLERPOX INFECTED operative in the following list: • 1 VULGRAR THRICE-CURSED • 1 BLOATSPAWN • 1 FLESHSCREAMER • 1 LUMBERGHAST • 4 GLITCHLING • 1 MUTANT with frag grenade and heavy axe • 2 MUTANT with frag grenade and improvised weapon ↘ Specified number of GELLERPOX INFECTED operatives selected from the following list: • CURSEMITE • EYESTINGER SWARM • SLUDGE-GRUB",
+      "restrictions": null
+    },
+    {
+      "name": "Archetypes",
+      "epCost": 1,
+      "description": "SEEK &",
+      "restrictions": null
+    },
+    {
+      "name": "Security",
+      "epCost": 1,
+      "description": "",
+      "restrictions": null
+    },
+    {
+      "name": "Destroy",
+      "epCost": 1,
+      "description": "Archetypes are used in certain mission packs, e.g. Approved Ops. The game sequence will specify how.",
+      "restrictions": null
+    },
+    {
+      "name": "Gellerpox",
+      "epCost": 1,
+      "description": "",
+      "restrictions": null
+    },
+    {
+      "name": "Infected",
+      "epCost": 1,
+      "description": "»",
+      "restrictions": null
+    },
+    {
+      "name": "Kill",
+      "epCost": 1,
+      "description": "",
+      "restrictions": null
+    },
+    {
+      "name": "Team",
+      "epCost": 1,
+      "description": "",
+      "restrictions": null
+    },
+    {
+      "name": "Selection",
+      "epCost": 1,
+      "description": "4",
+      "restrictions": null
+    },
+    {
+      "name": "Ted Kill Team",
+      "epCost": 1,
+      "description": "",
+      "restrictions": null
+    },
+    {
+      "name": "Vulgrar Thrice-cursed",
+      "epCost": 1,
+      "description": "Fleshmelded weapons Pyregut",
+      "restrictions": null
+    },
+    {
+      "name": "Bloatspawn",
+      "epCost": 1,
+      "description": "Mutant claw Mutant tentacles",
+      "restrictions": null
+    }
+  ]
+}
