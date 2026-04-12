@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import TeamCard from '../components/TeamCard';
 import type { Season } from '../types';
-import { LAST_PR_NUMBER, LAST_PR_DATE } from '../version';
+import { VERSION } from '../version';
 import './HomePage.css';
 
 export default function HomePage() {
@@ -27,6 +27,7 @@ export default function HomePage() {
         <div className="home">
             <header className="home__header">
                 <h1 className="home__title">KillTeam Cards</h1>
+                <span className="home__version">{VERSION}</span>
             </header>
 
             {loading && <p className="home__loading">Loading...</p>}
@@ -55,10 +56,6 @@ export default function HomePage() {
                     </section>
                 ))}
             </div>
-
-            <footer className="home__footer">
-                PR #{LAST_PR_NUMBER} · {LAST_PR_DATE}
-            </footer>
         </div>
     );
 }
