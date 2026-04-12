@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import TeamCard from '../components/TeamCard';
 import type { Season } from '../types';
+import { LAST_PR_NUMBER, LAST_PR_DATE } from '../version';
 import './HomePage.css';
 
 export default function HomePage() {
@@ -54,6 +55,10 @@ export default function HomePage() {
                     </section>
                 ))}
             </div>
+
+            <footer className="home__footer">
+                PR #{LAST_PR_NUMBER} · {LAST_PR_DATE}
+            </footer>
         </div>
     );
 }
