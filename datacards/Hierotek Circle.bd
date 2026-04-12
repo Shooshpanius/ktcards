@@ -1,0 +1,529 @@
+{
+  "teamName": "Hierotek Circle",
+  "operatives": [
+    {
+      "name": "CHRONOMANCER",
+      "keywords": [
+        "HIEROTEK CIRCLE",
+        "NECRON",
+        "LEADER",
+        "CRYPTEK",
+        "CHRONOMANCER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 14,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Timesplinter (1AP)",
+          "description": "SUPPORT. Select one other friendly HIEROTEK SUPPORT. Select one other expended friendly CIRCLE operative (excluding APPRENTEK and HIEROTEK CIRCLE operative visible to and within 5\" CRYPTEK) visible to and within 6\" of this operative, or of this operative. Remove it from the killzone and set it back visible to and within 6\" of a friendly DESPOTEK operative up visible to and within 5\" horizontally of this operative, that’s visible to this operative. That selected operative can in a location it can be placed. Note that a Comms Device immediately perform a 1AP action for free; it cannot move from universal equipment only affects the first distance of more than or be removed and set up more than 2\" during this rule. that action, perform an action it’s already performed during this turning point, or perform that action again during this This operative cannot perform this action while within control turning point. range of an enemy operative, during the first turning point, or if a friendly operative has already performed this action This operative cannot perform this action while within control during this turning point. range of an enemy operative, or while counteracting. CHRONOMANCER ACTIONS COUNTERTEMPORAL NANOMINE 1AP"
+        },
+        {
+          "name": "Chronometron (1AP)",
+          "description": "Place your Countertemporal Nanomine marker visible to this SUPPORT. Select one friendly HIEROTEK CIRCLE operative, or on Vantage terrain of a terrain feature that’s operative visible to and within 6\" of this operative. Until the visible to this operative. Whenever an enemy operative start of this operative’s next activation, until this operative is within 4\" of your Countertemporal Nanomine marker, is incapacitated or until this action is performed again by a subtract 2\" from its Move stat. When this operative is next friendly operative (whichever comes first), subtract 1 from activated, is incapacitated or this action is performed again the Atk stat of an operative’s weapons whenever it’s shooting by a friendly operative (whichever comes first), remove that selected operative. that marker. This operative cannot perform this action while within control This operative cannot perform this action while within control range of an enemy operative. range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Aeonstave (ranged)",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "Blast 2\", Lethal 5+, Stun, Magnify*"
+        },
+        {
+          "name": "Entropic lance (ranged)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "5",
+          "criticalDamage": "3",
+          "specialRules": "Devastating 3, Piercing 1, Magnify*"
+        },
+        {
+          "name": "Aeonstave (melee)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Lethal 5+, Shock"
+        },
+        {
+          "name": "Entropic lance (melee)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "6",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "PSYCHOMANCER",
+      "keywords": [
+        "HIEROTEK CIRCLE",
+        "NECRON",
+        "LEADER",
+        "CRYPTEK",
+        "PSYCHOMANCER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 14,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Harbinger Of Despair (1AP)",
+          "description": "SUPPORT. Select one other friendly Place your Despair marker visible to this operative, or on Vantage terrain of HIEROTEK CIRCLE operative (excluding a terrain feature that’s visible to this operative. When this operative is next APPRENTEK and CRYPTEK) visible to and activated, is incapacitated or this action is performed again by a friendly within 6\" of this operative, or visible to and operative (whichever comes first), remove that marker. within 6\" of a friendly DESPOTEK operative that’s visible to this operative. That selected Whenever an enemy operative is within 2\" of your Despair marker, your operative can immediately perform a 1AP opponent must spend 1 additional AP for that enemy operative to perform action for free; it cannot move more than or the Pick Up Marker and mission actions. Whenever determining control be removed and set up more than 2\" during of a marker, treat the total APL stat of enemy operatives that contest it that action, perform an action it’s already as 1 lower if at least one of those enemy operatives is within 2\" of your performed during this turning point, or perform Despair marker. Note this isn’t a change to the APL stat, so any changes that action again during this turning point. are cumulative with this. This operative cannot perform this action while This operative cannot perform this action while within control range of an within control range of an enemy operative, or enemy operative. while counteracting. PSYCHOMANCER ACTIONS NIGHTMARE SHROUD 1AP"
+        },
+        {
+          "name": "Vision Of Madness (1AP)",
+          "description": "Until the start of this operative’s next Select one enemy operative visible to this operative. Until the start of activation, until it’s incapacitated or until this operative’s next activation, until it’s incapacitated or until this action this action is performed again by a friendly is performed again by a friendly operative (whichever comes first), that operative (whichever comes first), whenever an selected operative gains one of your Madness tokens. enemy operative within 4\" of this operative is shooting, fighting or retaliating, your opponent Whenever your opponent would activate an enemy operative that has one cannot re-roll their attack dice and cannot of your Madness tokens, you can roll one D6: if the result is equal to or retain attack dice results of less than 6 as higher than that enemy operative’s APL, they cannot activate it during this critical successes (e.g. as a result of the Lethal, activation. If that operative is successfully activated, or there are no other Rending or Severe weapon rules). enemy operatives eligible to be activated, remove its Madness token. This operative cannot perform this action while This operative cannot perform this action while within control range of an within control range of an enemy operative. enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Abyssal lance (ranged)",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "2",
+          "criticalDamage": "2",
+          "specialRules": "Blast 2\", 2\" Devastating 1, Piercing 2, Magnify*"
+        },
+        {
+          "name": "Abyssal lance (melee)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "4",
+          "specialRules": "Devastating 1"
+        }
+      ]
+    },
+    {
+      "name": "TECHNOMANCER",
+      "keywords": [
+        "HIEROTEK CIRCLE",
+        "NECRON",
+        "LEADER",
+        "CRYPTEK",
+        "TECHNOMANCER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 14,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Canoptek Repair (1AP)",
+          "description": "SUPPORT. Select one other friendly HIEROTEK SUPPORT. Select one friendly HIEROTEK CIRCLE CIRCLE operative (excluding APPRENTEK and operative visible to and within 6\" of this operative to regain CRYPTEK) visible to and within 6\" of this operative, or up to 2D3 lost wounds. visible to and within 6\" of a friendly DESPOTEK operative that’s visible to this operative. That selected operative can This operative cannot perform this action while within control immediately perform a 1AP action for free; it cannot move range of an enemy operative, or if a friendly operative has more than or be removed and set up more than 2\" during already performed this action during this turning point. that action, perform an action it’s already performed during this turning point, or perform that action again during this turning point. This operative cannot perform this action while within control range of an enemy operative, or while counteracting. TECHNOMANCER ACTIONS AUGMENT WEAPON 1AP"
+        },
+        {
+          "name": "Reinforce Metal (1AP)",
+          "description": "SUPPORT. Select one friendly HIEROTEK CIRCLE SUPPORT. Select one friendly HIEROTEK CIRCLE operative visible to and within 6\" of this operative. Until operative visible to and within 6\" of this operative. Until the start of this operative’s next activation, until it’s the start of this operative’s next activation, until it’s incapacitated or until this action is performed again by a incapacitated or until this action is performed again by a friendly operative (whichever comes first), select two of the friendly operative (whichever comes first), whenever an following weapon rules for one weapon from that selected attack dice inflicts damage of 3 or more on that operative, operative’s datacard to have: Lethal 5+, Rending, Saturate, subtract 1 from that inflicted damage. Severe. Note that if you select a staff of light or arcane conduit, you only select the additional weapon rules for This operative cannot perform this action while within control either the ranged or melee profile of that weapon. range of an enemy operative. This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Staff of light (ranged)",
+          "type": "Melee",
+          "attacks": 6,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Rending, Magnify*"
+        },
+        {
+          "name": "Staff of light (melee)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "Rending"
+        }
+      ]
+    },
+    {
+      "name": "PLASMACYTE ACCELERATOR",
+      "keywords": [
+        "HIEROTEK CIRCLE",
+        "NECRON",
+        "PLASMACYTE",
+        "ACCELERATOR"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 5,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Accelerate (1AP)",
+          "description": "• Whenever this operative has a Conceal order and is in cover, it Select one friendly DEATHMARK or IMMORTAL cannot be selected as a valid target, taking precedence over all operative visible to and within 6\" of this operative. Until the other rules (e.g. Seek, Vantage terrain) except being within 2\". end of that operative’s next activation, add 1 to its APL stat. • This operative can perform the Fall Back action for 1 less AP. This operative cannot perform this action while within control • This operative cannot use any weapons that aren’t on its range of an enemy operative. datacard, or perform unique actions other than Accelerate."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Spark",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": "Range 4\", Piercing 1"
+        },
+        {
+          "name": "Claws",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 5,
+          "damage": "1",
+          "criticalDamage": "2",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "PLASMACYTE REANIMATOR",
+      "keywords": [
+        "HIEROTEK CIRCLE",
+        "NECRON",
+        "MEDIC",
+        "PLASMACYTE",
+        "REANIMATOR"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 5,
+      "notes": null,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Atomiser beam",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 6\", Lethal 5+"
+        },
+        {
+          "name": "Claws",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 5,
+          "damage": "1",
+          "criticalDamage": "2",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "APPRENTEK",
+      "keywords": [
+        "HIEROTEK CIRCLE",
+        "NECRON",
+        "APPRENTEK"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 11,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Apprentek Assistance",
+          "description": "This operative has the same unique actions as your CRYPTEK operative selected for the battle, but can only perform one CRYPTEK unique action per turning point."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Arcane conduit (ranged)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Piercing 1, Magnify*"
+        },
+        {
+          "name": "Arcane conduit (melee)",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "DEATHMARK",
+      "keywords": [
+        "HIEROTEK CIRCLE",
+        "NECRON",
+        "DEATHMARK"
+      ],
+      "movement": "5\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Deathmarked",
+          "description": "Whenever this operative ends the Shoot action,"
+        },
+        {
+          "name": "Multi-dimensional Vision (1AP)",
+          "description": "the target gains one of your Deathmarked tokens if it wasn’t Until the start of this operative’s next activation, whenever incapacitated (the primary target, if relevant). Whenever a it’s shooting, enemy operatives cannot be obscured. friendly HIEROTEK CIRCLE DEATHMARK operative is shooting an enemy operative that has one of your Deathmarked This operative cannot perform this action while within control tokens, that friendly operative’s ranged weapons have the Seek range of an enemy operative. weapon rule."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Synaptic disintegrator",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "4",
+          "criticalDamage": "3",
+          "specialRules": "Devastating 2, Heavy (Dash only),"
+        }
+      ]
+    },
+    {
+      "name": "IMMORTAL DESPOTEK",
+      "keywords": [
+        "HIEROTEK CIRCLE",
+        "NECRON",
+        "IMMORTAL",
+        "DESPOTEK"
+      ],
+      "movement": "5\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 11,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Steadfast",
+          "description": "Whenever determining control of a marker, you can treat this operative’s APL stat as 3. If you do, this takes precedence over all other rules, meaning any changes to its APL stat are ignored for this."
+        },
+        {
+          "name": "Interstitial Command (1AP)",
+          "description": "SUPPORT. Select one other friendly HIEROTEK CIRCLE operative (excluding APPRENTEK and CRYPTEK) visible to and within 6\" of this operative. That selected operative can immediately perform a 1AP action for free (excluding Accelerate); it cannot move more than or be removed and set up more than 2\" during that action, perform an action it’s already performed during this turning point, or perform that action again during this turning point. This operative cannot perform this action while within control range of an enemy operative, or while counteracting."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Gauss blaster",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Piercing 1"
+        },
+        {
+          "name": "Tesla carbine",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "2\" Devastating 1"
+        },
+        {
+          "name": "Bayonet",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "IMMORTAL GUARDIAN",
+      "keywords": [
+        "HIEROTEK CIRCLE",
+        "NECRON",
+        "IMMORTAL",
+        "GUARDIAN"
+      ],
+      "movement": "5\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Steadfast",
+          "description": "Whenever determining control of a marker, you can treat this operative’s APL stat as 3. If you do, this takes precedence over all other rules, meaning any changes to its APL stat are ignored for this. NOTES: NOTES: NOTES:"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Gauss blaster",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Piercing 1"
+        },
+        {
+          "name": "Tesla carbine",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "2\" Devastating 1"
+        },
+        {
+          "name": "Bayonet",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    }
+  ],
+  "factionRules": [
+    {
+      "name": "Living Metal",
+      "description": "The Necrons’ semi-sentient metal skin enables them to heal devastating damage in the midst of battle. In the Ready step of each Strategy phase, after resolving all other rules in this step (e.g. HIEROTEK CIRCLE operative regains up to D3+1 lost wounds (roll separately for each)."
+    }
+  ],
+  "markersTokens": [
+    {
+      "name": "The body of a slain Necron becomes wreathed in an",
+      "description": ""
+    },
+    {
+      "name": "Timesplinter Nightmare",
+      "description": ""
+    },
+    {
+      "name": "Chronometron Augment",
+      "description": ""
+    },
+    {
+      "name": "Multi-",
+      "description": ""
+    },
+    {
+      "name": "Despair",
+      "description": ""
+    },
+    {
+      "name": "Deathmarked Reanimation",
+      "description": ""
+    },
+    {
+      "name": "Magnification",
+      "description": ""
+    },
+    {
+      "name": "Reinforce",
+      "description": ""
+    },
+    {
+      "name": "Conduits",
+      "description": ""
+    },
+    {
+      "name": "Madness Phase Shifter",
+      "description": ""
+    }
+  ],
+  "strategyPloys": [
+    {
+      "name": "Undying Androids",
+      "cpCost": 1,
+      "description": "The living metal forms of Necrons are resistant to the majority of weapons wielded by the galaxy’s primitive biological species. Whenever an operative is shooting a friendly HIEROTEK CIRCLE operative, if you cannot retain any cover saves, you can retain one of your defence dice as a normal success without rolling it."
+    },
+    {
+      "name": "Command Underlings",
+      "cpCost": 1,
+      "description": "Necron Crypteks and Apprenteks wield their underlings like puppets, directing their every movement and action in order to confound the enemy. Select one of the following: • SUPPORT. Each other friendly HIEROTEK CIRCLE operative visible to and within 6\" of a friendly CRYPTEK operative can immediately perform a free Dash action in an order of your choice. • SUPPORT. Each other friendly HIEROTEK CIRCLE operative (excluding CRYPTEK) visible to and within 3\" of a friendly APPRENTEK operative can immediately perform a free Dash action in an order of your choice."
+    },
+    {
+      "name": "Methodical Elimination",
+      "cpCost": 1,
+      "description": "Necrons often trade speed of movement for steadfast resilience and unrelenting firepower. Friendly HIEROTEK CIRCLE operatives’ melee weapons have the Accurate 1 weapon rule. Whenever a friendly HIEROTEK CIRCLE operative is fighting during an activation in which it hasn’t moved more than its Move stat, or whenever it’s retaliating, its melee weapons have the Accurate 2 weapon rule instead."
+    }
+  ],
+  "firefightPloys": [
+    {
+      "name": "Reanimated Function",
+      "cpCost": 1,
+      "description": "The continual reanimation of fallen Necrons enables the Hierotek Circle to steadily tighten its grip on its objectives. of a marker. Select one of your Reanimation markers. Until the start of the next turning point, whenever determining control of a marker, treat that Reanimation marker as a friendly HIEROTEK CIRCLE operative that has an APL stat of 1. For the purposes of the Martyrs tac op (Approved Ops 2025), this ploy has no effect."
+    },
+    {
+      "name": "Dimensional Ambush",
+      "cpCost": 1,
+      "description": "Shifting between dimensions, a Deathmark reveals its position only when a kill shot presents itself. CIRCLE DEATHMARK operative’s activation, if it has a Conceal order. During that activation, that operative can perform the Guard action regardless of the killzone and while it has a Conceal order (see close quarters rules, Kill Team Core Book), but when you perform the free Shoot or Fight action during the interruption, you must change its order to Engage."
+    },
+    {
+      "name": "Living Lightning",
+      "cpCost": 1,
+      "description": "Tesla weapons project living lightning that grows in power, leaping between targets as it drains life from the living. CIRCLE IMMORTAL operative is performing the Shoot action and you select a tesla carbine. Until the end of that action, that weapon doesn’t have the 2\" from its Devastating weapon rule but has the Blast 2\" weapon rule."
+    }
+  ],
+  "factionEquipment": [
+    {
+      "name": "Phase Shifter",
+      "epCost": 1,
+      "description": "At a moment’s notice, a Cryptek can use this device to flit between dimensions to avoid incoming fire. Once per turning point, when an operative is shooting a friendly CRYPTEK operative, at the start of the Roll Defence Dice step, you can use this rule. If you do, worsen the x of the Piercing weapon rule by 1 (if any) until the end of that sequence. Note that Piercing 1 would therefore be ignored.",
+      "restrictions": null
+    },
+    {
+      "name": "Tesla Weave",
+      "epCost": 1,
+      "description": "Upon the Cryptek’s command, an insubstantial web of tesla energy flickers from Necron to Canoptek construct, searing any enemy caught within its leaping arcs. Once per turning point, when an enemy operative ends the Charge action with friendly HIEROTEK CIRCLE operatives within its control range, you can use this rule. If you do, inflict D3+1 damage on that enemy operative.",
+      "restrictions": null
+    },
+    {
+      "name": "Tesseract Cube",
+      "epCost": 1,
+      "description": "This device uses dimensional technology to hold considerably more than its size suggests, becoming a vault for all manner of resources, knowledge and artefacts recovered by the Hierotek Circle. In the Ready step of each Strategy phase, when you gain CP, if a friendly CRYPTEK operative isn’t incapacitated, isn’t within control range of enemy operatives and hasn’t been REANIMATED this turning point, you can use this rule. If you do, roll one D6: on a 1, you cannot use this rule for the rest of the battle; on a 4+, you gain 1CP. Once you’ve gained 2CP from this rule, you cannot use it for the rest of the battle. NOTES:",
+      "restrictions": null
+    }
+  ]
+}

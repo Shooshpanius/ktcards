@@ -1,0 +1,689 @@
+{
+  "teamName": "Legionaries",
+  "operatives": [
+    {
+      "name": "LEGIONARY ASPIRING CHAMPION",
+      "keywords": [
+        "LEGIONARY",
+        "CHAOS",
+        "HERETIC ASTARTES",
+        "LEADER",
+        "ASPIRING CHAMPION"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 15,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "In the Eyes of the Gods",
+          "description": "Once during each of this operative’s activations, if it incapacitates an enemy operative, add 1 to its APL stat until the end of that activation."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Plasma pistol (standard)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\", Piercing 1"
+        },
+        {
+          "name": "Plasma pistol (supercharge)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\", Hot, Lethal 5+, Piercing 1"
+        },
+        {
+          "name": "Tainted bolt pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\", Rending"
+        },
+        {
+          "name": "Power fist",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 4,
+          "damage": "5",
+          "criticalDamage": "7",
+          "specialRules": "Brutal"
+        },
+        {
+          "name": "Power maul",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "S hock"
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "Lethal 5+"
+        },
+        {
+          "name": "Tainted chainsword",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Rending"
+        }
+      ]
+    },
+    {
+      "name": "LEGIONARY CHOSEN",
+      "keywords": [
+        "LEGIONARY",
+        "CHAOS",
+        "HERETIC ASTARTES",
+        "LEADER",
+        "CHOSEN"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 15,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Daemonic Aura",
+          "description": "Whenever an enemy operative performs the"
+        },
+        {
+          "name": "Soul Gorge",
+          "description": "After this operative fights or retaliates, if it isn’t Fall Back action while within control range of this operative, incapacitated, but it incapacitated an enemy operative during you can use this rule. If you do, roll one D6: on a 3+, that enemy that sequence, it regains up to D3+1 lost wounds. operative cannot perform that action during that activation/ counteraction (the AP spent on it is refunded)."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Plasma pistol (standard)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\", Piercing 1"
+        },
+        {
+          "name": "Plasma pistol (supercharge)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\", Hot, Lethal 5+, Piercing 1"
+        },
+        {
+          "name": "Tainted bolt pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\", Rending"
+        },
+        {
+          "name": "Daemon blade",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "7",
+          "specialRules": "Lethal 5+"
+        }
+      ]
+    },
+    {
+      "name": "LEGIONARY ANOINTED",
+      "keywords": [
+        "LEGIONARY",
+        "CHAOS",
+        "HERETIC ASTARTES",
+        "ANOINTED"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 14,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Unleash Daemon",
+          "description": "Once per battle, when this operative is activated, you can use this rule. If you do, until the end of the battle: • This operative cannot perform the Pick Up Marker or mission actions (excluding Operate Hatch). If it’s carrying a marker, it must immediately perform the Place Marker action for 0AP (this takes precedence over all other rules). • Normal and Critical Dmg of 4 or more inflicts 1 less damage on this operative. If this operative has the NURGLE keyword, you cannot reduce the damage of an attack dice by more than 1. In other words, you cannot use both rules to reduce Normal Dmg of 4 or more by 2. • Its daemonic claw has the Ceaseless and Lethal 5+ weapon rules."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Daemonic claw",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Rending"
+        }
+      ]
+    },
+    {
+      "name": "LEGIONARY BALEFIRE ACOLYTE",
+      "keywords": [
+        "LEGIONARY",
+        "CHAOS",
+        "HERETIC ASTARTES",
+        "PSYKER",
+        "BALEFIRE ACOLYTE"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 14,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Siphon Life (weapon rule)",
+          "description": "When you select this weapon, you can use this rule. If you do, at the start of the Resolve Attack Dice step, select one friendly LEGIONARY operative visible to and within 6\" of this operative. For each attack dice you resolve during that step that inflicts damage, that friendly operative regains 1 lost wound, or D3 lost wounds if it was a critical success. You cannot use this weapon rule more than once per turning point."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Fireblast",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "PSYCHIC , Blast 2\", 1\" Devastating 1, Saturate"
+        },
+        {
+          "name": "Life siphon",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "PSYCHIC , Saturate, Siphon Life*"
+        },
+        {
+          "name": "Fell dagger",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "PSYCHIC , Rending, Siphon Life*"
+        }
+      ]
+    },
+    {
+      "name": "LEGIONARY BUTCHER",
+      "keywords": [
+        "LEGIONARY",
+        "CHAOS",
+        "HERETIC ASTARTES",
+        "BUTCHER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 14,
+      "notes": null,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Double-handed chainaxe",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 4,
+          "damage": "5",
+          "criticalDamage": "7",
+          "specialRules": "Brutal"
+        }
+      ]
+    },
+    {
+      "name": "LEGIONARY GUNNER",
+      "keywords": [
+        "LEGIONARY",
+        "CHAOS",
+        "HERETIC ASTARTES",
+        "GUNNER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 14,
+      "notes": null,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Flamer",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "Range 8\", Saturate, Torrent 2\""
+        },
+        {
+          "name": "Meltagun",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "6",
+          "criticalDamage": "3",
+          "specialRules": "Range 6\", Devastating 4, Piercing 2"
+        },
+        {
+          "name": "Plasma gun (standard)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "Piercing 1"
+        },
+        {
+          "name": "Plasma gun (supercharge)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "5",
+          "criticalDamage": "6",
+          "specialRules": "Hot, Lethal 5+, Piercing 1"
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "LEGIONARY HEAVY GUNNER",
+      "keywords": [
+        "LEGIONARY",
+        "CHAOS",
+        "HERETIC ASTARTES",
+        "HEAVY GUNNER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 14,
+      "notes": null,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Heavy bolter (focused)",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Heavy (Reposition only), Piercing Crits 1"
+        },
+        {
+          "name": "Heavy bolter (sweeping)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Heavy (Reposition only), Piercing Crits 1,"
+        }
+      ]
+    },
+    {
+      "name": "LEGIONARY ICON BEARER",
+      "keywords": [
+        "LEGIONARY",
+        "CHAOS",
+        "HERETIC ASTARTES",
+        "ICON BEARER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 14,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Icon Bearer",
+          "description": "Whenever determining control of a marker, treat"
+        },
+        {
+          "name": "Favoured of the Dark Gods",
+          "description": "In the Ready step of each Strategy this operative’s APL stat as 1 higher. Note this isn’t a change to phase, if this operative controls an objective marker that isn’t its APL stat, so any changes are cumulative with this. tainted, that objective marker is tainted for the battle and you gain 1CP. Note that if any operative (including enemy operatives) has tainted an objective marker, you cannot taint that objective marker."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Boltgun",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        },
+        {
+          "name": "Chainsword",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": null
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "LEGIONARY SHRIVETALON",
+      "keywords": [
+        "LEGIONARY",
+        "CHAOS",
+        "HERETIC ASTARTES",
+        "SHRIVETALON"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 14,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Vicious Reflexes",
+          "description": "Whenever this operative is retaliating, you"
+        },
+        {
+          "name": "Horrifying Dismemberment",
+          "description": "Whenever this operative resolve the first attack dice (i.e. defender instead of attacker). incapacitates an enemy operative while fighting or retaliating, select one other enemy operative visible to and within 3\" of either this operative or the incapacitated enemy operative. Subtract 1 from that enemy operative’s APL stat until the end of its next activation."
+        },
+        {
+          "name": "Grisly Mark (2AP)",
+          "description": "Place your Grisly marker within this operative’s control range. • Whenever an enemy operative is within 3\" of your Grisly marker, your opponent must spend 1 additional AP for that enemy operative to perform the Pick Up Marker and mission actions. • Whenever determining control of a marker, treat the total APL stat of enemy operatives that contest it as 1 lower if at least one of those enemy operatives is within 3\" of your Grisly marker. Note this isn’t a change to the APL stat, so any changes are cumulative with this. This operative cannot perform this action more than once per battle, and cannot perform it while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Flensing blades",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "Lethal 5+"
+        }
+      ]
+    },
+    {
+      "name": "LEGIONARY WARRIOR",
+      "keywords": [
+        "LEGIONARY",
+        "CHAOS",
+        "HERETIC ASTARTES",
+        "WARRIOR"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 14,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Infernal Pact",
+          "description": "Once per battle, when a friendly LEGIONARY WARRIOR operative is activated, you can use this rule. If you do, change that operative’s Marks of Chaos keyword. NOTES:"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Boltgun",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        },
+        {
+          "name": "Chainsword",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": null
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    }
+  ],
+  "factionRules": [
+    {
+      "name": "Marks Of Chaos",
+      "description": ""
+    },
+    {
+      "name": "Khorne",
+      "description": "Wrathful Onslaught This operative’s melee weapons have the Severe weapon rule."
+    },
+    {
+      "name": "Marks Of Chaos",
+      "description": ""
+    },
+    {
+      "name": "Slaanesh",
+      "description": "Unnatural Agility Add 1\" to this operative’s Move stat."
+    },
+    {
+      "name": "Marks Of Chaos",
+      "description": ""
+    },
+    {
+      "name": "Undivided",
+      "description": "Vicious Reavers Whenever this operative is shooting against, fighting against or retaliating against an enemy operative within 6\" of it, this operative’s weapons have the Ceaseless weapon rule."
+    }
+  ],
+  "markersTokens": [
+    {
+      "name": "These genetically modified superhumans are made for",
+      "description": ""
+    },
+    {
+      "name": "Mark of Chaos Mark of Chaos Mark of Chaos",
+      "description": ""
+    },
+    {
+      "name": "Khorne token Nurgle token Tzeentch token",
+      "description": ""
+    },
+    {
+      "name": "Each friendly LEGIONARY operative can",
+      "description": ""
+    },
+    {
+      "name": "Mark of Chaos Mark of Chaos Unleash",
+      "description": ""
+    },
+    {
+      "name": "Slaanesh token Undivided Daemon token",
+      "description": ""
+    },
+    {
+      "name": "Tainted Rounds Warded Grisly marker",
+      "description": ""
+    },
+    {
+      "name": "Whenever a friendly LEGIONARY operative",
+      "description": ""
+    }
+  ],
+  "strategyPloys": [
+    {
+      "name": "Quicksilver Speed",
+      "cpCost": 1,
+      "description": "Some amongst the Heretic Astartes are possessed of a fleetness of foot and inhuman agility with which they beguile and confound the foe. Whenever a friendly LEGIONARY operative that performed an action in which it moved during this turning point is fighting, worsen the Hit stat of the enemy operative’s melee weapons by 1. Whenever an operative is shooting a friendly LEGIONARY SLAANESH operative more than 6\" from it that performed an action in which it moved during this turning point, worsen the Hit stat of the enemy operative’s weapons by 1. In all cases for this ploy, this isn’t cumulative with being injured."
+    },
+    {
+      "name": "Fickle Fates",
+      "cpCost": 1,
+      "description": "With superhuman reactions, a Heretic Astartes warrior can use even fractional glimpses of future events to devastating effect. Whenever a friendly LEGIONARY operative is shooting a ready enemy operative, that friendly operative’s ranged weapons have the Balanced weapon rule. Whenever an operative is shooting a ready friendly LEGIONARY TZEENTCH operative, in the Roll Defence Dice step, if you retain any critical successes, you can retain one of your fails as a normal success instead of discarding it."
+    }
+  ],
+  "firefightPloys": [
+    {
+      "name": "Malignant Aura",
+      "cpCost": 1,
+      "description": "Those who swear themselves to Nurgle may be granted his favour. Some are even able to project an miasmic aura of decay. LEGIONARY NURGLE operative is performing the Shoot action, when you select a valid target. Until the end of that action, whenever that friendly operative is shooting an enemy operative within 3\" of it (i.e. including secondary targets, if any), that friendly operative’s ranged weapons have the Piercing 1 weapon rule."
+    },
+    {
+      "name": "Sickening Captivation",
+      "cpCost": 1,
+      "description": "Slaanesh bestows upon the loyal the power to nauseate their foes, using dazzling speed, sickening perfumed auras and horrific sonic projections. LEGIONARY SLAANESH operative’s activation, before or after it performs an action. Select one enemy operative visible to and within 4\" of that friendly operative. Until the end of that enemy operative’s next activation, subtract 1 from its APL stat."
+    }
+  ],
+  "factionEquipment": [
+    {
+      "name": "Chaos Talismans",
+      "epCost": 1,
+      "description": "Those who carry the talismans of the Ruinous Powers may be granted great gifts, though they invariably come at a price. STRATEGIC GAMBIT. Select one Marks of Chaos keyword. Once during each of their activations, when a friendly LEGIONARY operative that has that keyword is shooting, fighting or retaliating, if you roll two or more fails, you can inflict D3 damage on that friendly operative to discard one of them and retain the other as a normal success instead. Note that if it’s the Shoot action and that damage incapacitates that friendly operative, the action doesn’t end (continue the sequence with your successful attack dice). NOTES:",
+      "restrictions": null
+    },
+    {
+      "name": "Malefic Blades",
+      "epCost": 1,
+      "description": "Redolent with daemonic energies, this blade hungers for blood. Friendly LEGIONARY operatives have the following melee weapon: NAME ATK HIT DMG Malefic blade 5 3+ 3/4 NOTES:",
+      "restrictions": null
+    }
+  ]
+}

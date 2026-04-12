@@ -1,0 +1,407 @@
+{
+  "teamName": "Battleclade",
+  "operatives": [
+    {
+      "name": "BATTLECLADE TECHNOARCHEOLOGIST",
+      "keywords": [
+        "BATTLECLADE",
+        "IMPERIUM",
+        "ADEPTUS MECHANICUS",
+        "TECH-PRIEST",
+        "LEADER",
+        "TECHNOARCHEOLOGIST"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 3,
+      "wounds": 9,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Seeker of Divine Arcana",
+          "description": "STRATEGIC GAMBIT. You"
+        },
+        {
+          "name": "Omniscanner (1AP)",
+          "description": "can immediately change this operative’s order and/or it can Select one enemy operative visible to or within 8\" of this immediately perform a free Omniscanner, Fall Back, Place operative to gain one of your Omniscanner tokens. Whenever Marker, Pick Up Marker, Reposition or mission action. a friendly BATTLECLADE operative is shooting against, If it’s the Fall Back or Reposition action and this operative fighting against or retaliating against an enemy operative that isn’t carrying a marker, it must end that move either within your has one of your Omniscanner tokens, that friendly operative’s drop zone (if this isn’t possible, then as close as possible to it), or weapons have the Ceaseless weapon rule. with an objective marker or one of your mission markers within its control range. This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Eradication pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "2",
+          "specialRules": "Range 8\", 1\" Devastating 3, Lethal 5+"
+        },
+        {
+          "name": "Servo-arc claw",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Severe, Shock"
+        }
+      ]
+    },
+    {
+      "name": "BATTLECLADE AUTO-PROXY SERVITOR",
+      "keywords": [
+        "BATTLECLADE",
+        "IMPERIUM",
+        "ADEPTUS MECHANICUS",
+        "AUTO-PROXY",
+        "SERVITOR"
+      ],
+      "movement": "5\"",
+      "actionPointLimit": 2,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Achillan Eye",
+          "description": "Whenever a friendly"
+        },
+        {
+          "name": "Gaze Of The Omnissiah (1AP)",
+          "description": "BATTLECLADE operative is Select one enemy operative visible to this operative. Until the end of the turning shooting an enemy operative visible to point, whenever a friendly BATTLECLADE operative is shooting that enemy this operative, that friendly operative’s operative, you can use this effect. If you do: ranged weapons have the Saturate weapon rule. This rule has no effect if this • That friendly operative’s ranged weapons have the Seek Light weapon rule. operative is within control range of an • That enemy operative cannot be obscured. enemy operative. This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Taser goad",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Lethal 5+, Shock"
+        }
+      ]
+    },
+    {
+      "name": "BATTLECLADE BREACHER SERVITOR",
+      "keywords": [
+        "BATTLECLADE",
+        "IMPERIUM",
+        "ADEPTUS MECHANICUS",
+        "BREACHER",
+        "SERVITOR"
+      ],
+      "movement": "5\"",
+      "actionPointLimit": 2,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Breach (1AP)",
+          "description": "Place one of your Breach markers within this operative’s This operative cannot perform this action while within control control range as close as possible to a terrain feature within range of an enemy operative, or if a terrain feature isn’t control range of it. Whenever an operative is within 1\" of that within its control range. marker, it treats parts of that terrain feature that are no more than 1\" thick as Accessible terrain."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Lascutter (close range)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Range 2\", Lethal 5+, Piercing 2"
+        },
+        {
+          "name": "Lascutter (short range)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Range 6\", Lethal 5+"
+        },
+        {
+          "name": "Hydraulic pincer & lascutter",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "Lethal 5+"
+        }
+      ]
+    },
+    {
+      "name": "BATTLECLADE COMBAT SERVITOR",
+      "keywords": [
+        "BATTLECLADE",
+        "IMPERIUM",
+        "ADEPTUS MECHANICUS",
+        "COMBAT",
+        "SERVITOR"
+      ],
+      "movement": "5\"",
+      "actionPointLimit": 2,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Incendine igniter",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "4",
+          "criticalDamage": "4",
+          "specialRules": "Range 6\", Saturate, Torrent 1\""
+        },
+        {
+          "name": "Meltagun",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "6",
+          "criticalDamage": "3",
+          "specialRules": "Range 6\", Devastating 4, Piercing 2"
+        },
+        {
+          "name": "Phosphor blaster",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Blast 1\", Severe"
+        },
+        {
+          "name": "Servo-claw",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "BATTLECLADE GUN SERVITOR",
+      "keywords": [
+        "BATTLECLADE",
+        "IMPERIUM",
+        "ADEPTUS MECHANICUS",
+        "GUN",
+        "SERVITOR"
+      ],
+      "movement": "5\"",
+      "actionPointLimit": 2,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 4,
+      "wounds": 11,
+      "notes": null,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Heavy arc rifle",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "Heavy (Dash only), Piercing 1, Stun"
+        },
+        {
+          "name": "Heavy bolter (focused)",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Heavy (Dash only), Piercing Crits 1"
+        },
+        {
+          "name": "Heavy bolter (sweeping)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Heavy (Dash only), Piercing Crits 1, Torrent 1\""
+        },
+        {
+          "name": "Augmetic claw",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Brutal"
+        }
+      ]
+    },
+    {
+      "name": "BATTLECLADE SERVITOR UNDERSEER",
+      "keywords": [
+        "BATTLECLADE",
+        "IMPERIUM",
+        "ADEPTUS MECHANICUS",
+        "TECH-PRIEST",
+        "SERVITOR UNDERSEER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 3,
+      "wounds": 9,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Datacoronal Accumulator (1AP)",
+          "description": "SUPPORT. Determine the friendly BATTLECLADE operatives within 6\" of this operative and/or a friendly BATTLECLADE AUTO-PROXY operative, then roll one D3. If the result is equal to or less than the number of objective markers those friendly operatives contest, you gain 1CP. For the purposes of the Comms Device universal equipment, the operative the distance is being determined from must control your Comms Device marker to add 3\" to its distance requirement for this rule. This operative cannot perform this action while within control range of an enemy operative."
+        },
+        {
+          "name": "Network Override (1AP)",
+          "description": "SUPPORT. Select one friendly BATTLECLADE SERVITOR operative within 6\" of either this operative or a friendly BATTLECLADE AUTO-PROXY operative to immediately NETWORK COUNTERACT (you don’t have to TRANSFER POWER to do so). Continue this operative’s activation after doing so. For the purposes of the Comms Device universal equipment, the operative the distance is being determined from must control that marker. This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Master-crafted radium pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "2",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\", Balanced, Rending"
+        },
+        {
+          "name": "Dataspikes",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 5,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "BATTLECLADE TECHNOMEDIC SERVITOR",
+      "keywords": [
+        "BATTLECLADE",
+        "IMPERIUM",
+        "ADEPTUS MECHANICUS",
+        "MEDIC",
+        "TECHNOMEDIC",
+        "SERVITOR"
+      ],
+      "movement": "5\"",
+      "actionPointLimit": 2,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Mechanosuture Array",
+          "description": "Once per turning point, when another friendly BATTLECLADE operative would be incapacitated while visible to and within 3\" of this operative, you can use this rule, providing neither this nor that operative is within control range of an enemy operative. If you do, that friendly operative isn’t incapacitated, has 1 wound remaining and cannot be incapacitated for the remainder of the action. After that action, that friendly operative can immediately perform a free Dash action, but must end that move within this operative’s control range. If this rule was used during that friendly operative’s activation, that activation ends. You cannot use this rule if this operative is incapacitated, or if it’s a Shoot action and this operative would be a primary or secondary target."
+        },
+        {
+          "name": "Expedient Repair (1AP)",
+          "description": "Select one friendly BATTLECLADE operative within this operative’s control range to regain up to D3+3 lost wounds. It cannot be an operative that the Mechanosuture Array rule was used on during this turning point. This operative cannot perform this action while within control range of an enemy operative. NOTES: NOTES: NOTES:"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Servo-chirurgic claw",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Rending"
+        }
+      ]
+    }
+  ],
+  "factionRules": [
+    {
+      "name": "Tary",
+      "description": ""
+    },
+    {
+      "name": "Battleclade",
+      "description": "»"
+    },
+    {
+      "name": "Designer’s",
+      "description": ""
+    },
+    {
+      "name": "Commentary",
+      "description": "ny steps ahead, using operatives ared to other kill teams; you’ll have e. This team provides combos and ys to threaten and react. age, so use the aforementioned network ts and the Breacher Servitor’s Breach overcome this deficit. Gun and Combat like most of your kill team, aren’t y threatening in a fight. Consider the"
+    }
+  ],
+  "markersTokens": [
+    {
+      "name": "It may take you a few games to get to grips with",
+      "description": ""
+    }
+  ],
+  "strategyPloys": [
+    {
+      "name": "Battleclade",
+      "cpCost": 1,
+      "description": "MARKER/TOKEN GUIDE Mechanosuture Array Omniscanner token token Prioritised Acquisition Network Counteract token token Gaze of the Omnissiah Breach marker token"
+    },
+    {
+      "name": "Duty Of Reclamation",
+      "cpCost": 1,
+      "description": "Embedded in Battleclade operatives are lurking strands of enhanced binharic doctrine. These instructions await the moment to activate, triggered by the proximity of a Tech-Priest’s designated prize. Once per action, you can use the Command Re-"
+    },
+    {
+      "name": "Noospheric Possession",
+      "cpCost": 1,
+      "description": "By broadcasting portions of their neural architecture into their thralls, sometimes via a well-positioned relay, manipulative Servitor Underseers effectively possess their tools to better direct the Omnissiah’s wrath. SUPPORT. Whenever a friendly BATTLECLADE SERVITOR operative is within 6\" of a friendly BATTLECLADE AUTO-PROXY or BATTLECLADE SERVITOR UNDERSEER operative, that friendly SERVITOR operative’s weapons have the Accurate 1 weapon rule. For the purposes of the Comms Device universal equipment, the operative the distance is being determined from must control your Comms Device marker to add 3\" to its distance requirement for this rule."
+    },
+    {
+      "name": "Incantation Of The Iron Soul",
+      "cpCost": 1,
+      "description": "Through chanted binharic praise from the Tech-Priests, or sparked by holy subroutines, microactuators lock into bracing positions and reserve power cells are brought online. The flesh may be weak, but the sacred invulnerability of the Machine God’s augmetic blessings is evident to all. Whenever an attack dice inflicts damage of 3 or more on a friendly BATTLECLADE operative, roll one D6: on a 5+, subtract 1 from that inflicted damage."
+    },
+    {
+      "name": "Prioritised Acquisition",
+      "cpCost": 1,
+      "description": "Acquisition is a holy task to a Technoarcheologist, and their zealous fanaticism bleeds into their binharic instructions. Faced with the sacrilege of thieves, aggression protocols are initiated and biochemical stimulants are released in their thralls, endowing all with a measure of their master’s repugnance. Select one objective marker or one of your mission markers. • Whenever determining control of that marker, treat the total APL stat of friendly BATTLECLADE operatives that contest it as 1 higher if at least one friendly BATTLECLADE operative contests that marker. Note this isn’t a change to the APL stat, so any changes are cumulative with this. • Whenever a friendly BATTLECLADE operative is within 3\" of that marker, add 1 to the Atk stat of its melee weapons (to a maximum of 4)."
+    }
+  ],
+  "firefightPloys": [
+    {
+      "name": "Servile Surrogacy",
+      "cpCost": 1,
+      "description": "Deeply woven into each thrall’s cybernetic programming is the instinct to bodily shield their masters should they be threatened. BATTLECLADE TECH-PRIEST operative is selected as the valid target of a Shoot action or to fight against during the Fight action. Select one friendly BATTLECLADE SERVITOR operative visible to and within 3\" of that first friendly operative to become the valid target or to be fought against (as appropriate) instead (even if it wouldn’t normally be valid for this). If it’s the Fight action, treat that SERVITOR operative as being within the fighting operative’s control range for the duration of that action. If it’s the Shoot action, that SERVITOR operative is only in cover or obscured if the original target was. This ploy has no effect if it’s the Shoot action and the ranged weapon has the Blast or Torrent weapon rule."
+    }
+  ],
+  "factionEquipment": [
+    {
+      "name": "Neurocyclic Reserve Cells",
+      "epCost": 1,
+      "description": "Battleclades are granted these devices to accelerate servitor capabilities. After revealing this equipment option, roll one D3. A number of times during the battle equal to the result, whenever you TRANSFER POWER, you can use this rule. If you do, you can TRANSFER POWER for 0AP (this takes precedence over the normal Noospheric Network rules). NOTES:",
+      "restrictions": null
+    }
+  ]
+}

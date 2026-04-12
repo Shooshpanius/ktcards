@@ -1,0 +1,519 @@
+{
+  "teamName": "Wolf Scouts",
+  "operatives": [
+    {
+      "name": "WOLF SCOUT PACK LEADER",
+      "keywords": [
+        "WOLF SCOUT",
+        "IMPERIUM",
+        "ADEPTUS ASTARTES",
+        "SPACE WOLVES",
+        "PACK",
+        "LEADER"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 3,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 3,
+      "wounds": 14,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Lupine Guile",
+          "description": "Once per battle, after rolling off to decide initiative,"
+        },
+        {
+          "name": "Grizzled Veteran",
+          "description": "The first time this operative would be if this operative is in the killzone, you can re-roll your dice. incapacitated during the battle, it’s not incapacitated, has 1 wound remaining and cannot be incapacitated for the remainder of the action. All remaining attack dice are discarded (including yours if this operative is fighting or retaliating). You cannot use the Counterattack firefight ploy or inflict damage as a result of the Savage Fighters strategy ploy at the end of that action."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Plasma pistol (standard)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\", Piercing 1"
+        },
+        {
+          "name": "Plasma pistol (supercharge)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\", Hot, Lethal 5+, Piercing 1"
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "Lethal 5+"
+        }
+      ]
+    },
+    {
+      "name": "WOLF SCOUT FANGBEARER",
+      "keywords": [
+        "WOLF SCOUT",
+        "IMPERIUM",
+        "ADEPTUS ASTARTES",
+        "SPACE WOLVES",
+        "FANGBEARER"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 3,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 3,
+      "wounds": 13,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Spiritual Chirurgy",
+          "description": "You can ignore any changes to the stats of"
+        },
+        {
+          "name": "Healing Balms (1AP)",
+          "description": "friendly WOLF SCOUT operatives (excluding FENRISIAN Select one friendly WOLF SCOUT operative within this WOLF) from being injured (including their weapons’ stats). operative’s control range to regain up to D3+3 lost wounds. Friendly WOLF SCOUT operatives (excluding FENRISIAN WOLF) are not affected by enemy operatives’ Shock and Stun This operative cannot perform this action while within control weapon rules and you can ignore any changes to their APL stat. range of an enemy operative. Note that friendly operatives have these rules if you select this operative for the battle (even if it’s incapacitated later)."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Absolvor bolt pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Range 9\", Piercing Crits 1"
+        },
+        {
+          "name": "Combat blade",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "WOLF SCOUT FROSTEYE",
+      "keywords": [
+        "WOLF SCOUT",
+        "IMPERIUM",
+        "ADEPTUS ASTARTES",
+        "SPACE WOLVES",
+        "FROSTEYE"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 3,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 3,
+      "wounds": 13,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Storm-veiled Execution",
+          "description": "Whenever this operative is within your STORM: • It can perform the Guard action regardless of the killzone (see close quarters rules, Kill Team Core Book). • It can perform the Guard action while it has a Conceal order."
+        },
+        {
+          "name": "Senses (1AP)",
+          "description": "Select one of the following rules for all profiles of this operative’s instigator bolt carbine to have until the start of its next activation: • Severe. • Saturate, and whenever this operative is shooting with that weapon, enemy operatives cannot be obscured. This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Instigator bolt carbine (heavy)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Heavy (Dash only), Piercing Crits 1, Silent"
+        },
+        {
+          "name": "Instigator bolt carbine (mobile)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Piercing Crits 1, Silent"
+        },
+        {
+          "name": "Combat blade",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "WOLF SCOUT GUNNER",
+      "keywords": [
+        "WOLF SCOUT",
+        "IMPERIUM",
+        "ADEPTUS ASTARTES",
+        "SPACE WOLVES",
+        "GUNNER"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 3,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 3,
+      "wounds": 13,
+      "notes": null,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Plasma gun (standard)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "Piercing 1"
+        },
+        {
+          "name": "Plasma gun (supercharge)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "5",
+          "criticalDamage": "6",
+          "specialRules": "Hot, Lethal 5+, Piercing 1"
+        },
+        {
+          "name": "Combat blade",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "WOLF SCOUT HUNTER",
+      "keywords": [
+        "WOLF SCOUT",
+        "IMPERIUM",
+        "ADEPTUS ASTARTES",
+        "SPACE WOLVES",
+        "HUNTER"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 3,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 3,
+      "wounds": 13,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Fierce Temperament",
+          "description": "Whenever this operative is within your STORM, its weapons have the Severe weapon rule."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Plasma pistol (standard)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\", Piercing 1"
+        },
+        {
+          "name": "Plasma pistol (supercharge)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\", Hot, Lethal 5+, Piercing 1"
+        },
+        {
+          "name": "Combat blade",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "WOLF SCOUT RUNE PRIEST SKJALD",
+      "keywords": [
+        "WOLF SCOUT",
+        "IMPERIUM",
+        "ADEPTUS ASTARTES",
+        "SPACE WOLVES",
+        "PSYKER",
+        "RUNE PRIEST SKJALD"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 3,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 3,
+      "wounds": 13,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Cast the Runes",
+          "description": "After selecting this operative, before the battle, roll three D6 and put them to one side. For each result of 1-4, you can use the Command Re-roll firefight ploy for OCP once during the turning point that matches the result. For each result of 5-6, you gain 1CP. For example, if you roll 2, 2 and 5, you gain 1CP and twice during the second turning point you can use Command Re-roll for 0CP."
+        },
+        {
+          "name": "Call The Storm (1AP)",
+          "description": "PSYCHIC. Remove your Storm marker from the killzone (if any), then place it in the killzone. PSYCHIC. Alternatively, instead of resolving the above effect, select one friendly WOLF SCOUT operative. Until the start of this operative’s next activation, until it’s incapacitated or until it performs this action again (whichever comes first), whenever that friendly operative is within your STORM and more than 3\" from the active operative, it’s obscured. This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Jaws of the World Wolf",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "P SYCHIC, Blast 2\", Severe"
+        },
+        {
+          "name": "Thunderclap",
+          "type": "Ranged",
+          "attacks": 5,
+          "hitSkill": 2,
+          "damage": "2",
+          "criticalDamage": "2",
+          "specialRules": "PSYCHIC, Range 6\", Saturate, Seek Light, Stun,"
+        }
+      ]
+    },
+    {
+      "name": "WOLF SCOUT TRAPMASTER",
+      "keywords": [
+        "WOLF SCOUT",
+        "IMPERIUM",
+        "ADEPTUS ASTARTES",
+        "SPACE WOLVES",
+        "TRAPMASTER"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 3,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 3,
+      "wounds": 13,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Haywire Mine",
+          "description": "This operative is carrying your Haywire Mine marker. It can perform the Pick Up Marker action on that marker, but that marker cannot be placed within another operative’s control range (if this operative is incapacitated while carrying that marker and that marker cannot be placed, it’s removed with this operative)."
+        },
+        {
+          "name": "Proximity Mine",
+          "description": "The first time your Haywire Mine marker is within another operative’s control range, remove that marker, subtract 1 from that operative’s APL stat until the end of its next activation, and inflict 2D3+3 damage on it (or D3+6 if that marker is within 6\" horizontally of your Storm marker); if it isn’t incapacitated, end its action (if any), even if that action’s effects aren’t fulfilled. If it cannot be placed, move it the minimum amount to do so. Note that this operative is ignored for these effects (i.e. it cannot set it off or take damage from that marker)."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Plasma pistol (standard)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\", Piercing 1"
+        },
+        {
+          "name": "Plasma pistol (supercharge)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\", Hot, Lethal 5+, Piercing 1"
+        },
+        {
+          "name": "Combat blade",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "WOLF SCOUT FENRISIAN WOLF",
+      "keywords": [],
+      "movement": "8\"",
+      "actionPointLimit": 2,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 5,
+      "wounds": 9,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Instinctive Predator",
+          "description": "This operative cannot perform any actions"
+        },
+        {
+          "name": "Pounce",
+          "description": "Once per battle STRATEGIC GAMBIT. If this other than Charge, Dash, Fall Back, Fight, Guard and operative’s APL stat is 2 or more, this operative can perform a Reposition. It cannot use any weapons that aren’t on its free Charge, Fall Back or Reposition action. If it does, until datacard. This operative can perform the Charge action while it the end of its next activation, subtract 1 from its APL stat and it has a Conceal order. cannot perform any of the aforementioned actions. WOLF SCOUT , IMPERIUM, ADEPTUS ASTARTES, SPACE WOLVES, FENRISIAN WOLF 60x35 NOTES:"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Fangs",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Rending"
+        }
+      ]
+    }
+  ],
+  "factionRules": [
+    {
+      "name": "Elemental Storm",
+      "description": "It is said by some battle-brothers that their Chapter’s Wolf Scouts take the storm with them. In many cases, these tempestuous upheavals truly are supernatural, called into being by accompanying Rune Priest Skjalds. At other times, Wolf Scouts skilfully time their hunts to coincide with local atmospheric phenomena or instigate them with arcane technologies. Wolf Scouts can operate for extended periods hidden by such storms; using the cover to mask their movements and confuse the senses of their prey, their enemies feel they are fighting the very elements themselves."
+    },
+    {
+      "name": "Tary",
+      "description": "apons and stats, who are heavily m you have a group of potent ndance of plasma weaponry and y to double-shoot with them. Even 3AP to do so, your opponent will be espect the threat, preventing them lax or overly aggressive with their positioning. nt operatives in this kill team have unique rules to really make the e. The Pack Leader gives you an -roll, and the Grizzled Veteran rule gladly take on the toughest fights. The r will give some great board control aywire mine, and the Fangbearer support operative with their ng Spiritual Chirurgy rule. Priest Skjald gives you some extra with its Call the Storm action by operative to be obscured. Note that ve doesn’t have to be on Conceal for curing a double-shooting Gunner storm is a great trick. m is just five Space Marines, but it’s by a Fenrisian Wolf – a great tactical used right. This operative can’t oe with tougher operatives like the s can, but it has permanent Charge and great Attacks. It also has the ounce rule, a strategic gambit that to get an early Charge in to tie up a key rative (or operatives if it multi-charges base). This is an excellent tactic to ponent’s initiative gambit: this is when aggressively in the previous turning der to be offensive at the start of the ounce rule can hinder this entirely – nning play when you pull it off. e Wolf Scouts are an elite team with te strengths of the Adeptus Astartes. with slightly less durability they can forgiving. Therefore, they will reward t utilise their storm and the unique n their rules to elevate their operatives ing the apex predators of Kill Team."
+    },
+    {
+      "name": "Wolf",
+      "description": ""
+    },
+    {
+      "name": "Scouts",
+      "description": "»"
+    },
+    {
+      "name": "Designer’s",
+      "description": ""
+    },
+    {
+      "name": "Commentary",
+      "description": ""
+    }
+  ],
+  "markersTokens": [
+    {
+      "name": "Wolf Scouts are experienced Space Marines who",
+      "description": ""
+    },
+    {
+      "name": "Each friendly WOLF SCOUT operative can",
+      "description": ""
+    },
+    {
+      "name": "Lupine Guile Guard",
+      "description": ""
+    }
+  ],
+  "strategyPloys": [
+    {
+      "name": "Cloaked By The Storm",
+      "cpCost": 1,
+      "description": "Wolf Scouts are expert in using the uncanny tempests around them to their advantage, ensuring their desperate prey rarely get a clean shot. Whenever an operative is shooting a friendly WOLF SCOUT operative that’s within your STORM, you can re-roll one of your defence dice."
+    },
+    {
+      "name": "Storm’s Bite",
+      "cpCost": 1,
+      "description": "Subjected to numbing temperatures, flying debris or the empyric lash of a Rune Priest Skjald, the Wolf Scouts’ enemies struggle to focus their wrath and skill. Whenever a friendly WOLF SCOUT operative is fighting against an enemy operative that’s within your STORM, subtract 1 from the Atk stat of that enemy operative’s melee weapons (to a minimum of 3)."
+    },
+    {
+      "name": "Tempestuous Wrath",
+      "cpCost": 1,
+      "description": "When roused, the elemental fury of Wolf Scouts is as ferocious as that of Fenris’ winter storms or the crackling lightning of its Season of Fire. Whenever a friendly WOLF SCOUT operative is fighting or retaliating, if it’s within your STORM or was within your STORM at the start of the activation, its melee weapons have the Balanced weapon rule."
+    },
+    {
+      "name": "Savage Fighters",
+      "cpCost": 1,
+      "description": "Once their prey have been cornered, the Wolf Scouts savagely sustain the pressure, ensuring no opportunity is missed to weaken their quarry. Whenever a friendly WOLF SCOUT operative finishes retaliating, if it wasn’t incapacitated, you can inflict D3+1 damage on the enemy operative in that sequence."
+    }
+  ],
+  "firefightPloys": [
+    {
+      "name": "Acute Senses",
+      "cpCost": 1,
+      "description": "The heightened acuity of the sons of Russ coupled with the keen hunter’s instincts of an experienced Wolf Scout enable these operatives to pick out their prey no matter where they hide. SCOUT operative performs the Shoot action and you’re selecting a valid target. Until the end of that action, that friendly operative’s ranged weapons have the Range 6\" and Seek Light weapon rules and enemy operatives cannot be obscured."
+    },
+    {
+      "name": "Touched By Lokyar",
+      "cpCost": 1,
+      "description": "Independence of spirit is exceptionally strong amongst Wolf Scouts. Enemies who believe them vulnerably isolated soon regret tackling these vicious survivalists. for a friendly WOLF SCOUT operative (excluding FENRISIAN WOLF), if it’s fighting more than 5\" from other friendly operatives. You can re-roll any of your attack dice."
+    },
+    {
+      "name": "Counterattack",
+      "cpCost": 1,
+      "description": "The greatest hunters know never to waste the chance to make an unexpected lunge, their prey at its most vulnerable just as they strike. operative’s activation, or after an enemy operative performs the Fight action. One friendly WOLF SCOUT operative can immediately perform a free Fight action, but you cannot select any other enemy operative to fight against during that action."
+    },
+    {
+      "name": "Transhuman Physiology",
+      "cpCost": 1,
+      "description": "The genetically modified physiology of the Space Wolves is capable of resisting wounds that would kill a lesser being. shooting a friendly WOLF SCOUT operative (excluding FENRISIAN WOLF), in the Roll Defence Dice step. You can retain one of your normal successes as a critical success instead."
+    }
+  ],
+  "factionEquipment": [
+    {
+      "name": "Frost Weapons",
+      "epCost": 1,
+      "description": "These blisteringly cold weapons are crafted by a master Iron Priest and boast lethal edges. Some incorporate ice kraken fangs while others are shards of energised diamond, appearing as if forged from purest ice. Friendly WOLF SCOUT operatives’ combat blades have the Lethal 5+ weapon rule, and one friendly WOLF SCOUT PACK LEADER operative’s power weapon has the Lethal 4+ weapon rule (if any).",
+      "restrictions": null
+    },
+    {
+      "name": "Wolfteeth Necklaces",
+      "epCost": 1,
+      "description": "The right to wear one of these fetishes may be earned in the contests of might held in the Chapter’s fortress monastery: the Fang. They recognise the bearer’s martial skill, and their capacity to draw upon great reserves of genetically augmented strength and perseverance. Once per turning point, when a friendly WOLF SCOUT operative (excluding FENRISIAN WOLF) is shooting, fighting or retaliating, if you roll two or more fails, you can discard one of them to retain another as a normal success instead.",
+      "restrictions": null
+    },
+    {
+      "name": "Runic Charms",
+      "epCost": 1,
+      "description": "Many pieces of a warrior’s wargear are artfully inscribed with runes, but only the enigmatic Rune Priests know the secrets of etching these more potent charms, which the Space Wolves believe can ward their very souls. Once per turning point, when an operative is shooting a friendly WOLF SCOUT operative (excluding FENRISIAN WOLF), at the start of the Roll Defence Dice step, you can use this rule. If you do, worsen the x of the Piercing weapon rule by 1 (if any) until the end of that sequence. Note that Piercing 1 would therefore be ignored.",
+      "restrictions": null
+    },
+    {
+      "name": "Talismanic Trophies",
+      "epCost": 1,
+      "description": "Thick pelts, skulls and tails adorn these sons of Russ. These trophies – taken from huge lupine beasts they have tracked and killed on Fenris – are seen as potent tokens of luck and protection against malign attacks. Whenever a friendly WOLF SCOUT operative (excluding FENRISIAN WOLF) is fighting or retaliating, in the Resolve Attack Dice step, you can subtract 1 from the damage inflicted on it from one success.",
+      "restrictions": null
+    }
+  ]
+}

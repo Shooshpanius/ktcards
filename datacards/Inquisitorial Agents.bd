@@ -1,0 +1,980 @@
+{
+  "teamName": "Inquisitorial Agents",
+  "operatives": [
+    {
+      "name": "INTERROGATOR AGENT",
+      "keywords": [
+        "INQUISITORIAL AGENT",
+        "IMPERIUM",
+        "INQUISITION",
+        "LEADER",
+        "INTERROGATOR"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Inquisitorial Tomes",
+          "description": "STRATEGIC • Denunciation: Whenever a friendly •"
+        },
+        {
+          "name": "Sanctification",
+          "description": "Whenever an enemy GAMBIT if this operative is in the INQUISITORIAL AGENT operative operative is shooting against, fighting killzone and/or when this operative is is shooting against, fighting against or against or retaliating against a friendly activated. Select one of the following retaliating against an enemy operative INQUISITORIAL AGENT operative INQUISITORIAL TOME rules for within 2\" of friendly operatives with within 2\" of friendly operatives with this this operative to have, and one for a this rule, add 1 to the Atk stat of that rule, subtract 1 from the Atk stat of that friendly INQUISITORIAL AGENT friendly operative’s weapons. enemy operative’s weapons. TOME-SKULL operative to have (they can be the same, and ignore the rule you didn’t select for each operative):"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Extended stock relic autopistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "2",
+          "criticalDamage": "4",
+          "specialRules": "Range 12\", Lethal 5+"
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "TOME-SKULL",
+      "keywords": [
+        "INQUISITORIAL AGENT",
+        "IMPERIUM",
+        "INQUISITION",
+        "TOME-SKULL"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 5,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Consecrated Tome",
+          "description": "This operative can have an Machine: INQUISITORIAL TOME rule (see INTERROGATOR). • This operative cannot perform any actions other than Note it keeps that rule even if that friendly INTERROGATOR Charge, Dash, Fall Back and Reposition. operative is removed from the killzone. • It cannot retaliate or assist in a fight. • Whenever determining control of a marker, treat this operative’s APL stat as 1 lower. Note this isn’t a change to its APL stat, so any changes are cumulative with this. • Whenever this operative has a Conceal order and is in cover, it cannot be selected as a valid target, taking precedence over all other rules (e.g. Seek, Vantage terrain) except being within 2\"."
+        },
+        {
+          "name": "Expendable",
+          "description": "This operative is ignored for your opponent’s kill/ elimination op (when it’s incapacitated, and when determining your starting number of operatives). It’s also ignored for victory conditions and scoring VPs if either require operatives to ‘escape’, ‘survive’ or be incapacitated by enemy operatives (if it escapes/survives/is incapacitated, determining how many operatives must escape/survive/be incapacitated, etc.)."
+        },
+        {
+          "name": "Group Activation",
+          "description": "Whenever this operative is expended, you must then activate a ready friendly INQUISITORIAL AGENT INTERROGATOR operative (if able) before your opponent activates. The same is true in reverse (INTERROGATOR followed by TOME-SKULL). When that other operative is expended, your opponent then activates as normal."
+        }
+      ],
+      "attacks": []
+    },
+    {
+      "name": "AUTOSAVANT AGENT",
+      "keywords": [
+        "INQUISITORIAL AGENT",
+        "IMPERIUM",
+        "INQUISITION",
+        "AUTOSAVANT"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Scrivener",
+          "description": "Each subsequent time your opponent uses each ploy"
+        },
+        {
+          "name": "Lightly Armed",
+          "description": "This operative cannot use any weapons that during the battle (excluding Command Re-roll), if this operative aren’t on its datacard, or perform unique actions. is in the killzone, you gain 1CP (to a maximum of 2CP per turning point)."
+        },
+        {
+          "name": "Irrefutable Report",
+          "description": "Whenever this operative contests an objective marker or one of your mission markers, it always controls that marker. This takes precedence over all other rules."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Mechanical appendages",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 5,
+          "damage": "1",
+          "criticalDamage": "2",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "DEATH WORLD VETERAN AGENT",
+      "keywords": [
+        "INQUISITORIAL AGENT",
+        "IMPERIUM",
+        "INQUISITION",
+        "DEATH WORLD VETERAN"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Hunter",
+          "description": "This operative can perform the"
+        },
+        {
+          "name": "Charge action while it Weathered",
+          "description": "Once per turning point, when this operative is has a Conceal order. fighting or retaliating, in the Resolve Attack Dice step, you can ignore the damage inflicted on it from one normal success."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Autopistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Knife",
+          "type": "Melee",
+          "attacks": 1,
+          "hitSkill": 2,
+          "damage": "5",
+          "criticalDamage": "7",
+          "specialRules": "Lethal 5+"
+        },
+        {
+          "name": "Polearm",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "ENLIGHTENER AGENT",
+      "keywords": [
+        "INQUISITORIAL AGENT",
+        "IMPERIUM",
+        "INQUISITION",
+        "ENLIGHTENER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "No Escape",
+          "description": "Whenever an enemy operative would perform the"
+        },
+        {
+          "name": "Extract Information",
+          "description": "Whenever an enemy operative is Fall Back action while within control range of this operative, incapacitated within this operative’s control range, you gain 1CP. you can use this rule. If you do, roll one D6, subtracting 1 from the result if that enemy operative has a higher Wounds stat than this operative, and adding 1 if that enemy operative is wounded: on a 4+, that enemy operative cannot perform that action during that activation/counteraction (the AP spent on it isn’t refunded)."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Autopistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Paired blades",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "Balanced, Rending"
+        }
+      ]
+    },
+    {
+      "name": "HEXORCIST AGENT",
+      "keywords": [
+        "INQUISITORIAL AGENT",
+        "IMPERIUM",
+        "INQUISITION",
+        "HEXORCIST"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Hexorcise",
+          "description": "Whenever an enemy operative"
+        },
+        {
+          "name": "Chasten (1AP)",
+          "description": "is visible to and within 6\" of this operative, Select one enemy operative that's a valid target for this operative and within 6\" of it, your opponent cannot re-roll their attack then select one additional rule (including a unique action) that enemy operative has or defence dice for that operative. on its datacard (excluding a weapon rule or a rule that states it is ignored for the kill/ elimination op). Until the end of that enemy operative’s next activation, it’s treated as not having that additional rule. This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Shotgun",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "Range 6\""
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "MYSTIC AGENT",
+      "keywords": [
+        "INQUISITORIAL AGENT",
+        "IMPERIUM",
+        "INQUISITION",
+        "PSYKER",
+        "MYSTIC"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Icon Bearer",
+          "description": "Whenever determining control of a marker, treat this operative’s APL stat as 1 higher. Note this isn’t a change to its APL stat, so any changes are cumulative with this."
+        },
+        {
+          "name": "Lightly Armed",
+          "description": "This operative cannot use any weapons that aren’t on its datacard."
+        },
+        {
+          "name": "Scry (1AP)",
+          "description": "PSYCHIC. Select one friendly INQUISITORIAL AGENT operative within 6\" of this operative, then select one of the following effects to last until the start of this operative’s next activation, until it’s incapacitated or until it performs this action again (whichever comes first): • Guidance: PSYCHIC. Whenever the selected operative is shooting, fighting or retaliating, in the Roll Attack Dice step, you can retain one of your fails as a normal success instead of discarding it, or retain one of your normal successes as a critical success instead. • Protection: PSYCHIC. Whenever an operative is shooting the selected operative, in the Roll Defence Dice step, you can retain one of your fails as a normal success instead of discarding it, or retain one of your normal successes as a critical success instead. This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Autopistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": "Range 8\", Seek"
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 5,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "PENAL LEGIONNAIRE AGENT",
+      "keywords": [
+        "INQUISITORIAL AGENT",
+        "IMPERIUM",
+        "INQUISITION",
+        "PENAL LEGIONNAIRE"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Chem-mask",
+          "description": "You can ignore any changes to this operative’s"
+        },
+        {
+          "name": "Cruel",
+          "description": "Whenever this operative is shooting against, fighting APL stat, and any changes to its stats from being injured. This against or retaliating against a wounded enemy operative, this operative isn’t affected by enemy operatives’ Shock and Stun operative’s weapons have the Relentless weapon rule. weapon rules."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Hand flamer",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "Range 6\", Saturate, Torrent 1\""
+        },
+        {
+          "name": "Chainsword",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "PISTOLIER AGENT",
+      "keywords": [
+        "INQUISITORIAL AGENT",
+        "IMPERIUM",
+        "INQUISITION",
+        "PISTOLIER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Pistolier",
+          "description": "You can ignore any changes"
+        },
+        {
+          "name": "Pistol Barrage (1AP)",
+          "description": "to the Hit stat of this operative’s Perform two free Shoot actions with this operative (this takes precedence over ranged weapons. action restrictions). You must select a profile of its scoped plasma pistol for one action and its suppressed autopistol for the other (in any order). This operative cannot perform this action while it has a Conceal order, or during an activation in which it performed the Shoot action (or vice versa)."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Scoped plasma pistol (standard)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "Range 12\", Piercing 1"
+        },
+        {
+          "name": "Scoped plasma pistol (supercharge)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Range 12\", Hot, Lethal 5+, Piercing 1"
+        },
+        {
+          "name": "Suppressed autopistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": "Range 8\", Silent"
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "QUESTKEEPER AGENT",
+      "keywords": [
+        "INQUISITORIAL AGENT",
+        "IMPERIUM",
+        "INQUISITION",
+        "QUESTKEEPER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Irrepressible Purpose",
+          "description": "If this operative is incapacitated during"
+        },
+        {
+          "name": "Zealot",
+          "description": "Whenever an attack dice inflicts damage of 3 or more the Fight action, you can strike the enemy operative in that on this operative, roll one D6: on a 5+, subtract 1 from that sequence with one of your unresolved successes before this inflicted damage. operative is removed from the killzone."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Autopistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Eviscerator",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "5",
+          "criticalDamage": "6",
+          "specialRules": "Brutal"
+        }
+      ]
+    },
+    {
+      "name": "REQUISITIONED GUN SERVITOR",
+      "keywords": [
+        "INQUISITORIAL AGENT",
+        "IMPERIUM",
+        "INQUISITION",
+        "GUN SERVITOR"
+      ],
+      "movement": "5\"",
+      "actionPointLimit": 1,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 11,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Lobotomised",
+          "description": "Whenever this operative is activated, if it’s visible to and within 3\" of another friendly INQUISITORIAL AGENT operative (excluding GUN SERVITOR) or vice versa, add 1 to this operative’s APL stat until the end of that activation."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Heavy bolter (focused)",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Heavy (Dash only), Piercing Crits 1"
+        },
+        {
+          "name": "Heavy bolter (sweeping)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Heavy (Dash only), Piercing Crits 1, Torrent 1\""
+        },
+        {
+          "name": "Multi-melta",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "6",
+          "criticalDamage": "3",
+          "specialRules": "Devastating 4, Heavy (Dash only), Piercing 2"
+        },
+        {
+          "name": "Plasma cannon (standard)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "Blast 2\", Heavy (Dash only), Piercing 1"
+        },
+        {
+          "name": "Plasma cannon (supercharge)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "5",
+          "criticalDamage": "6",
+          "specialRules": "Blast 2\", Heavy (Dash only), Hot, Lethal 5+,"
+        }
+      ]
+    },
+    {
+      "name": "SISTER OF SILENCE PROSECUTOR",
+      "keywords": [
+        "INQUISITORIAL AGENT",
+        "IMPERIUM",
+        "ANATHEMA PSYKANA",
+        "SISTER OF SILENCE",
+        "PROSECUTOR"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Psychic Null",
+          "description": "PSYCHIC ranged weapons cannot inflict damage on this operative. For the effects of PSYCHIC actions, this operative cannot be selected and is never treated as being within those actions’ required distances. Whenever an operative is within 6\" of this operative: • That operative cannot perform PSYCHIC actions or use PSYCHIC additional rules. • That operative cannot use PSYCHIC ranged weapons. • PSYCHIC melee weapons have no weapon rules and cannot have Dmg stats higher than 3/4."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Boltgun",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        },
+        {
+          "name": "Gun butt",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "SISTER OF SILENCE VIGILATOR",
+      "keywords": [
+        "INQUISITORIAL AGENT",
+        "IMPERIUM",
+        "ANATHEMA PSYKANA",
+        "SISTER OF SILENCE",
+        "VIGILATOR"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Psychic Null",
+          "description": "PSYCHIC ranged weapons cannot inflict damage on this operative. For the effects of PSYCHIC actions, this operative cannot be selected and is never treated as being within those actions’ required distances. Whenever an operative is within 6\" of this operative: • That operative cannot perform PSYCHIC actions or use PSYCHIC additional rules. • That operative cannot use PSYCHIC ranged weapons. • PSYCHIC melee weapons have no weapon rules and cannot have Dmg stats higher than 3/4."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Executioner greatblade",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "Lethal 5+"
+        }
+      ]
+    },
+    {
+      "name": "SISTER OF SILENCE WITCHSEEKER",
+      "keywords": [
+        "INQUISITORIAL AGENT",
+        "IMPERIUM",
+        "ANATHEMA PSYKANA",
+        "SISTER OF SILENCE",
+        "WITCHSEEKER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Psychic Null",
+          "description": "PSYCHIC ranged weapons cannot inflict damage on this operative. For the effects of PSYCHIC actions, this operative cannot be selected and is never treated as being within those actions’ required distances. Whenever an operative is within 6\" of this operative: • That operative cannot perform PSYCHIC actions or use PSYCHIC additional rules. • That operative cannot use PSYCHIC ranged weapons. • PSYCHIC melee weapons have no weapon rules and cannot have Dmg stats higher than 3/4."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Flamer",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "Range 8\", Saturate, Torrent 2\""
+        },
+        {
+          "name": "Gun butt",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "TEMPESTUS SCION GUNNER",
+      "keywords": [
+        "INQUISITORIAL AGENT",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "TEMPESTUS SCION",
+        "GUNNER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Flamer",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "Range 8\", Saturate, Torrent 2\""
+        },
+        {
+          "name": "Grenade launcher (frag)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "2",
+          "criticalDamage": "4",
+          "specialRules": "Blast 2\""
+        },
+        {
+          "name": "Grenade launcher (krak)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Piercing 1"
+        },
+        {
+          "name": "Hot-shot volley gun (focused)",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Piercing Crits 1"
+        },
+        {
+          "name": "Hot-shot volley gun (sweeping)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Piercing Crits 1, Torrent 1\""
+        },
+        {
+          "name": "Meltagun",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "6",
+          "criticalDamage": "3",
+          "specialRules": "Range 6\", Devastating 4, Piercing 2"
+        },
+        {
+          "name": "Plasma gun (standard)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "Piercing 1"
+        },
+        {
+          "name": "Plasma gun (supercharge)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "5",
+          "criticalDamage": "6",
+          "specialRules": "Hot, Lethal 5+, Piercing 1"
+        },
+        {
+          "name": "Gun butt",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "TEMPESTUS SCION MEDIC",
+      "keywords": [
+        "INQUISITORIAL AGENT",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "TEMPESTUS SCION",
+        "MEDIC"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Medikit (1AP)",
+          "description": "Select one friendly INQUISITORIAL AGENT operative within this operative’s control range to regain up to 2D3 lost wounds. It cannot be an operative that the Medic! rule was used on during this turning point. This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Hot-shot lasgun",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        },
+        {
+          "name": "Gun butt",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "TEMPESTUS SCION TROOPER",
+      "keywords": [
+        "INQUISITORIAL AGENT",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "TEMPESTUS SCION",
+        "TROOPER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Adaptive Equipment",
+          "description": "You can do each of the following once per turning point: • One friendly INQUISITORIAL AGENT TEMPESTUS SCION TROOPER operative can perform the Smoke Grenade action. • One friendly INQUISITORIAL AGENT TEMPESTUS SCION TROOPER operative can perform the Stun Grenade action. The rules for these actions are found in universal equipment. Performing these actions using this rule doesn’t count towards their action limits (i.e. if you also select those grenades from equipment)."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Hot-shot lasgun",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        },
+        {
+          "name": "Gun butt",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "TEMPESTUS SCION VOX-OPERATOR",
+      "keywords": [
+        "INQUISITORIAL AGENT",
+        "IMPERIUM",
+        "ASTRA MILITARUM",
+        "TEMPESTUS SCION",
+        "VOX-OPERATOR"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Signal (1AP)",
+          "description": "SUPPORT. Select one other friendly INQUISITORIAL AGENT operative in the killzone. Until the end of that operative’s next activation, add 1 to its APL stat. This operative can perform this action twice during its activation, but cannot perform this action while within control range of an enemy operative. NOTES: NOTES: NOTES:"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Hot-shot lasgun",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        },
+        {
+          "name": "Gun butt",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    }
+  ],
+  "factionRules": [
+    {
+      "name": "Ents Kill Team",
+      "description": ""
+    },
+    {
+      "name": "Interrogator",
+      "description": "tives that kill team, Extended stock relic autopistol ons specified for ollowing list:"
+    },
+    {
+      "name": "Tome-skull",
+      "description": "st above, or orial Requisition s from ce, unless you’re AUTOSAVANT you can include e different Mechanical appendages tives) cannot ule, and cannot ding Piercing ertain mission ow."
+    }
+  ],
+  "markersTokens": [],
+  "strategyPloys": [
+    {
+      "name": "Inquisitorial Agent",
+      "cpCost": 1,
+      "description": ""
+    },
+    {
+      "name": "Inquisitorial Requisition",
+      "cpCost": 1,
+      "description": ""
+    },
+    {
+      "name": "Tempestus Scions",
+      "cpCost": 1,
+      "description": "↘ 5 TEMPESTUS SCION operatives selected from the following list: • GUNNER with flamer and gun butt • GUNNER with grenade launcher and gun butt • GUNNER with hot-shot volley gun and gun butt • GUNNER with meltagun and gun butt • GUNNER with plasma gun and gun butt • MEDIC • TROOPER • VOX-OPERATOR Other than TROOPER operatives, your kill team can only include each operative on this list once. Your kill team can only include up to two GUNNER operatives."
+    },
+    {
+      "name": "Denounce",
+      "cpCost": 1,
+      "description": "None escape the long arm of the Inquisition. Those denounced and proclaimed guilty quail before its vengeful Agents. Select one enemy operative and roll one D3. In the Firefight phase of this turning point, that enemy operative cannot be activated or perform actions until it's the last enemy operative to be activated, or your opponent has activated a number of enemy operatives equal to the result of the D3 (whichever comes first). This ploy costs you 1 additional CP for each previous time you’ve used it during the battle (e.g. 1CP the first time you would use it, 2CP the second time, etc.)."
+    },
+    {
+      "name": "Inquisitorial Agent",
+      "cpCost": 1,
+      "description": "MARKER/TOKEN GUIDE Denounce Denunciation Sanctification token token token Medic token Protection Guidance token token Chasten token Quarry token Weathered token Servo-skull Tome-skull Inquisitorial token marker Rosette token"
+    },
+    {
+      "name": "Intense Scrutiny",
+      "cpCost": 1,
+      "description": "There is no hiding from the all-seeing eyes of the Inquisition. Whenever you’re selecting a valid target for a friendly INQUISITORIAL AGENT operative, enemy operatives within 4\" of it cannot be in cover (instead of 2\"). While this can allow such operatives to be targeted (assuming they’re visible), it doesn’t remove their cover save (if any), unless the friendly INQUISITORIAL AGENT operative is within 2\" as normal."
+    },
+    {
+      "name": "Quarry",
+      "cpCost": 1,
+      "description": "For those judged guilty, there is no escape. Once marked for execution, the Inquisition’s quarry is doomed. Select one enemy operative to be your quarry for the turning point. Whenever a friendly INQUISITORIAL AGENT operative is shooting against, fighting against or retaliating against your quarry, that friendly operative’s weapons have the Ceaseless weapon rule. Whenever your quarry is incapacitated, you can select a new enemy operative to be your quarry (and can continue to do so during this turning point). (excluding Command Re-roll or one that costs 0CP). Their ploy isn’t used, the CP spent on it is refunded and they cannot use that ploy again during this turning point. This ploy cannot be used to stop the same ploy more than once per battle."
+    },
+    {
+      "name": "Irrefutable Jurisdiction",
+      "cpCost": 1,
+      "description": "The Agents of the Inquisition are emboldened by their near-limitless authority, and will bow before neither traitor nor xenos. Whenever an operative is shooting a friendly INQUISITORIAL AGENT operative that’s within 3\" of an objective marker, you can re-roll one of your defence dice. If that friendly operative contests that marker, you can re-roll any of your defence dice results of one result instead (e.g. results of 2)."
+    }
+  ],
+  "firefightPloys": [
+    {
+      "name": "The Emperor's Will",
+      "cpCost": 1,
+      "description": "The Agents of the Inquisition enforce the Emperor’s will. This authority emboldens them in their duties. INQUISITORIAL AGENT operative is activated. Until the end of that operative’s activation, you can ignore any changes to its stats (including its weapons’ stats)."
+    },
+    {
+      "name": "Intimidating Presence",
+      "cpCost": 1,
+      "description": "Those that bear the sigils and authority of the Inquisition are rightly feared, even by the mightiest of foes. operative visible to and within 3\" of a friendly INQUISITORIAL AGENT operative, or visible to and within 6\" of a friendly MYSTIC operative, performs the Pick Up Marker or a mission action (excluding Operate Hatch). Your opponent must spend 1 additional AP for that enemy operative to perform that action (if they cannot or choose not to, the AP spent on it is refunded)."
+    }
+  ],
+  "factionEquipment": [
+    {
+      "name": "Armoured Bodysuits",
+      "epCost": 1,
+      "description": "Lightweight yet tough, these form-fitting bodysuits provide an extra layer of protection to the wearer. Whenever an operative is shooting a friendly INQUISITORIAL AGENT operative (excluding TOME-SKULL) that has a 5+ Save stat, you can retain one of your defence dice results of 4 as a normal success. NOTES:",
+      "restrictions": null
+    },
+    {
+      "name": "Servo-skull",
+      "epCost": 1,
+      "description": "Servo-skulls are diminutive floating servitors that can be crafted and programmed to assist their operators with a wide range of tasks. Once per battle, one friendly INQUISITORIAL AGENT operative can perform a mission action for 1 less AP. NOTES:",
+      "restrictions": null
+    }
+  ]
+}

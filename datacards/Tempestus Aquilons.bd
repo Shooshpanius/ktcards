@@ -1,0 +1,558 @@
+{
+  "teamName": "Tempestus Aquilons",
+  "operatives": [
+    {
+      "name": "AQUILON TEMPESTOR",
+      "keywords": [
+        "TEMPESTUS AQUILON",
+        "IMPERIUM",
+        "LEADER",
+        "TEMPESTOR"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 9,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Tempestus Veteran",
+          "description": "Once per battle, you can either use a"
+        },
+        {
+          "name": "Command (1AP)",
+          "description": "firefight ploy for 0CP if this is the specified TEMPESTUS SUPPORT. Select one other friendly TEMPESTUS AQUILON operative, or the Command Re‑roll firefight ploy AQUILON operative (excluding SERVO‑SENTRY) for 0CP if this is the operative the attack or defence dice was visible to and within 6\" of this operative. Until the end of that rolled for. operative’s next activation, add 1 to its APL stat. This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Hot‑shot lascarbine",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "‑"
+        },
+        {
+          "name": "Hot‑shot laspistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Relic bolt pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\", Lethal 5+"
+        },
+        {
+          "name": "Chainsword",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "‑"
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 3,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": "‑"
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "Lethal 5+"
+        }
+      ]
+    },
+    {
+      "name": "AQUILON GRENADIER",
+      "keywords": [
+        "TEMPESTUS AQUILON",
+        "IMPERIUM",
+        "GRENADIER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Grenadier",
+          "description": "This operative can use frag, krak, smoke and stun grenades (see universal equipment). Doing so doesn’t count towards any limited uses you have (i.e. if you also select those grenades from equipment for other operatives). Whenever this operative is using a frag or krak grenade, improve the Hit stat of that weapon by 1."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Hot‑shot laspistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Melta bomb",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "5",
+          "criticalDamage": "3",
+          "specialRules": "Range 3\", Devastating 3, Heavy (Reposition only),"
+        }
+      ]
+    },
+    {
+      "name": "AQUILON GUNFIGHTER",
+      "keywords": [
+        "TEMPESTUS AQUILON",
+        "IMPERIUM",
+        "GUNFIGHTER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Salvo (weapon rule)",
+          "description": "Select up to two different Gunfight: Whenever an enemy operative within 8\" of this operative shoots this valid targets that aren’t within control operative, keep track of each attack dice that’s discarded as a fail. After the action, range of friendly operatives. Shoot before incapacitated operatives are removed (including this one, if relevant), this with this weapon against both of them operative can perform a free Shoot action (you can change its order to Engage to do in an order of your choice (roll each so), but it can only target that enemy operative with its hot‑shot laspistols (focused), sequence separately). and you only roll a number of attack dice equal to the opponent’s discarded attack dice plus one (to a maximum of four)."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Hot‑shot laspistols (focused)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\", Ceaseless, Rending"
+        },
+        {
+          "name": "Hot‑shot laspistols (salvo)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\", Salvo*"
+        },
+        {
+          "name": "Hot‑shot laspistols (point‑blank)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Ceaseless"
+        }
+      ]
+    },
+    {
+      "name": "AQUILON GUNNER",
+      "keywords": [
+        "TEMPESTUS AQUILON",
+        "IMPERIUM",
+        "GUNNER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Melta carbine",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "6",
+          "criticalDamage": "3",
+          "specialRules": "Range 6\", Devastating 4, Piercing 2"
+        },
+        {
+          "name": "Plasma carbine (standard)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "Piercing 1"
+        },
+        {
+          "name": "Plasma carbine (supercharge)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "5",
+          "criticalDamage": "6",
+          "specialRules": "Hot, Lethal 5+, Piercing 1"
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": "‑"
+        }
+      ]
+    },
+    {
+      "name": "AQUILON MARKSMAN",
+      "keywords": [
+        "TEMPESTUS AQUILON",
+        "IMPERIUM",
+        "MARKSMAN"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Hot‑shot long‑las (concealed)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "Devastating 3, Heavy, Silent, Concealed Position*"
+        },
+        {
+          "name": "Hot‑shot long‑las (mobile)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "‑"
+        },
+        {
+          "name": "Hot‑shot long‑las (stationary)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "Devastating 3, Heavy"
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": "‑"
+        }
+      ]
+    },
+    {
+      "name": "AQUILON PRECURSOR",
+      "keywords": [
+        "TEMPESTUS AQUILON",
+        "IMPERIUM",
+        "PRECURSOR"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Vicious Knife Fighter",
+          "description": "Whenever this operative is fighting, after"
+        },
+        {
+          "name": "Dynamic",
+          "description": "Whenever this operative performs the Shoot or resolving your first attack dice during that sequence, you can Fight action, it can immediately perform a free Dash action immediately resolve another (before your opponent). afterwards. It can do so even if it’s performed the Charge action during this activation, but can only use any remaining move distance it had from that Charge action (to a maximum of 3\")."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Hot‑shot laspistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Tempestus dagger",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Ceaseless, Lethal 5+"
+        }
+      ]
+    },
+    {
+      "name": "AQUILON SERVO‑SENTRY",
+      "keywords": [],
+      "movement": "4\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Machine",
+          "description": "This operative cannot perform any actions other"
+        },
+        {
+          "name": "Turret",
+          "description": "This operative can perform two Shoot actions during than Dash, Fall Back, Reposition and Shoot. It cannot its activation. retaliate, assist in a fight or use any weapons that aren’t on its datacard. TEMPESTUS AQUILON , IMPERIUM, SERVO‑SENTRY 40"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Flamer",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "Range 8\", Saturate, Torrent 2\""
+        },
+        {
+          "name": "Grenade launcher (frag)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "4",
+          "specialRules": "Blast 2\""
+        },
+        {
+          "name": "Grenade launcher (krak)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Piercing 1"
+        },
+        {
+          "name": "Hot‑shot volley gun (focused)",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Piercing Crits 1"
+        },
+        {
+          "name": "Hot‑shot volley gun (sweeping)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Piercing Crits 1, Torrent 1\""
+        }
+      ]
+    },
+    {
+      "name": "AQUILON TROOPER",
+      "keywords": [
+        "TEMPESTUS AQUILON",
+        "IMPERIUM",
+        "TROOPER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Rapid Insertion",
+          "description": "STRATEGIC GAMBIT in the first turning"
+        },
+        {
+          "name": "Swift Landing",
+          "description": "When this operative lands, you can set it up point. Each friendly TEMPESTUS AQUILON TROOPER within 4\" horizontally of one of your Drop markers, taking operative wholly within your drop zone can immediately perform precedence over the normal distance requirement. a free Reposition action, but must end that move wholly within 3\" of your drop zone. NOTES: NOTES: NOTES:"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Hot‑shot lascarbine",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "‑"
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": "‑"
+        }
+      ]
+    }
+  ],
+  "factionRules": [],
+  "markersTokens": [
+    {
+      "name": "The operative is treated as performing the",
+      "description": ""
+    },
+    {
+      "name": "As a STRATEGIC GAMBIT in the first and second",
+      "description": ""
+    },
+    {
+      "name": "Less than half of your operatives can be set up",
+      "description": ""
+    },
+    {
+      "name": "When readying your operatives during the second",
+      "description": ""
+    },
+    {
+      "name": "Detected token Drop and Secure token",
+      "description": ""
+    },
+    {
+      "name": "Whenever a friendly TEMPESTUS AQUILON",
+      "description": ""
+    },
+    {
+      "name": "Drop marker Melta Bomb token",
+      "description": ""
+    }
+  ],
+  "strategyPloys": [
+    {
+      "name": "Eye Above",
+      "cpCost": 1,
+      "description": "Airborne servo‑skulls and spotter aircraft keep the Aquilons appraised of up‑to‑the‑minute tactical data. Select one enemy operative. That operative and each other enemy operative within 3\" of it gains one of your Detected tokens until the end of the turning point. Whenever an enemy operative that has one of your Detected tokens: • Is shooting a friendly TEMPESTUS AQUILON operative, you can re‑roll one of your defence dice. • Is fighting or retaliating against a friendly TEMPESTUS AQUILON operative, one of your blocks can be allocated to block two unresolved successes (instead of one)."
+    },
+    {
+      "name": "Drop And Secure",
+      "cpCost": 1,
+      "description": "Priority tactical objectives must be secured to ensure victory is absolute. Select one marker. • Until the Ready step of the next Strategy phase, when determining control of that marker, treat the total APL stat of friendly TEMPESTUS AQUILON operatives that contest it as 1 higher if at least one friendly TEMPESTUS AQUILON operative contests that marker. Note this isn’t a change to the APL stat, so any changes are cumulative with this. • Whenever a friendly TEMPESTUS AQUILON operative is within 3\" of that marker, add 1 to the Atk stat of its melee weapons (to a maximum of 4)."
+    }
+  ],
+  "firefightPloys": [
+    {
+      "name": "Tempestus Exemplars",
+      "cpCost": 1,
+      "description": "The training and conditioning of the Tempestus Aquilons allows them to stay focused on their mission, even during the most ferocious firefights. TEMPESTUS AQUILON operative’s activation (excluding SERVO‑SENTRY and any operative that has an APL stat higher than 2). During that activation, that operative can perform the Pick Up Marker, Place Marker or a mission action for 1 less AP."
+    },
+    {
+      "name": "Progena",
+      "cpCost": 1,
+      "description": "As graduates of the Schola Progenium, these warriors are not only conditioned to follow their orders with unquestioning precision, but are also driven by a zealous dedication to the Imperial Cult that helps them to shrug off pain and fear. TEMPESTUS AQUILON operative (excluding SERVO‑SENTRY) is activated. It regains up to 2D3 lost wounds, and during that activation you can ignore any changes to its APL stat."
+    },
+    {
+      "name": "Designer’s Comment",
+      "cpCost": 1,
+      "description": "Tempestus Aquilons are a tactical shooting kill team. They mid‑battle, and are at their best when engaging early. Drop Insertion is the fundamental rule of the Tempestus Aquilons. Instead of setting them up before the battle, you can set up two‑thirds of your operatives later. In the early stages, this keeps them safe from attacks, allows you to control 6 the killzone and enables you to react to your opponent’s movement. It also gives you fantastic offensive potential, as your best guns can shoot with full re‑rolls from the Hot Drop You’ll need a detailed understanding of how best to use Drop Insertion, so experiment to uncover the different options it provides you. The Drop Augury equipment allows you to move a Drop marker again, and Troopers and the Adjust This creates a very large area for your operatives to potentially drop into, giving you an increased capability to gain strong positions, control territory and capture objectives. This kill team’s offence is at its best when they are on the front foot, keeping the pressure on so the enemy struggles to react. For instance, the Sudden Offensive and Maintain Momentum"
+    },
+    {
+      "name": "Tary",
+      "cpCost": 1,
+      "description": "have an unparalleled ability to descend into the killzone of an intense firefight, they are capable of focusing on the mission and scoring you victory points. The Tempestus action give you ways to spend more action points, beneficial for a big activation or performing those all‑important mission actions while engaging. This will be a key strategy for you to focus on – maintaining their offence, but securing objectives within that. This kill team has some individual operatives with unique roles that will pay dividends in the right situation. The Grenadier has unlimited access to grenades, and a well‑placed melta bomb can be devastating. The Marksman is a sniper that can land on Vantage terrain, giving you a commanding view of the killzone and forcing your opponent to be wary of its firing lanes. The Precursor can punish an enemy that gets too complacent, particularly if that enemy is near your Drop markers. Your Gunfighter is flexible, capable of engaging in many different ways. Finally, your Servo‑sentry is ideal for a protracted gunfight, with increased durability and the ability to shoot twice per activation once it’s in position. The Tempestus Aquilons are a team with a unique but identifiable premise – drop in and engage fast. Master this early, and you’ll soon discover the extra layer of potential beneath as you flex your approach, calling on the different operatives and tactics at your disposal to ensure the enemy is incapacitated and objectives are in your hands. ‘ IT DOESN’T MATTER WHO OR WHAT THE"
+    },
+    {
+      "name": "Enemy Are. If They Stand Between",
+      "cpCost": 1,
+      "description": ""
+    },
+    {
+      "name": "Us And Following Our Orders,",
+      "cpCost": 1,
+      "description": ""
+    },
+    {
+      "name": "They’ll Die For It.’",
+      "cpCost": 1,
+      "description": "‑ Tempestus Aquilon Therka Drayv, prior to the Ossinium Drop"
+    },
+    {
+      "name": "Tempestus",
+      "cpCost": 1,
+      "description": ""
+    },
+    {
+      "name": "Aquilons",
+      "cpCost": 1,
+      "description": "»"
+    },
+    {
+      "name": "Designer’s",
+      "cpCost": 1,
+      "description": ""
+    },
+    {
+      "name": "Commentary",
+      "cpCost": 1,
+      "description": ""
+    }
+  ],
+  "factionEquipment": [
+    {
+      "name": "Drop Augury",
+      "epCost": 1,
+      "description": "Prior to the commencement of hostilities, this region has been subjected to thorough augur scans by orbiting warships or hovering servo‑skulls, the resultant intelligence inloaded to the Tempestor’s slate monitron. Once per battle, when a friendly TEMPESTUS AQUILON operative that’s set up above is activated, before expending or landing that operative, you can move one of your Drop markers again. However, it cannot be moved closer to your opponent’s drop zone. NOTES:",
+      "restrictions": null
+    },
+    {
+      "name": "Remote Overseer",
+      "epCost": 1,
+      "description": "Be it a high‑flying observer aircraft or a specialist team of lexmechanicae employing tactical augur banks, monitoring officers provide wider strategic insight as the firefight rages. Once per battle, after rolling off to decide initiative, you can re‑roll your dice. NOTES:",
+      "restrictions": null
+    }
+  ]
+}

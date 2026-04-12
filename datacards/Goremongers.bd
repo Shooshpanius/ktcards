@@ -1,0 +1,325 @@
+{
+  "teamName": "Goremongers",
+  "operatives": [
+    {
+      "name": "GOREMONGER BLOOD HERALD",
+      "keywords": [
+        "GOREMONGER",
+        "CHAOS",
+        "LEADER",
+        "BLOOD HERALD"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 11,
+      "notes": null,
+      "abilities": [],
+      "attacks": []
+    },
+    {
+      "name": "GOREMONGER ASPIRANT",
+      "keywords": [
+        "GOREMONGER",
+        "CHAOS",
+        "ASPIRANT"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Obsessive Bloodlust",
+          "description": "Once during each of this operative’s activations, when this operative ends the Fight action, if it’s no longer within control range of enemy operatives, you can use this rule. If you do, it can immediately perform a free Charge action (even if it’s already performed the Charge action during that activation), but it cannot move more than 2\" during that action. Doing so doesn’t prevent it from performing the Charge, Dash or Reposition action afterwards during that activation."
+        }
+      ],
+      "attacks": []
+    },
+    {
+      "name": "GOREMONGER BLOODTAKER",
+      "keywords": [
+        "GOREMONGER",
+        "CHAOS",
+        "BLOODTAKER"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Ritual (weapon rule)",
+          "description": "Whenever this operative is using this weapon, the"
+        },
+        {
+          "name": "Transfusion Ritual (1AP)",
+          "description": "first time you inflict damage on an operative within its control Decrease this operative’s GORE TANK. Instead of using a range during that sequence, you can increase this operative’s SANGUAVITAE rule, you can increase the GORE TANK GORE TANK. Note this is cumulative with the normal rules for of one other friendly GOREMONGER operative within 8\" increasing its GORE TANK (i.e. if it incapacitates an operative of this operative. within its control range). This operative cannot perform this action while within control range of an enemy operative, or if its GORE TANK is empty."
+        }
+      ],
+      "attacks": []
+    },
+    {
+      "name": "GOREMONGER IMPALER",
+      "keywords": [
+        "GOREMONGER",
+        "CHAOS",
+        "IMPALER"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Drag (weapon rule)",
+          "description": "Whenever this operative is shooting with this weapon, at the start of the Resolve"
+        },
+        {
+          "name": "Prey",
+          "description": "Whenever this operative is Attack Dice step (before inflicting damage), you can move the target up to x\". X is your shooting with this weapon, in the Resolve total number of successful unblocked attack dice, multiplied by 2. The target must be Attack Dice step, after resolving the Drag moved to a location it can be placed as close as possible to this operative, determined weapon rule (if you choose to), you can by the x\" you choose to use. The move must be done in one or more straight-line discard any of your successful unblocked increments, and increments are always rounded up to the nearest inch. Whenever the attack dice. In other words, you can target is dropping during that move, ignore the vertical distance. choose not to inflict damage with any number of them."
+        }
+      ],
+      "attacks": []
+    },
+    {
+      "name": "GOREMONGER INCITER",
+      "keywords": [
+        "GOREMONGER",
+        "CHAOS",
+        "INCITER"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Dash And Spray (1AP)",
+          "description": "Perform a free Dash action and a free Shoot action with this operative in any order. You can only select dual autopistols (focused) for that Shoot action. This operative cannot perform this action while it has a Conceal order, or while within control range of an enemy operative."
+        },
+        {
+          "name": "Incite the Hunt",
+          "description": "Whenever this operative incapacitates an enemy operative from more than 2\" away, before that enemy operative is removed from the killzone, you can increase the GORE TANK of one friendly GOREMONGER operative within 8\" of that enemy operative. Whenever this operative inflicts damage on an enemy operative with either profile of its dual autopistols but doesn’t incapacitate it, that enemy operative gains one of your Bleeding tokens (if it doesn’t already have one). During a friendly GOREMONGER operative’s activation or counteraction, before or after it performs an action, if it’s within 8\" of an enemy operative that has one of your Bleeding tokens, you can remove that token and increase that friendly operative’s GORE TANK."
+        }
+      ],
+      "attacks": []
+    },
+    {
+      "name": "GOREMONGER SKULLCLAIMER",
+      "keywords": [
+        "GOREMONGER",
+        "CHAOS",
+        "SKULLCLAIMER"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Brutish",
+          "description": "Whenever an attack dice would inflict"
+        },
+        {
+          "name": "Critical Dmg Claim Skull",
+          "description": "Once per turning point, if this operative on this operative, you can choose for that attack dice to inflict incapacitates an enemy operative with its great chainaxe, you Normal Dmg instead. gain 1CP."
+        }
+      ],
+      "attacks": []
+    },
+    {
+      "name": "GOREMONGER STALKER",
+      "keywords": [
+        "GOREMONGER",
+        "CHAOS",
+        "STALKER"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Climbing Picks",
+          "description": "Whenever this operative is climbing up, you"
+        },
+        {
+          "name": "Rooftop Stalker",
+          "description": "Whenever this operative is fighting during an can treat the vertical distance as 2\" (regardless of how far the activation in which it dropped from Vantage terrain, or whenever operative actually moves vertically). this operative is fighting against an enemy operative that’s on Vantage terrain, this operative’s melee weapons have the Relentless weapon rule."
+        }
+      ],
+      "attacks": []
+    }
+  ],
+  "factionRules": [
+    {
+      "name": "Runes Of Khorne",
+      "description": "Khornate runes carved into the flesh of Goremongers give them an infernal resistance to ranged attacks. Each friendly GOREMONGER operative cannot lose more than 8 wounds per Shoot action. Whenever a friendly GOREMONGER operative incapacitates an operative within its control range, or visible to and within 2\" of it, you can increase its GORE TANK. Whenever a friendly GOREMONGER operative uses a SANGUAVITAE rule, you must decrease its"
+    },
+    {
+      "name": "Gore Tank.",
+      "description": ""
+    },
+    {
+      "name": "Full",
+      "description": ""
+    },
+    {
+      "name": "Decrease",
+      "description": ""
+    },
+    {
+      "name": "Increase",
+      "description": ""
+    },
+    {
+      "name": "Half",
+      "description": ""
+    },
+    {
+      "name": "Decrease",
+      "description": ""
+    },
+    {
+      "name": "Increase",
+      "description": ""
+    },
+    {
+      "name": "Sanguavitae",
+      "description": "Rejuvenate WHEN: During a friendly GOREMONGER"
+    },
+    {
+      "name": "Sanguavitae",
+      "description": "Fury WHEN: During a friendly GOREMONGER operative’s activation, before or after it performs an action. EFFECT: That operative can perform two Fight actions during that activation, and the second one is free."
+    },
+    {
+      "name": "Sanguavitae",
+      "description": "Surge WHEN: When a friendly GOREMONGER operative performs the Charge or Reposition action. EFFECT: Until the end of that action, add 1\" to that operative’s Move stat."
+    },
+    {
+      "name": "Tary",
+      "description": "require the careful management of a valuable resource –"
+    },
+    {
+      "name": "Goremongers",
+      "description": "»"
+    },
+    {
+      "name": "Designer’s",
+      "description": ""
+    },
+    {
+      "name": "Commentary",
+      "description": "a big play. These operatives can also focus on objectives, freeing your other operatives up for attacking. Being a melee-focused group of operatives can mean you’re vulnerable to shooting teams, so careful positioning and the right use of Conceal orders is required to keep your operatives alive as you close the distance. At just eight operatives, your team is more elite, so you often won’t have the numbers to trade. Against teams with more operatives, your own will have to incapacitate multiple enemies during the game. Eight operatives at an APL of 2 can put you at an action deficit, especially in missions that require mission actions. At times you may have to show restraint, keeping your Goremongers on a tight leash to better achieve your objectives. The Mania Sanguavitae rule can get you the extra AP you need to do mission actions. Furthermore, a big play with a Goremonger can create enough of a distraction to divert your opponent away from your other operatives, who than 8 wounds per Shoot action. This can force your opponent to double up on shooting – using more than one operative/ Shoot action to incapacitate your operatives. This can spare your other operatives from shots that would otherwise come their way. What’s more, the timely use of the Rejuvenate Sanguavitae rule can push a wounded operative back over the Runes of Khorne threshold, starting the process again! Secondly, the Impaler is a useful operative for dragging the enemy closer, moving them off objectives and keeping them alive to set up charges. Don’t forget, wounding and dragging an expended operative can provide a ‘safe’ charge for a Goremonger (as they can’t normally be shot within control range). They can then later incapacitate their prey, top up their gore tank, then charge further into enemy lines. Setting"
+    }
+  ],
+  "markersTokens": [
+    {
+      "name": "Rage",
+      "description": ""
+    },
+    {
+      "name": "Gore Tank Gore Tank Impending",
+      "description": ""
+    },
+    {
+      "name": "Bleeding token Claim Skull Bloody",
+      "description": ""
+    },
+    {
+      "name": "Gory Totem Chaos Sigil Wrist Chains",
+      "description": ""
+    }
+  ],
+  "strategyPloys": [
+    {
+      "name": "Enhanced Violence",
+      "cpCost": 1,
+      "description": "When powered by sanguavitae, Goremongers fight with far greater ferocity and skill than any unaugmented Human. Whenever a friendly GOREMONGER operative’s GORE TANK is: • Half, its melee weapons have the Balanced weapon rule. • Full, its melee weapons have the Relentless weapon rule."
+    },
+    {
+      "name": "Gory Tenacity",
+      "cpCost": 1,
+      "description": "The prospect of carnage drives Goremongers into a maniacal fury. Enraged thus, they are capable of shrugging off terrible wounds. Whenever a friendly GOREMONGER operative is fighting or retaliating, the first time your opponent strikes it during that sequence, halve the damage inflicted (rounding up and to a minimum of 2)."
+    },
+    {
+      "name": "Augmented Endurance",
+      "cpCost": 1,
+      "description": "An infusion of sanguavitae serves to harden the subject’s mind, body and soul, rendering them supremely resilient. Whenever an operative is shooting a friendly GOREMONGER operative, if that friendly operative’s GORE TANK is: • Half, you can re-roll one of your defence dice. • Full, you can re-roll any of your defence dice."
+    },
+    {
+      "name": "Hunt For Blood",
+      "cpCost": 1,
+      "description": "As blood is spilled, its copper scent fills the air, driving the Goremongers into a thirsting frenzy. Select one friendly GOREMONGER operative. If it has a Conceal order, change it to Engage. Then it can immediately perform a free Charge action, but cannot move more than 3\" during that action."
+    }
+  ],
+  "firefightPloys": [
+    {
+      "name": "Unbridled Aggression",
+      "cpCost": 1,
+      "description": "When they close with the enemy, Goremongers fight with all the savage fury and martial prowess of the Bloodletters they so idolise. GOREMONGER operative is fighting during an activation in which it performed the Charge action, at the end of the Roll Attack Dice step. Until the end of that sequence, that operative’s melee weapons have the Severe weapon rule."
+    },
+    {
+      "name": "Destructive Demise",
+      "cpCost": 1,
+      "description": "Empowered by the blood of their foes, mortally wounded Goremongers expend the last of their might in a vengeful frenzy. GOREMONGER operative is incapacitated, before it’s removed from the killzone. Inflict damage determined by that friendly operative’s GORE TANK on one enemy operative within that friendly operative’s control range. Inflict: • D3 if empty. • D3+1 if half. • D3+2 if full."
+    },
+    {
+      "name": "Gorethirst",
+      "cpCost": 1,
+      "description": "Goremongers are drawn to violence like insects to blazing lumen, unable to control their thirst to spill viscera. You can do so with one friendly GOREMONGER operative that has a Conceal order, but you must change its order to Engage and it cannot perform any actions other than Charge, Shoot or Fight during that counteraction."
+    },
+    {
+      "name": "Lacerate Flesh",
+      "cpCost": 1,
+      "description": "Goremongers may resort to topping up their blood tanks with their own crimson fluid. Doing so is a last resort, undertaken only in a desperate frenzy. GOREMONGER operative with an empty GORE TANK is activated or counteracts. Increase that operative’s GORE TANK. At the end of that activation/counteraction, decrease its GORE TANK (you cannot use this decrease to use a SANGUAVITAE rule); if you cannot decrease its GORE TANK, inflict D3 damage on it."
+    }
+  ],
+  "factionEquipment": [
+    {
+      "name": "Gory Totem",
+      "epCost": 1,
+      "description": "Gore and peeled skulls mark the limits of the Goremongers’ territory. Before the battle, you can set up one of your Gory Totem markers wholly within your territory and more than 2\" from other markers (excluding your Bloody Cadaver marker). Whenever an enemy operative within 3\" of your Gory Totem marker is shooting, fighting or retaliating, your opponent cannot re-roll their attack dice.",
+      "restrictions": null
+    },
+    {
+      "name": "Chaos Sigil",
+      "epCost": 1,
+      "description": "The runes of the Ruinous Powers are carved into flesh and borne upon armour and clothing, providing their bearers with malefic might. Once per turning point, when an operative is shooting a friendly GOREMONGER operative, at the start of the Roll Defence Dice step, you can use this rule. If you do, worsen the x of the Piercing weapon rule by 1 (if any) until the end of that sequence. Note that Piercing 1 would therefore be ignored.",
+      "restrictions": null
+    },
+    {
+      "name": "Bloody Cadaver",
+      "epCost": 1,
+      "description": "Goremongers will often stash corpses for later consumption and refuelling. Before the battle, you can set up one of your Bloody Cadaver markers wholly within your territory and more than 2\" from other markers (excluding your Gory Totem marker). Friendly GOREMONGER operatives can perform the Pick Up Marker action on that marker. In the Ready step of each Strategy phase, you can increase the GORE TANK of one friendly GOREMONGER operative that controls that marker, unless that friendly operative is within control range of an enemy operative.",
+      "restrictions": null
+    },
+    {
+      "name": "Wrist Chains",
+      "epCost": 1,
+      "description": "The Goremongers secure their weapons with lengths of chain, enabling them to be hurled towards an opponent. Once per turning point, when a friendly GOREMONGER operative performs the Shoot action and you’re selecting a ranged weapon, you can use this rule. If you do, until the end of that action, the following melee weapons are treated as ranged weapons with the Range 2\" weapon rule: chainblade, chainglaive, great chainaxe (ignore its Brutal weapon rule), pickrippers.",
+      "restrictions": null
+    }
+  ]
+}

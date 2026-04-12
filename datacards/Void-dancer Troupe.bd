@@ -1,0 +1,280 @@
+{
+  "teamName": "Void-dancer Troupe",
+  "operatives": [
+    {
+      "name": "LEAD PLAYER",
+      "keywords": [
+        "VOID-DANCER TROUPE",
+        "AELDARI",
+        "HARLEQUIN",
+        "LEADER",
+        "LEAD PLAYER"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 3,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 4,
+      "wounds": 9,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Lead the Performance",
+          "description": "Once per battle STRATEGIC GAMBIT. If this operative is in the killzone, change the ALLEGORY you selected for your kill team. Note that the ACCOLADE rule friendly operatives have will also change."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Fusion pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "5",
+          "criticalDamage": "3",
+          "specialRules": "Range 3\", Devastating 3, Piercing 2"
+        },
+        {
+          "name": "Neuro disruptor",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\", Piercing 1, Stun"
+        },
+        {
+          "name": "Shuriken pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\", Rending"
+        },
+        {
+          "name": "Blade",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": null
+        },
+        {
+          "name": "Caress",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Rending"
+        },
+        {
+          "name": "Embrace",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Brutal"
+        },
+        {
+          "name": "Kiss",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "7",
+          "specialRules": null
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "Lethal 5+"
+        }
+      ]
+    },
+    {
+      "name": "DEATH JESTER",
+      "keywords": [
+        "VOID-DANCER TROUPE",
+        "AELDARI",
+        "HARLEQUIN",
+        "DEATH JESTER"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 3,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 4,
+      "wounds": 9,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Humbling Cruelty (weapon rule)",
+          "description": "If the target of this weapon isn’t incapacitated but any of your attack dice inflict damage, the target gains one of your Humbling Cruelty tokens (if it doesn’t already have one). Whenever an enemy operative has one of your Humbling Cruelty tokens, subtract 2\" from its Move stat and worsen the Hit stat of its weapons by 1. This isn’t cumulative with being injured. At the end of that enemy operative’s next activation, remove its Humbling Cruelty token."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Shrieker cannon (focused)",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Rending, Heavy (Reposition only),"
+        }
+      ]
+    },
+    {
+      "name": "PLAYER",
+      "keywords": [
+        "VOID-DANCER TROUPE",
+        "AELDARI",
+        "HARLEQUIN",
+        "PLAYER"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 3,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Luck of the Laughing God",
+          "description": "Once per turning point, you can use this rule. If you do, you can use a firefight ploy for 0CP if this is the specified VOID-DANCER TROUPE operative (including Command Re-roll if the attack or defence dice was rolled for this operative). You cannot select the same firefight ploy for this rule more than once per battle."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Fusion pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "5",
+          "criticalDamage": "3",
+          "specialRules": "Range 3\", Devastating 3, Piercing 2"
+        },
+        {
+          "name": "Neuro disruptor",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\", Piercing 1, Stun"
+        },
+        {
+          "name": "Shuriken pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\", Rending"
+        },
+        {
+          "name": "Blade",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": null
+        },
+        {
+          "name": "Caress",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Rending"
+        },
+        {
+          "name": "Embrace",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Brutal"
+        },
+        {
+          "name": "Kiss",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "7",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "SHADOWSEER",
+      "keywords": [
+        "VOID-DANCER TROUPE",
+        "AELDARI",
+        "HARLEQUIN",
+        "PSYKER",
+        "SHADOWSEER"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 3,
+      "groupActivations": 2,
+      "defence": 3,
+      "save": 4,
+      "wounds": 9,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Fog Of Dreams (1AP)",
+          "description": "PSYCHIC. Select one enemy operative that’s a valid target PSYCHIC. Select one ready enemy operative visible to this for and within 8\" of this operative. Both players roll five D6. operative and roll one D6. Until the end of the turning point, Pair your dice with your opponent’s dice based on matching that enemy operative cannot be activated or perform actions results. For each matching pair, inflict D3 damage on that until it’s the last enemy operative to be activated, or until enemy operative (to a maximum of 8). For example, if you your opponent has activated a number of enemy operatives rolled 6, 5, 5, 2, 1 and your opponent rolled 6, 5, 4, 3, 1, after this action equal to the result of the D6 (whichever you would inflict 3D3 damage on that enemy operative. comes first). This operative cannot perform this action while within control This operative cannot perform this action while within control range of an enemy operative. range of an enemy operative. NOTES: NOTES:"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Hallucinogen grenade",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "1",
+          "criticalDamage": "1",
+          "specialRules": "Range 6\", Blast 2\", Lethal 5+, Seek Light,"
+        }
+      ]
+    }
+  ],
+  "factionRules": [],
+  "markersTokens": [],
+  "strategyPloys": [
+    {
+      "name": "Cegorach’s Jest",
+      "cpCost": 1,
+      "description": "Attempts to engage the troupe in melee combat meet with little success. Luckless assailants find their well- aimed strikes meeting only thin air. Whenever a friendly VOID-DANCER TROUPE operative is fighting or retaliating and your opponent strikes with a normal success, you can roll one D6: if the result is less than the Hit stat of your opponent’s selected weapon, that strike is allocated to block one of your dice instead (ignore the Brutal weapon rule, if relevant) and you cannot use this rule for the rest of the sequence."
+    }
+  ],
+  "firefightPloys": [
+    {
+      "name": "Domino Field",
+      "cpCost": 1,
+      "description": "Harlequins bear a variety of esoteric equipment, including the ubiquitous Domino Field, which breaks up their outline and renders them difficult to target. shooting a friendly VOID-DANCER TROUPE operative, during the Resolve Defence Dice step. You can allocate one of your rolled successful dice to block all of your opponent's attack dice with matching results (e.g. one of your successful defence dice results of 5 can be used to block all successful attack dice results of 5)."
+    }
+  ],
+  "factionEquipment": [
+    {
+      "name": "Understudy’s Mask",
+      "epCost": 1,
+      "description": "This item allows Harlequins to change roles during the saedath. Should one who holds a pivotal role be slain, another will swiftly take their place. Once per battle, when you activate a friendly VOID-DANCER TROUPE operative, if the friendly operative that has the PIVOTAL ROLE has been incapacitated, you can use this rule. If you do, that activated operative has the PIVOTAL ROLE for the battle. NOTES:",
+      "restrictions": null
+    }
+  ]
+}

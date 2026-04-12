@@ -1,0 +1,675 @@
+{
+  "teamName": "Pathfinders",
+  "operatives": [
+    {
+      "name": "SHAS’UI PATHFINDER",
+      "keywords": [],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Art of War",
+          "description": "STRATEGIC GAMBIT if this operative is in the"
+        },
+        {
+          "name": "Markerlight (1AP)",
+          "description": "killzone. Select one of the following and apply its rules until the See the Markerlights faction rule. end of the turning point. You cannot select each option more than once per battle: • Mont’ka: Add 1\" to the Move stat of friendly PATHFINDER operatives. • Kauyon: Friendly PATHFINDER operatives can perform a free Markerlight action during their activation if they have a Conceal order. PATHFINDER , T'AU EMPIRE, LEADER, SHAS’UI 25"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Pulse carbine",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": null
+        },
+        {
+          "name": "Gun butt",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "ASSAULT GRENADIER PATHFINDER",
+      "keywords": [],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Grenadier Specialist",
+          "description": "This operative can use frag and krak"
+        },
+        {
+          "name": "Markerlight (1AP)",
+          "description": "grenades (see universal equipment). Doing so doesn’t count See the Markerlights faction rule. towards any limited uses you have (i.e. if you also select those grenades from equipment for other operatives). Whenever it’s doing so, improve the Hit stat of that weapon by 1. PATHFINDER , T'AU EMPIRE, ASSAULT GRENADIER 25"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Fusion grenade",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "3",
+          "specialRules": "Range 6\", Devastating 2, Limited 1, Piercing 2,"
+        }
+      ]
+    },
+    {
+      "name": "BLOODED PATHFINDER",
+      "keywords": [],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Veteran",
+          "description": "During a turning point in which you have used a friendly"
+        },
+        {
+          "name": "Markerlight (1AP)",
+          "description": "SHAS’UI operative’s Art of War STRATEGIC GAMBIT and See the Markerlights faction rule. you selected Mont’ka, this operative can use Kauyon instead during its activation (and vice versa). PATHFINDER , T'AU EMPIRE, BLOODED 25"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Suppressed pulse carbine",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Silent"
+        },
+        {
+          "name": "Bionic arm",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "COMMS SPECIALIST PATHFINDER",
+      "keywords": [],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Signal (1AP)",
+          "description": "See the Markerlights faction rule. SUPPORT. Select one other friendly PATHFINDER operative visible to and within 6\" of this operative. Until the end of that operative’s next activation, add 1 to its APL stat. This operative cannot perform this action while within control range of an enemy operative. PATHFINDER , T'AU EMPIRE, COMMS SPECIALIST 25"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Pulse carbine",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": null
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 5,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "DRONE CONTROLLER PATHFINDER",
+      "keywords": [],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Drone Controller",
+          "description": "Whenever this operative is in the killzone:"
+        },
+        {
+          "name": "Markerlight (1AP)",
+          "description": "• Add 2\" to the Move stat of friendly PATHFINDER See the Markerlights faction rule. DRONE operatives. • The Saviour Protocols firefight ploy costs you 0CP. PATHFINDER , T'AU EMPIRE, DRONE CONTROLLER 25"
+        },
+        {
+          "name": "Remote Pilot (1AP)",
+          "description": "One friendly PATHFINDER DRONE operative can immediately perform one free action, but it cannot move more than 2\" during that action. That action can be one that’s normally restricted by its Drone rule (this takes precedence over that rule). This operative cannot perform this action while within control range of an enemy operative. This operative can perform this action more than once during its activation, but if it does, the same DRONE operative cannot perform the same free action more than once per activation."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Pulse carbine",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": null
+        },
+        {
+          "name": "Gun butt",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 5,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "MARKSMAN PATHFINDER",
+      "keywords": [],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Inertial Dampener",
+          "description": "You can ignore any changes to the Hit stat of this operative’s marksman rail rifle. PATHFINDER , T'AU EMPIRE, MARKSMAN 25"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Marksman rail rifle (standard)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "4",
+          "specialRules": "Devastating 2, Lethal 5+, Piercing 1"
+        },
+        {
+          "name": "Marksman rail rifle (dart round)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Piercing 1, Silent"
+        },
+        {
+          "name": "Gun butt",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 5,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "MEDICAL TECHNICIAN PATHFINDER",
+      "keywords": [],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Medikit (1AP)",
+          "description": "See the Markerlights faction rule. Select one friendly PATHFINDER operative (excluding DRONE) within this operative’s control range to regain up to 2D3 lost wounds. It cannot be an operative that the Medic! rule was used on during this turning point. This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Pulse carbine",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": null
+        },
+        {
+          "name": "Gun butt",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 5,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "SHAS’LA PATHFINDER",
+      "keywords": [],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Group Activation",
+          "description": "Whenever this operative is expended, you"
+        },
+        {
+          "name": "Fearless on the Frontline",
+          "description": "This operative can perform the must then activate one other ready friendly PATHFINDER Markerlight action while within control range of an enemy SHAS’LA operative (if able) before your opponent activates. operative (this takes precedence over the Markerlight action’s When that other operative is expended, your opponent then normal conditions). In addition, this operative can perform the activates as normal (in other words, you cannot activate more Fall Back action for 1 less AP. than two operatives in succession with this rule)."
+        },
+        {
+          "name": "Markerlight (1AP)",
+          "description": "See the Markerlights faction rule. PATHFINDER , T'AU EMPIRE, SHAS’LA 25"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Pulse carbine",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": null
+        },
+        {
+          "name": "Gun butt",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 5,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "TRANSPECTRAL INTERFERENCE PATHFINDER",
+      "keywords": [],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Pulse carbine",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": null
+        },
+        {
+          "name": "Gun butt",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 5,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "WEAPONS EXPERT PATHFINDER",
+      "keywords": [],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Ion rifle (standard)",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Piercing Crits 1"
+        },
+        {
+          "name": "Ion rifle (overcharge)",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Hot, Lethal 5+, Piercing 1"
+        },
+        {
+          "name": "Rail rifle",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "4",
+          "specialRules": "D evastating 2, Lethal 5+, Piercing 1"
+        },
+        {
+          "name": "Gun butt",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 5,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "MB3 RECON DRONE",
+      "keywords": [],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 12,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Analyse",
+          "description": "Whenever this operative performs the Markerlight Drone: action, each other enemy operative that’s both visible to this • This operative cannot perform any actions other than Charge, operative and within 3\" of the enemy operative you selected for Dash, Fall Back, Fight, Markerlight, Reposition and that action also gains one of your Markerlight tokens. Shoot. It cannot use any weapons that aren’t on its datacard. • Whenever determining control of an objective marker, treat MARKERLIGHT 1AP this operative’s APL stat as 1 lower. Note this isn’t a change to its APL stat, so any changes are cumulative with this. See the Markerlights faction rule. • Whenever determining what’s visible to this operative, the round disc at the top of the miniature is its head. PATHFINDER , T'AU EMPIRE, MB3 RECON, DRONE 32"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Burst cannon (focused)",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Ceaseless, Heavy (Reposition only), Punishing"
+        },
+        {
+          "name": "Burst cannon (sweeping)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Ceaseless, Heavy (Reposition only), Punishing,"
+        }
+      ]
+    },
+    {
+      "name": "MV1 GUN DRONE",
+      "keywords": [],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Twin pulse carbine",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Ceaseless"
+        },
+        {
+          "name": "Ram",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 5,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "MV4 SHIELD DRONE",
+      "keywords": [],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Drone",
+          "description": "Shield Generator: • This operative cannot perform any actions other than • This operative ignores the Piercing weapon rule. Charge, Dash, Fall Back, Fight and Reposition. It • Once per turning point, when an attack dice inflicts Normal cannot use any weapons that aren’t on its datacard. Dmg on this operative, you can ignore that inflicted damage. • Whenever determining control of an objective marker, treat • You can use the Saviour Protocols firefight ploy for 0CP if this this operative’s APL stat as 1 lower. Note this isn’t a change to is the specified DRONE operative. its APL stat, so any changes are cumulative with this. • Whenever determining what’s visible to this operative, the round disc at the top of the miniature is its head. PATHFINDER , T'AU EMPIRE, MV4 SHIELD, DRONE 32"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Ram",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 5,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "MV7 MARKER DRONE",
+      "keywords": [],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "High-intensity Markerlight",
+          "description": "Whenever this operative performs Drone: the Markerlight action, the selected enemy operative gains • This operative cannot perform any actions other than two of your Markerlight tokens (instead of one). Charge, Dash, Fall Back, Fight, Markerlight and Reposition. It cannot use any weapons that aren’t on"
+        },
+        {
+          "name": "Markerlight (1AP)",
+          "description": "its datacard. See the Markerlights faction rule. • When determining control of an objective marker, treat this operative’s APL stat as 1 lower. Note this isn’t a change to its APL stat, so any changes are cumulative with this. • When determining what’s visible to this operative, the round disc at the top of the miniature is its head. PATHFINDER , T'AU EMPIRE, MV7 MARKER, DRONE 32"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Ram",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 5,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "MV31 PULSE ACCELERATOR DRONE",
+      "keywords": [],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Pulse Accelerator (1AP)",
+          "description": "• This operative cannot perform any actions other than Until the start of this operative’s next activation or until it's Charge, Dash, Fall Back, Fight, Pulse Accelerator incapacitated (whichever comes first), whenever another and Reposition. It cannot use any weapons that aren’t on friendly PATHFINDER operative is shooting with a pulse its datacard. weapon within 3\" of this operative, that weapon has the • When determining control of an objective marker, treat this Lethal 5+ and Severe weapon rules. operative’s APL stat as 1 lower. Note this isn’t a change to its APL stat, so any changes are cumulative with this. • When determining what’s visible to this operative, the round disc at the top of the miniature is its head. PATHFINDER , T'AU EMPIRE, MV31 PULSE ACCELERATOR, DRONE 32"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Ram",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 5,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "MV33 GRAV-INHIBITOR DRONE",
+      "keywords": [],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 7,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Drone",
+          "description": "Grav-inhibitor: • This operative cannot perform any actions other than • Whenever an enemy operative performs an action in which it Charge, Dash, Fall Back, Fight and Reposition. It moves (excluding Dash), if it would move visible to and within cannot use any weapons that aren’t on its datacard. 6\" of this operative, treat the distance as an additional 2\" • When determining control of an objective marker, treat this and ignore the additional distances from the Obstructing and operative’s APL stat as 1 lower. Note this isn’t a change to its Accessible terrain rules. APL stat, so any changes are cumulative with this. • Whenever an enemy operative is fighting or retaliating while • When determining what’s visible to this operative, the round visible to and within 6\" of this operative, worsen the Hit stat of disc at the top of the miniature is its head. that enemy operative’s melee weapons by 1. This is cumulative with being injured. PATHFINDER , T'AU EMPIRE, MV33 GRAV-INHIBITOR, DRONE 32 NOTES: NOTES:"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Ram",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 5,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    }
+  ],
+  "factionRules": [],
+  "markersTokens": [
+    {
+      "name": "An operative cannot perform this action",
+      "description": ""
+    },
+    {
+      "name": "Shoot action can be selected for this action",
+      "description": ""
+    }
+  ],
+  "strategyPloys": [
+    {
+      "name": "Markerlight",
+      "cpCost": 1,
+      "description": ""
+    },
+    {
+      "name": "Additional Rules",
+      "cpCost": 1,
+      "description": ""
+    },
+    {
+      "name": "Tokens",
+      "cpCost": 1,
+      "description": "Saturate and Balanced 1 weapon rules. 2 Improve the Hit stat of that friendly operative’s ranged weapons by 1 (to a maximum of 3+). 3 The target cannot be obscured. 4 Seek Light weapon rule."
+    },
+    {
+      "name": "Recon Sweep",
+      "cpCost": 1,
+      "description": "Pathfinders are tasked with reconnaissance roles and are skilled at crossing difficult terrain to outflank unsuspecting targets. Select one killzone edge (excluding your own). Each friendly PATHFINDER operative that’s wholly within 6\" of that edge can immediately perform a free Dash action in an order of your choice, but each that does so must end that move wholly within 6\" of a killzone edge (excluding your own). You cannot use this ploy during the first turning point."
+    },
+    {
+      "name": "Pathfinder",
+      "cpCost": 1,
+      "description": "MARKER/TOKEN GUIDE Markerlight tokens Mont’ka (Values token 1 & 2) Saviour Kauyon Protocols token tokens Fusion Target Grenade Analysis token Optic token High- intensity Medic token Markerlight token Multi- Photon dimensional Grenade token token Pulse Orbital Accelerator Survey token Uplink token"
+    },
+    {
+      "name": "Suppressing Fire",
+      "cpCost": 1,
+      "description": "T’au Pathfinders lay down a punishing blizzard of fire, forcing their enemies to take cover and fire back in scattered, desperate bursts. Whenever an enemy operative is performing the Shoot action, if the target (the primary target if the weapon has the Blast or Torrent weapon rules) isn’t the closest valid target, your opponent cannot re-roll their attack dice. Ignore friendly PATHFINDER operatives that have a Conceal order or are obscured when determining this."
+    },
+    {
+      "name": "Bonded",
+      "cpCost": 1,
+      "description": "Often trained together from youth and bonded by blood ritual, Fire Warrior teams possess an uncanny degree of coordination. Whenever a friendly PATHFINDER operative (excluding DRONE) is shooting or retaliating with a ranged weapon (see Point-Blank Fusillade"
+    },
+    {
+      "name": "Take Cover",
+      "cpCost": 1,
+      "description": "Pathfinders are lightly armoured and equipped for mobility. They must use surrounding terrain to their advantage in order to survive. Whenever an operative is shooting a friendly PATHFINDER operative, if you can retain any cover saves, improve that friendly operative’s Save stat by 1."
+    }
+  ],
+  "firefightPloys": [
+    {
+      "name": "Saviour Protocols",
+      "cpCost": 1,
+      "description": "T’au drones are hard-coded to prioritise the safety of their operators, and will automatically interpose themselves between a T’au warrior and an incoming attack. PATHFINDER operative (excluding DRONE) is selected as the valid target of a Shoot action. Select one friendly PATHFINDER DRONE operative visible to and within 3\" of that first friendly operative to become the valid target instead (even if it wouldn’t normally be valid for this). That friendly DRONE operative is only in cover or obscured if the original target was. This ploy has no effect if the ranged weapon has the Blast or Torrent weapon rule."
+    },
+    {
+      "name": "Point-blank Fusillade",
+      "cpCost": 1,
+      "description": "Wielding their ranged weapons with practised skill, Pathfinders are capable of utilising them even at close quarters. PATHFINDER operative (excluding DRONE) is retaliating, if it wasn’t within control range of enemy operatives at the start of that activation/ counteraction. You can use one of its ranged weapons as a melee weapon (excluding a weapon that has the word ‘grenade’ in its name) during that sequence. If you do, you cannot block during that sequence, and the following weapon rules have no effect on its weapons until the end of that sequence: Devastating, Piercing, Torrent. If that friendly operative is ready, has an Engage order and is retaliating with a pulse weapon, you resolve the first attack dice (i.e. defender instead of attacker)."
+    }
+  ],
+  "factionEquipment": [
+    {
+      "name": "Photon Grenade",
+      "epCost": 1,
+      "description": "Upon reaching their destination, photon grenades release bright pulses of multispectrum light that blind and shock those caught in the blast. Once per turning point, a friendly PATHFINDER operative that has the Markerlight action on their datacard (excluding DRONE) can perform the following unique action: PHOTON GRENADE 1AP Select one enemy operative visible to this operative and roll one D6: on a 3+, until the end of that operative’s next activation, subtract 2\" from its Move stat. An operative cannot perform this action while within control range of an enemy operative. NOTES:",
+      "restrictions": null
+    },
+    {
+      "name": "Orbital Survey Uplink",
+      "epCost": 1,
+      "description": "So effective are the scanning matrices of T’au voidships that they can detect and illuminate a single infantry target, even from orbit. Once per turning point, when a friendly PATHFINDER operative performs the Markerlight action, you can use this rule. If you do, you can select one enemy operative in the killzone to gain one of your Markerlight tokens instead (it doesn’t need to be visible). This isn’t cumulative with the High-intensity Markerlight or Analyse rules. NOTES:",
+      "restrictions": null
+    }
+  ]
+}

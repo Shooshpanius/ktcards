@@ -103,11 +103,13 @@ def try_parse_weapon(line: str) -> Optional[dict]:
 
 # ─── STATS PARSING ────────────────────────────────────────────────────────────
 
-STATS_RE = re.compile(r'^(\d)\s+(\d+)"\s*(\d+)\+\s+(\d+)\s*$')
+# Traditional format: "2 6\" 5+ 11" (save includes +)
+# New format: "3 6\" 3 14" (save without +, + is on separate line for group activations)
+STATS_RE = re.compile(r'^(\d)\s+(\d+)"\s*(\d+)\+?\s+(\d+)\s*$')
 
 
 def parse_stats(line: str) -> Optional[dict]:
-    """Parse a stats line like '2 6\" 5+ 11'."""
+    """Parse a stats line like '2 6\" 5+ 11' or '3 6\" 3 14'."""
     m = STATS_RE.match(line.strip())
     if m:
         return {
@@ -359,11 +361,16 @@ def parse_operative_block(block_text: str) -> Optional[dict]:
 
     i = 1
     stats = None
+    group_activations = 1
     while i < len(lines):
         s = parse_stats(lines[i])
         if s:
             stats = s
             i += 1
+            # Check if the next line is "+" (group activations indicator in newer PDFs)
+            if i < len(lines) and lines[i].strip() == '+':
+                group_activations = 2
+                i += 1
             break
         i += 1
 
@@ -399,7 +406,7 @@ def parse_operative_block(block_text: str) -> Optional[dict]:
         "keywords": keywords,
         "movement": stats["move"],
         "actionPointLimit": stats["apl"],
-        "groupActivations": 1,
+        "groupActivations": group_activations,
         "defence": 3,
         "save": stats["save"],
         "wounds": stats["wounds"],

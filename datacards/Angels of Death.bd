@@ -1,0 +1,687 @@
+{
+  "teamName": "Angels of Death",
+  "operatives": [
+    {
+      "name": "SPACE MARINE CAPTAIN",
+      "keywords": [
+        "ANGEL OF DEATH",
+        "IMPERIUM",
+        "ADEPTUS ASTARTES",
+        "LEADER",
+        "SPACE MARINE CAPTAIN"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 15,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Heroic Leader",
+          "description": "Once per turning point, you can do one of the following: • Use a firefight ploy for 0CP if this is the specified ANGEL OF DEATH operative (excluding Command Re-roll). • Use the Combat Doctrine strategy ploy when you activate a friendly ANGEL OF DEATH operative if this operative is in the killzone and isn’t within control range of enemy operatives (pay its CP cost as normal). Note that you cannot do so if you’ve already used that ploy during this turning point. • Use the Adjust Doctrine firefight ploy for 0CP if this operative is in the killzone and isn’t within control range of enemy operatives."
+        },
+        {
+          "name": "Iron Halo",
+          "description": "Once per battle, when an attack dice inflicts Normal Dmg on this operative, you can ignore that inflicted damage."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Plasma pistol (standard)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\", Piercing 1"
+        },
+        {
+          "name": "Plasma pistol (supercharge)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\", Hot, Lethal 5+, Piercing 1"
+        },
+        {
+          "name": "Power fist",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "5",
+          "criticalDamage": "7",
+          "specialRules": "Brutal"
+        }
+      ]
+    },
+    {
+      "name": "ASSAULT INTERCESSOR SERGEANT",
+      "keywords": [
+        "ANGEL OF DEATH",
+        "IMPERIUM",
+        "ADEPTUS ASTARTES",
+        "LEADER",
+        "ASSAULT INTERCESSOR",
+        "SERGEANT"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 15,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Doctrine Warfare",
+          "description": "You can do each of the following once"
+        },
+        {
+          "name": "Chapter Veteran",
+          "description": "At the end of the Select Operatives step, if per battle: this operative is selected for deployment, select one additional CHAPTER TACTIC for it to have for the battle. Unlike primary • Whenever you would use the Combat Doctrine strategy ploy and secondary CHAPTER TACTICS, you don’t have to select and then select Assault, if this operative is in the killzone, it the same one for each battle in a campaign or tournament. costs you 0CP. • Whenever you would use the Combat Doctrine strategy ploy and then select Tactical, if this operative is in the killzone, it costs you 0CP."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Hand flamer",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "Range 6\", Saturate, Torrent 1\""
+        },
+        {
+          "name": "Heavy bolt pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\", Piercing Crits 1"
+        },
+        {
+          "name": "Plasma pistol (standard)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\", Piercing 1"
+        },
+        {
+          "name": "Plasma pistol (supercharge)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\", Hot, Lethal 5+, Piercing 1"
+        },
+        {
+          "name": "Chainsword",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": null
+        },
+        {
+          "name": "Power fist",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 4,
+          "damage": "5",
+          "criticalDamage": "7",
+          "specialRules": "Brutal"
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "Lethal 5+"
+        },
+        {
+          "name": "Thunder hammer",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 4,
+          "damage": "5",
+          "criticalDamage": "6",
+          "specialRules": "Shock, Stun"
+        }
+      ]
+    },
+    {
+      "name": "INTERCESSOR SERGEANT",
+      "keywords": [
+        "ANGEL OF DEATH",
+        "IMPERIUM",
+        "APEPTUS ASTARTES",
+        "LEADER",
+        "INTERCESSOR",
+        "SERGEANT"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 15,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Doctrine Warfare",
+          "description": "You can do each of the following once"
+        },
+        {
+          "name": "Chapter Veteran",
+          "description": "At the end of the Select Operatives step, if per battle: this operative is selected for deployment, select one additional CHAPTER TACTIC for it to have for the battle. Unlike primary • Whenever you would use the Combat Doctrine strategy ploy and secondary CHAPTER TACTICS, you don’t have to select and then select Devastator, if this operative is in the killzone, the same one for each battle in a campaign or tournament. it costs you 0CP. • Whenever you would use the Combat Doctrine strategy ploy and then select Tactical, if this operative is in the killzone, it costs you 0CP."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Auto bolt rifle",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Torrent 1\""
+        },
+        {
+          "name": "Bolt rifle",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Piercing Crits 1"
+        },
+        {
+          "name": "Stalker bolt rifle (heavy)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "H eavy (Dash only), Lethal 5+, Piercing Crits 1"
+        },
+        {
+          "name": "Stalker bolt rifle (mobile)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        },
+        {
+          "name": "Chainsword",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": null
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        },
+        {
+          "name": "Power fist",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "5",
+          "criticalDamage": "7",
+          "specialRules": "Brutal"
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "Lethal 5+"
+        },
+        {
+          "name": "Thunder hammer",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "5",
+          "criticalDamage": "6",
+          "specialRules": "Shock, Stun"
+        }
+      ]
+    },
+    {
+      "name": "ASSAULT INTERCESSOR GRENADIER",
+      "keywords": [
+        "ANGEL OF DEATH",
+        "IMPERIUM",
+        "ADEPTUS ASTARTES",
+        "ASSAULT INTERCESSOR",
+        "GRENADIER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 14,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Grenadier",
+          "description": "This operative can use frag and krak grenades (see universal equipment). Doing so doesn’t count towards any limited uses you have (i.e. if you also select those grenades from equipment for other operatives). Whenever it’s doing so, improve the Hit stat of that weapon by 1."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Heavy bolt pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\", Piercing Crits 1"
+        },
+        {
+          "name": "Chainsword",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "ASSAULT INTERCESSOR WARRIOR",
+      "keywords": [
+        "ANGEL OF DEATH",
+        "IMPERIUM",
+        "ADEPTUS ASTARTES",
+        "ASSAULT INTERCESSOR",
+        "WARRIOR"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 14,
+      "notes": null,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Heavy bolt pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\", Piercing Crits 1"
+        },
+        {
+          "name": "Chainsword",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "HEAVY INTERCESSOR GUNNER",
+      "keywords": [
+        "ANGEL OF DEATH",
+        "IMPERIUM",
+        "ADEPTUS ASTARTES",
+        "HEAVY INTERCESSOR",
+        "GUNNER"
+      ],
+      "movement": "5\"",
+      "actionPointLimit": 3,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 18,
+      "notes": null,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Heavy bolter (focused)",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Piercing Crits 1"
+        },
+        {
+          "name": "Heavy bolter (sweeping)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Piercing Crits 1, Torrent 1\""
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "INTERCESSOR GUNNER",
+      "keywords": [
+        "ANGEL OF DEATH",
+        "IMPERIUM",
+        "ADEPTUS ASTARTES",
+        "INTERCESSOR",
+        "GUNNER"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 14,
+      "notes": null,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Auto bolt rifle",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "T orrent 1\""
+        },
+        {
+          "name": "Auxiliary grenade launcher (frag)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "2",
+          "criticalDamage": "4",
+          "specialRules": "B last 2\""
+        },
+        {
+          "name": "Auxiliary grenade launcher (krak)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Piercing 1"
+        },
+        {
+          "name": "Bolt rifle",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "P iercing Crits 1"
+        },
+        {
+          "name": "Stalker bolt rifle (heavy)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "Heavy (Dash only), Lethal 5+,"
+        }
+      ]
+    },
+    {
+      "name": "INTERCESSOR WARRIOR",
+      "keywords": [
+        "ANGEL OF DEATH",
+        "IMPERIUM",
+        "ADEPTUS ASTARTES",
+        "INTERCESSOR",
+        "WARRIOR"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 14,
+      "notes": null,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Auto bolt rifle",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Torrent 1\""
+        },
+        {
+          "name": "Bolt rifle",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Piercing Crits 1"
+        },
+        {
+          "name": "Stalker bolt rifle (heavy)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "H eavy (Dash only), Lethal 5+, Piercing Crits 1"
+        },
+        {
+          "name": "Stalker bolt rifle (mobile)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "ELIMINATOR SNIPER",
+      "keywords": [
+        "ANGEL OF DEATH",
+        "IMPERIUM",
+        "ADEPTUS ASTARTES",
+        "ELIMINATOR",
+        "SNIPER"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 3,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 3,
+      "wounds": 12,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Camo Cloak",
+          "description": "Whenever an operative is shooting this operative,"
+        },
+        {
+          "name": "Optics (1AP)",
+          "description": "ignore the Saturate weapon rule. This operative has the Stealthy Until the start of this operative’s next activation, whenever CHAPTER TACTIC. If you selected that CHAPTER TACTIC, it’s shooting, enemy operatives cannot be obscured. you can do both of its options (i.e. retain two cover saves – one normal and one critical success). This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Bolt pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Bolt sniper rifle (executioner)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Heavy (Dash only), Saturate, Seek Light, Silent"
+        },
+        {
+          "name": "Bolt sniper rifle (hyperfrag)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "2",
+          "criticalDamage": "4",
+          "specialRules": "Blast 1\", Heavy (Dash only), Silent"
+        },
+        {
+          "name": "Bolt sniper rifle (mortis)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "Devastating 3, Heavy (Dash only), Piercing 1,"
+        }
+      ]
+    }
+  ],
+  "factionRules": [
+    {
+      "name": "Chapter Tactics",
+      "description": ""
+    },
+    {
+      "name": "Aggressive",
+      "description": "This operative’s melee weapons have the Rending weapon rule."
+    },
+    {
+      "name": "Dueller",
+      "description": "Whenever this operative is fighting or retaliating, each of your normal successes can block one unresolved critical success (unless the enemy operative’s weapon has the Brutal weapon rule)."
+    },
+    {
+      "name": "Resolute",
+      "description": "You can ignore any changes to this operative’s APL stat and it isn’t affected by enemy operatives’ Shock weapon rule."
+    },
+    {
+      "name": "Sharpshooter",
+      "description": "Whenever this operative is shooting during an activation in which it hasn’t performed the Charge, Fall Back or Reposition action, its bolt weapons have the Accurate 1 and Severe weapon rules."
+    },
+    {
+      "name": "Siege Specialist",
+      "description": "This operative’s ranged weapons have the Saturate weapon rule. Whenever this operative is fighting or retaliating, enemy operatives cannot assist."
+    }
+  ],
+  "markersTokens": [],
+  "strategyPloys": [
+    {
+      "name": "And They Shall Know No Fear",
+      "cpCost": 1,
+      "description": "Space Marines possess extraordinary courage and are utterly unflinching in the face of terrifying horrors and overwhelming odds. You can ignore any changes to the stats of friendly ANGEL OF DEATH operatives from being injured (including their weapons’ stats)."
+    },
+    {
+      "name": "Indomitus",
+      "cpCost": 1,
+      "description": "This is the Era Indomitus. The Imperium wages galaxy-spanning crusades to drive back the horrors that plague it, and the battle-brothers of the Adeptus Astartes are spurred on by this righteous purpose. Whenever an operative is shooting a friendly ANGEL OF DEATH operative, if you roll two or more fails, you can discard one of them to retain another as a normal success instead."
+    },
+    {
+      "name": "Adaptive Tactics",
+      "cpCost": 1,
+      "description": "There are few more tactically flexible warriors than the Adeptus Astartes. Supplementing the teachings of the Codex Astartes with their own experience, Space Marines may adjust their strategies at a moment’s notice. Change your secondary CHAPTER TACTIC. Note this ploy only lasts until the end of the turning point, at which point your original secondary CHAPTER TACTIC returns. change the COMBAT DOCTRINE you selected."
+    }
+  ],
+  "firefightPloys": [
+    {
+      "name": "Transhuman Physiology",
+      "cpCost": 1,
+      "description": "The genetically modified physiology of a Space Marine is capable of resisting wounds that would kill a lesser being. shooting a friendly ANGEL OF DEATH operative, in the Roll Defence Dice step. You can retain one of your normal successes as a critical success instead."
+    },
+    {
+      "name": "Wrath Of Vengeance",
+      "cpCost": 1,
+      "description": "When roused to anger, a battle-brother of the Adeptus Astartes may be spurred to acts of extraordinary strength and athleticism. OF DEATH operative is counteracting. It can perform an additional 1AP action for free during that counteraction, but both actions must be different."
+    },
+    {
+      "name": "Shock Assault",
+      "cpCost": 1,
+      "description": "The Adeptus Astartes strike with exceptional speed and strength, the roar of chainswords and brutal assaults spelling death for their foes. DEATH operative is performing the Fight action during an activation in which it performed the Charge action, at the start of the Resolve Attack Dice step. Until the end of that action: • Its melee weapon has the Shock weapon rule. • The first time you strike during that sequence, inflict 1 additional damage (to a maximum of 7)."
+    }
+  ],
+  "factionEquipment": [
+    {
+      "name": "Chapter Reliquaries",
+      "epCost": 1,
+      "description": "Many Space Marines bear macabre relics taken from the bodies of their fallen. Those who bear these inspirational items fight all the harder to honour the sacrifice of their battle-brothers.",
+      "restrictions": null
+    },
+    {
+      "name": "Auspex",
+      "epCost": 1,
+      "description": "Auspexes come in many forms. These scanning devices can detect motion, analyse atmospheric conditions and reveal heat signatures. Once per turning point, when a friendly ANGEL OF DEATH operative performs the Shoot action and you’re selecting a valid target, you can use this rule. If you do, until the end of the activation/ counteraction, enemy operatives within 8\" of that friendly operative cannot be obscured.",
+      "restrictions": null
+    },
+    {
+      "name": "Tilting Shields",
+      "epCost": 1,
+      "description": "As well as displaying company colours and personal heraldry, a Space Marine’s tilting plate serves to protect the bearer in the press of melee combat. Once per turning point, when a friendly ANGEL OF DEATH operative is fighting or retaliating, after your opponent rolls their attack dice, but before re-rolls, you can use this rule. If you do, your opponent cannot retain attack dice results of less than 6 as critical successes during that sequence (e.g. as a result of the Lethal, Rending or Severe weapon rules). NOTES:",
+      "restrictions": null
+    }
+  ]
+}

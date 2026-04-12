@@ -1,0 +1,569 @@
+{
+  "teamName": "Kommandos",
+  "operatives": [
+    {
+      "name": "KOMMANDO BOSS NOB",
+      "keywords": [
+        "KOMMANDO",
+        "ORK",
+        "LEADER",
+        "BOSS NOB"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 3,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 14,
+      "notes": null,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Slugga",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Big choppa",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "5",
+          "criticalDamage": "6",
+          "specialRules": null
+        },
+        {
+          "name": "Power klaw",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "5",
+          "criticalDamage": "7",
+          "specialRules": "Brutal, Shock"
+        }
+      ]
+    },
+    {
+      "name": "KOMMANDO BOMB SQUIG",
+      "keywords": [
+        "KOMMANDO",
+        "ORK",
+        "BOMB SQUIG"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 5,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Explosive (weapon rule)",
+          "description": "This operative can perform the Shoot action with Boom!: If this operative is incapacitated during a battle in which this weapon while within control range of an enemy operative. it hasn’t used its explosives, roll one D6, or two D6 if you wish. If Don’t select a valid target. Instead, this operative is always the any result is a 4+, this operative performs a free Shoot action primary target and cannot be in cover or obscured. with its explosives before it’s removed from the killzone."
+        },
+        {
+          "name": "Stoopid",
+          "description": "In the Firefight phase, whenever you determine this"
+        },
+        {
+          "name": "Expendable",
+          "description": "This operative is ignored for your opponent’s kill/ operative’s order, you cannot select Conceal. This operative elimination op (when it’s incapacitated, and when determining cannot perform any actions other than Charge, Dash, Fight, your starting number of operatives). It’s also ignored for victory Reposition and Shoot. It cannot use any weapons that aren’t conditions and scoring VPs if either require operatives to on its datacard. ‘escape’, ‘survive’ or be incapacitated by enemy operatives (if it escapes/survives/is incapacitated, determining how many operatives must escape/survive/be incapacitated, etc.)."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Explosives",
+          "type": "Melee",
+          "attacks": 6,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Blast 1\", Limited 1, Explosive*"
+        },
+        {
+          "name": "Bite",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "KOMMANDO BOY",
+      "keywords": [
+        "KOMMANDO",
+        "ORK",
+        "BOY"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Taktical Wot-notz",
+          "description": "You can do each of the following once per turning point: • One friendly KOMMANDO BOY operative can perform the Smoke Grenade action. • One friendly KOMMANDO BOY operative can perform the Stun Grenade action. The rules for these actions are found in universal equipment. Performing these actions using this rule doesn’t count towards their action limits (i.e. if you also select those grenades from equipment)."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Slugga",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Choppa",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "KOMMANDO BREACHA BOY",
+      "keywords": [
+        "KOMMANDO",
+        "ORK",
+        "BREACHA BOY"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Breach (1AP)",
+          "description": "Place one of your Breach markers within this operative’s control range as close as possible to a terrain feature within control range of it. Whenever an operative is within 1\" of that marker, it treats parts of that terrain feature that are no more than 1\" thick as Accessible terrain. This operative can perform this action during the Charge or Reposition action, and it can do so for 1 less AP during those actions. Any remaining move distance can be used after it does so. This operative cannot perform this action while within control range of an enemy operative, or if a terrain feature isn’t within its control range."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Slugga",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\""
+        },
+        {
+          "name": "Breacha ram",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 4,
+          "damage": "5",
+          "criticalDamage": "5",
+          "specialRules": "Brutal, Severe, Shock"
+        }
+      ]
+    },
+    {
+      "name": "KOMMANDO BURNA BOY",
+      "keywords": [
+        "KOMMANDO",
+        "ORK",
+        "BURNA BOY"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Killzone",
+          "description": "Volkus, Kill Team Core Book)."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Burna (standard)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "Range 8\", Saturate, Torrent 2\""
+        },
+        {
+          "name": "Burna (deluge)",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "Range 4\", Saturate, Seek Light, Torrent 0\"*"
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "KOMMANDO COMMS BOY",
+      "keywords": [
+        "KOMMANDO",
+        "ORK",
+        "COMMS BOY"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Listen In (1AP)",
+          "description": "this operative’s activations, it can perform SUPPORT. Select one other friendly KOMMANDO operative (excluding the Pick Up Marker, Place Marker BOMB SQUIG) visible to and within 6\" of this operative. Until the end of that or a mission action for 1 less AP. operative’s next activation, add 1 to its APL stat. This operative cannot perform this action while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Shokka pistol",
+          "type": "Ranged",
+          "attacks": 6,
+          "hitSkill": 4,
+          "damage": "1",
+          "criticalDamage": "0",
+          "specialRules": "Range 8\", Devastating 2, Severe, Stun"
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "KOMMANDO DAKKA BOY",
+      "keywords": [
+        "KOMMANDO",
+        "ORK",
+        "DAKKA BOY"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Dakka Dash (1AP)",
+          "description": "Perform a free Dash action and a free Shoot action with this operative in any order. You can only select a dakka shoota for that Shoot action. This operative cannot perform this action while it has a Conceal order, or while within control range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Dakka shoota (short range)",
+          "type": "Ranged",
+          "attacks": 5,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 9\", Ceaseless"
+        },
+        {
+          "name": "Dakka shoota (long range)",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 4,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "KOMMANDO GROT",
+      "keywords": [
+        "KOMMANDO",
+        "ORK",
+        "GROT"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 5,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Sneaky Zogger",
+          "description": "This operative cannot"
+        },
+        {
+          "name": "Grappling Hook (1AP)",
+          "description": "have an Engage order. Whenever this Select a visible point on a terrain feature for this operative. Remove this operative operative is in cover, it cannot be selected from the killzone and set it back up within 1\" horizontally of that point in a location as a valid target, taking precedence over it can be placed, not within control range of enemy operatives, and with that point all other rules (e.g. Seek, Vantage terrain) visible to it. This operative cannot perform the Operate Hatch action during except being within 2\". this action. This action is treated as a Reposition action. This operative cannot perform this action while within control range of an enemy operative, or during an activation in which it performed the Charge or Fall Back action (or vice versa)."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Grot choppa",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 5,
+          "damage": "1",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "KOMMANDO ROKKIT BOY",
+      "keywords": [
+        "KOMMANDO",
+        "ORK",
+        "ROKKIT BOY"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Rokkit launcha (aimed)",
+          "type": "Melee",
+          "attacks": 6,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Blast 1\", Ceaseless, Heavy (Dash only)"
+        },
+        {
+          "name": "Rokkit launcha (mobile)",
+          "type": "Melee",
+          "attacks": 6,
+          "hitSkill": 4,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Blast 1\""
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "KOMMANDO SLASHA BOY",
+      "keywords": [
+        "KOMMANDO",
+        "ORK",
+        "SLASHA BOY"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Throwing knives",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "2",
+          "criticalDamage": "5",
+          "specialRules": "Range 6\", Silent"
+        },
+        {
+          "name": "Twin choppas",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Ceaseless, Lethal 5+"
+        }
+      ]
+    },
+    {
+      "name": "KOMMANDO SNIPA BOY",
+      "keywords": [
+        "KOMMANDO",
+        "ORK",
+        "SNIPA BOY"
+      ],
+      "movement": "6\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 5,
+      "wounds": 10,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Concealed Position (weapon rule)",
+          "description": "This operative can only use this weapon the first time it’s performing the Shoot action during the battle."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Scoped big shoota (concealed)",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "Devastating 2, Heavy, Silent, Concealed Position*"
+        },
+        {
+          "name": "Scoped big shoota (stationary)",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "Devastating 2, Heavy"
+        },
+        {
+          "name": "Scoped big shoota (sweeping)",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Heavy (Dash only), Torrent 1\""
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        }
+      ]
+    }
+  ],
+  "factionRules": [
+    {
+      "name": "Throat Slittas",
+      "description": "Unusual amongst Orks, Kommandos utilise stealth and misdirection to close in before falling upon the enemy with jagged blades drawn. Each friendly KOMMANDO operative (excluding BOMB SQUIG) can perform the Charge action while it has a Conceal order."
+    }
+  ],
+  "markersTokens": [
+    {
+      "name": "Kommandos hold to the same belief that any target can",
+      "description": ""
+    },
+    {
+      "name": "Stun Grenade token Smoke Grenade token",
+      "description": ""
+    }
+  ],
+  "strategyPloys": [
+    {
+      "name": "Waaagh!",
+      "cpCost": 1,
+      "description": "The infamous and dreaded battle cry of the Orks heralds a tempest of violence and butchery. Friendly KOMMANDO operatives’ melee weapons have the Balanced weapon rule."
+    },
+    {
+      "name": "Sssshhhh!",
+      "cpCost": 1,
+      "description": "Despite their colossal bulk, Ork Kommandos are capable of moving surprisingly quietly, should the situation demand it. Each friendly KOMMANDO operative that’s not a valid target for enemy operatives, or has a Conceal order and is more than 6\" from enemy operatives, can immediately perform a free Dash action. You cannot use this ploy during the first turning point."
+    },
+    {
+      "name": "Skulk About",
+      "cpCost": 1,
+      "description": "Kommandos exploit cover and terrain to confound the enemy and confuse their aim. Whenever an enemy operative is shooting a friendly KOMMANDO operative that has a Conceal order, you can retain one of your defence dice as a normal success without rolling it (in addition to a cover save, if any)."
+    }
+  ],
+  "firefightPloys": [
+    {
+      "name": "Krump ’em!",
+      "cpCost": 1,
+      "description": "Whilst they are far more crafty than your average Ork, Kommandos are still ultimately driven by a need to fight and kill. phase. Select one friendly KOMMANDO operative. It can immediately perform a free Fight action."
+    },
+    {
+      "name": "Shake It Off",
+      "cpCost": 1,
+      "description": "Ork Kommandos bolster their natural resilience with makeshift armour and protective equipment, rendering their advance almost impossible to slow. KOMMANDO operative is activated, or when its APL stat is changed. Until the start of the next turning point, you can ignore any changes to its APL stat."
+    },
+    {
+      "name": "Kunnin’ But Brutal",
+      "cpCost": 1,
+      "description": "Whilst they may utilise stealth and cunning to get within range of their enemies, Kommandos are no less enthusiastic about meting out brutal violence. KOMMANDO operative that has a Conceal order is fighting during an activation in which it performed the Charge action, you’re resolving the first attack dice, and it’s a strike with a normal success. Treat that normal success as a critical success instead."
+    }
+  ],
+  "factionEquipment": [
+    {
+      "name": "Dynamite",
+      "epCost": 1,
+      "description": "Kommandos are known to utilise a variety of improvised explosives, the most common of which are bundles of volatile dynamite. Once per battle, a friendly KOMMANDO operative (excluding BOMB SQUIG and GROT) can use the following ranged weapon: NAME ATK HIT DMG Dynamite 5 4+ 4/5 WR Range 4\", Blast 1\", Heavy (Reposition only), Saturate",
+      "restrictions": null
+    },
+    {
+      "name": "Collapsible Stocks",
+      "epCost": 1,
+      "description": "Kommandos often use modified guns with cut down or folding shoulder stocks to enhance the impact of their firepower. Remove the Range weapon rule from the following ranged weapons friendly KOMMANDO operatives have: • Shokka pistol • Slugga",
+      "restrictions": null
+    },
+    {
+      "name": "Harpoon",
+      "epCost": 1,
+      "description": "This weapon fires a sharp, barbed projectile that snags any foes it doesn’t kill outright, preventing them from moving. Once per turning point, a friendly KOMMANDO operative (excluding BOMB SQUIG and GROT) can use the following ranged weapon: NAME ATK HIT DMG Harpoon 4 4+ 4/5 WR Range 8\", Lethal 5+, Stun NOTES:",
+      "restrictions": null
+    }
+  ]
+}

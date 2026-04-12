@@ -1,0 +1,674 @@
+{
+  "teamName": "Corsair Voidscarred",
+  "operatives": [
+    {
+      "name": "VOIDSCARRED FELARCH",
+      "keywords": [
+        "CORSAIR VOIDSCARRED",
+        "AELDARI",
+        "ANHRATHE",
+        "LEADER",
+        "FELARCH"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 9,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Veteran Raider",
+          "description": "This operative One Step"
+        },
+        {
+          "name": "Ahead",
+          "description": "Once per battle, after an enemy operative performs an action, if this operative is can perform a 1AP action for ready, you can use this rule. If you do, roll one D6: if the result is higher than that enemy operative’s free during their activation APL stat, you can interrupt and immediately perform either a free Shoot or a free Fight action with as a result of the Aeldari this operative, but you cannot select any other enemy operative as a valid target or to fight against Raiders rule (instead of the during that action (note that secondary targets from the Blast weapon rule can still be targeted). After Dash action). you perform that action, subtract 1 from this operative’s APL stat until the end of its next activation."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Neuro disruptor",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Range 8\", Piercing 1, Stun"
+        },
+        {
+          "name": "Shuriken pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\", Rending"
+        },
+        {
+          "name": "Shuriken rifle",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Rending"
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "Lethal 5+"
+        }
+      ]
+    },
+    {
+      "name": "VOIDSCARRED FATE DEALER",
+      "keywords": [
+        "CORSAIR VOIDSCARRED",
+        "AELDARI",
+        "ANHRATHE",
+        "FATE DEALER"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Camo Cloak",
+          "description": "Whenever an operative is shooting this operative: • Ignore the Saturate weapon rule. • If you can retain any cover saves, you can retain one additional cover save, or you can retain one cover save as a critical success instead. This isn’t cumulative with improved cover saves from Vantage terrain."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Ranger long rifle (mobile)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": null
+        },
+        {
+          "name": "Ranger long rifle (stationary)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 2,
+          "damage": "3",
+          "criticalDamage": "3",
+          "specialRules": "Devastating 3, Heavy, Silent"
+        },
+        {
+          "name": "Shuriken pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\", Rending"
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 3,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "VOIDSCARRED GUNNER",
+      "keywords": [
+        "CORSAIR VOIDSCARRED",
+        "AELDARI",
+        "ANHRATHE",
+        "GUNNER"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Blaster",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Piercing 2"
+        },
+        {
+          "name": "Shredder",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Rending, Torrent 2\""
+        },
+        {
+          "name": "Shuriken pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\", Rending"
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 3,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "VOIDSCARRED HEAVY GUNNER",
+      "keywords": [
+        "CORSAIR VOIDSCARRED",
+        "AELDARI",
+        "ANHRATHE",
+        "HEAVY GUNNER"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [],
+      "attacks": [
+        {
+          "name": "Shuriken cannon (focused)",
+          "type": "Melee",
+          "attacks": 5,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Heavy (Dash only), Rending"
+        },
+        {
+          "name": "Shuriken cannon (sweeping)",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "5",
+          "specialRules": "Heavy (Dash only), Rending, Torrent 1\""
+        },
+        {
+          "name": "Shuriken pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\", Rending"
+        },
+        {
+          "name": "Wraithcannon",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "6",
+          "criticalDamage": "3",
+          "specialRules": "Devastating 4, Heavy (Dash only), Piercing 2"
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 3,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "VOIDSCARRED KURNATHI",
+      "keywords": [
+        "CORSAIR VOIDSCARRED",
+        "AELDARI",
+        "ANHRATHE",
+        "KURNATHI"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Blademaster",
+          "description": "This operative can perform the"
+        },
+        {
+          "name": "Dash action Bladed Stance",
+          "description": "Whenever this operative is fighting or retaliating, during an activation in which it performed the Charge action, you can resolve one of your successes before the normal order. If but can only use any remaining move distance it had from that you do, that success must be used to block. Charge action (to a maximum of 3\")."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Shuriken pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\", Rending"
+        },
+        {
+          "name": "Dual power weapons",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "Ceaseless, Lethal 5+"
+        }
+      ]
+    },
+    {
+      "name": "VOIDSCARRED KURNITE HUNTER",
+      "keywords": [
+        "CORSAIR VOIDSCARRED",
+        "AELDARI",
+        "ANHRATHE",
+        "KURNITE HUNTER"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Erudite Hunter",
+          "description": "STRATEGIC GAMBIT. Select one enemy operative within 9\" of this operative. Once during this turning point, after that enemy operative performs an action in which it moves, you can interrupt to use this rule. If you do, this operative can immediately perform either a free Reposition action (it cannot end that move further away from that enemy operative), or a free Charge action (you can change its order to do so, and it must end that move within control range of that enemy operative). In a killzone that uses the close quarters rules (e.g. Killzone: Tomb World), ignore Wall terrain when determining further away."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Faolchú",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "1",
+          "criticalDamage": "2",
+          "specialRules": "Rending, Saturate, Seek Light, Silent"
+        },
+        {
+          "name": "Shuriken pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\", Rending"
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "Lethal 5+"
+        }
+      ]
+    },
+    {
+      "name": "VOIDSCARRED SHADE RUNNER",
+      "keywords": [
+        "CORSAIR VOIDSCARRED",
+        "AELDARI",
+        "ANHRATHE",
+        "SHADE RUNNER"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Blink Pack",
+          "description": "Whenever this operative performs the Charge, Fall Back or Reposition action, it can warp jump. If it does, don’t move it. Instead, remove it from the killzone and set it back up wholly within 7\" horizontally of its original location (in a killzone that uses the close quarters rules, e.g."
+        },
+        {
+          "name": "Killzone",
+          "description": "Tomb World, this distance can be measured through Wall terrain). It must be set up in a location it can be placed, and unless it’s the Charge action, it cannot be set up within control range of an enemy operative."
+        },
+        {
+          "name": "Slicing Attack",
+          "description": "Whenever this operative performs the Reposition action with a warp jump (see other side of card), Shade Runner Enemy operative you can use this rule. If you do, after it moves, draw an imaginary previous location line 1mm in diameter and up to 7\" long between it and its previous location. Note this doesn’t have to be a straight line. Up to 7\" Inflict D3+2 damage on one enemy operative that line crosses. You cannot inflict damage on an enemy operative that was not Shade Runner visible to this operative at the start of that action. A 28mm round marker can be temporarily placed underneath this operative before it moves to help determine this."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Shuriken pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\", Rending"
+        },
+        {
+          "name": "Throwing blades",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "2",
+          "criticalDamage": "4",
+          "specialRules": "Range 6\", Silent"
+        },
+        {
+          "name": "Hekatarii blades",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "Ceaseless, Lethal 5+"
+        }
+      ]
+    },
+    {
+      "name": "VOIDSCARRED SOUL WEAVER",
+      "keywords": [
+        "CORSAIR VOIDSCARRED",
+        "AELDARI",
+        "ANHRATHE",
+        "PSYKER",
+        "MEDIC",
+        "SOUL WEAVER"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Soul Heal (1AP)",
+          "description": "PSYCHIC. Select one other friendly CORSAIR PSYCHIC. Select one friendly CORSAIR VOIDSCARRED operative visible to and within 6\" of this VOIDSCARRED operative visible to and within 6\" of this operative. Until the end of that operative’s next activation, operative. That operative regains up to 2D3 lost wounds. add 1 to its APL stat. This operative cannot perform this action while within control This operative cannot perform this action while within control range of an enemy operative. range of an enemy operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Shuriken pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\", Rending"
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "Lethal 5+"
+        }
+      ]
+    },
+    {
+      "name": "VOIDSCARRED STARSTORM DUELLIST",
+      "keywords": [
+        "CORSAIR VOIDSCARRED",
+        "AELDARI",
+        "ANHRATHE",
+        "STARSTORM DUELLIST"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Quick on the Trigger",
+          "description": "This operative can perform the Shoot"
+        },
+        {
+          "name": "Pistol Barrage (1AP)",
+          "description": "action while within control range of an enemy operative. If it Perform two free Shoot actions with this operative (this does, when selecting a valid target, you can only select an takes precedence over action restrictions). You must select enemy operative within this operative’s control range, and can its fusion pistol for one action and its shuriken pistol for the do so even if other friendly operatives are within that enemy other (in any order). operative’s control range. This operative cannot perform this action while it has a Conceal order, or during an activation in which it performed the Shoot action (or vice versa)."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Fusion pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "5",
+          "criticalDamage": "3",
+          "specialRules": "Range 3\", Devastating 3, Piercing 2"
+        },
+        {
+          "name": "Shuriken pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\", Rending"
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 3,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "VOIDSCARRED WARRIOR",
+      "keywords": [
+        "CORSAIR VOIDSCARRED",
+        "AELDARI",
+        "ANHRATHE",
+        "WARRIOR"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Prowling Raiders",
+          "description": "You can use the Capricious Flight and Light Fingers firefight ploys for 0CP each if a friendly WARRIOR operative is the specified CORSAIR VOIDSCARRED operative."
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Shuriken pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\", Rending"
+        },
+        {
+          "name": "Shuriken rifle",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Rending"
+        },
+        {
+          "name": "Power weapon",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "6",
+          "specialRules": "Lethal 5+"
+        },
+        {
+          "name": "Fists",
+          "type": "Melee",
+          "attacks": 3,
+          "hitSkill": 3,
+          "damage": "2",
+          "criticalDamage": "3",
+          "specialRules": null
+        }
+      ]
+    },
+    {
+      "name": "VOIDSCARRED WAY SEEKER",
+      "keywords": [
+        "CORSAIR VOIDSCARRED",
+        "AELDARI",
+        "ANHRATHE",
+        "PSYKER",
+        "WAY SEEKER"
+      ],
+      "movement": "7\"",
+      "actionPointLimit": 2,
+      "groupActivations": 1,
+      "defence": 3,
+      "save": 4,
+      "wounds": 8,
+      "notes": null,
+      "abilities": [
+        {
+          "name": "Warding Shield (1AP)",
+          "description": "PSYCHIC. Select two friendly CORSAIR PSYCHIC. Select one friendly CORSAIR VOIDSCARRED operatives visible to and within 5\" of this VOIDSCARRED operative visible to and within 6\" of this operative. Remove them both from the killzone and set them operative. Until the start of this operative’s next activation, back up in each other’s previous locations (in other words, until it’s incapacitated or until it performs this action swap their positions). If one of them performed the Charge, again (whichever comes first), the first time an attack dice Fall Back or Reposition action during this turning point inflicts Normal Dmg on that friendly operative, ignore that and the other is ready, the other cannot perform any of those inflicted damage. actions in its activation during this turning point. This operative cannot perform this action while within control This operative cannot perform this action while within control range of an enemy operative. range of an enemy operative. NOTES: NOTES: NOTES:"
+        }
+      ],
+      "attacks": [
+        {
+          "name": "Freezing grasp",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "1",
+          "criticalDamage": "2",
+          "specialRules": "PSYCHIC, Severe, Silent, Stun"
+        },
+        {
+          "name": "Lightning strike",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "4",
+          "criticalDamage": "3",
+          "specialRules": "PSYCHIC, 2\" Devastating 2"
+        },
+        {
+          "name": "Shuriken pistol",
+          "type": "Ranged",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "4",
+          "specialRules": "Range 8\", Rending"
+        },
+        {
+          "name": "Witch staff",
+          "type": "Melee",
+          "attacks": 4,
+          "hitSkill": 3,
+          "damage": "3",
+          "criticalDamage": "5",
+          "specialRules": "PSYCHIC, Shock"
+        }
+      ]
+    }
+  ],
+  "factionRules": [
+    {
+      "name": "Aeldari Raiders",
+      "description": "Aeldari are lithe, graceful and swift – qualities the Corsair Voidscarred utilise to outmanoeuvre their enemies. Each friendly CORSAIR VOIDSCARRED operative can perform a free Dash action during their activation."
+    }
+  ],
+  "markersTokens": [],
+  "strategyPloys": [
+    {
+      "name": "Corsair Voidscarred",
+      "cpCost": 1,
+      "description": "MARKER/TOKEN GUIDE Erudite Hunter token Faolchú’s Bond token Warding Shield token One Step Ahead token Mistfield token Runes of Guidance token"
+    },
+    {
+      "name": "Piratical Profiteers",
+      "cpCost": 1,
+      "description": "Any foolish enough to attempt to contest a prize claimed by the Corsair Voidscarred will soon find themselves caught in a blizzard of shuriken fire and sword thrusts. Whenever a friendly CORSAIR VOIDSCARRED operative is shooting, fighting or retaliating, if it or the enemy operative in that sequence contests an objective marker or one of your mission markers, that friendly operative’s weapons have the Balanced weapon rule."
+    },
+    {
+      "name": "Plunderers",
+      "cpCost": 1,
+      "description": "Aeldari Corsairs prioritise profit over glory, moving swiftly towards their objective in the hope of seizing their prize before the foe can react. Up to D3 friendly CORSAIR VOIDSCARRED operatives can immediately perform a free Dash action in an order of your choice. This turning point, each that does so cannot perform the Dash action during their activation. You cannot use this ploy during the first turning point."
+    },
+    {
+      "name": "Mobile Engagement",
+      "cpCost": 1,
+      "description": "Aeldari Corsairs rely upon blistering speed to avoid heavy fire. Whenever an operative is shooting a friendly CORSAIR VOIDSCARRED operative that performed an action in which it moved during this turning point, you can re-roll one of your defence dice."
+    },
+    {
+      "name": "Outcasts",
+      "cpCost": 1,
+      "description": "Those who walk the Path of the Outcast are no strangers to solitude. Some even fight better alone. Whenever a friendly CORSAIR VOIDSCARRED operative is more than 5\" from other friendly operatives, its weapons have the Punishing weapon rule."
+    }
+  ],
+  "firefightPloys": [
+    {
+      "name": "Contemptuous Adventurer",
+      "cpCost": 1,
+      "description": "The Corsair Voidscarred possess a fearless arrogance that is often justified by their superior skill at arms. CORSAIR VOIDSCARRED operative is activated during the turning point, if it’s more than 5\" from other friendly operatives. The first time that operative performs either the Shoot or Fight action during that activation, its weapons have the Relentless weapon rule. Note this ploy cannot come into effect more than once per activation (you cannot use it during both the Shoot and Fight action in the same activation)."
+    }
+  ],
+  "factionEquipment": [
+    {
+      "name": "Star Charts",
+      "epCost": 1,
+      "description": "The Corsair Voidscarred utilise their peerless knowledge of the void to outmanoeuvre their foes. STRATEGIC GAMBIT. Roll one D3: if the result is higher than the number of the current turning point, you gain 1CP and cannot use this STRATEGIC GAMBIT for the rest of the battle. NOTES:",
+      "restrictions": null
+    }
+  ]
+}
