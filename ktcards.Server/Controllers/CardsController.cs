@@ -9,7 +9,7 @@ namespace ktcards.Server.Controllers
 {
     [ApiController]
     [Route("api/teams/{teamId:int}/cards")]
-    public class CardsController(AppDbContext db, IWebHostEnvironment env) : ControllerBase
+    public class CardsController(AppDbContext db, IConfiguration config, IHttpClientFactory httpClientFactory) : ControllerBase
     {
         private static readonly JsonSerializerOptions JsonOptions = new()
         {
@@ -55,16 +55,27 @@ namespace ktcards.Server.Controllers
             if (team is null)
                 return NotFound("Team not found.");
 
-            var datacardsDir = Path.Combine(env.ContentRootPath, "..", "datacards");
-            var bdFilePath = Path.Combine(datacardsDir, $"{team.Name}.bd");
+            var baseUrl = config["DatacardsBaseUrl"]
+                ?? "https://raw.githubusercontent.com/Shooshpanius/ktcards/main/datacards";
+            var bdUrl = $"{baseUrl.TrimEnd('/')}/{Uri.EscapeDataString(team.Name)}.bd";
 
-            if (!System.IO.File.Exists(bdFilePath))
-                return NotFound($"File '{team.Name}.bd' not found in the datacards directory.");
+            string json;
+            try
+            {
+                var httpClient = httpClientFactory.CreateClient();
+                var response = await httpClient.GetAsync(bdUrl);
+                if (!response.IsSuccessStatusCode)
+                    return NotFound($"File '{team.Name}.bd' not found in the datacards repository.");
+                json = await response.Content.ReadAsStringAsync();
+            }
+            catch (HttpRequestException ex)
+            {
+                return StatusCode(502, $"Failed to fetch '{team.Name}.bd' from repository: {ex.Message}");
+            }
 
             TeamDataCard? data;
             try
             {
-                var json = await System.IO.File.ReadAllTextAsync(bdFilePath);
                 data = JsonSerializer.Deserialize<TeamDataCard>(json, JsonOptions);
             }
             catch (JsonException ex)
