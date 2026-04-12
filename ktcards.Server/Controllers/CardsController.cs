@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Text;
 using System.Text.Json;
 using ktcards.Server.Data;
 using ktcards.Server.Filters;
@@ -56,17 +57,30 @@ namespace ktcards.Server.Controllers
                 return NotFound("Team not found.");
 
             var baseUrl = config["DatacardsBaseUrl"]
-                ?? "https://raw.githubusercontent.com/Shooshpanius/ktcards/main/datacards";
-            var bdUrl = $"{baseUrl.TrimEnd('/')}/{Uri.EscapeDataString(team.Name)}.bd";
+                ?? "https://api.github.com/repos/Shooshpanius/ktcards/contents/datacards";
+            var datacardsRef = config["DatacardsRef"] ?? "master";
+            var apiUrl = $"{baseUrl.TrimEnd('/')}/{Uri.EscapeDataString(team.Name)}.bd?ref={datacardsRef}";
 
             string json;
             try
             {
                 var httpClient = httpClientFactory.CreateClient();
-                var response = await httpClient.GetAsync(bdUrl);
+                var request = new HttpRequestMessage(HttpMethod.Get, apiUrl);
+                request.Headers.Add("User-Agent", "ktcards");
+                var gitHubToken = config["GitHubToken"];
+                if (!string.IsNullOrWhiteSpace(gitHubToken))
+                    request.Headers.Add("Authorization", $"Bearer {gitHubToken}");
+
+                var response = await httpClient.SendAsync(request);
                 if (!response.IsSuccessStatusCode)
                     return NotFound($"File '{team.Name}.bd' not found in the datacards repository.");
-                json = await response.Content.ReadAsStringAsync();
+
+                var apiJson = await response.Content.ReadAsStringAsync();
+                using var doc = JsonDocument.Parse(apiJson);
+                var b64 = doc.RootElement.GetProperty("content").GetString()
+                    ?? throw new InvalidOperationException("No content field in GitHub API response.");
+                json = Encoding.UTF8.GetString(Convert.FromBase64String(
+                    b64.Replace("\n", "").Replace("\r", "")));
             }
             catch (HttpRequestException ex)
             {
