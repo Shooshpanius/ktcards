@@ -63,7 +63,8 @@ namespace ktcards.Server.Controllers
             var localPath = config["DatacardsLocalPath"];
             if (!string.IsNullOrWhiteSpace(localPath))
             {
-                var filePath = Path.Combine(localPath.TrimEnd('/'), $"{team.Name}.bd");
+                var safeFileName = $"{Path.GetFileName(team.Name)}.bd";
+                var filePath = Path.Combine(Path.TrimEndingDirectorySeparator(localPath), safeFileName);
                 if (!System.IO.File.Exists(filePath))
                     return NotFound($"File '{team.Name}.bd' not found in the datacards directory.");
                 json = await System.IO.File.ReadAllTextAsync(filePath);
