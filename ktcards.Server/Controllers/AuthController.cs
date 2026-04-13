@@ -4,15 +4,13 @@ using System.Security.Cryptography;
 using System.Text;
 using ktcards.Server.Filters;
 using ktcards.Server.Helpers;
-
 namespace ktcards.Server.Controllers
 {
     [ApiController]
     [Route("api/auth")]
     public class AuthController(
         IConfiguration config,
-        AdminTokenService tokenService,
-        IWebHostEnvironment env) : ControllerBase
+        AdminTokenService tokenService) : ControllerBase
     {
         private const string CookieName = "admin_session";
 
@@ -32,7 +30,7 @@ namespace ktcards.Server.Controllers
             Response.Cookies.Append(CookieName, token, new CookieOptions
             {
                 HttpOnly = true,
-                Secure = !env.IsDevelopment(),
+                Secure = Request.IsHttps,
                 SameSite = SameSiteMode.Lax,
                 MaxAge = TimeSpan.FromHours(24),
                 Path = "/"
@@ -52,7 +50,7 @@ namespace ktcards.Server.Controllers
             Response.Cookies.Delete(CookieName, new CookieOptions
             {
                 HttpOnly = true,
-                Secure = !env.IsDevelopment(),
+                Secure = Request.IsHttps,
                 SameSite = SameSiteMode.Lax,
                 Path = "/"
             });

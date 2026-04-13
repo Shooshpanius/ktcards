@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.HttpOverrides;
 using System.Threading.RateLimiting;
 using ktcards.Server.Data;
 using ktcards.Server.Helpers;
@@ -21,12 +22,36 @@ builder.Services.AddControllers();
 builder.Services.AddHttpClient();
 builder.Services.AddSingleton<AdminTokenService>();
 
+// Trust the reverse proxy so that RemoteIpAddress and Request.IsHttps reflect the real client values
+builder.Services.Configure<ForwardedHeadersOptions>(options =>
+{
+    options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+    options.KnownIPNetworks.Clear();
+    options.KnownProxies.Clear();
+});
+
 // Rate limiting: max 10 login attempts per minute per IP
 builder.Services.AddRateLimiter(options =>
 {
     options.AddPolicy("login", httpContext =>
-        RateLimitPartition.GetFixedWindowLimiter(
-            httpContext.Connection.RemoteIpAddress?.ToString() ?? "unknown",
+    {
+        var ip = httpContext.Connection.RemoteIpAddress?.ToString();
+        if (ip is null)
+        {
+            // No client IP available — use a very tight shared bucket to prevent abuse
+            return RateLimitPartition.GetFixedWindowLimiter(
+                "no-ip",
+                _ => new FixedWindowRateLimiterOptions
+                {
+                    PermitLimit = 2,
+                    Window = TimeSpan.FromMinutes(1),
+                    QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
+                    QueueLimit = 0
+                }
+            );
+        }
+        return RateLimitPartition.GetFixedWindowLimiter(
+            ip,
             _ => new FixedWindowRateLimiterOptions
             {
                 PermitLimit = 10,
@@ -34,8 +59,8 @@ builder.Services.AddRateLimiter(options =>
                 QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
                 QueueLimit = 0
             }
-        )
-    );
+        );
+    });
     options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
 });
 
@@ -51,6 +76,7 @@ using (var scope = app.Services.CreateScope())
     db.Database.Migrate();
 }
 
+app.UseForwardedHeaders();
 app.UseDefaultFiles();
 app.UseStaticFiles();
 app.MapStaticAssets();
