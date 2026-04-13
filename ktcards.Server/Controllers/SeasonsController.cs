@@ -16,7 +16,7 @@ namespace ktcards.Server.Controllers
         {
             var seasons = await db.Seasons
                 .Include(s => s.Teams)
-                .OrderBy(s => s.Id)
+                .OrderByDescending(s => s.Id)
                 .Select(s => new
                 {
                     s.Id,
