@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import TeamCard from '../components/TeamCard';
 import type { Season } from '../types';
-import { VERSION } from '../version';
+import { LAST_PR_NUMBER, LAST_PR_DATE } from '../version';
 import './HomePage.css';
 
 export default function HomePage() {
