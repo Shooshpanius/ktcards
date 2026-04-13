@@ -27,7 +27,7 @@ export default function HomePage() {
         <div className="home">
             <header className="home__header">
                 <h1 className="home__title">KillTeam Cards</h1>
-                <span className="home__version">{VERSION}</span>
+                <span className="home__version">PR #{LAST_PR_NUMBER} от {LAST_PR_DATE}</span>
             </header>
 
             {loading && <p className="home__loading">Loading...</p>}
