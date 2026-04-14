@@ -7,7 +7,8 @@ namespace ktcards.Server.Helpers
             if (string.IsNullOrEmpty(logoPath)) return;
             var uploadsDir = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads"));
             var filePath = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", logoPath.TrimStart('/')));
-            if (!filePath.StartsWith(uploadsDir + Path.DirectorySeparatorChar, StringComparison.OrdinalIgnoreCase))
+            var relative = Path.GetRelativePath(uploadsDir, filePath);
+            if (relative.StartsWith("..") || Path.IsPathRooted(relative))
                 return;
             if (File.Exists(filePath))
                 File.Delete(filePath);
