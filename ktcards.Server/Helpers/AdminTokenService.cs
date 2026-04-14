@@ -1,3 +1,5 @@
+using System.Security.Cryptography;
+
 namespace ktcards.Server.Helpers
 {
     public class AdminTokenService
@@ -9,7 +11,7 @@ namespace ktcards.Server.Helpers
 
         public string CreateToken()
         {
-            var token = Guid.NewGuid().ToString("N");
+            var token = Convert.ToHexString(RandomNumberGenerator.GetBytes(32));
             _tokens[token] = DateTimeOffset.UtcNow;
             PurgeExpired();
             return token;
