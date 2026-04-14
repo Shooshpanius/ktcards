@@ -80,16 +80,17 @@
 
 ---
 
-### 9. Пароль БД в `appsettings.Development.json`
+### ~~9. Пароль БД в `appsettings.Development.json`~~ ✅ ИСПРАВЛЕНО
 - **Файл:** `ktcards.Server/appsettings.Development.json`
 - **Проблема:** `"password=ktcards;"` — учётные данные в открытом виде в репозитории.
 - **Решение:** Заменить на плейсхолдер `REPLACE_ME`. Использовать User Secrets (`dotnet user-secrets`) или переменные окружения для локальной разработки.
+- **Статус:** Пароль заменён на `REPLACE_ME`. Для локальной разработки использовать `dotnet user-secrets set "ConnectionStrings:Default" "...password=реальный_пароль..."` или переменную окружения `ConnectionStrings__Default`.
 
 ---
 
 ## 🟡 СРЕДНИЕ уязвимости
 
-### 10. Отсутствие security-заголовков в nginx
+### ~~10. Отсутствие security-заголовков в nginx~~ ✅ ИСПРАВЛЕНО
 - **Файл:** `ktcards.client/nginx.conf`
 - **Проблема:** Отсутствуют заголовки: `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, `Permissions-Policy`. Возможны атаки Clickjacking, MIME sniffing.
 - **Решение:** Добавить в конфигурацию nginx:
@@ -99,6 +100,7 @@
   add_header Referrer-Policy "strict-origin-when-cross-origin" always;
   add_header Permissions-Policy "geolocation=(), microphone=(), camera=()" always;
   ```
+- **Статус:** Все четыре заголовка добавлены на уровне `server` блока в `nginx.conf`.
 
 ---
 
@@ -157,8 +159,8 @@
 | 6 | ~~Нет rate limiting на login~~ ✅ | 🟠 Высокая | Средняя |
 | 7 | ~~Нет logout / инвалидации токена~~ ✅ | 🟠 Высокая | Низкая |
 | 8 | ~~Дефолтный пароль в репозитории~~ ✅ | 🟠 Высокая | Низкая |
-| 9 | Пароль БД в dev-конфиге | 🟠 Высокая | Низкая |
-| 10 | Нет security-заголовков nginx | 🟡 Средняя | Низкая |
+| 9 | ~~Пароль БД в dev-конфиге~~ ✅ | 🟠 Высокая | Низкая |
+| 10 | ~~Нет security-заголовков nginx~~ ✅ | 🟡 Средняя | Низкая |
 | 11 | Нет proxy forwarding IP | 🟡 Средняя | Низкая |
 | 12 | AdminPassword не в .env.example | 🟡 Средняя | Низкая |
 | 13 | Scaffolding WeatherForecast | 🟢 Низкая | Минимальная |
