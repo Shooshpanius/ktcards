@@ -40,10 +40,25 @@ namespace ktcards.Server.Controllers
             string? logoPath = null;
             if (dto.Logo is not null && dto.Logo.Length > 0)
             {
+                const long maxFileSize = 5 * 1024 * 1024; // 5 MB
+                if (dto.Logo.Length > maxFileSize)
+                    return BadRequest("Logo file size must not exceed 5 MB.");
+
+                var allowedExtensions = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+                    { ".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg" };
+                var allowedContentTypes = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+                    { "image/jpeg", "image/png", "image/gif", "image/webp", "image/svg+xml" };
+
+                var ext = Path.GetExtension(dto.Logo.FileName);
+                if (!allowedExtensions.Contains(ext))
+                    return BadRequest("Invalid file extension. Allowed: .jpg, .jpeg, .png, .gif, .webp, .svg");
+
+                if (!allowedContentTypes.Contains(dto.Logo.ContentType))
+                    return BadRequest("Invalid file content type.");
+
                 var uploadsDir = Path.Combine(env.WebRootPath, "uploads");
                 Directory.CreateDirectory(uploadsDir);
-                var ext = Path.GetExtension(dto.Logo.FileName);
-                var fileName = $"{Guid.NewGuid()}{ext}";
+                var fileName = $"{Guid.NewGuid()}{ext.ToLowerInvariant()}";
                 var filePath = Path.Combine(uploadsDir, fileName);
                 await using var stream = System.IO.File.Create(filePath);
                 await dto.Logo.CopyToAsync(stream);
