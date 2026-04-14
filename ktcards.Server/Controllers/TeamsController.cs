@@ -45,13 +45,13 @@ namespace ktcards.Server.Controllers
                     return BadRequest("Logo file size must not exceed 5 MB.");
 
                 var allowedExtensions = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
-                    { ".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg" };
+                    { ".jpg", ".jpeg", ".png", ".gif", ".webp" };
                 var allowedContentTypes = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
-                    { "image/jpeg", "image/png", "image/gif", "image/webp", "image/svg+xml" };
+                    { "image/jpeg", "image/png", "image/gif", "image/webp" };
 
                 var ext = Path.GetExtension(dto.Logo.FileName);
                 if (!allowedExtensions.Contains(ext))
-                    return BadRequest("Invalid file extension. Allowed: .jpg, .jpeg, .png, .gif, .webp, .svg");
+                    return BadRequest("Invalid file extension. Allowed: .jpg, .jpeg, .png, .gif, .webp");
 
                 if (!allowedContentTypes.Contains(dto.Logo.ContentType))
                     return BadRequest("Invalid file content type.");
