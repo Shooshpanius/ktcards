@@ -40,6 +40,12 @@ builder.Services.AddRateLimiter(options =>
 
 var app = builder.Build();
 
+// Validate required configuration
+var adminPassword = builder.Configuration["AdminPassword"];
+if (string.IsNullOrEmpty(adminPassword))
+    throw new InvalidOperationException(
+        "AdminPassword is not configured. Set the AdminPassword configuration value or KTCARDS_ADMIN_PASSWORD environment variable before starting the application.");
+
 // Auto-migrate / create database on startup
 using (var scope = app.Services.CreateScope())
 {

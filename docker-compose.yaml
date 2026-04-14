@@ -12,6 +12,7 @@ services:
       ConnectionStrings__Default: server=mariadb_ktcards;port=3306;database=ktcards;user=${KTCARDS_DB_USER};password=${KTCARDS_DB_PASSWORD};
       ASPNETCORE_URLS: "http://+:8080"
       GitHubToken: ${KTCARDS_GITHUB_TOKEN}
+      AdminPassword: ${KTCARDS_ADMIN_PASSWORD}
     restart: always
     depends_on:
       mariadb_ktcards:
