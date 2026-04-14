@@ -29,11 +29,9 @@ builder.Services.AddAntiforgery(options =>
     // already exists if XSS is present.
     options.Cookie.HttpOnly = false;
     options.Cookie.SameSite = SameSiteMode.Strict;
-    // Mirror the same secure policy used by the admin_token cookie: require HTTPS
-    // in production, allow HTTP in development.
-    options.Cookie.SecurePolicy = builder.Environment.IsDevelopment()
-        ? CookieSecurePolicy.SameAsRequest
-        : CookieSecurePolicy.Always;
+    // HTTPS is terminated by the external reverse proxy (outside the containers),
+    // so we use SameAsRequest here — the proxy handles TLS enforcement.
+    options.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
 });
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
