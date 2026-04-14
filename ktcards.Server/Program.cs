@@ -21,6 +21,7 @@ var app = builder.Build();
 // Auto-migrate / create database on startup
 using (var scope = app.Services.CreateScope())
 {
+    var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
     try
     {
@@ -28,9 +29,8 @@ using (var scope = app.Services.CreateScope())
     }
     catch (Exception ex) when (ex is not OutOfMemoryException)
     {
-        // DB may exist but without migration history. Drop and recreate so migrations can be applied cleanly.
-        db.Database.EnsureDeleted();
-        db.Database.Migrate();
+        logger.LogCritical(ex, "Database migration failed. The application will shut down.");
+        throw;
     }
 }
 
