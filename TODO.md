@@ -104,7 +104,7 @@
 
 ---
 
-### 11. Отсутствие `proxy_set_header` для реального IP клиента
+### ~~11. Отсутствие `proxy_set_header` для реального IP клиента~~ ✅ ИСПРАВЛЕНО
 - **Файл:** `ktcards.client/nginx.conf`
 - **Проблема:** Без `proxy_set_header X-Real-IP` и `X-Forwarded-For` бэкенд видит IP самого nginx, а не реального пользователя. Rate limiting по IP работать не будет корректно.
 - **Решение:** Добавить в секцию `location /api`:
@@ -114,26 +114,29 @@
   proxy_set_header X-Forwarded-Proto $scheme;
   ```
   Включить `UseForwardedHeaders` middleware в `Program.cs`.
+- **Статус:** Добавлены три заголовка в `location /api` в `nginx.conf`. `UseForwardedHeaders` уже был подключён в `Program.cs`.
 
 ---
 
-### 12. Отсутствие KTCARDS_ADMIN_PASSWORD в инфраструктурных файлах
+### ~~12. Отсутствие KTCARDS_ADMIN_PASSWORD в инфраструктурных файлах~~ ✅ ИСПРАВЛЕНО
 - **Файлы:** `.env.example`, `docker-compose.yaml`
 - **Проблема:** Переменная для пароля администратора не описана в шаблоне `.env`, что ведёт к неправильной конфигурации при деплое.
 - **Решение:** Добавить `KTCARDS_ADMIN_PASSWORD=` в `.env.example` и передавать через `environment:` в `docker-compose.yaml`.
+- **Статус:** Переменная присутствует в обоих файлах.
 
 ---
 
 ## 🟢 НИЗКИЕ / ТЕХНИЧЕСКИЙ ДОЛГ
 
-### 13. Scaffolding-файлы в production коде
+### ~~13. Scaffolding-файлы в production коде~~ ✅ ИСПРАВЛЕНО
 - **Файлы:** `ktcards.Server/Controllers/WeatherForecastController.cs`, `ktcards.Server/WeatherForecast.cs`
 - **Проблема:** Стандартные файлы ASP.NET шаблона не удалены. Лишняя поверхность атаки, путаница в коде.
 - **Решение:** Удалить оба файла.
+- **Статус:** Оба файла удалены.
 
 ---
 
-### 14. SQLite-файлы БД в репозитории
+### ~~14. SQLite-файлы БД в репозитории~~ ✅ ИСПРАВЛЕНО
 - **Файлы:** `ktcards.Server/ktcards.db`, `ktcards.Server/ktcards.db-shm`, `ktcards.Server/ktcards.db-wal`
 - **Проблема:** Бинарные файлы базы данных попали в git (в т.ч. из-за отката PR #32). Могут содержать персональные/служебные данные.
 - **Решение:**
@@ -144,6 +147,7 @@
     *.db-wal
     ```
   - Удалить файлы из истории git (при необходимости — `git filter-branch` или `git-filter-repo`).
+- **Статус:** Паттерны добавлены в `.gitignore`, файлы удалены из индекса git через `git rm --cached`.
 
 ---
 
@@ -161,7 +165,7 @@
 | 8 | ~~Дефолтный пароль в репозитории~~ ✅ | 🟠 Высокая | Низкая |
 | 9 | ~~Пароль БД в dev-конфиге~~ ✅ | 🟠 Высокая | Низкая |
 | 10 | ~~Нет security-заголовков nginx~~ ✅ | 🟡 Средняя | Низкая |
-| 11 | Нет proxy forwarding IP | 🟡 Средняя | Низкая |
-| 12 | AdminPassword не в .env.example | 🟡 Средняя | Низкая |
-| 13 | Scaffolding WeatherForecast | 🟢 Низкая | Минимальная |
-| 14 | SQLite файлы в git | 🟢 Низкая | Низкая |
+| 11 | ~~Нет proxy forwarding IP~~ ✅ | 🟡 Средняя | Низкая |
+| 12 | ~~AdminPassword не в .env.example~~ ✅ | 🟡 Средняя | Низкая |
+| 13 | ~~Scaffolding WeatherForecast~~ ✅ | 🟢 Низкая | Минимальная |
+| 14 | ~~SQLite файлы в git~~ ✅ | 🟢 Низкая | Низкая |
