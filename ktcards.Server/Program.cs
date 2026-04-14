@@ -1,7 +1,9 @@
+using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 using ktcards.Server.Data;
+using ktcards.Server.Filters;
 using ktcards.Server.Helpers;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +17,24 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddControllers();
 builder.Services.AddHttpClient("github", c => c.Timeout = TimeSpan.FromSeconds(15));
 builder.Services.AddSingleton<AdminTokenService>();
+builder.Services.AddScoped<AntiforgeryValidationFilter>();
+builder.Services.AddAntiforgery(options =>
+{
+    options.HeaderName = "X-CSRF-TOKEN";
+    // HttpOnly must be false so that the frontend JS can read the antiforgery cookie
+    // and include the request token in the X-CSRF-TOKEN header. This is the standard
+    // double-submit cookie / header pattern. The cookie is still SameSite=Strict and
+    // the token value is cryptographically bound to the session, so the reduced
+    // HttpOnly setting does not create a meaningful XSS escalation path beyond what
+    // already exists if XSS is present.
+    options.Cookie.HttpOnly = false;
+    options.Cookie.SameSite = SameSiteMode.Strict;
+    // Mirror the same secure policy used by the admin_token cookie: require HTTPS
+    // in production, allow HTTP in development.
+    options.Cookie.SecurePolicy = builder.Environment.IsDevelopment()
+        ? CookieSecurePolicy.SameAsRequest
+        : CookieSecurePolicy.Always;
+});
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
