@@ -53,10 +53,11 @@
 
 ## 🟠 ВЫСОКИЕ уязвимости
 
-### 6. Отсутствие rate limiting на `/api/auth/login`
+### ~~6. Отсутствие rate limiting на `/api/auth/login`~~ ✅ ИСПРАВЛЕНО
 - **Файл:** `ktcards.Server/Controllers/AuthController.cs`
 - **Проблема:** Нет защиты от брутфорса. Злоумышленник может неограниченно перебирать пароли.
 - **Решение:** Добавить `AddRateLimiter` (ASP.NET Core built-in) — например, 10 запросов/мин на IP. Учитывать реальный IP клиента через `UseForwardedHeaders` (за nginx).
+- **Статус:** Добавлен `AddRateLimiter` с `FixedWindowLimiter` (10 запросов/мин на IP). Подключены `UseForwardedHeaders` и `UseRateLimiter`. Эндпоинт `/api/auth/login` защищён атрибутом `[EnableRateLimiting("login")]`.
 
 ---
 
@@ -151,7 +152,7 @@
 | 3 | ~~Загрузка файлов без проверки~~ ✅ | 🔴 Критическая | Низкая |
 | 4 | ~~Path Traversal при удалении файла~~ ✅ | 🔴 Критическая | Низкая |
 | 5 | ~~EnsureDeleted() в production~~ ✅ | 🔴 Критическая | Низкая |
-| 6 | Нет rate limiting на login | 🟠 Высокая | Средняя |
+| 6 | ~~Нет rate limiting на login~~ ✅ | 🟠 Высокая | Средняя |
 | 7 | Нет logout / инвалидации токена | 🟠 Высокая | Низкая |
 | 8 | Дефолтный пароль в репозитории | 🟠 Высокая | Низкая |
 | 9 | Пароль БД в dev-конфиге | 🟠 Высокая | Низкая |

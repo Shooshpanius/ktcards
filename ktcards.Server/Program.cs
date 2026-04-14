@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.EntityFrameworkCore;
 using ktcards.Server.Data;
 using ktcards.Server.Helpers;
@@ -16,6 +18,26 @@ builder.Services.AddSingleton<AdminTokenService>();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
+builder.Services.Configure<ForwardedHeadersOptions>(options =>
+{
+    options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+    // Trust all proxies; in Docker behind nginx the proxy IP is not on loopback.
+    // Restrict to specific proxy IPs in production if the infrastructure allows it.
+    options.KnownIPNetworks.Clear();
+    options.KnownProxies.Clear();
+});
+
+builder.Services.AddRateLimiter(options =>
+{
+    options.AddFixedWindowLimiter("login", limiterOptions =>
+    {
+        limiterOptions.Window = TimeSpan.FromMinutes(1);
+        limiterOptions.PermitLimit = 30;
+        limiterOptions.QueueLimit = 0;
+    });
+    options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
+});
+
 var app = builder.Build();
 
 // Auto-migrate / create database on startup
@@ -33,6 +55,9 @@ using (var scope = app.Services.CreateScope())
         throw;
     }
 }
+
+app.UseForwardedHeaders();
+app.UseRateLimiter();
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
