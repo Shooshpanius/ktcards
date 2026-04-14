@@ -21,10 +21,14 @@ builder.Services.AddOpenApi();
 builder.Services.Configure<ForwardedHeadersOptions>(options =>
 {
     options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
-    // Trust all proxies; in Docker behind nginx the proxy IP is not on loopback.
-    // Restrict to specific proxy IPs in production if the infrastructure allows it.
-    options.KnownIPNetworks.Clear();
-    options.KnownProxies.Clear();
+    // Trust only the Docker private network range (172.16.0.0/12).
+    // This prevents X-Forwarded-For spoofing from external clients while still allowing
+    // the nginx container (front_ktcards) to forward the real client IP.
+    // To further restrict to the exact Docker Compose subnet, run:
+    //   docker network inspect <project>_default
+    // and replace the network below with the actual "Subnet" value.
+    options.KnownIPNetworks.Add(new System.Net.IPNetwork(
+        System.Net.IPAddress.Parse("172.16.0.0"), 12));
 });
 
 builder.Services.AddRateLimiter(options =>
