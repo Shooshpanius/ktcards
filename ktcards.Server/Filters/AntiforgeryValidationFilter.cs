@@ -9,7 +9,8 @@ namespace ktcards.Server.Filters
         public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
         {
             var method = context.HttpContext.Request.Method;
-            if (!HttpMethods.IsGet(method) && !HttpMethods.IsHead(method) && !HttpMethods.IsOptions(method))
+            if (!HttpMethods.IsGet(method) && !HttpMethods.IsHead(method) &&
+                !HttpMethods.IsOptions(method) && !HttpMethods.IsTrace(method))
             {
                 try
                 {

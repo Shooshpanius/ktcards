@@ -3,12 +3,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
 using System.Security.Cryptography;
 using System.Text;
+using ktcards.Server.Filters;
 using ktcards.Server.Helpers;
 
 namespace ktcards.Server.Controllers
 {
     [ApiController]
     [Route("api/auth")]
+    [ServiceFilter(typeof(AntiforgeryValidationFilter))]
     public class AuthController(IConfiguration config, AdminTokenService tokenService, IWebHostEnvironment env, IAntiforgery antiforgery) : ControllerBase
     {
         private const string CookieName = "admin_token";
