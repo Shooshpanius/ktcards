@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
 using System.Security.Cryptography;
@@ -8,9 +9,16 @@ namespace ktcards.Server.Controllers
 {
     [ApiController]
     [Route("api/auth")]
-    public class AuthController(IConfiguration config, AdminTokenService tokenService, IWebHostEnvironment env) : ControllerBase
+    public class AuthController(IConfiguration config, AdminTokenService tokenService, IWebHostEnvironment env, IAntiforgery antiforgery) : ControllerBase
     {
         private const string CookieName = "admin_token";
+
+        [HttpGet("csrf")]
+        public IActionResult GetCsrfToken()
+        {
+            var tokens = antiforgery.GetAndStoreTokens(HttpContext);
+            return Ok(new { token = tokens.RequestToken });
+        }
 
         [HttpPost("login")]
         [EnableRateLimiting("login")]

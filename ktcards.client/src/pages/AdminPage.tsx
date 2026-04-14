@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import type { Season, Team } from '../types';
+import { csrfFetch } from '../csrf';
 import './AdminPage.css';
 
 export default function AdminPage() {
@@ -18,7 +19,7 @@ export default function AdminPage() {
         e.preventDefault();
         setPasswordError('');
         try {
-            const r = await fetch('/api/auth/login', {
+            const r = await csrfFetch('/api/auth/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ password: passwordInput }),
@@ -97,7 +98,7 @@ function AdminContent({ onLogout }: { onLogout: () => void }) {
     async function addSeason(e: React.FormEvent) {
         e.preventDefault();
         setSeasonError('');
-        const r = await fetch('/api/seasons', {
+        const r = await csrfFetch('/api/seasons', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name: newSeasonName }),
@@ -113,7 +114,7 @@ function AdminContent({ onLogout }: { onLogout: () => void }) {
 
     async function deleteSeason(id: number) {
         if (!confirm('Delete this season and all its teams?')) return;
-        await fetch(`/api/seasons/${id}`, { method: 'DELETE' });
+        await csrfFetch(`/api/seasons/${id}`, { method: 'DELETE' });
         await loadSeasons();
         await loadTeams();
     }
@@ -129,7 +130,7 @@ function AdminContent({ onLogout }: { onLogout: () => void }) {
         form.append('name', newTeamName);
         form.append('seasonId', String(newTeamSeasonId));
         if (newTeamLogo) form.append('logo', newTeamLogo);
-        const r = await fetch('/api/teams', { method: 'POST', body: form });
+        const r = await csrfFetch('/api/teams', { method: 'POST', body: form });
         if (r.ok) {
             setNewTeamName('');
             setNewTeamSeasonId('');
@@ -145,13 +146,13 @@ function AdminContent({ onLogout }: { onLogout: () => void }) {
 
     async function deleteTeam(id: number) {
         if (!confirm('Delete this team?')) return;
-        await fetch(`/api/teams/${id}`, { method: 'DELETE' });
+        await csrfFetch(`/api/teams/${id}`, { method: 'DELETE' });
         await loadSeasons();
         await loadTeams();
     }
 
     async function importTeamCards(id: number, _name: string) {
-        const r = await fetch(`/api/teams/${id}/cards/import`, { method: 'POST' });
+        const r = await csrfFetch(`/api/teams/${id}/cards/import`, { method: 'POST' });
         if (r.ok) {
             const data = await r.json();
             alert(data.message ?? 'Import successful.');
@@ -164,7 +165,7 @@ function AdminContent({ onLogout }: { onLogout: () => void }) {
     const seasonById = Object.fromEntries(seasons.map(s => [s.id, s.name]));
 
     async function handleLogout() {
-        await fetch('/api/auth/logout', { method: 'POST' });
+        await csrfFetch('/api/auth/logout', { method: 'POST' });
         onLogout();
     }
 

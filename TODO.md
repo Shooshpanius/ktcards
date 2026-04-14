@@ -62,31 +62,35 @@
 
 ## 🟡 СРЕДНИЕ уязвимости
 
-### 7. Race condition при параллельном импорте карточек
+### ~~7. Race condition при параллельном импорте карточек~~ ✅ ИСПРАВЛЕНО
 - **Файл:** `ktcards.Server/Controllers/CardsController.cs`
 - **Проблема:** Два одновременных запроса `POST /api/teams/{id}/cards/import` удаляют старые карточки и вставляют новые без блокировки. Оба запроса могут пройти фазу удаления параллельно, затем оба вставят данные — в итоге карточки задвоятся.
 - **Решение:** Добавить транзакцию (`db.Database.BeginTransactionAsync`) или семафор на уровне `teamId` (например, `SemaphoreSlim` в `ConcurrentDictionary`).
+- **Статус:** `SemaphoreSlim` через `ConcurrentDictionary<int, SemaphoreSlim>` на уровне `teamId` добавлен. Повторный импорт для той же команды возвращает 409 Conflict.
 
 ---
 
-### 8. Нет защиты от CSRF на мутирующих эндпоинтах
+### ~~8. Нет защиты от CSRF на мутирующих эндпоинтах~~ ✅ ИСПРАВЛЕНО
 - **Файлы:** `ktcards.Server/Controllers/AuthController.cs`, `TeamsController.cs`, `SeasonsController.cs`, `CardsController.cs`
 - **Проблема:** `SameSite=Lax` защищает от CSRF при cross-site навигации в большинстве браузеров, но не от атак через `<form>` (метод POST в HTML-форме кросс-сайт). При `SameSite=Lax` куки передаются только при "top-level navigation" с безопасными методами; для POST из стороннего сайта куки не передаются — это частичная защита. Однако если приложение когда-либо переедет на `SameSite=None` (например, для iframe), CSRF станет реальной угрозой.
 - **Решение:** Добавить явную CSRF-защиту через `IAntiforgery` (ASP.NET Core) или Double Submit Cookie pattern. Как минимум — задокументировать, что `SameSite=Lax` является текущей защитой.
+- **Статус:** Добавлена явная CSRF-защита через `IAntiforgery` ASP.NET Core. Эндпоинт `GET /api/auth/csrf` выдаёт токен; `AntiforgeryValidationFilter` валидирует заголовок `X-CSRF-TOKEN` на всех мутирующих запросах к TeamsController, SeasonsController и CardsController. Фронтенд обновлён — все мутирующие fetch-вызовы используют `csrfFetch`, который автоматически добавляет токен.
 
 ---
 
-### 9. HTTP без HTTPS — нет TLS и перенаправления
+### ~~9. HTTP без HTTPS — нет TLS и перенаправления~~ ✅ ИСПРАВЛЕНО
 - **Файл:** `ktcards.client/nginx.conf`
 - **Проблема:** nginx слушает только `port 80`. Нет HTTPS-блока и нет редиректа с HTTP на HTTPS. Все данные (включая `admin_token` куку при первом запросе) передаются в открытом виде. Флаг `Secure` на куке устанавливается в production, но nginx сам не терминирует TLS.
 - **Решение:** Добавить HTTPS-блок (SSL/TLS termination) в nginx.conf с редиректом с HTTP на HTTPS. Рассмотреть интеграцию с Let's Encrypt через Certbot или внешний реверс-прокси.
+- **Статус:** Добавлен редирект с HTTP на HTTPS (301) и HTTPS-блок на порту 443 с TLS 1.2/1.3. Добавлен заголовок `Strict-Transport-Security`. Сертификаты ожидаются по пути Let's Encrypt: `/etc/letsencrypt/live/ktcards.ru/`.
 
 ---
 
-### 10. Нет `proxy_set_header Host` в `location /api`
+### ~~10. Нет `proxy_set_header Host` в `location /api`~~ ✅ ИСПРАВЛЕНО
 - **Файл:** `ktcards.client/nginx.conf`
 - **Проблема:** В блоке `location /api` не передаётся заголовок `Host`. ASP.NET Core получает имя хоста nginx (`back_ktcards`), а не оригинальный `Host` клиента. Это может влиять на формирование абсолютных URL, логирование и заголовок `Forwarded`.
 - **Решение:** Добавить `proxy_set_header Host $host;` в секцию `location /api`.
+- **Статус:** `proxy_set_header Host $host;` добавлен в блок `location /api`.
 
 ---
 
@@ -130,10 +134,10 @@
 | 4 | Нет Content-Security-Policy | 🟠 Высокая | Низкая | ✅ |
 | 5 | Rate limit слишком мягкий (30/мин) | 🟠 Высокая | Минимальная | ✅ |
 | 6 | Нет таймаута у HttpClient | 🟠 Высокая | Низкая | ✅ |
-| 7 | Race condition при импорте карточек | 🟡 Средняя | Средняя | |
-| 8 | Нет CSRF-защиты | 🟡 Средняя | Средняя | |
-| 9 | HTTP без HTTPS / нет TLS | 🟡 Средняя | Средняя | |
-| 10 | Нет `proxy_set_header Host` | 🟡 Средняя | Минимальная | |
+| 7 | Race condition при импорте карточек | 🟡 Средняя | Средняя | ✅ |
+| 8 | Нет CSRF-защиты | 🟡 Средняя | Средняя | ✅ |
+| 9 | HTTP без HTTPS / нет TLS | 🟡 Средняя | Средняя | ✅ |
+| 10 | Нет `proxy_set_header Host` | 🟡 Средняя | Минимальная | ✅ |
 | 11 | Dockerfile frontend антипаттерн | 🟢 Низкая | Низкая | |
 | 12 | Dockerfile backend двойной COPY | 🟢 Низкая | Низкая | |
 | 13 | AdminTokenService в памяти | 🟢 Низкая | Высокая | |

@@ -9,6 +9,7 @@ namespace ktcards.Server.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [ServiceFilter(typeof(AntiforgeryValidationFilter))]
     public class TeamsController(AppDbContext db, IWebHostEnvironment env) : ControllerBase
     {
         [HttpGet]
