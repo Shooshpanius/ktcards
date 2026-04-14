@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 using System.Security.Cryptography;
 using System.Text;
 using ktcards.Server.Helpers;
@@ -12,6 +13,7 @@ namespace ktcards.Server.Controllers
         private const string CookieName = "admin_token";
 
         [HttpPost("login")]
+        [EnableRateLimiting("login")]
         public IActionResult Login([FromBody] LoginDto dto)
         {
             var expectedPassword = config["AdminPassword"] ?? string.Empty;
