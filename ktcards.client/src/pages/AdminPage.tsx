@@ -3,17 +3,14 @@ import { Link } from 'react-router-dom';
 import type { Season, Team } from '../types';
 import './AdminPage.css';
 
+const SESSION_KEY = 'admin_token';
+
 export default function AdminPage() {
-    const [authenticated, setAuthenticated] = useState(false);
-    const [checking, setChecking] = useState(true);
+    const [authenticated, setAuthenticated] = useState(
+        () => !!sessionStorage.getItem(SESSION_KEY)
+    );
     const [passwordInput, setPasswordInput] = useState('');
     const [passwordError, setPasswordError] = useState('');
-
-    useEffect(() => {
-        fetch('/api/auth/check', { credentials: 'same-origin' })
-            .then(r => { if (r.ok) setAuthenticated(true); })
-            .finally(() => setChecking(false));
-    }, []);
 
     async function handleLogin(e: React.FormEvent) {
         e.preventDefault();
@@ -22,22 +19,18 @@ export default function AdminPage() {
             const r = await fetch('/api/auth/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                credentials: 'same-origin',
                 body: JSON.stringify({ password: passwordInput }),
             });
             if (r.ok) {
+                const data = await r.json();
+                sessionStorage.setItem(SESSION_KEY, data.token);
                 setAuthenticated(true);
-                setPasswordInput('');
             } else {
                 setPasswordError('Неверный пароль.');
             }
         } catch {
             setPasswordError('Ошибка соединения с сервером.');
         }
-    }
-
-    if (checking) {
-        return <div className="admin"><p style={{ padding: '2rem' }}>Загрузка…</p></div>;
     }
 
     if (!authenticated) {
@@ -66,10 +59,16 @@ export default function AdminPage() {
         );
     }
 
-    return <AdminContent onLogout={() => setAuthenticated(false)} />;
+    return <AdminContent />;
 }
 
-function AdminContent({ onLogout }: { onLogout: () => void }) {
+function authHeaders(): HeadersInit {
+    const token = sessionStorage.getItem(SESSION_KEY);
+    if (!token) return {};
+    return { Authorization: `Bearer ${token}` };
+}
+
+function AdminContent() {
     const [seasons, setSeasons] = useState<Season[]>([]);
     const [newSeasonName, setNewSeasonName] = useState('');
     const [seasonError, setSeasonError] = useState('');
@@ -88,18 +87,13 @@ function AdminContent({ onLogout }: { onLogout: () => void }) {
     }, []);
 
     async function loadSeasons() {
-        const r = await fetch('/api/seasons', { credentials: 'same-origin' });
+        const r = await fetch('/api/seasons');
         if (r.ok) setSeasons(await r.json());
     }
 
     async function loadTeams() {
-        const r = await fetch('/api/teams', { credentials: 'same-origin' });
+        const r = await fetch('/api/teams');
         if (r.ok) setAllTeams(await r.json());
-    }
-
-    async function handleLogout() {
-        await fetch('/api/auth/logout', { method: 'POST', credentials: 'same-origin' });
-        onLogout();
     }
 
     async function addSeason(e: React.FormEvent) {
@@ -107,8 +101,7 @@ function AdminContent({ onLogout }: { onLogout: () => void }) {
         setSeasonError('');
         const r = await fetch('/api/seasons', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            credentials: 'same-origin',
+            headers: { 'Content-Type': 'application/json', ...authHeaders() },
             body: JSON.stringify({ name: newSeasonName }),
         });
         if (r.ok) {
@@ -122,7 +115,7 @@ function AdminContent({ onLogout }: { onLogout: () => void }) {
 
     async function deleteSeason(id: number) {
         if (!confirm('Delete this season and all its teams?')) return;
-        await fetch(`/api/seasons/${id}`, { method: 'DELETE', credentials: 'same-origin' });
+        await fetch(`/api/seasons/${id}`, { method: 'DELETE', headers: authHeaders() });
         await loadSeasons();
         await loadTeams();
     }
@@ -138,7 +131,7 @@ function AdminContent({ onLogout }: { onLogout: () => void }) {
         form.append('name', newTeamName);
         form.append('seasonId', String(newTeamSeasonId));
         if (newTeamLogo) form.append('logo', newTeamLogo);
-        const r = await fetch('/api/teams', { method: 'POST', credentials: 'same-origin', body: form });
+        const r = await fetch('/api/teams', { method: 'POST', headers: authHeaders(), body: form });
         if (r.ok) {
             setNewTeamName('');
             setNewTeamSeasonId('');
@@ -154,13 +147,13 @@ function AdminContent({ onLogout }: { onLogout: () => void }) {
 
     async function deleteTeam(id: number) {
         if (!confirm('Delete this team?')) return;
-        await fetch(`/api/teams/${id}`, { method: 'DELETE', credentials: 'same-origin' });
+        await fetch(`/api/teams/${id}`, { method: 'DELETE', headers: authHeaders() });
         await loadSeasons();
         await loadTeams();
     }
 
     async function importTeamCards(id: number, _name: string) {
-        const r = await fetch(`/api/teams/${id}/cards/import`, { method: 'POST', credentials: 'same-origin' });
+        const r = await fetch(`/api/teams/${id}/cards/import`, { method: 'POST', headers: authHeaders() });
         if (r.ok) {
             const data = await r.json();
             alert(data.message ?? 'Import successful.');
@@ -177,7 +170,6 @@ function AdminContent({ onLogout }: { onLogout: () => void }) {
             <header className="admin__header">
                 <Link to="/" className="admin__back">← Back</Link>
                 <h1 className="admin__title">Admin Panel</h1>
-                <button className="admin__btn admin__btn--danger" onClick={handleLogout}>Выйти</button>
             </header>
 
             <div className="admin__columns">

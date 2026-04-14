@@ -11,17 +11,6 @@ namespace ktcards.Server.Controllers
     [Route("api/[controller]")]
     public class TeamsController(AppDbContext db, IWebHostEnvironment env) : ControllerBase
     {
-        private static readonly HashSet<string> AllowedExtensions = new(StringComparer.OrdinalIgnoreCase)
-        {
-            ".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg"
-        };
-
-        private static readonly HashSet<string> AllowedContentTypes = new(StringComparer.OrdinalIgnoreCase)
-        {
-            "image/jpeg", "image/png", "image/gif", "image/webp", "image/svg+xml"
-        };
-
-        private const long MaxLogoSize = 5 * 1024 * 1024; // 5 MB
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
@@ -51,18 +40,9 @@ namespace ktcards.Server.Controllers
             string? logoPath = null;
             if (dto.Logo is not null && dto.Logo.Length > 0)
             {
-                if (dto.Logo.Length > MaxLogoSize)
-                    return BadRequest("Размер логотипа не должен превышать 5 МБ.");
-
-                var ext = Path.GetExtension(dto.Logo.FileName);
-                if (!AllowedExtensions.Contains(ext))
-                    return BadRequest("Допустимые форматы логотипа: JPG, PNG, GIF, WebP, SVG.");
-
-                if (!AllowedContentTypes.Contains(dto.Logo.ContentType))
-                    return BadRequest("Недопустимый тип содержимого файла логотипа.");
-
                 var uploadsDir = Path.Combine(env.WebRootPath, "uploads");
                 Directory.CreateDirectory(uploadsDir);
+                var ext = Path.GetExtension(dto.Logo.FileName);
                 var fileName = $"{Guid.NewGuid()}{ext}";
                 var filePath = Path.Combine(uploadsDir, fileName);
                 await using var stream = System.IO.File.Create(filePath);
