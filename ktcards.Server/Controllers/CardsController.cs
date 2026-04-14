@@ -20,6 +20,8 @@ namespace ktcards.Server.Controllers
         };
 
         // Per-team semaphores prevent concurrent imports from causing duplicate cards.
+        // The dictionary grows at most one entry per team (typically a small, bounded set),
+        // so the memory cost is negligible and no cleanup is required.
         private static readonly ConcurrentDictionary<int, SemaphoreSlim> ImportLocks = new();
 
         // GET /api/teams/{teamId}/cards — return all cards for a team
@@ -64,6 +66,9 @@ namespace ktcards.Server.Controllers
             // Acquire per-team lock to prevent race conditions when two concurrent
             // requests both delete-then-insert cards for the same team.
             var semaphore = ImportLocks.GetOrAdd(teamId, _ => new SemaphoreSlim(1, 1));
+            // Reject immediately if another import is already running for this team.
+            // Returning 409 is intentional: queuing the second request would cause it
+            // to import data that may already be superseded by the first import.
             if (!await semaphore.WaitAsync(TimeSpan.Zero))
                 return Conflict("An import is already in progress for this team.");
 

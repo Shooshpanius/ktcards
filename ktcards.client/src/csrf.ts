@@ -1,4 +1,6 @@
-let csrfToken: string | null = null;
+// Promise cache ensures only one /api/auth/csrf request is in-flight at a time,
+// preventing a race condition where multiple concurrent callers each trigger a separate fetch.
+let csrfTokenPromise: Promise<string> | null = null;
 
 async function fetchCsrfToken(): Promise<string> {
     const r = await fetch('/api/auth/csrf');
@@ -7,11 +9,11 @@ async function fetchCsrfToken(): Promise<string> {
     return data.token;
 }
 
-export async function getCsrfToken(): Promise<string> {
-    if (!csrfToken) {
-        csrfToken = await fetchCsrfToken();
+export function getCsrfToken(): Promise<string> {
+    if (!csrfTokenPromise) {
+        csrfTokenPromise = fetchCsrfToken();
     }
-    return csrfToken;
+    return csrfTokenPromise;
 }
 
 const MUTATING_METHODS = new Set(['POST', 'PUT', 'PATCH', 'DELETE']);

@@ -21,7 +21,12 @@ builder.Services.AddScoped<AntiforgeryValidationFilter>();
 builder.Services.AddAntiforgery(options =>
 {
     options.HeaderName = "X-CSRF-TOKEN";
-    // Allow JS to read the antiforgery cookie so it can include the token in request headers.
+    // HttpOnly must be false so that the frontend JS can read the antiforgery cookie
+    // and include the request token in the X-CSRF-TOKEN header. This is the standard
+    // double-submit cookie / header pattern. The cookie is still SameSite=Strict and
+    // the token value is cryptographically bound to the session, so the reduced
+    // HttpOnly setting does not create a meaningful XSS escalation path beyond what
+    // already exists if XSS is present.
     options.Cookie.HttpOnly = false;
     options.Cookie.SameSite = SameSiteMode.Strict;
     options.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
