@@ -1,153 +1,116 @@
-# Security Audit — ktcards
+# Security & Quality Audit — ktcards
 
 > Дата аудита: 2026-04-14  
-> Состояние кодовой базы: после отмены PR #32 (master без security-хардинга)
+> Состояние кодовой базы: после завершения первого цикла security-хардинга (PR #32 отменён → исправлен)
 
 ---
 
 ## 🔴 КРИТИЧЕСКИЕ уязвимости
 
-### ~~1. Предсказуемый токен аутентификации (GUID)~~ ✅ ИСПРАВЛЕНО
-- **Файл:** `ktcards.Server/Helpers/AdminTokenService.cs`
-- **Проблема:** `Guid.NewGuid().ToString("N")` — GUID-ы не являются криптографически безопасными источниками случайных данных. Возможна частичная предсказуемость при некоторых реализациях.
-- **Решение:** Заменить на `RandomNumberGenerator.GetHexString(32)` (или `Convert.ToHexString(RandomNumberGenerator.GetBytes(32))`).
-- **Статус:** Используется `Convert.ToHexString(RandomNumberGenerator.GetBytes(32))`.
+### 1. XSS через загрузку SVG-логотипа
+- **Файл:** `ktcards.Server/Controllers/TeamsController.cs`
+- **Проблема:** `.svg` включён в белый список расширений логотипов. SVG — XML-файл, который может содержать `<script>` теги. Браузер исполнит JS при открытии файла напрямую (`/uploads/xxx.svg`). Кука `admin_token` защищена флагом `HttpOnly`, однако атака может использовать CSRF, читать другие cookie или манипулировать DOM.
+- **Решение:** Убрать `.svg` / `image/svg+xml` из белых списков. Если SVG необходим, добавить серверную санитизацию (например, библиотека `Svg.Net` с удалением скриптов) или раздавать SVG с заголовком `Content-Disposition: attachment`.
 
 ---
 
-### ~~2. Токен хранится в `sessionStorage` (доступен через XSS)~~ ✅ ИСПРАВЛЕНО
-- **Файл:** `ktcards.client/src/pages/AdminPage.tsx`
-- **Проблема:** `sessionStorage.setItem(SESSION_KEY, data.token)` — любой XSS-вектор в приложении получает прямой доступ к токену администратора.
-- **Решение:** Перевести на `HttpOnly`-куки (флаги `HttpOnly`, `SameSite=Lax`, `Secure`). Серверные эндпоинты: `GET /api/auth/check` (проверка состояния), `POST /api/auth/logout` (инвалидация).
-- **Статус:** Токен устанавливается сервером через `HttpOnly`-куку. Клиент использует `GET /api/auth/check` для проверки сессии и `POST /api/auth/logout` для выхода. Заголовок `Authorization` больше не используется.
-
----
-
-### ~~3. Загрузка файла без проверки типа и размера (RCE / хранилище)~~ ✅ ИСПРАВЛЕНО
-- **Файл:** `ktcards.Server/Controllers/TeamsController.cs` (метод `Create`)
-- **Проблема:** Расширение файла берётся из `dto.Logo.FileName` без валидации. `ContentType` не проверяется. Лимит размера не задан на уровне контроллера. Возможна загрузка произвольных файлов (`.php`, `.aspx`, скрипты).
-- **Решение:**
-  - Белый список расширений: `.jpg`, `.jpeg`, `.png`, `.gif`, `.webp`, `.svg`.
-  - Проверять `ContentType` (MIME-тип).
-  - Ограничить размер файла (например, ≤ 5 МБ).
-  - Имя файла генерировать самостоятельно (`Guid.NewGuid() + ext`), не доверять оригинальному имени.
-- **Статус:** Добавлены проверки расширения (белый список), ContentType и лимит 5 МБ. Расширение нормализуется в нижний регистр, имя файла генерируется через `Guid.NewGuid()`.
-
----
-
-### ~~4. Path Traversal при удалении логотипа~~ ✅ ИСПРАВЛЕНО
-- **Файл:** `ktcards.Server/Helpers/FileHelper.cs`
-- **Проблема:** `logoPath` напрямую конкатенируется с путём без канонизации. Если значение в БД будет изменено злоумышленником (например, `../../appsettings.json`), возможно удаление произвольного файла.
-- **Решение:** Канонизировать итоговый путь с помощью `Path.GetFullPath` и убедиться, что он начинается с разрешённой директории `wwwroot/uploads/`.
-- **Статус:** Путь канонизируется через `Path.GetFullPath`, проверяется, что итоговый путь начинается с `wwwroot/uploads/`. Если нет — операция отменяется.
-
----
-
-### ~~5. Деструктивная операция `EnsureDeleted()` в production~~ ✅ ИСПРАВЛЕНО
+### 2. Обход rate limiting через подделку `X-Forwarded-For`
 - **Файл:** `ktcards.Server/Program.cs`
-- **Проблема:** При ошибке миграции вызывался `db.Database.EnsureDeleted()` — **полное уничтожение базы данных в production!**
-- **Решение:** Убрать `EnsureDeleted()` из блока catch. Логировать ошибку и завершать приложение исключением (fail fast).
-- **Статус:** `EnsureDeleted()` удалён. В catch логируется критическая ошибка через `ILogger`, после чего исключение пробрасывается (`throw`), останавливая приложение.
+- **Проблема:** `options.KnownIPNetworks.Clear()` и `options.KnownProxies.Clear()` заставляют ASP.NET Core доверять заголовку `X-Forwarded-For` от **любого** хоста. Злоумышленник может поставить `X-Forwarded-For: 1.2.3.4` в каждом запросе, имитируя разные IP, и обходить rate limiter на `/api/auth/login`.
+- **Решение:** Указать конкретный IP nginx-контейнера в `KnownProxies` (или подсеть Docker-сети в `KnownIPNetworks`) вместо полной очистки списков.
 
 ---
 
 ## 🟠 ВЫСОКИЕ уязвимости
 
-### ~~6. Отсутствие rate limiting на `/api/auth/login`~~ ✅ ИСПРАВЛЕНО
-- **Файл:** `ktcards.Server/Controllers/AuthController.cs`
-- **Проблема:** Нет защиты от брутфорса. Злоумышленник может неограниченно перебирать пароли.
-- **Решение:** Добавить `AddRateLimiter` (ASP.NET Core built-in) — например, 10 запросов/мин на IP. Учитывать реальный IP клиента через `UseForwardedHeaders` (за nginx).
-- **Статус:** Добавлен `AddRateLimiter` с `FixedWindowLimiter` (10 запросов/мин на IP). Подключены `UseForwardedHeaders` и `UseRateLimiter`. Эндпоинт `/api/auth/login` защищён атрибутом `[EnableRateLimiting("login")]`.
+### 3. `.env` не добавлен в `.gitignore`
+- **Файл:** `.gitignore`
+- **Проблема:** В `.gitignore` нет паттерна для `.env`. Если разработчик создаст `.env` с реальными паролями (`KTCARDS_ADMIN_PASSWORD`, `KTCARDS_DB_PASSWORD` и т.д.), он может случайно попасть в репозиторий.
+- **Решение:** Добавить `.env` в `.gitignore`. Сохранить только `.env.example`.
 
 ---
 
-### ~~7. Нет эндпоинта выхода (logout) / инвалидации токена~~ ✅ ИСПРАВЛЕНО
-- **Файл:** `ktcards.Server/Controllers/AuthController.cs`
-- **Проблема:** Токен нельзя инвалидировать на сервере. При компрометации токена нет способа его отозвать.
-- **Решение:** Добавить `POST /api/auth/logout` — удаляет токен из `AdminTokenService`.
-- **Статус:** Добавлен эндпоинт `POST /api/auth/logout`, который отзывает токен через `AdminTokenService.RevokeToken()` и удаляет `HttpOnly`-куку. Клиент вызывает `/api/auth/logout` при выходе из панели администратора.
+### 4. Отсутствие Content-Security-Policy (CSP)
+- **Файл:** `ktcards.client/nginx.conf`
+- **Проблема:** Нет заголовка `Content-Security-Policy`. Без CSP любой XSS-вектор (например, через данные карточек, импортированных из `.bd`-файла) может загружать внешние ресурсы и выполнять произвольный JS.
+- **Решение:** Добавить строгий CSP, например:
+  ```
+  add_header Content-Security-Policy "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; object-src 'none'; frame-ancestors 'none';" always;
+  ```
 
 ---
 
-### ~~8. Дефолтный пароль администратора в репозитории~~ ✅ ИСПРАВЛЕНО
-- **Файл:** `ktcards.Server/appsettings.json`
-- **Проблема:** `"AdminPassword": "change_me_before_deploy"` — слабый дефолт, который легко забыть поменять при деплое.
-- **Решение:**
-  - Установить значение `""` (пустое) в `appsettings.json`.
-  - Добавить проверку при старте: если `AdminPassword` пустой — выбрасывать исключение (`throw new InvalidOperationException`), запрещая запуск без настройки.
-  - Добавить `KTCARDS_ADMIN_PASSWORD` в `.env.example` и `docker-compose.yaml`.
-- **Статус:** `AdminPassword` установлен в `""`. При старте проверяется наличие значения — если пустое, выбрасывается `InvalidOperationException`. Добавлена переменная `KTCARDS_ADMIN_PASSWORD` в `.env.example` и `docker-compose.yaml`.
+### 5. Rate limit слишком мягкий (30 запросов/мин)
+- **Файл:** `ktcards.Server/Program.cs`
+- **Проблема:** `PermitLimit = 30` позволяет делать 30 попыток подбора пароля за минуту. При 8-символьном пароле из строчных букв это открывает возможность для медленного брутфорса. В комментариях предыдущего аудита фигурировало значение 10.
+- **Решение:** Снизить лимит до 5–10 запросов в минуту. Рассмотреть прогрессивные задержки или блокировку IP после N неудачных попыток.
 
 ---
 
-### ~~9. Пароль БД в `appsettings.Development.json`~~ ✅ ИСПРАВЛЕНО
-- **Файл:** `ktcards.Server/appsettings.Development.json`
-- **Проблема:** `"password=ktcards;"` — учётные данные в открытом виде в репозитории.
-- **Решение:** Заменить на плейсхолдер `REPLACE_ME`. Использовать User Secrets (`dotnet user-secrets`) или переменные окружения для локальной разработки.
-- **Статус:** Пароль заменён на `REPLACE_ME`. Для локальной разработки использовать `dotnet user-secrets set "ConnectionStrings:Default" "...password=реальный_пароль..."` или переменную окружения `ConnectionStrings__Default`.
+### 6. Отсутствие таймаута у `HttpClient` при импорте карточек
+- **Файл:** `ktcards.Server/Controllers/CardsController.cs`
+- **Проблема:** `httpClientFactory.CreateClient()` создаёт клиент с дефолтным таймаутом 100 секунд. Если GitHub API не ответит, запрос к `/api/teams/{id}/cards/import` завис на 100 с, блокируя поток. Злоумышленник с правами администратора может вызвать DoS серверных потоков.
+- **Решение:** Зарегистрировать именованный `HttpClient` с коротким таймаутом (например, 10–15 с) через `builder.Services.AddHttpClient("github", c => c.Timeout = TimeSpan.FromSeconds(15))`.
 
 ---
 
 ## 🟡 СРЕДНИЕ уязвимости
 
-### ~~10. Отсутствие security-заголовков в nginx~~ ✅ ИСПРАВЛЕНО
-- **Файл:** `ktcards.client/nginx.conf`
-- **Проблема:** Отсутствуют заголовки: `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, `Permissions-Policy`. Возможны атаки Clickjacking, MIME sniffing.
-- **Решение:** Добавить в конфигурацию nginx:
-  ```
-  add_header X-Content-Type-Options "nosniff" always;
-  add_header X-Frame-Options "SAMEORIGIN" always;
-  add_header Referrer-Policy "strict-origin-when-cross-origin" always;
-  add_header Permissions-Policy "geolocation=(), microphone=(), camera=()" always;
-  ```
-- **Статус:** Все четыре заголовка добавлены на уровне `server` блока в `nginx.conf`.
+### 7. Race condition при параллельном импорте карточек
+- **Файл:** `ktcards.Server/Controllers/CardsController.cs`
+- **Проблема:** Два одновременных запроса `POST /api/teams/{id}/cards/import` удаляют старые карточки и вставляют новые без блокировки. Оба запроса могут пройти фазу удаления параллельно, затем оба вставят данные — в итоге карточки задвоятся.
+- **Решение:** Добавить транзакцию (`db.Database.BeginTransactionAsync`) или семафор на уровне `teamId` (например, `SemaphoreSlim` в `ConcurrentDictionary`).
 
 ---
 
-### ~~11. Отсутствие `proxy_set_header` для реального IP клиента~~ ✅ ИСПРАВЛЕНО
-- **Файл:** `ktcards.client/nginx.conf`
-- **Проблема:** Без `proxy_set_header X-Real-IP` и `X-Forwarded-For` бэкенд видит IP самого nginx, а не реального пользователя. Rate limiting по IP работать не будет корректно.
-- **Решение:** Добавить в секцию `location /api`:
-  ```
-  proxy_set_header X-Real-IP $remote_addr;
-  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-  proxy_set_header X-Forwarded-Proto $scheme;
-  ```
-  Включить `UseForwardedHeaders` middleware в `Program.cs`.
-- **Статус:** Добавлены три заголовка в `location /api` в `nginx.conf`. `UseForwardedHeaders` уже был подключён в `Program.cs`.
+### 8. Нет защиты от CSRF на мутирующих эндпоинтах
+- **Файлы:** `ktcards.Server/Controllers/AuthController.cs`, `TeamsController.cs`, `SeasonsController.cs`, `CardsController.cs`
+- **Проблема:** `SameSite=Lax` защищает от CSRF при cross-site навигации в большинстве браузеров, но не от атак через `<form>` (метод POST в HTML-форме кросс-сайт). При `SameSite=Lax` куки передаются только при "top-level navigation" с безопасными методами; для POST из стороннего сайта куки не передаются — это частичная защита. Однако если приложение когда-либо переедет на `SameSite=None` (например, для iframe), CSRF станет реальной угрозой.
+- **Решение:** Добавить явную CSRF-защиту через `IAntiforgery` (ASP.NET Core) или Double Submit Cookie pattern. Как минимум — задокументировать, что `SameSite=Lax` является текущей защитой.
 
 ---
 
-### ~~12. Отсутствие KTCARDS_ADMIN_PASSWORD в инфраструктурных файлах~~ ✅ ИСПРАВЛЕНО
-- **Файлы:** `.env.example`, `docker-compose.yaml`
-- **Проблема:** Переменная для пароля администратора не описана в шаблоне `.env`, что ведёт к неправильной конфигурации при деплое.
-- **Решение:** Добавить `KTCARDS_ADMIN_PASSWORD=` в `.env.example` и передавать через `environment:` в `docker-compose.yaml`.
-- **Статус:** Переменная присутствует в обоих файлах.
+### 9. HTTP без HTTPS — нет TLS и перенаправления
+- **Файл:** `ktcards.client/nginx.conf`
+- **Проблема:** nginx слушает только `port 80`. Нет HTTPS-блока и нет редиректа с HTTP на HTTPS. Все данные (включая `admin_token` куку при первом запросе) передаются в открытом виде. Флаг `Secure` на куке устанавливается в production, но nginx сам не терминирует TLS.
+- **Решение:** Добавить HTTPS-блок (SSL/TLS termination) в nginx.conf с редиректом с HTTP на HTTPS. Рассмотреть интеграцию с Let's Encrypt через Certbot или внешний реверс-прокси.
+
+---
+
+### 10. Нет `proxy_set_header Host` в `location /api`
+- **Файл:** `ktcards.client/nginx.conf`
+- **Проблема:** В блоке `location /api` не передаётся заголовок `Host`. ASP.NET Core получает имя хоста nginx (`back_ktcards`), а не оригинальный `Host` клиента. Это может влиять на формирование абсолютных URL, логирование и заголовок `Forwarded`.
+- **Решение:** Добавить `proxy_set_header Host $host;` в секцию `location /api`.
 
 ---
 
 ## 🟢 НИЗКИЕ / ТЕХНИЧЕСКИЙ ДОЛГ
 
-### ~~13. Scaffolding-файлы в production коде~~ ✅ ИСПРАВЛЕНО
-- **Файлы:** `ktcards.Server/Controllers/WeatherForecastController.cs`, `ktcards.Server/WeatherForecast.cs`
-- **Проблема:** Стандартные файлы ASP.NET шаблона не удалены. Лишняя поверхность атаки, путаница в коде.
-- **Решение:** Удалить оба файла.
-- **Статус:** Оба файла удалены.
+### 11. Антипаттерн установки зависимостей в `Dockerfile` (frontend)
+- **Файл:** `ktcards.client/Dockerfile`
+- **Проблема:** Последовательность `npm ci --force` → `rm -rf node_modules package-lock.json` → `npm cache clean --force` → `npm install --force` нарушает воспроизводимость сборки. `npm ci` предназначен именно для воспроизводимых установок по `package-lock.json`; последующий `npm install` может поставить другие версии пакетов. Флаг `--force` скрывает конфликты зависимостей.
+- **Решение:** Заменить весь блок на одну команду `RUN npm ci`. Починить конфликты зависимостей, из-за которых был добавлен `--force`.
 
 ---
 
-### ~~14. SQLite-файлы БД в репозитории~~ ✅ ИСПРАВЛЕНО
-- **Файлы:** `ktcards.Server/ktcards.db`, `ktcards.Server/ktcards.db-shm`, `ktcards.Server/ktcards.db-wal`
-- **Проблема:** Бинарные файлы базы данных попали в git (в т.ч. из-за отката PR #32). Могут содержать персональные/служебные данные.
-- **Решение:**
-  - Добавить в `.gitignore`:
-    ```
-    *.db
-    *.db-shm
-    *.db-wal
-    ```
-  - Удалить файлы из истории git (при необходимости — `git filter-branch` или `git-filter-repo`).
-- **Статус:** Паттерны добавлены в `.gitignore`, файлы удалены из индекса git через `git rm --cached`.
+### 12. Двойной `COPY` контекста в `Dockerfile` (backend)
+- **Файл:** `ktcards.Server/Dockerfile`
+- **Проблема:** Стадия `build` содержит `COPY . ktcards.Server/`, а затем `COPY . .` — файлы копируются дважды. Это раздувает Docker-слои и может приводить к непредсказуемому результату при конфликтах путей.
+- **Решение:** Оставить один корректный `COPY`. Исправить структуру Dockerfile для правильного контекста сборки.
+
+---
+
+### 13. `AdminTokenService` хранит токены только в памяти
+- **Файл:** `ktcards.Server/Helpers/AdminTokenService.cs`
+- **Проблема:** При перезапуске контейнера все активные сессии сбрасываются. При горизонтальном масштабировании (несколько инстансов) токен, выданный одним инстансом, не признаётся другим.
+- **Решение:** Сохранять токены в Redis или в таблице БД. Это также даст возможность аудита активных сессий.
+
+---
+
+### 14. Кастомный `AdminAuthorizeAttribute` реализует `IActionFilter` вместо `IAuthorizationFilter`
+- **Файл:** `ktcards.Server/Filters/AdminAuthorizeAttribute.cs`
+- **Проблема:** Авторизационная логика реализована через `IActionFilter`, который запускается **после** model binding. Это нарушает принцип defence-in-depth: `IAuthorizationFilter` вызывается раньше в pipeline и является семантически правильным местом для проверки прав.
+- **Решение:** Переключить на `IAuthorizationFilter` или использовать стандартный механизм авторизации ASP.NET Core (`IAuthorizationHandler` + `[Authorize]`).
 
 ---
 
@@ -155,17 +118,17 @@
 
 | # | Уязвимость | Критичность | Сложность фикса |
 |---|-----------|-------------|-----------------|
-| 1 | ~~Предсказуемый токен (GUID)~~ ✅ | 🔴 Критическая | Низкая |
-| 2 | ~~Токен в sessionStorage (XSS)~~ ✅ | 🔴 Критическая | Средняя |
-| 3 | ~~Загрузка файлов без проверки~~ ✅ | 🔴 Критическая | Низкая |
-| 4 | ~~Path Traversal при удалении файла~~ ✅ | 🔴 Критическая | Низкая |
-| 5 | ~~EnsureDeleted() в production~~ ✅ | 🔴 Критическая | Низкая |
-| 6 | ~~Нет rate limiting на login~~ ✅ | 🟠 Высокая | Средняя |
-| 7 | ~~Нет logout / инвалидации токена~~ ✅ | 🟠 Высокая | Низкая |
-| 8 | ~~Дефолтный пароль в репозитории~~ ✅ | 🟠 Высокая | Низкая |
-| 9 | ~~Пароль БД в dev-конфиге~~ ✅ | 🟠 Высокая | Низкая |
-| 10 | ~~Нет security-заголовков nginx~~ ✅ | 🟡 Средняя | Низкая |
-| 11 | ~~Нет proxy forwarding IP~~ ✅ | 🟡 Средняя | Низкая |
-| 12 | ~~AdminPassword не в .env.example~~ ✅ | 🟡 Средняя | Низкая |
-| 13 | ~~Scaffolding WeatherForecast~~ ✅ | 🟢 Низкая | Минимальная |
-| 14 | ~~SQLite файлы в git~~ ✅ | 🟢 Низкая | Низкая |
+| 1 | XSS через SVG-логотип | 🔴 Критическая | Низкая |
+| 2 | Обход rate limiting (XFF спуфинг) | 🔴 Критическая | Низкая |
+| 3 | `.env` не в `.gitignore` | 🟠 Высокая | Минимальная |
+| 4 | Нет Content-Security-Policy | 🟠 Высокая | Низкая |
+| 5 | Rate limit слишком мягкий (30/мин) | 🟠 Высокая | Минимальная |
+| 6 | Нет таймаута у HttpClient | 🟠 Высокая | Низкая |
+| 7 | Race condition при импорте карточек | 🟡 Средняя | Средняя |
+| 8 | Нет CSRF-защиты | 🟡 Средняя | Средняя |
+| 9 | HTTP без HTTPS / нет TLS | 🟡 Средняя | Средняя |
+| 10 | Нет `proxy_set_header Host` | 🟡 Средняя | Минимальная |
+| 11 | Dockerfile frontend антипаттерн | 🟢 Низкая | Низкая |
+| 12 | Dockerfile backend двойной COPY | 🟢 Низкая | Низкая |
+| 13 | AdminTokenService в памяти | 🟢 Низкая | Высокая |
+| 14 | AdminAuthorizeAttribute — IActionFilter | 🟢 Низкая | Низкая |
