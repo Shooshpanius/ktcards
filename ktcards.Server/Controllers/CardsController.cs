@@ -64,7 +64,7 @@ namespace ktcards.Server.Controllers
             string json;
             try
             {
-                var httpClient = httpClientFactory.CreateClient();
+                var httpClient = httpClientFactory.CreateClient("github");
                 var request = new HttpRequestMessage(HttpMethod.Get, apiUrl);
                 request.Headers.Add("User-Agent", "ktcards");
                 var gitHubToken = config["GitHubToken"];
