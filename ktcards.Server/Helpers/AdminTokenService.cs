@@ -26,6 +26,11 @@ namespace ktcards.Server.Helpers
             return false;
         }
 
+        public void RevokeToken(string token)
+        {
+            _tokens.TryRemove(token, out _);
+        }
+
         private void PurgeExpired()
         {
             var cutoff = DateTimeOffset.UtcNow - TokenLifetime;

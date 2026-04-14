@@ -3,14 +3,16 @@ import { Link } from 'react-router-dom';
 import type { Season, Team } from '../types';
 import './AdminPage.css';
 
-const SESSION_KEY = 'admin_token';
-
 export default function AdminPage() {
-    const [authenticated, setAuthenticated] = useState(
-        () => !!sessionStorage.getItem(SESSION_KEY)
-    );
+    const [authenticated, setAuthenticated] = useState<boolean | null>(null);
     const [passwordInput, setPasswordInput] = useState('');
     const [passwordError, setPasswordError] = useState('');
+
+    useEffect(() => {
+        fetch('/api/auth/check')
+            .then(r => setAuthenticated(r.ok))
+            .catch(() => setAuthenticated(false));
+    }, []);
 
     async function handleLogin(e: React.FormEvent) {
         e.preventDefault();
@@ -22,8 +24,6 @@ export default function AdminPage() {
                 body: JSON.stringify({ password: passwordInput }),
             });
             if (r.ok) {
-                const data = await r.json();
-                sessionStorage.setItem(SESSION_KEY, data.token);
                 setAuthenticated(true);
             } else {
                 setPasswordError('Неверный пароль.');
@@ -31,6 +31,10 @@ export default function AdminPage() {
         } catch {
             setPasswordError('Ошибка соединения с сервером.');
         }
+    }
+
+    if (authenticated === null) {
+        return null;
     }
 
     if (!authenticated) {
@@ -59,16 +63,10 @@ export default function AdminPage() {
         );
     }
 
-    return <AdminContent />;
+    return <AdminContent onLogout={() => setAuthenticated(false)} />;
 }
 
-function authHeaders(): HeadersInit {
-    const token = sessionStorage.getItem(SESSION_KEY);
-    if (!token) return {};
-    return { Authorization: `Bearer ${token}` };
-}
-
-function AdminContent() {
+function AdminContent({ onLogout }: { onLogout: () => void }) {
     const [seasons, setSeasons] = useState<Season[]>([]);
     const [newSeasonName, setNewSeasonName] = useState('');
     const [seasonError, setSeasonError] = useState('');
@@ -101,7 +99,7 @@ function AdminContent() {
         setSeasonError('');
         const r = await fetch('/api/seasons', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json', ...authHeaders() },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name: newSeasonName }),
         });
         if (r.ok) {
@@ -115,7 +113,7 @@ function AdminContent() {
 
     async function deleteSeason(id: number) {
         if (!confirm('Delete this season and all its teams?')) return;
-        await fetch(`/api/seasons/${id}`, { method: 'DELETE', headers: authHeaders() });
+        await fetch(`/api/seasons/${id}`, { method: 'DELETE' });
         await loadSeasons();
         await loadTeams();
     }
@@ -131,7 +129,7 @@ function AdminContent() {
         form.append('name', newTeamName);
         form.append('seasonId', String(newTeamSeasonId));
         if (newTeamLogo) form.append('logo', newTeamLogo);
-        const r = await fetch('/api/teams', { method: 'POST', headers: authHeaders(), body: form });
+        const r = await fetch('/api/teams', { method: 'POST', body: form });
         if (r.ok) {
             setNewTeamName('');
             setNewTeamSeasonId('');
@@ -147,13 +145,13 @@ function AdminContent() {
 
     async function deleteTeam(id: number) {
         if (!confirm('Delete this team?')) return;
-        await fetch(`/api/teams/${id}`, { method: 'DELETE', headers: authHeaders() });
+        await fetch(`/api/teams/${id}`, { method: 'DELETE' });
         await loadSeasons();
         await loadTeams();
     }
 
     async function importTeamCards(id: number, _name: string) {
-        const r = await fetch(`/api/teams/${id}/cards/import`, { method: 'POST', headers: authHeaders() });
+        const r = await fetch(`/api/teams/${id}/cards/import`, { method: 'POST' });
         if (r.ok) {
             const data = await r.json();
             alert(data.message ?? 'Import successful.');
@@ -165,11 +163,17 @@ function AdminContent() {
 
     const seasonById = Object.fromEntries(seasons.map(s => [s.id, s.name]));
 
+    async function handleLogout() {
+        await fetch('/api/auth/logout', { method: 'POST' });
+        onLogout();
+    }
+
     return (
         <div className="admin">
             <header className="admin__header">
                 <Link to="/" className="admin__back">← Back</Link>
                 <h1 className="admin__title">Admin Panel</h1>
+                <button className="admin__btn admin__btn--secondary" onClick={handleLogout}>Выйти</button>
             </header>
 
             <div className="admin__columns">

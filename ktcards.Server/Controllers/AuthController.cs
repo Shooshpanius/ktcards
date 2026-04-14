@@ -7,8 +7,10 @@ namespace ktcards.Server.Controllers
 {
     [ApiController]
     [Route("api/auth")]
-    public class AuthController(IConfiguration config, AdminTokenService tokenService) : ControllerBase
+    public class AuthController(IConfiguration config, AdminTokenService tokenService, IWebHostEnvironment env) : ControllerBase
     {
+        private const string CookieName = "admin_token";
+
         [HttpPost("login")]
         public IActionResult Login([FromBody] LoginDto dto)
         {
@@ -21,7 +23,34 @@ namespace ktcards.Server.Controllers
                 return Unauthorized("Неверный пароль.");
 
             var token = tokenService.CreateToken();
-            return Ok(new { token });
+            Response.Cookies.Append(CookieName, token, new CookieOptions
+            {
+                HttpOnly = true,
+                SameSite = SameSiteMode.Lax,
+                Secure = !env.IsDevelopment(),
+                Path = "/",
+                MaxAge = TimeSpan.FromHours(24)
+            });
+            return Ok();
+        }
+
+        [HttpGet("check")]
+        public IActionResult Check()
+        {
+            var token = Request.Cookies[CookieName] ?? string.Empty;
+            if (!tokenService.Validate(token))
+                return Unauthorized();
+            return Ok();
+        }
+
+        [HttpPost("logout")]
+        public IActionResult Logout()
+        {
+            var token = Request.Cookies[CookieName];
+            if (token != null)
+                tokenService.RevokeToken(token);
+            Response.Cookies.Delete(CookieName, new CookieOptions { Path = "/" });
+            return Ok();
         }
     }
 
