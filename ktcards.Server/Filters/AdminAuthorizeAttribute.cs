@@ -10,11 +10,8 @@ namespace ktcards.Server.Filters
         public void OnActionExecuting(ActionExecutingContext context)
         {
             var tokenService = context.HttpContext.RequestServices.GetRequiredService<AdminTokenService>();
-            var authHeader = context.HttpContext.Request.Headers.Authorization.ToString();
-            const string prefix = "Bearer ";
-            if (!authHeader.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) ||
-                authHeader.Length <= prefix.Length ||
-                !tokenService.Validate(authHeader[prefix.Length..]))
+            var token = context.HttpContext.Request.Cookies["admin_token"] ?? string.Empty;
+            if (!tokenService.Validate(token))
             {
                 context.Result = new UnauthorizedResult();
             }
