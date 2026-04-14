@@ -7,13 +7,14 @@ namespace ktcards.Server.Filters
     [AttributeUsage(AttributeTargets.Method | AttributeTargets.Class)]
     public class AdminAuthorizeAttribute : Attribute, IActionFilter
     {
-        private const string CookieName = "admin_session";
-
         public void OnActionExecuting(ActionExecutingContext context)
         {
             var tokenService = context.HttpContext.RequestServices.GetRequiredService<AdminTokenService>();
-            var token = context.HttpContext.Request.Cookies[CookieName] ?? string.Empty;
-            if (!tokenService.Validate(token))
+            var authHeader = context.HttpContext.Request.Headers.Authorization.ToString();
+            const string prefix = "Bearer ";
+            if (!authHeader.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) ||
+                authHeader.Length <= prefix.Length ||
+                !tokenService.Validate(authHeader[prefix.Length..]))
             {
                 context.Result = new UnauthorizedResult();
             }
